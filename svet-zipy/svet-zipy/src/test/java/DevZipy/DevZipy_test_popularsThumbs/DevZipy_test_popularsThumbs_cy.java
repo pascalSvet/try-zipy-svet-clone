@@ -21,7 +21,7 @@ import zipy_elements.*;
 
 public class DevZipy_test_popularsThumbs_cy extends DevZipy_test_popularsThumbs_MAIN {
 	
-		
+	//test commit	
 	//Test - opening thumbnails in populars (Dev Cypress - aliExpress)
 	@Test		
 	public  void DevZipy_test_cy_popularsThumbs() throws Exception {
