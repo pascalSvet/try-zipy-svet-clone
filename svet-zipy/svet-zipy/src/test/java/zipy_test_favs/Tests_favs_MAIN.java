@@ -1,23 +1,11 @@
 package zipy_test_favs;
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.runner.RunWith;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
-
 import zipy_elements.*;
 	
 	public class Tests_favs_MAIN {
@@ -33,7 +21,7 @@ import zipy_elements.*;
 		
 
 		errorCaught = false;
-		System.setProperty("webdriver.chrome.driver","src/zipy_resources/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","src/test/resources/chromedriver.exe");
 		driver = new ChromeDriver();
 		
 		wait = new WebDriverWait(driver, 15);	
@@ -51,7 +39,8 @@ import zipy_elements.*;
 	public static void cartEnding() throws InterruptedException {	
 		// Closing all windows of the browser, opened by the test.
 		driver.quit();			 
-	}	
+	}
+	
 	/*
 	@AfterClass		
 	public static void killDriverProcess() throws IOException, InterruptedException {		

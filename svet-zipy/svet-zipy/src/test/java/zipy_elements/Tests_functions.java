@@ -122,6 +122,12 @@ public class Tests_functions {
 		}	
 	}
 
+	// A function for deleting one item from favorites.
+	public static void emptyFavoritesOneItem(WebDriver driver) throws Exception{
+		Thread.sleep(500);		
+		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
+		
+	}
 	
 	// A function for summing two product prices.
 	public static String priceSum(WebDriver driver, String price1, String price2) throws Exception{
