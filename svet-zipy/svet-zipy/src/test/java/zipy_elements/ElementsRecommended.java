@@ -1,7 +1,4 @@
 package zipy_elements;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ElementsRecommended {
 	
@@ -24,5 +21,6 @@ public class ElementsRecommended {
 	public static final String populars_title = "//div[@id='wrapper']/section[@class='popularLinksBar']//span[@class='popularLinksBar__title_text']";
 
 	
-	public static final String dailyDeal_onPage = "//div[@id='wrapper']//main[@role='main']/section[@class='daily m--plates']/div[@class='daily__slide']/div[1]/a[@href='https://www.zipy.co.il/p/upsale/----/pandy/']";
+	public static final String dailyDeal_onPage = "//div[@id='wrapper']//main[@role='main']/section[@class='daily m--plates']/div[@class='daily__slide']/div[1]/a[@class='daily__item-link']";
+	public static final String dailyDeal_onPage_title = "//div[@id='wrapper']//main[@role='main']/section[@class='daily m--plates']/div[@class='daily__slide']/div[1]/a/span[@class='hidden-accessibility-text']";
 }

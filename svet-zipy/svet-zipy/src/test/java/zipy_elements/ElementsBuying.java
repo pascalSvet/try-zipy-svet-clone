@@ -1,7 +1,4 @@
 package zipy_elements;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ElementsBuying {
 	
@@ -43,7 +40,7 @@ public class ElementsBuying {
 	public static final String Product_closeFavorites = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]/strong[@class='topbar__items-link-count']";
 	public static final String Product_openFavorites = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]/strong[@class='topbar__items-link-count']";
 	public static final String Product_favoritesTitle = "/html/body/div[1]/div[3]/div/div[1]//ul[@class='user-goods-list-heading']/li[@class='title']";
-	public static final String Product_PinThumbIcon = "//*[@id=\"wrapper\"]/div[3]/main/section[2]/div[3]/div[1]/div/div[2]/button/span";
+	public static final String Product_PinThumbIcon = "/html//div[@id='wrapper']//main[@role='main']/section[@class='daily m--plates']/div[@class='daily__slide']/div[1]/div/div[@class='daily__item-info']/button[@class='daily__item-pin']";
 	
 	public static final String Product_variationsColor ="/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']/div[@class='sell-wrap']/div[@class='buy-options']/table[@class='product__params']//div[@class='selectric']//span[@class='selectric-option-text']";
 	public static final String Product_variationsColorAgain = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']/div[@class='sell-wrap']/div[@class='buy-options']/table[@class='product__params']//div[@class='selectric']//span[@class='selectric-option-text']";

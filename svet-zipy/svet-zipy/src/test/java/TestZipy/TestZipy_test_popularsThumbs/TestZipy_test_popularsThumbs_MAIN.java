@@ -44,7 +44,8 @@ import zipy_elements.*;
 		
 		// Closing all windows of the browser, opened by the test.
 		driver.quit();			 
-	}	
+	}
+	
 	/*
 	@AfterClass		
 	public static void killDriverProcess() throws IOException, InterruptedException {		
