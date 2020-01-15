@@ -65,4 +65,8 @@ public static final String DevZipy_it_amazon = "https://zipy:zipy@www.dev.zipy.i
 public static final String DevZipy_py = "https://zipy:zipy@www.dev.zipy.pt/?utm_medium=email";					//Dev Portugal
 public static final String DevZipy_py_ebay = "https://zipy:zipy@www.dev.zipy.pt/ebay/?utm_medium=email";
 public static final String DevZipy_py_amazon = "https://zipy:zipy@www.dev.zipy.pt/amazon/?utm_medium=email";
+
+
+//deals:
+public static final String Zipy_il_deals_ali = "https://www.zipy.co.il/deals/aliexpress/?utm_medium=email";
 }
