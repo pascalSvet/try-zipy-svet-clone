@@ -13,7 +13,7 @@ import zipy_elements.*;
 public class TestZipy_tests_favorites extends TestZipy_tests_favs_MAIN {
 	
 	
-	//Test - appearance of favorite-pin icon on the daiy deals thumbnail, on mouse hover
+	//Test - appearance of favorite-pin icon on thumbnail, on mouse hover
 	@Test		
 	public  void TestZipy_tests_favorites_pinIcon_appearOnHover() throws Exception {
 		System.out.println("Running test for appearance of favorite-pin icon on the daiy deals thumbnail, on mouse hover (test site)");		

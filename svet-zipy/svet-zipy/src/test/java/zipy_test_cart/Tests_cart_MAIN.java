@@ -42,22 +42,29 @@ import zipy_elements.*;
 		
 		//enter site and log in
 		driver.get(ElementsWebsites.Zipy_il);
-		Tests_functions.logIn(driver);
+		//Tests_functions.logIn(driver);
 	
 	}
 	
+	@Before
+	public void startCartEmpty() throws Exception {	
+		//at the end, remove the product from the cart, for the future tests
+		Tests_functions.openAndEmptyCart(driver);	
+	}
+	
+	@After
+	public void endCartEmpty() throws Exception {	
+		//at the end, remove the product from the cart, for the future tests
+		if(!driver.findElements(By.xpath(ElementsBuying.Product_cartRemove)).isEmpty()) {
+			driver.findElement(By.xpath(ElementsBuying.Product_cartRemove)).click();
+		}
+	}
 	
 	@AfterClass	
-	public static void cartEnding() throws InterruptedException {	
-		// Closing all windows of the browser, opened by the test.
+	public static void quitDriver() throws Exception {		
+		// and close all windows of the browser, opened by the test.
 		driver.quit();			 
 	}	
-	/*
-	@AfterClass		
-	public static void killDriverProcess() throws IOException, InterruptedException {		
-        Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");	// Killing the chromedriver process in the end of the test.
-        Thread.sleep(500); 
-        
-	}*/
+
 
 }

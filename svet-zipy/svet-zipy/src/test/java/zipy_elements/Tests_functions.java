@@ -67,7 +67,6 @@ public class Tests_functions {
 								
 		//enter login+password and wait for the logging-in
 		new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.Login_disconnect))).click();				
-		new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.Login_button))).click();;											
 	}
 	
 	//close the pop-up window if exist
@@ -108,6 +107,32 @@ public class Tests_functions {
 				driver.findElement(By.xpath(ElementsBuying.Product_openCart)).click();
 				Thread.sleep(500);
 		}	
+	}
+
+	
+	// A function for open the cart and focus on the contents.
+	public static WebElement openCart(WebDriver driver) throws Exception{
+		//back to main page and open the cart			
+		driver.get(ElementsWebsites.Zipy_il);
+		WebDriverWait wait = new WebDriverWait(driver, 15);	
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
+		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
+		wait.until(ExpectedConditions.visibilityOf(cartFrame));
+		return(cartFrame);
+	}
+	
+	// A function for emptying the cart.
+	public static void openAndEmptyCart(WebDriver driver) throws Exception{
+		//back to main page and open the cart			
+		driver.get(ElementsWebsites.Zipy_il);
+		WebDriverWait wait = new WebDriverWait(driver, 15);	
+		
+		if(!driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity)).getText().equals("0")) {
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
+			WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
+			wait.until(ExpectedConditions.visibilityOf(cartFrame));
+			Tests_functions.emptyCart(driver);
+		}
 	}
 	
 	// A function for emptying the favorites.

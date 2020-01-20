@@ -12,12 +12,13 @@ public class ElementsBuying {
 	public static final String ProductFramed_color_1 ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric-items']/div/ul/li[2]//span[@class='selectric-option-text']";
 	public static final String ProductFramed_length ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']/div[@class='featherlight-content quick-view']/div[@class='featherlight-content-wrap']/div/section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[2]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
 	public static final String ProductFramed_length_1 = "/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[2]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric-items']/div/ul/li[4]//span[@class='selectric-option-text']";
+	public static final String ProductFramed_addToCart = "/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='product__buy']/div[@class='product__buy-buttons']/a/span[@class='button__inner']";	
 	public static final String Checkout_button = "/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']/div[@class='featherlight-content quick-view']/div[@class='featherlight-content-wrap']//section//div[@class='product__buy']/div[@class='product__buy-buttons']/div[@class='product__buy-buttons-buy-now']/a[2]//span[@class='button__inner']";
 	public static final String PayNow_button = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']//div[@class='product__buy-buttons-buy-now']/a[2]//span[@class='button__inner']";
 	public static final String FinalBuy_button = "/html//form[@id='paymentBalanceForm']//button[@type='submit']";
 	public static final String BackToMain_button = "/html//div[@id='wrapper']/div[@class='pay']/div[@class='pay__main']/div[2]//div[@class='pay__step-success']/div[1]/div[@class='pay__step-success-finish']/a[@href='https://www.zipy.co.il/']";
 	public static final String Thanks_box = "/html//div[@id='wrapper']/div[@class='pay']/div[@class='pay__main']/div[2]//div[@class='pay__step-success']/div[1]/p[1]";
-	
+	public static final String ProductFramed_next = "/html/body/div[@role='dialog']//div[@class='featherlight-content quick-view']/span[1]/span[@class='ico ico--arrow-slider']";
 	public static final String Product_addToCart = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']//div[@class='product__buy-buttons']/a/span[@class='button__inner']";	
 	public static final String Product_addedToCart = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='product__buy-buttons-buy-now']/a[2]";
 	public static final String Product_openCart = "/html//div[@id='topbar']//span[@class='ico ico--cart']";
@@ -33,7 +34,8 @@ public class ElementsBuying {
 	public static final String Product_cart_finalSum = "/html/body/div[1]/div[3]/div/div[2]//span[@class='sum__price']";
 	public static final String Product_cart_oldPrice = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[2]//span[@class='price__old']";
 	public static final String Product_cart_newPrice = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//span[@class='price__current']";
-	
+	public static final String Product_cart_quantity = "//*[@id=\"topbar\"]/div[2]/div[5]/span[2]/strong/span";
+
 	//public static final String Product_favoritesButton = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]";
 	public static final String Product_favoritesButton = "/html//div[@id='topbar']//span[@class='ico ico--pin']";
 	public static final String Product_favoritesButton_popup = "/html/body/div[@role='dialog']//div[@class='featherlight-content-wrap']//section//div[@class='product__pin']/a/span[@class='product__pin-anchor']";
@@ -44,7 +46,7 @@ public class ElementsBuying {
 	public static final String Product_favoritesTitle = "/html/body/div[1]/div[3]/div/div[1]//ul[@class='user-goods-list-heading']/li[@class='title']";
 
 	public static final String Product_variationsColor ="/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']/div[@class='sell-wrap']/div[@class='buy-options']/table[@class='product__params']//div[@class='selectric']//span[@class='selectric-option-text']";
-	public static final String Product_variationsColorAgain = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']/div[@class='sell-wrap']/div[@class='buy-options']/table[@class='product__params']//div[@class='selectric']//span[@class='selectric-option-text']";
+	public static final String Product_variationsColorAgain = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td//div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
 	public static final String Product_variationsColor_1 = "/html//div[@id='wrapper']/div[@class='product__page']//section//div[@class='buy-options']/table[@class='product__params']//div[@class='select type-variations']/div[1]/div[@class='selectric-items']/div/ul/li[2]/span[@class='selectric-option']";
 	public static final String Product_variationsColor_2 = "/html//div[@id='wrapper']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td//div[@class='select type-variations']/div[1]/div[@class='selectric-items']/div/ul/li[3]/span[@class='selectric-option']";
 	public static final String Product_variationsColor_3 = "/html//div[@id='wrapper']/div[3]//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td//div[@class='select type-variations']/div[1]/div[@class='selectric-items']/div/ul/li[4]//span[@class='selectric-option-text']";
@@ -53,12 +55,12 @@ public class ElementsBuying {
 	public static final String Product_variationsLength_1 = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']//div[@class='buy-options']/table[@class='product__params']/tbody/tr[2]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric-items']/div/ul/li[2]//span[@class='selectric-option-text']";
 	public static final String Product_variationsLength_2 = "/html//div[@id='wrapper']/div[3]//section//div[@class='buy-options']/table[@class='product__params']//div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric-items']/div/ul/li[3]/span[@class='selectric-option']";
 	public static final String Product_plusOne = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']//div[@class='product__buy-buttons-buy-now']/a[1]/span[@class='button-buy-amount-text']";
-	public static final String Product_quantityPlus = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']//button[.='+']";
-	public static final String Product_quantityPlusAgain = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']//button[.='+']";
+	public static final String Product_quantityPlus = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']//div[@class='product__counter']/button[2]";
+	public static final String Product_quantityPlusAgain = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']//div[@class='product__counter']/button[2]";
 	public static final String Product_quantity = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//input";
 	public static final String Product_titleFromPicture = "//img[@class='product__specs-image']";
 	public static final String Product_titleFromPopup = "/html//div[@role='dialog']//div[@class='featherlight-content-wrap']//section//h1[@class='product__title']";
-
+	public static final String Product_added = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='product__buy-buttons-buy-now']/a[2]//span[@class='amount-text']";
 	public static final String Product_heron = "//div[@id='wrapper']//main[@role='main']/section[@class='notfound']//div[@class='notfound__text-title']";
 	public static final String Product_price = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']//div[@class='product__table-wrapper']/table[@class='product__params']//td[@class='product__params-sale']/span/span[@class='value']";
 	public static final String Product_discount = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']//div[@class='product__table-wrapper']/table[@class='product__params']/thead/tr[2]/td[@class='product__params-sale']/span/span[@class='value']";

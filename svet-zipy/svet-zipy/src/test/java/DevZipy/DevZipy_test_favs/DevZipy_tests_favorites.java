@@ -13,8 +13,8 @@ import zipy_elements.*;
 
 public class DevZipy_tests_favorites extends DevZipy_tests_favs_MAIN {
 	
-	
-	//Test - appearance of favorite-pin icon on the daiy deals thumbnail, on mouse hover
+/*	
+	//Test - appearance of favorite-pin icon on thumbnail, on mouse hover
 	@Test		
 	public  void DevZipy_tests_favorites_pinIcon_appearOnHover() throws Exception {
 		System.out.println("Running test for appearance of favorite-pin icon on the daiy deals thumbnail, on mouse hover (dev site)");		
@@ -76,7 +76,7 @@ public class DevZipy_tests_favorites extends DevZipy_tests_favs_MAIN {
 		//at the end, remove the products from the favorites, for the future tests		
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
 	}
-
+*/
 	//Test - adding to favorites from product pop-up page
 	@Test		
 	public  void DevZipy_tests_favorites_add_fromProductPopupPage() throws Exception {
@@ -84,6 +84,7 @@ public class DevZipy_tests_favorites extends DevZipy_tests_favs_MAIN {
 
 		//open one of the products on the main page and save its name
 		driver.get(ElementsWebsites.DevZipy_il_deals);
+		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3)).click();
 		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3)).click();
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPopup)).getText().trim();
 
@@ -102,7 +103,7 @@ public class DevZipy_tests_favorites extends DevZipy_tests_favs_MAIN {
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
 	}
 
-	
+/*	
 	//Test - adding to favorites from daiy deals thumbnail
 	@Test		
 	public  void DevZipy_tests_favorites_add_fromDealsThumb() throws Exception {
@@ -220,5 +221,5 @@ public class DevZipy_tests_favorites extends DevZipy_tests_favs_MAIN {
 		//at the end, remove the products from the favorites, for the future tests		
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();		
 	}
-	
+*/	
 }
