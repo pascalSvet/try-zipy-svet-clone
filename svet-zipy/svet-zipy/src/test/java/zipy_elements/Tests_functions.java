@@ -235,17 +235,21 @@ public class Tests_functions {
 				boolean t = driver.findElement(By.xpath(ElementsBuying.Product_sortBy)).isDisplayed(); 
 			}
 			catch (Exception ex) {
-				if(driver.getTitle().contains("404")) {					
-				}		
-				else if(!driver.findElements((By.xpath(ElementsBuying.Product_notFound))).isEmpty()) {
+				if(driver.getCurrentUrl().contains("toys")) {					
+				}	
+				else {
+					System.out.println("the category:  \"" + driver.getTitle() + "\" failed to load \n it's link: " + driver.getCurrentUrl());
+				    fails++;
+				}
+				/*else if(!driver.findElements((By.xpath(ElementsBuying.Product_notFound))).isEmpty()) {
 					System.out.println("the category:  \"" + driver.getTitle() + "\" failed to load \n it's link: " + driver.getCurrentUrl());
 				    fails++;	
-				}				
+				}	*/			
 			}
 			driver.close();
 		}
 		if(fails!=0) {
-			System.out.println("in total: " + fails + " of thumbs failed to load");			
+			System.out.println("in total: " + fails + " of categories failed to load");			
 		}
 		return (fails!=0);		
 	}

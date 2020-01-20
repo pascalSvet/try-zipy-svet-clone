@@ -1,22 +1,25 @@
-package zipy_test_favs;
+package DevZipy.DevZipy_test_favs;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import zipy_elements.*;
 
-public class Tests_favorites extends Tests_favs_MAIN {
+public class DevZipy_tests_favorites extends DevZipy_tests_favs_MAIN {
 	
 	
 	//Test - appearance of favorite-pin icon on the daiy deals thumbnail, on mouse hover
 	@Test		
-	public  void Tests_favorites_pinIcon_appearOnHover() throws Exception {
-		System.out.println("Running test for appearance of favorite-pin icon on the daiy deals thumbnail, on mouse hover");		
+	public  void DevZipy_tests_favorites_pinIcon_appearOnHover() throws Exception {
+		System.out.println("Running test for appearance of favorite-pin icon on the daiy deals thumbnail, on mouse hover (dev site)");		
 		
-		driver.get(ElementsWebsites.Zipy_il_deals);
+		driver.get(ElementsWebsites.DevZipy_il_deals);
 		
 		//move mouse over the thumbnail
 		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3))).build().perform();;
@@ -28,10 +31,10 @@ public class Tests_favorites extends Tests_favs_MAIN {
 	
 	//Test - correct colors of favorite-pin button
 	@Test		
-	public  void Tests_favorites_pinIcon_colors() throws Exception {
-		System.out.println("Running test for coreect colors of favorite-pin before and after clicking");		
+	public  void DevZipy_tests_favorites_pinIcon_colors() throws Exception {
+		System.out.println("Running test for coreect colors of favorite-pin before and after clicking (dev site)");		
 		
-		driver.get(ElementsWebsites.Zipy_il_deals);
+		driver.get(ElementsWebsites.DevZipy_il_deals);
 		
 		//move mouse over the thumbnail
 		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3))).build().perform();;
@@ -52,12 +55,12 @@ public class Tests_favorites extends Tests_favs_MAIN {
 		
 	//Test - adding to favorites from product page
 	@Test		
-	public  void Tests_favorites_add_fromProductPage() throws Exception {
-		System.out.println("Running test for adding to favorites from the product page");		
+	public  void DevZipy_tests_favorites_add_fromProductPage() throws Exception {
+		System.out.println("Running test for adding to favorites from the product page (dev site)");		
 
 		//get to the required product page and save its title
 		driver.get(ElementsBuying.Product_noVariations);
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt").trim();
+		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 
 		//add to the favorites
 		driver.findElement(By.xpath(ElementsBuying.Product_pin)).click();
@@ -67,26 +70,21 @@ public class Tests_favorites extends Tests_favs_MAIN {
 		Thread.sleep(500);
 		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
 		
-		
-		System.out.println(driver.findElement(By.xpath("/html/head/meta[7]")).getAttribute("content"));
-		System.out.println();
-		System.out.println();
-		
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 		
 		//at the end, remove the products from the favorites, for the future tests		
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
 	}
-	
+
 	//Test - adding to favorites from product pop-up page
 	@Test		
-	public  void Tests_favorites_add_fromProductPopupPage() throws Exception {
-		System.out.println("Running test for adding to favorites from the product pop-up page");		
+	public  void DevZipy_tests_favorites_add_fromProductPopupPage() throws Exception {
+		System.out.println("Running test for adding to favorites from the product pop-up page (dev site)");		
 
 		//open one of the products on the main page and save its name
-		driver.get(ElementsWebsites.Zipy_il);
-		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_3)).click();
+		driver.get(ElementsWebsites.DevZipy_il_deals);
+		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3)).click();
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPopup)).getText().trim();
 
 		//add to favorites
@@ -104,13 +102,13 @@ public class Tests_favorites extends Tests_favs_MAIN {
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
 	}
 
-
+	
 	//Test - adding to favorites from daiy deals thumbnail
 	@Test		
-	public  void Tests_favorites_add_fromDealsThumb() throws Exception {
-		System.out.println("Running test for adding to favorites from daiy deals thumbnail");		
+	public  void DevZipy_tests_favorites_add_fromDealsThumb() throws Exception {
+		System.out.println("Running test for adding to favorites from daiy deals thumbnail (dev site)");		
 		
-		driver.get(ElementsWebsites.Zipy_il_deals);
+		driver.get(ElementsWebsites.DevZipy_il_deals);
 		
 		//click the pin button on the thumbnail
 		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3)))
@@ -118,7 +116,7 @@ public class Tests_favorites extends Tests_favs_MAIN {
 
 		//save products title			
 		String ProductTitle = driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3_title)).getText().trim();
-				
+		
 		// open the favorites window and save its contents
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
 		Thread.sleep(500);
@@ -133,13 +131,13 @@ public class Tests_favorites extends Tests_favs_MAIN {
 	}
 		
 	
-	//Test - adding to favorites from less-than-5 tab
+	//Test - adding to favorites from less-than-5 tab thumbnail
 	@Test		
-	public  void Tests_favorites_add_fromLessThen5() throws Exception {
-		System.out.println("Running test for adding to favorites from the less-than-5 tab");		
+	public  void DevZipy_tests_favorites_add_fromLessThen5() throws Exception {
+		System.out.println("Running test for to favorites from the less-than-5 thumbnail (dev site)");		
 
 		//open the less-than-5 tab
-		driver.get(ElementsWebsites.Zipy_il_lessThan5);
+		driver.get(ElementsWebsites.DevZipy_il_lessThan5);
 
 		//click the pin button on the thumbnail
 		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsRecommended.lessThan5_3)))
@@ -152,7 +150,7 @@ public class Tests_favorites extends Tests_favs_MAIN {
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
 		Thread.sleep(500);
 		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
-		
+
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 		
@@ -160,13 +158,13 @@ public class Tests_favorites extends Tests_favs_MAIN {
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
 	}
 	
-	
+
 	//Test - adding to favorites from search thumbnail
 	@Test		
-	public  void Tests_favorites_add_fromSearchThumb() throws Exception {
-		System.out.println("Running test for adding to favorites from search thumbnail");		
+	public  void DevZipy_tests_favorites_add_fromSearchThumb() throws Exception {
+		System.out.println("Running test for adding to favorites from search thumbnail (dev site)");		
 		
-		driver.get(ElementsWebsites.Zipy_il);
+		driver.get(ElementsWebsites.DevZipy_il);
 		
 		// perform search and open the product
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
@@ -187,30 +185,30 @@ public class Tests_favorites extends Tests_favs_MAIN {
 		
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
-			
+		
 		//at the end, remove the products from the favorites, for the future tests		
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
 	}
 
-	
+			
 	//Test - adding to favorites from category thumbnail (from categories side panel)
 	@Test		
-	public  void Tests_favorites_add_fromCategoryThumb() throws Exception {
-		System.out.println("Running test for adding to favorites from category thumbnail");		
+	public  void DevZipy_tests_favorites_add_fromCategoryThumb() throws Exception {
+		System.out.println("Running test for adding to favorites from category thumbnail (dev site)");		
 		
-		driver.get(ElementsWebsites.Zipy_il);
+		driver.get(ElementsWebsites.DevZipy_il);
 		
 		//chose the first category from side panel and choose the first sub category
 		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategory1))).click()
 		.moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategory1_1))).click().build().perform();
-		
+
 		//click the pin button on the third thumbnail
 		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsRecommended.category_3)))
 		.moveToElement(driver.findElement(By.xpath(ElementsRecommended.category_3_PinThumbIcon))).click().build().perform();
 
 		//save products title			
 		String ProductTitle = driver.findElement(By.xpath(ElementsRecommended.category_3_title)).getText().trim();
-				
+		
 		// open the favorites window and save its contents
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
 		Thread.sleep(500);
@@ -220,7 +218,7 @@ public class Tests_favorites extends Tests_favs_MAIN {
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 		
 		//at the end, remove the products from the favorites, for the future tests		
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
-		
+		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();		
 	}
+	
 }

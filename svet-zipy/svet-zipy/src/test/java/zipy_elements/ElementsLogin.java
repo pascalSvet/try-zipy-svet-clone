@@ -13,7 +13,13 @@ public class ElementsLogin {
 	public static final String Username = "vikos120989@yandex.com";	
 	public static final String Password = "123456";	
 
+	public static final String sideCategory1 = "/html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[1]";
+	public static final String sideCategory1_1 = "/html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[1]/div/div/div[1]/div[2]/div[1]";
+	public static final String sideCategoryUp1 = "/html//div[@id='topbar']/div[@class='default']//span[@class='topbar-catalogue__btn_icon']";
+	public static final String sideCategoryUp1_1 = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[1]/div/div/div[1]/div[2]/div[1]";
+
 	public static final String Login_button = "/html//div[@id='topbar']/div[@class='default']/div[4]/div[2]/span[@class='topbar__menu-item-link']/span[@class='topbar__menu-item-link--dotted']";
+	public static final String Login_button_Dev = "/html//div[@id='topbar']/div[@class='default']/div[3]/div[2]/span[@class='topbar__menu-item-link']/span[@class='topbar__menu-item-link--dotted']";
 	public static final String Logedin_button = "/html//div[@id='topbar']/div[@class='default']//span[@class='topbar__user-link-no-name']";
 	public static final String Login_disconnect = "/html//form[@id='profileForm']//a[@href='/user/logout']/span[@class='topbar__user-dropdown-logout-anchor']";
 	public static final String Login_usernameField = "/html//input[@id='i_signin-email']";

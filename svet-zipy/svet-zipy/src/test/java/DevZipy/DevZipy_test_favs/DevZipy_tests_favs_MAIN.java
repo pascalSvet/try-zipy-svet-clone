@@ -1,4 +1,4 @@
-package zipy_test_favs;
+package DevZipy.DevZipy_test_favs;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.AfterClass;
@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import zipy_elements.*;
 	
-	public class Tests_favs_MAIN {
+	public class DevZipy_tests_favs_MAIN {
 	
 	static WebDriver driver;
 	static boolean errorCaught;
@@ -29,7 +29,7 @@ import zipy_elements.*;
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
 		
 		//open the main site and close the pop-up, so it won't appear in next tabs
-		driver.get("https://www.zipy.co.il");
+		driver.get(ElementsWebsites.DevZipy_il);
 		//Tests_functions.logIn(driver);
 	
 	}

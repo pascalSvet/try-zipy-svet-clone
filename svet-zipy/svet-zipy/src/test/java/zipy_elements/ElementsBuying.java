@@ -34,14 +34,15 @@ public class ElementsBuying {
 	public static final String Product_cart_oldPrice = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[2]//span[@class='price__old']";
 	public static final String Product_cart_newPrice = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//span[@class='price__current']";
 	
-	public static final String Product_favoritesButton = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]";
+	//public static final String Product_favoritesButton = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]";
+	public static final String Product_favoritesButton = "/html//div[@id='topbar']//span[@class='ico ico--pin']";
 	public static final String Product_favoritesButton_popup = "/html/body/div[@role='dialog']//div[@class='featherlight-content-wrap']//section//div[@class='product__pin']/a/span[@class='product__pin-anchor']";
-	public static final String Product_favoritesFrame = "/html/body/div[1]/div[3]/div/div[1]//div[@class='user-goods-list']/div/div[1]//div[@class='text']";
-	public static final String Product_favoritesRemove = "/html/body/div[1]/div[3]/div/div[1]//div[@class='user-goods-list']/div/div[1]//span[@class='ico']";
+	public static final String Product_favoritesFrame = "/html/body/div[1]/div[*]/div/div[1]//div[@class='user-goods-list']/div/div[1]//div[@class='text']";
+	public static final String Product_favoritesRemove = "/html/body/div[1]/div[*]/div/div[1]//div[@class='user-goods-list']/div/div[1]//span[@class='ico']";
 	public static final String Product_closeFavorites = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]/strong[@class='topbar__items-link-count']";
 	public static final String Product_openFavorites = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]/strong[@class='topbar__items-link-count']";
 	public static final String Product_favoritesTitle = "/html/body/div[1]/div[3]/div/div[1]//ul[@class='user-goods-list-heading']/li[@class='title']";
-	
+
 	public static final String Product_variationsColor ="/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']/div[@class='sell-wrap']/div[@class='buy-options']/table[@class='product__params']//div[@class='selectric']//span[@class='selectric-option-text']";
 	public static final String Product_variationsColorAgain = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']/div[@class='sell-wrap']/div[@class='buy-options']/table[@class='product__params']//div[@class='selectric']//span[@class='selectric-option-text']";
 	public static final String Product_variationsColor_1 = "/html//div[@id='wrapper']/div[@class='product__page']//section//div[@class='buy-options']/table[@class='product__params']//div[@class='select type-variations']/div[1]/div[@class='selectric-items']/div/ul/li[2]/span[@class='selectric-option']";
@@ -56,6 +57,8 @@ public class ElementsBuying {
 	public static final String Product_quantityPlusAgain = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']//button[.='+']";
 	public static final String Product_quantity = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//input";
 	public static final String Product_titleFromPicture = "//img[@class='product__specs-image']";
+	public static final String Product_titleFromPopup = "/html//div[@role='dialog']//div[@class='featherlight-content-wrap']//section//h1[@class='product__title']";
+
 	public static final String Product_heron = "//div[@id='wrapper']//main[@role='main']/section[@class='notfound']//div[@class='notfound__text-title']";
 	public static final String Product_price = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']//div[@class='product__table-wrapper']/table[@class='product__params']//td[@class='product__params-sale']/span/span[@class='value']";
 	public static final String Product_discount = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']//div[@class='product__table-wrapper']/table[@class='product__params']/thead/tr[2]/td[@class='product__params-sale']/span/span[@class='value']";
@@ -65,12 +68,12 @@ public class ElementsBuying {
 
 	public static final String Product_notFound = "//div[@id='wrapper']//main[@role='main']/section[@class='notfound']//div[@class='notfound__text-title']";
 		
-	public static final String Product_noVariations = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/computer-gaming-pc-desktop-onebot-ssd-intel-4gb-ddr4-celeron-ak22-3865u-all-in-one-16-9/32843889521/";
-	public static final String Product_noVariations2 = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/onebot-g32-31-5-inch-curved-led-gaming-monitor-144hz-1920-1080p-dvi-hd-ports-displayport-1800r-immersive-curvature/32887298148/";
-	public static final String Product_noVariationsAmazon = "https://www.zipy.co.il/p/amazon/sidetrak-portable-usb-monitor-12-5-screen-attaches-to-your-laptop-for-easy-travel-efficient-usb-power-compatible-with-mac-pc-chromebook-13-17-laptops-hd-ips-display-patent-pending/B07RJYQN9K/";
-	public static final String Product_oneVariation = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/A/32958346076";
-	public static final String Product_twoVariations = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/rez-micro-usb-cable-usb-charging-cord-mobile-phone-nylon-xiaomi-android-samsung-for-hua-wei/32995752928/";
-	public static final String lessThan5_Open ="/html/body/div[@class='wrap wrap_with_mehes']//ul[@class='stores']//a[@alt='פחות מ-5 ₪ בעברית']/span[.='פחות מ-5 ₪']";
+	public static final String Product_noVariations = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/onebot-l2416-g4400-120g-ssd-4g-ddr4-1920-1080-23-8-all-in-one-computer-desktop-dual-core-all-in-one-pc-for-office-bussiness/32838774114/?utm_medium=email";
+	public static final String Product_noVariations2 = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/onebot-g32-31-5-inch-curved-led-gaming-monitor-144hz-1920-1080p-dvi-hd-ports-displayport-1800r-immersive-curvature/32887298148/?utm_medium=email";
+	public static final String Product_noVariationsAmazon = "https://www.zipy.co.il/p/amazon/sidetrak-portable-usb-monitor-12-5-screen-attaches-to-your-laptop-for-easy-travel-efficient-usb-power-compatible-with-mac-pc-chromebook-13-17-laptops-hd-ips-display-patent-pending/B07RJYQN9K/?utm_medium=email";
+	public static final String Product_oneVariation = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/A/32958346076/?utm_medium=email";
+	public static final String Product_twoVariations = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/rez-micro-usb-cable-usb-charging-cord-mobile-phone-nylon-xiaomi-android-samsung-for-hua-wei/32995752928/?utm_medium=email";
+	public static final String lessThan5_Open ="/html/body/div[@class='wrap wrap_with_mehes']//ul[@class='stores']//a/span";
 	public static final String lessThan5_dealThumbnail1 = "//*[@id=\"wrapper\"]/div[2]/main/section[2]/div[2]/div[1]/a";
 
 	public static final String Product_sortBy = "//div[@id='wrapper']//main[@role='main']/section[@class='daily m--category m--plates']//div[@class='daily__heading-sort']/div[1]";
