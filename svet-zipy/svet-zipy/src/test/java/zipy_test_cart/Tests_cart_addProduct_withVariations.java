@@ -92,6 +92,7 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 			
 			//add to the cart
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlusAgain)));
 
 			//choose another product variation - second option from the droplist - and save its name
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsColorAgain))).click();
@@ -138,6 +139,7 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 		
 		//add to the cart
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlusAgain)));
 
 		//choose the second variation again - second option from the second droplist - and save its name
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsLengthAgain))).click();	

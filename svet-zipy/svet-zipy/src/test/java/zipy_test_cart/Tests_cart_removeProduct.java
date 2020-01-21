@@ -17,7 +17,7 @@ public class Tests_cart_removeProduct extends Tests_cart_MAIN {
 	
 	//Test - removing product from the cart
 	@Test		
-	public  void Tests_cart_removeProduct_noVariations() throws Exception {
+	public  void Tests_cart_removeProduct() throws Exception {
 		System.out.println("Running test for removing product from the cart");		
 
 		//get to the required product page and save its title
@@ -27,14 +27,8 @@ public class Tests_cart_removeProduct extends Tests_cart_MAIN {
 		//add to the cart
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 
-		//back to main page and open the cart			
-		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
-		
 		//empty the cart
 		Tests_functions.emptyCart(driver);	
-		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
-		wait.until(ExpectedConditions.visibilityOf(cartFrame));
 
 		// if we managed to remove the product from the cart, it contains a message of empty cart
 		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cartIsEmpty)).isDisplayed());					
@@ -66,13 +60,13 @@ public class Tests_cart_removeProduct extends Tests_cart_MAIN {
 		//check if the cart contains the removed item  
 		boolean removedItem = driver.findElement(By.xpath(ElementsBuying.Product_cartIsEmpty)).isDisplayed();		
 		
-		//switch to the favorites window	
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_favoritesButton))).click();
-		WebElement favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame));
-		wait.until(ExpectedConditions.visibilityOf(favoritesFrame));
-		
+		// open the favorites window and save its contents
+		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
+		Thread.sleep(500);
+		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+				
 		// if we managed to remove the product, the cart won't contain its title, but the favorites will contain it:			
-		Assert.assertTrue(favoritesFrame.getText().contains(ProductTitle) && removedItem);
+		Assert.assertTrue(favoritesFrame.contains(ProductTitle) && removedItem);
 		
 		//at the end, remove the products from the favorites, for the future tests		
 		Tests_functions.emptyFavorites(driver);		
@@ -106,9 +100,7 @@ public class Tests_cart_removeProduct extends Tests_cart_MAIN {
 
 		// if we managed to return the product, its title is found in the cart:
 		Assert.assertTrue(cartFrame.getText().contains(ProductTitle));
-				
-		//at the end, remove the products from the cart, for the future tests		
-		Tests_functions.emptyCart(driver);		
+		
 	}
 	
 	
@@ -130,12 +122,13 @@ public class Tests_cart_removeProduct extends Tests_cart_MAIN {
 		
 		//add to the cart
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlusAgain)));
 
 		//choose another product variation - second option from the droplist - and save its name
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsColorAgain))).click();
-		Thread.sleep(1000);
-		WebElement variationColor_2 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_2));
-		String ProductVariation2 = variationColor_2.getText().trim();;
+		Thread.sleep(3000);
+		WebElement variationColor_2 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_3));
+		String ProductVariation2 = variationColor_2.getText().trim();
 		variationColor_2.click();
 		
 		//add to the cart again
@@ -159,10 +152,68 @@ public class Tests_cart_removeProduct extends Tests_cart_MAIN {
 		Assert.assertTrue((cartFrame.getText().contains(ProductTitle)) &&
 				(cartFrame.getText().contains(ProductVariation2)) &&
 				!(cartFrame.getText().contains(ProductVariation1)));
-		
-		//at the end, remove the product from the cart, for the future tests		
-		Tests_functions.emptyCart(driver);		
+			
 	}
 	
+	//Test - removing product from the payment page
+	@Test		
+	public  void Tests_cart_removeProduct_fromPayment() throws Exception {
+		System.out.println("Running test for removing product from the payment page");		
+
+		//get to the required product page and save its title
+		driver.get(ElementsBuying.Product_noVariations);
+		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		
+		//add to the cart and proceed to the payment
+		driver.findElement(By.xpath(ElementsBuying.PayNow_button)).click();
+
+		//remove the product
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_payment_Remove))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_paymentPopup_Remove))).click();
+
+		//reopen the cart	
+		driver.get(ElementsWebsites.Zipy_il);
+		driver.findElement(By.xpath(ElementsBuying.Product_openCart)).click();
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(ElementsBuying.Product_cartFrame))));
+				
+		// if we managed to remove the product from the cart, it contains a message of empty cart
+		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cartIsEmpty)).isDisplayed());					
+	}
+
+	//Test - removing product to favorites from the payment page
+	@Test		
+	public  void Tests_cart_removeProduct_toFavorites_fromPayment() throws Exception {
+		System.out.println("Running test for removing product to favorites from the payment page");		
+
+		//get to the required product page and save its title
+		driver.get(ElementsBuying.Product_noVariations);
+		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		
+		//add to the cart and proceed to the payment
+		driver.findElement(By.xpath(ElementsBuying.PayNow_button)).click();
+
+		//remove the product
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_payment_Remove))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_paymentPopup_moveToFavs))).click();
+
+		//reopen the cart	
+		driver.get(ElementsWebsites.Zipy_il);
+		driver.findElement(By.xpath(ElementsBuying.Product_openCart)).click();
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(ElementsBuying.Product_cartFrame))));
+
+		//check if the cart contains the removed item  
+		boolean removedItem = driver.findElement(By.xpath(ElementsBuying.Product_cartIsEmpty)).isDisplayed();		
+		
+		// open the favorites window and save its contents
+		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
+		Thread.sleep(500);
+		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+				
+		// if we managed to remove the product, the cart won't contain its title, but the favorites will contain it:			
+		Assert.assertTrue(favoritesFrame.contains(ProductTitle) && removedItem);
+		
+		//at the end, remove the products from the favorites, for the future tests		
+		Tests_functions.emptyFavorites(driver);					
+	}
 	
 }
