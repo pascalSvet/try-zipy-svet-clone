@@ -135,18 +135,34 @@ public class Tests_functions {
 		}
 	}
 	
-	// A function for open and remove one product from the cart in mobile version.
-	public static void openAndEmptyCart_mobile(WebDriver driver) throws Exception{
+	// A function for remove one product from the cart in mobile version.
+	public static void openAndRemoveFromCart_mobile(WebDriver driver) throws Exception{
 		WebDriverWait wait = new WebDriverWait(driver, 15);	
-
-		driver.get(ElementsWebsites.Zipy_il);
-		driver.findElement(By.xpath(ElementsBuying.Product_openCart)).click();
-		//wait.until(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_payment));
 		Thread.sleep(1000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_payment_Remove))).click();
+		((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_payment_Remove))).click();
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_paymentPopup_Remove))).click();
+	}
+	
+	// A function for remove one product from the cart in mobile version.
+	public static void removeFromCart_mobile(WebDriver driver) throws Exception{
+		WebDriverWait wait = new WebDriverWait(driver, 15);	
 		Thread.sleep(1000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_paymentPopup_Remove))).click();
-
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_payment_Remove))).click();
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_paymentPopup_Remove))).click();
+	}
+	
+	// A function for remove one product from the cart in mobile version.
+	public static void removeFromCart_toFavs_mobile(WebDriver driver) throws Exception{
+		WebDriverWait wait = new WebDriverWait(driver, 15);	
+		((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_payment_Remove))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_paymentPopup_moveToFavs))).click();
 	}
 	
 	// A function for emptying the favorites.
@@ -168,10 +184,25 @@ public class Tests_functions {
 		
 	}
 	
+	// A function for adding a sample product to a cart (no variations, one unit).
+	public static String addSampleProductToCart(WebDriver driver) throws Exception{
+		WebDriverWait wait = new WebDriverWait(driver, 15);	
+
+		driver.get(ElementsBuying.Product_noVariations);
+		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_plusOne)));
+
+		return ProductTitle;		
+	}
+	
 	// A function for summing two product prices.
 	public static String priceSum(WebDriver driver, String price1, String price2) throws Exception{
-		double firstPrice = Double.parseDouble(driver.findElement(By.xpath(price1)).getText());
-		double secondPrice = Double.parseDouble(driver.findElement(By.xpath(price2)).getText());
+		WebElement firstPrice1 = driver.findElement(By.xpath(price1));
+		WebElement secondPrice2 = driver.findElement(By.xpath(price2));
+		double firstPrice = Double.parseDouble(firstPrice1.getText());
+		double secondPrice = Double.parseDouble(secondPrice2.getText());
 		BigDecimal sumTemp = BigDecimal.valueOf(firstPrice).add(BigDecimal.valueOf(secondPrice));
 		String Sum = String.valueOf(sumTemp);
 		

@@ -10,7 +10,7 @@ import zipy_elements.*;
 
 public class Tests_favorites extends Tests_favs_MAIN {
 	
-	
+/*	
 	//Test - appearance of favorite-pin icon on thumbnail, on mouse hover
 	@Test		
 	public  void Tests_favorites_pinIcon_appearOnHover() throws Exception {
@@ -78,7 +78,7 @@ public class Tests_favorites extends Tests_favs_MAIN {
 		//at the end, remove the products from the favorites, for the future tests		
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
 	}
-	
+*/	
 	//Test - adding to favorites from product pop-up page
 	@Test		
 	public  void Tests_favorites_add_fromProductPopupPage() throws Exception {
@@ -104,7 +104,7 @@ public class Tests_favorites extends Tests_favs_MAIN {
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
 	}
 
-
+/*
 	//Test - adding to favorites from daiy deals thumbnail
 	@Test		
 	public  void Tests_favorites_add_fromDealsThumb() throws Exception {
@@ -223,4 +223,6 @@ public class Tests_favorites extends Tests_favs_MAIN {
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
 		
 	}
+	*/
+	
 }
