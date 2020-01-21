@@ -18,6 +18,7 @@ public class ElementsBuying {
 	public static final String ProceedToPayment_button_framed = "/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']/div[@class='featherlight-content quick-view']/div[@class='featherlight-content-wrap']//section//div[@class='product__buy']/div[@class='product__buy-buttons']/div[@class='product__buy-buttons-buy-now']/a[2]//span[@class='ico ico--arrow']";
 	public static final String ProceedToPayment_button = "/html//div[@id='wrapper']/div[2]//section/div[@class='product__body']/div[@class='product__main']//div[@class='product__buy-buttons-buy-now']/a[2]//span[@class='ico ico--arrow']";
 	public static final String Product_payment_Remove = "/html//div[@id='wrapper']/div[2]/div[2]/div[@class='user-goods-list']/div[1]/div[1]//span[@class='ico']";
+	public static final String Product_payment_Remove_mobile = "/html//div[@id='wrapper']/div[2]/div[2]/div[@class='user-goods-list']/div[1]/div//span[@class='ico']";
 	public static final String Product_paymentPopup_Remove = "//div[@id='payment_item_delete_popup']/div[@class='popup__delete']/div[4]";
 	public static final String Product_paymentPopup_moveToFavs = "//div[@id='payment_item_delete_popup']/div[@class='popup__delete']/div[3]";
 	public static final String Product_paymentPopup_back = "/html//div[@id='payment_item_delete_popup']//span[@class='ico ico--back']";
@@ -38,9 +39,16 @@ public class ElementsBuying {
 	public static final String Product_cartPay = "/html/body/div[1]/div[3]/div/div[2]//a[@href='/payment/']";
 	public static final String Product_cartIsEmpty = "/html/body/div[1]/div[3]/div/div[2]//strong[.='הסל שלך ריק.']";
 	public static final String Product_cart_finalSum = "/html/body/div[1]/div[3]/div/div[2]//span[@class='sum__price']";
+	public static final String Product_cart_finalSum_mobile = "//*[@id=\"paymentInfoForm\"]/div/div[5]/div/table/tfoot/tr/td[1]/span/span/span[1]";
 	public static final String Product_cart_oldPrice = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[2]//span[@class='price__old']";
 	public static final String Product_cart_newPrice = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//span[@class='price__current']";
-	public static final String Product_cart_quantity = "//*[@id=\"topbar\"]/div[2]/div[5]/span[2]/strong/span";
+	public static final String Product_cart_topBarQuantity = "//*[@id=\"topbar\"]/div[2]/div[5]/span[2]/strong/span";
+	public static final String Product_cart_quantity = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//input";
+	public static final String Product_cart_quantity_mobile = "/html//div[@id='wrapper']/div[2]/div[2]/div[@class='user-goods-list']/div[1]/div//input";
+	public static final String Product_cart_quantity10plus_mobile = "/html//div[@id='wrapper']/div[2]/div[2]/div[@class='user-goods-list']/div[1]/div//input";
+	public static final String Product_cart_quantityDrop = "/html//div[@id='wrapper']/div[2]/div[2]/div[@class='user-goods-list']/div[1]/div//div[@class='counter']/a";
+	public static final String Product_cart_quantityDrop_1 = "/html//div[@role='dialog']//div[@id='popup_cart-count']/div[@class='cart-count']/a[1]";
+	public static final String Product_cart_quantityDrop_10 = "/html//div[@role='dialog']//div[@id='popup_cart-count']/div[@class='cart-count']/a[10]";
 
 	//public static final String Product_favoritesButton = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]";
 	public static final String Product_favoritesButton = "/html//div[@id='topbar']//span[@class='ico ico--pin']";
@@ -61,9 +69,9 @@ public class ElementsBuying {
 	public static final String Product_variationsLength_1 = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']//div[@class='buy-options']/table[@class='product__params']/tbody/tr[2]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric-items']/div/ul/li[2]//span[@class='selectric-option-text']";
 	public static final String Product_variationsLength_2 = "/html//div[@id='wrapper']/div[3]//section//div[@class='buy-options']/table[@class='product__params']//div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric-items']/div/ul/li[3]/span[@class='selectric-option']";
 	public static final String Product_plusOne = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']//div[@class='product__buy-buttons-buy-now']/a[1]/span[@class='button-buy-amount-text']";
+	public static final String Product_quantityManual_mobile = "/html//input[@id='accessibility-buy-product-amount']";
 	public static final String Product_quantityPlus = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']//div[@class='product__counter']/button[2]";
 	public static final String Product_quantityPlusAgain = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']//div[@class='product__counter']/button[2]";
-	public static final String Product_quantity = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//input";
 	public static final String Product_titleFromPicture = "//img[@class='product__specs-image']";
 	public static final String Product_titleFromPopup = "/html//div[@role='dialog']//div[@class='featherlight-content-wrap']//section//h1[@class='product__title']";
 	public static final String Product_added = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='product__buy-buttons-buy-now']/a[2]//span[@class='amount-text']";
@@ -81,9 +89,10 @@ public class ElementsBuying {
 	public static final String Product_noVariationsAmazon = "https://www.zipy.co.il/p/amazon/sidetrak-portable-usb-monitor-12-5-screen-attaches-to-your-laptop-for-easy-travel-efficient-usb-power-compatible-with-mac-pc-chromebook-13-17-laptops-hd-ips-display-patent-pending/B07RJYQN9K/?utm_medium=email";
 	public static final String Product_oneVariation = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/A/32958346076/?utm_medium=email";
 	public static final String Product_twoVariations = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/rez-micro-usb-cable-usb-charging-cord-mobile-phone-nylon-xiaomi-android-samsung-for-hua-wei/32995752928/?utm_medium=email";
+	//no variations and no delivery : https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/sleeping-anti-schnarchen-nase-clip-silicone-magnetic-anti-snoring-nose-clips-breathing-stop-snore-apnea-antisnoring-clip-device/32952209706/?fd=
+
 	public static final String lessThan5_Open ="/html/body/div[@class='wrap wrap_with_mehes']//ul[@class='stores']//a/span";
 	public static final String lessThan5_dealThumbnail1 = "//*[@id=\"wrapper\"]/div[2]/main/section[2]/div[2]/div[1]/a";
-
 	public static final String Product_sortBy = "//div[@id='wrapper']//main[@role='main']/section[@class='daily m--category m--plates']//div[@class='daily__heading-sort']/div[1]";
 	public static final String Product_toysTitle = "/html//div[@id='wrapper']//main[@role='main']/div[@class='elementor elementor-21138']//div[@class='elementor-section-wrap']/section[1]//div[@class='elementor-row']/div//div[@class='elementor-element elementor-element-3f21537b elementor-widget elementor-widget-heading']//h2[@class='elementor-heading-title elementor-size-default']";
 	

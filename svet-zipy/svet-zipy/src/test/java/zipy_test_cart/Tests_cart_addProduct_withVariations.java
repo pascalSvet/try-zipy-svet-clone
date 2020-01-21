@@ -179,7 +179,7 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 		WebElement cartFrame = Tests_functions.openCart(driver);
 
 		// if we managed to add the product twice, its quantity in the cart is 2:
-		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_quantity)).getAttribute("value").equals("2"));	
+		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity)).getAttribute("value").equals("2"));	
 		
 	}
 		
@@ -199,7 +199,7 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 		WebElement cartFrame = Tests_functions.openCart(driver);
 
 		// if we managed to add the product twice, its quantity in the cart is 2:
-		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_quantity)).getAttribute("value").equals("2"));	
+		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity)).getAttribute("value").equals("2"));	
 		
 
 	}
@@ -221,7 +221,7 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 		WebElement cartFrame = Tests_functions.openCart(driver);
 
 		// if we managed to add the product and then add it twice again, its quantity in the cart is 3:
-		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_quantity)).getAttribute("value").equals("3"));
+		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity)).getAttribute("value").equals("3"));
 
 	}
 	
@@ -242,13 +242,13 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
 		Thread.sleep(2000);
 		//change the quantity in the cart manually to 2
-		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsBuying.Product_quantity))).click()
+		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity))).click()
 				.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys("2",Keys.ENTER).build().perform();
 		
 		WebElement cartFrame = Tests_functions.openCart(driver);
 
 		// if we managed to add the product twice, its quantity in the cart is 2:
-		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_quantity)).getAttribute("value").equals("2"));
+		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity)).getAttribute("value").equals("2"));
 		
 
 	}

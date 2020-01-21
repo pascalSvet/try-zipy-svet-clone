@@ -221,18 +221,19 @@ public class Tests_cart_price extends Tests_cart_MAIN {
 		//reopen the cart and change the quantity manually to "1"
 		driver.get(ElementsWebsites.Zipy_il);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();	
-		String FirstSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
+		WebElement Sum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum));
+		String FirstSum = Sum.getText();
 		Thread.sleep(500);
-		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsBuying.Product_quantity))).click()
+		
+		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity))).click()
 				.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys("1",Keys.ENTER).build().perform();
 		
-		WebElement Sum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum));
 		new WebDriverWait(driver, 30).until(ExpectedConditions.not(ExpectedConditions.
 				textToBePresentInElement(Sum, FirstSum)));
 		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
 
 		// the final sum supposed to be of 1 unit only :
-		Assert.assertTrue(FinalSum.contains(price));
+		Assert.assertTrue(FinalSum.contains(price) && !FirstSum.equals(FinalSum));
 						
 	}
 	

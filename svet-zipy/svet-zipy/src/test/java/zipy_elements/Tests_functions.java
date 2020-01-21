@@ -121,18 +121,32 @@ public class Tests_functions {
 		return(cartFrame);
 	}
 	
-	// A function for emptying the cart.
+	// A function for open and remove one product from the cart.
 	public static void openAndEmptyCart(WebDriver driver) throws Exception{
 		//back to main page and open the cart			
 		driver.get(ElementsWebsites.Zipy_il);
 		WebDriverWait wait = new WebDriverWait(driver, 15);	
 		
-		if(!driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity)).getText().equals("0")) {
+		if(!driver.findElement(By.xpath(ElementsBuying.Product_cart_topBarQuantity)).getText().equals("0")) {
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
 			WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
 			wait.until(ExpectedConditions.visibilityOf(cartFrame));
 			Tests_functions.emptyCart(driver);
 		}
+	}
+	
+	// A function for open and remove one product from the cart in mobile version.
+	public static void openAndEmptyCart_mobile(WebDriver driver) throws Exception{
+		WebDriverWait wait = new WebDriverWait(driver, 15);	
+
+		driver.get(ElementsWebsites.Zipy_il);
+		driver.findElement(By.xpath(ElementsBuying.Product_openCart)).click();
+		//wait.until(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_payment));
+		Thread.sleep(1000);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_payment_Remove))).click();
+		Thread.sleep(1000);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_paymentPopup_Remove))).click();
+
 	}
 	
 	// A function for emptying the favorites.
@@ -161,7 +175,7 @@ public class Tests_functions {
 		BigDecimal sumTemp = BigDecimal.valueOf(firstPrice).add(BigDecimal.valueOf(secondPrice));
 		String Sum = String.valueOf(sumTemp);
 		
-		while(Sum.charAt(Sum.length() - 1) == '0' || Sum.charAt(Sum.length() - 1) == '.') {
+		while((Sum.charAt(Sum.length() - 1) == '0' && Sum.contains(".")) || Sum.charAt(Sum.length() - 1) == '.') {
 			Sum = Sum.substring(0, Sum.length() - 1);			
 		}
 		return Sum;
@@ -175,11 +189,23 @@ public class Tests_functions {
 		BigDecimal sumTemp = BigDecimal.valueOf(firstPrice).add(BigDecimal.valueOf(secondPrice));
 		String Sum = String.valueOf(sumTemp);
 
-		while(Sum.charAt(Sum.length() - 1) == '0' || Sum.charAt(Sum.length() - 1) == '.') {
+		while((Sum.charAt(Sum.length() - 1) == '0' && Sum.contains(".")) || Sum.charAt(Sum.length() - 1) == '.') {
 			Sum = Sum.substring(0, Sum.length() - 1);			
 		}
 		return Sum;
 	}
+	
+	// A function for multiplying string.
+		public static String stringMultiply(WebDriver driver, String price1, int num) throws Exception{
+			double firstPrice = Double.parseDouble(price1);
+			BigDecimal multTemp = BigDecimal.valueOf(firstPrice).multiply(BigDecimal.valueOf(num));
+			String Mult = String.valueOf(multTemp);
+
+			while((Mult.charAt(Mult.length() - 1) == '0' && Mult.contains(".")) || Mult.charAt(Mult.length() - 1) == '.') {
+				Mult = Mult.substring(0, Mult.length() - 1);			
+			}
+			return Mult;
+		}
 	
 	
 	// A function for choosing color and size variations, if exist, in product frame.

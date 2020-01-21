@@ -49,14 +49,22 @@ import zipy_elements.*;
 	@Before
 	public void startCartEmpty() throws Exception {	
 		//at the end, remove the product from the cart, for the future tests
-		Tests_functions.openAndEmptyCart(driver);	
+		try {
+			Tests_functions.openAndEmptyCart(driver);	
+		}
+		catch(Exception e){			
+		}
 	}
 	
 	@After
 	public void endCartEmpty() throws Exception {	
 		//at the end, remove the product from the cart, for the future tests
-		if(!driver.findElements(By.xpath(ElementsBuying.Product_cartRemove)).isEmpty()) {
-			driver.findElement(By.xpath(ElementsBuying.Product_cartRemove)).click();
+		try {
+			if(!driver.findElements(By.xpath(ElementsBuying.Product_cartRemove)).isEmpty()) {
+				driver.findElement(By.xpath(ElementsBuying.Product_cartRemove)).click();
+			}
+		}
+		catch(Exception e){			
 		}
 	}
 	

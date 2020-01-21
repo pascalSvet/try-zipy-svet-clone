@@ -79,6 +79,7 @@ public static final String TestZipy_il_lessThan5 = "https://zipy:zipy@www.test.z
 public static final String DevZipy_il_deals = "https://zipy:zipy@www.dev.zipy.co.il/deals/?utm_medium=email";
 public static final String DevZipy_il_lessThan5 = "https://zipy:zipy@www.dev.zipy.co.il/fiveshekel/?utm_medium=email";
 
+public static final String Zipy_il_payment = "https://www.zipy.co.il/payment/";			
 
 
 
