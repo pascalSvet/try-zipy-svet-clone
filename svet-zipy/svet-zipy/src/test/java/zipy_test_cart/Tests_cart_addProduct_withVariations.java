@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
@@ -94,7 +95,7 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 
 			//choose another product variation - second option from the droplist - and save its name
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsColorAgain))).click();
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			WebElement variationColor_2 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_3));
 			String ProductVariation2 = variationColor_2.getText().trim();
 			variationColor_2.click();
@@ -109,7 +110,8 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 							(cartFrame.getText().contains(ProductVariation2)));
 							
 			//at the end, remove the product from the cart, for the future tests
-			driver.findElement(By.xpath(ElementsBuying.Product_cartRemove)).click();
+			Tests_functions.emptyCart(driver);
+
 		}	
 	
 			
@@ -156,10 +158,10 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 						(cartFrame.getText().contains(ProductVariation3)));
 						
 		//at the end, remove the product from the cart, for the future tests
-		driver.findElement(By.xpath(ElementsBuying.Product_cartRemove)).click();
+		Tests_functions.emptyCart(driver);
 		}		
 		
-		
+	
 	//Test - adding twice the same product to the cart, using plus-one button  
 	@Test		
 	public  void Tests_cart_addProduct_plusOne() throws Exception {
@@ -177,8 +179,6 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 		// if we managed to add the product twice, its quantity in the cart is 2:
 		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_quantity)).getAttribute("value").equals("2"));	
 		
-		//at the end, remove the product from the cart, for the future tests
-		driver.findElement(By.xpath(ElementsBuying.Product_cartRemove)).click();
 	}
 		
 	
@@ -199,8 +199,7 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 		// if we managed to add the product twice, its quantity in the cart is 2:
 		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_quantity)).getAttribute("value").equals("2"));	
 		
-		//at the end, remove the product from the cart, for the future tests
-		driver.findElement(By.xpath(ElementsBuying.Product_cartRemove)).click();
+
 	}
 	
 		
@@ -221,9 +220,7 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 
 		// if we managed to add the product and then add it twice again, its quantity in the cart is 3:
 		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_quantity)).getAttribute("value").equals("3"));
-		
-		//at the end, remove the product from the cart, for the future tests
-		driver.findElement(By.xpath(ElementsBuying.Product_cartRemove)).click();
+
 	}
 	
 	
@@ -251,8 +248,7 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 		// if we managed to add the product twice, its quantity in the cart is 2:
 		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_quantity)).getAttribute("value").equals("2"));
 		
-		//at the end, remove the product from the cart, for the future tests
-		driver.findElement(By.xpath(ElementsBuying.Product_cartRemove)).click();
+
 	}
 	
 
