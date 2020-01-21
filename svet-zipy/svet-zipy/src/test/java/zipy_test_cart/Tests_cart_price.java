@@ -22,25 +22,19 @@ public class Tests_cart_price extends Tests_cart_MAIN {
 	public  void Tests_cart_price_includesDelivery() throws Exception {
 		System.out.println("Running test for checking the final sum in the cart includes the delivery ");		
 
-		//get to the required product page and save the sum of its price and delivery price
+		//get to the required product page and save the sum of its price and delivery price/
 		driver.get(ElementsBuying.Product_noVariations);
 		String Sum = Tests_functions.priceSum(driver,ElementsBuying.Product_price,ElementsBuying.Product_delivery).trim();
 
 
 		//add to the cart
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		Tests_functions.openCart(driver);
+		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
 
-		//back to main page and open the cart			
-		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
-		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
-		wait.until(ExpectedConditions.visibilityOf(cartFrame));
-		
 		// if the prices added correctly, the final price will be the sum of original price plus delivery :
-		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText().contains(Sum));
-		
-		//at the end, remove the product from the cart, for the future tests		
-		Tests_functions.emptyCart(driver);				
+		Assert.assertTrue(FinalSum.contains(Sum));
+					
 	}
 	
 
@@ -61,18 +55,13 @@ public class Tests_cart_price extends Tests_cart_MAIN {
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 		Thread.sleep(3000);
 		String priceAfterDiscount = driver.findElement(By.xpath(ElementsBuying.Product_discount)).getText();	
-
-		//back to main page and open the cart			
-		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
-		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
-		wait.until(ExpectedConditions.visibilityOf(cartFrame));
+		Tests_functions.openCart(driver);
+		
+		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
 		
 		// if the prices added correctly, the price after the discount will be the final sum	
-		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText().contains(priceAfterDiscount));
-					
-		//at the end, remove the products from the cart, for the future tests		
-		Tests_functions.emptyCart(driver);		
+		Assert.assertTrue(FinalSum.contains(priceAfterDiscount));
+						
 	}
 
 	
@@ -99,15 +88,11 @@ public class Tests_cart_price extends Tests_cart_MAIN {
 		
 		//the sum of both products
 		String Sum = Tests_functions.stringSum(driver,price1,price2).trim();
-				
-		//back to main page and open the cart			
-		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
-		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
-		wait.until(ExpectedConditions.visibilityOf(cartFrame));
-		
+		Tests_functions.openCart(driver);
+		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
+
 		// if the prices added correctly, the final price will be the sum of two products	
-		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText().contains(Sum));
+		Assert.assertTrue(FinalSum.contains(Sum));
 					
 		//at the end, remove the products from the cart, for the future tests		
 		Tests_functions.emptyCart(driver);		
@@ -132,18 +117,12 @@ public class Tests_cart_price extends Tests_cart_MAIN {
 						
 		//add to the cart 
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		Tests_functions.openCart(driver);
+		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
 
-		//back to main page and open the cart			
-		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
-		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
-		wait.until(ExpectedConditions.visibilityOf(cartFrame));
-		
 		// if the prices added correctly, the final price will be the sum of two units
-		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText().contains(Sum));
-					
-		//at the end, remove the products from the cart, for the future tests		
-			Tests_functions.emptyCart(driver);		
+		Assert.assertTrue(FinalSum.contains(Sum));
+						
 		}
 		
 	
@@ -163,7 +142,8 @@ public class Tests_cart_price extends Tests_cart_MAIN {
 		
 		//add to the cart 
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
-		
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlusAgain)));
+
 		//choose another product variation - second option from the droplist - and save its name
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsColorAgain))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsColor_3))).click();;
@@ -175,15 +155,11 @@ public class Tests_cart_price extends Tests_cart_MAIN {
 		
 		//add to the cart 
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
-				
-		//back to main page and open the cart			
-		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
-		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
-		wait.until(ExpectedConditions.visibilityOf(cartFrame));
-		
+		Tests_functions.openCart(driver);
+		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
+
 		// if the prices added correctly, the final sum	includes the prices of all variations
-		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText().contains(Sum));
+		Assert.assertTrue(FinalSum.contains(Sum));
 					
 		//at the end, remove the products from the cart, for the future tests		
 		Tests_functions.emptyCart(driver);		
@@ -216,26 +192,22 @@ public class Tests_cart_price extends Tests_cart_MAIN {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
 		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_cartRemove))).click();
-			
-		//back to main page and open the cart again
-		driver.get(ElementsWebsites.Zipy_il);
 		Thread.sleep(500);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
-		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
-		wait.until(ExpectedConditions.visibilityOf(cartFrame));
-		
+		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
+
 		// if the prices added correctly, the final price will be of the second product only	
-		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText().contains(price2));
-					
+		Assert.assertTrue(FinalSum.contains(price2));
+		
 		//at the end, remove the products from the cart, for the future tests		
-		Tests_functions.emptyCart(driver);		
+		Tests_functions.openAndEmptyCart(driver);	
+							
 	}
 	
 	
 	//Test - checking the final sum in the cart affected by changing the quantity in the cart
 	@Test		
 	public  void Tests_cart_price_changeQuantity() throws Exception {
-		System.out.println("Running test for checking the final sum in the cart affected by by changing the quantity");		
+		System.out.println("Running test for checking the final sum in the cart affected by changing the quantity in the cart");		
 
 		//get to the required product page and save its price
 		driver.get(ElementsBuying.Product_noVariations);
@@ -249,19 +221,19 @@ public class Tests_cart_price extends Tests_cart_MAIN {
 		//reopen the cart and change the quantity manually to "1"
 		driver.get(ElementsWebsites.Zipy_il);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();	
+		String FirstSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
+		Thread.sleep(500);
 		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsBuying.Product_quantity))).click()
 				.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys("1",Keys.ENTER).build().perform();
 		
-		//back to main page and open the cart again		
-		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
-		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
-		wait.until(ExpectedConditions.visibilityOf(cartFrame));
-		
+		WebElement Sum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum));
+		new WebDriverWait(driver, 30).until(ExpectedConditions.not(ExpectedConditions.
+				textToBePresentInElement(Sum, FirstSum)));
+		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
+
 		// the final sum supposed to be of 1 unit only :
-		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText().contains(price));
-		
-		//at the end, remove the product from the cart, for the future tests		
-		Tests_functions.emptyCart(driver);				
+		Assert.assertTrue(FinalSum.contains(price));
+						
 	}
+	
 }

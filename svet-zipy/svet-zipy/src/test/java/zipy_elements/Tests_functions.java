@@ -160,6 +160,10 @@ public class Tests_functions {
 		double secondPrice = Double.parseDouble(driver.findElement(By.xpath(price2)).getText());
 		BigDecimal sumTemp = BigDecimal.valueOf(firstPrice).add(BigDecimal.valueOf(secondPrice));
 		String Sum = String.valueOf(sumTemp);
+		
+		while(Sum.charAt(Sum.length() - 1) == '0' || Sum.charAt(Sum.length() - 1) == '.') {
+			Sum = Sum.substring(0, Sum.length() - 1);			
+		}
 		return Sum;
 	}
 		
@@ -170,6 +174,10 @@ public class Tests_functions {
 		double secondPrice = Double.parseDouble(price2);
 		BigDecimal sumTemp = BigDecimal.valueOf(firstPrice).add(BigDecimal.valueOf(secondPrice));
 		String Sum = String.valueOf(sumTemp);
+
+		while(Sum.charAt(Sum.length() - 1) == '0' || Sum.charAt(Sum.length() - 1) == '.') {
+			Sum = Sum.substring(0, Sum.length() - 1);			
+		}
 		return Sum;
 	}
 	
