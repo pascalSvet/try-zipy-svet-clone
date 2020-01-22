@@ -18,7 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import zipy_elements.*;
 
-public class Tests_recommendedThumbs_il extends Tests_dailyDealsThumbs_MAIN {
+public class Tests_dailyDealsThumbs_il extends Tests_dailyDealsThumbs_MAIN {
 	
 	
 	//Test - opening thumbnails in dailyDeal (Israel - aliExpress)

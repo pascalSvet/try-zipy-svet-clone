@@ -1,4 +1,4 @@
-package zipy_test_categories;
+package zipy_test_catalogs;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.AfterClass;
@@ -10,17 +10,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import zipy_elements.*;
 	
-	public class Tests_categories_MAIN {
+	public class Tests_catalogs_MAIN {
 	
 	static WebDriver driver;
 	static boolean errorCaught;
 	static Boolean logged;
 	static WebDriverWait wait;
+	static int counter;
 	
 	@BeforeClass
 	public static void openDriver() throws Exception {	
 		
-		
+		counter = 0;
 
 		errorCaught = false;
 		System.setProperty("webdriver.chrome.driver","src/test/resources/chromedriver.exe");
@@ -31,7 +32,8 @@ import zipy_elements.*;
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
 		
 		//open the main site and close the pop-up, so it won't appear in next tabs
-		driver.get("https://www.zipy.co.il");
+		
+
 		//Tests_functions.logIn(driver);
 	
 	}
@@ -44,12 +46,6 @@ import zipy_elements.*;
 		driver.quit();			 
 	}
 	
-	/*
-	@AfterClass		
-	public static void killDriverProcess() throws IOException, InterruptedException {		
-        Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");	// Killing the chromedriver process in the end of the test.
-        Thread.sleep(500); 
-        
-	}*/
+	
 
 }

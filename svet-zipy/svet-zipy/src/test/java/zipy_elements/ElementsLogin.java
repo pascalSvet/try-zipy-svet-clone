@@ -4,6 +4,8 @@ public class ElementsLogin {
 	
 	// login and sign-up Elements:
 	public static final String Popup_welcome_close = "//button[@title='Close']";	
+	public static final String Popup_welcome_close_gr = "//div[@id='tucson-body']/a[@title='Close']";	
+
 	public static final String Popup_coockies_close = "/html/body//div[@role='dialog']//div[@class='cc-actions']/a[1]";
 	public static final String ZipyLogo = "/html/body//a[@title='Zipy - Απλές αγορές']/span[1]";
 
@@ -17,6 +19,12 @@ public class ElementsLogin {
 	public static final String sideCategory1_1 = "/html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[1]/div/div/div[1]/div[2]/div[1]";
 	public static final String sideCategoryUp1 = "/html//div[@id='topbar']/div[@class='default']//span[@class='topbar-catalogue__btn_icon']";
 	public static final String sideCategoryUp1_1 = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[1]/div/div/div[1]/div[2]/div[1]";
+	public static final String sideCategoryi = "/html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[";
+	///html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[i]
+	public static final String sideCategoryi_jStart = "/html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[";
+	public static final String sideCategoryi_jMiddle = "]/div/div/div[";
+	public static final String sideCategoryi_jEnd = "]/div[2]/div[";
+	///html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[1]/div/div/div[j]/div[2]/div[i]
 
 	public static final String Login_button = "/html//div[@id='topbar']/div[@class='default']/div[4]/div[2]/span[@class='topbar__menu-item-link']/span[@class='topbar__menu-item-link--dotted']";
 	public static final String Login_button_Dev = "/html//div[@id='topbar']/div[@class='default']/div[3]/div[2]/span[@class='topbar__menu-item-link']/span[@class='topbar__menu-item-link--dotted']";

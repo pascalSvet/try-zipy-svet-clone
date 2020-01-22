@@ -17,17 +17,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import zipy_elements.*;
 
-public class Tests_recommendedThumbs_cy extends Tests_dailyDealsThumbs_MAIN {
+public class Tests_dailyDealsThumbs_py extends Tests_dailyDealsThumbs_MAIN {
+			
 	
-		
-	//Test - opening thumbnails in dailyDeal (Cypress - aliExpress)
+	//Test - opening thumbnails in dailyDeal (Portugal - aliExpress)
 	@Test		
-	public  void Tests_cy_dailyDealThumbs() throws Exception {
-		System.out.println("Running test for Cypress site - aliExpress - dailyDeal thumbnails" );		
+	public  void Tests_py_dailyDealThumbs() throws Exception {
+		System.out.println("Running test for Portugal site - aliExpress - dailyDeal thumbnails" );		
 
 		//open the site
 		Thread.sleep(1000);
-		driver.get(ElementsWebsites.Zipy_cy);
+		driver.get(ElementsWebsites.Zipy_py);
 		String winHandleBefore = driver.getWindowHandle();
 		Thread.sleep(2000);
 		
@@ -39,14 +39,14 @@ public class Tests_recommendedThumbs_cy extends Tests_dailyDealsThumbs_MAIN {
 		Assert.assertFalse(fails);
 	}
 	
-	//Test - opening thumbnails in dailyDeal (Cypress - ebay)
+	//Test - opening thumbnails in dailyDeal (Portugal - ebay)
 	@Test		
-	public  void Tests_cy_dailyDealThumbs_ebay() throws Exception {
-		System.out.println("Running test for Cypress site - ebay - dailyDeal thumbnails" );		
+	public  void Tests_py_dailyDealThumbs_ebay() throws Exception {
+		System.out.println("Running test for Portugal site - ebay - dailyDeal thumbnails" );		
 
 		//open the site
 		Thread.sleep(1000);
-		driver.get(ElementsWebsites.Zipy_cy_ebay);
+		driver.get(ElementsWebsites.Zipy_py_ebay);
 		String winHandleBefore = driver.getWindowHandle();
 		Thread.sleep(2000);
 
@@ -58,14 +58,14 @@ public class Tests_recommendedThumbs_cy extends Tests_dailyDealsThumbs_MAIN {
 		Assert.assertFalse(fails);
 	}
 	
-	//Test - opening thumbnails in dailyDeal (Cypress - amazon)
+	//Test - opening thumbnails in dailyDeal (Portugal - amazon)
 	@Test		
-	public  void Tests_cy_dailyDealThumbs_amazon() throws Exception {
-		System.out.println("Running test for Cypress site - amazon - dailyDeal thumbnails" );		
+	public  void Tests_py_dailyDealThumbs_amazon() throws Exception {
+		System.out.println("Running test for Portugal site - amazon - dailyDeal thumbnails" );		
 
 		//open the site
 		Thread.sleep(1000);
-		driver.get(ElementsWebsites.Zipy_cy_amazon);
+		driver.get(ElementsWebsites.Zipy_py_amazon);
 		String winHandleBefore = driver.getWindowHandle();
 		Thread.sleep(2000);		
 
@@ -77,5 +77,4 @@ public class Tests_recommendedThumbs_cy extends Tests_dailyDealsThumbs_MAIN {
 		Assert.assertFalse(fails);
 	}
 	
-
 }

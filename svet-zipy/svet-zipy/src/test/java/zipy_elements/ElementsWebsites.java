@@ -8,12 +8,15 @@ public class ElementsWebsites {
 // Websites:
 public static final String Zipy_il = "https://www.zipy.co.il/?utm_medium=email";			//Israel
 public static final String Zipy_ilRu = "https://ru.zipy.co.il/?utm_medium=email";			//Israel russian
-public static final String Zipy_il_ali = "https://www.https://www.zipy.co.il/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/?utm_medium=email";				//Israel
+public static final String Zipy_il_ali = "https://www.https://www.zipy.co.il/אליאקספרס/?utm_medium=email";				//Israel
 public static final String Zipy_il_amazon = "https://www.https://www.https://www.zipy.co.il/amazon/?utm_medium=email";		
+public static final String Zipy_il_withPopup = "https://www.zipy.co.il/";			
 
 public static final String Zipy_gr = "https://www.zipy.gr/?utm_medium=email";				//Greece
 public static final String Zipy_gr_ebay = "https://www.zipy.gr/ebay/?utm_medium=email";
 public static final String Zipy_gr_amazon = "https://www.zipy.gr/amazon/?utm_medium=email";
+public static final String Zipy_gr_withPopup = "https://www.zipy.gr/";				
+
 public static final String Zipy_cy = "https://www.zipy.com.cy/?utm_medium=email";			//Cypress
 public static final String Zipy_cy_ebay = "https://www.zipy.com.cy/ebay/?utm_medium=email";		
 public static final String Zipy_cy_amazon = "https://www.zipy.com.cy/amazon/?utm_medium=email";		
@@ -81,6 +84,9 @@ public static final String DevZipy_il_lessThan5 = "https://zipy:zipy@www.dev.zip
 
 public static final String Zipy_il_payment = "https://www.zipy.co.il/payment/";			
 
-
+public static final String Zipy_il_aliButton = "/html/body//ul[@class='stores']/li[2]/a/span[@class='ico ico--shop-aliexpress']";
+public static final String Zipy_il_amazonButton = "/html/body//ul[@class='stores']/li[3]/a/span[@class='ico ico--shop-amazon']";
+public static final String Zipy_gr_aliButton = "/html/body//ul[@class='stores']//a/span[.='AliExpress']";
+public static final String Zipy_gr_amazonButton = "/html/body//ul[@class='stores']/li[3]/a/span[.='Amazon']";
 
 }

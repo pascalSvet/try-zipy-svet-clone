@@ -43,5 +43,10 @@ public class ElementsRecommended {
 	public static final String category_3 = "//div[@id='wrapper']//main[@role='main']/section/div[3]/div[3]";
 	public static final String category_3_title = "//div[@id='wrapper']//main[@role='main']/section/div[3]/div[3]/a";
 	public static final String category_3_PinThumbIcon = "//div[@id='wrapper']//main[@role='main']/section/div[3]/div[3]/div/div[@class='daily__item-info']/button[@class='daily__item-pin']";
-
+	public static final String category_linksStart = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[";
+	// + num + "]/div//*[@href]
+	public static final String category_mainCategoryStart = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[";
+	//  + num + "]/a/span[2]"
+	
+	
 }

@@ -78,13 +78,15 @@ public class Tests_functions {
 			}
 	}
 	
-	//close the pop-up window if exist
-		public static void closePopUpForce(WebDriver driver) throws Exception{
-			WebDriverWait wait = new WebDriverWait(driver, 20);
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.Popup_welcome_close))).click();
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(ElementsLogin.Popup_welcome_close)));
-				
-		}
+	//close the pop-up window if exist (in greece version)
+	public static void closePopUp_gr(WebDriver driver) throws Exception{
+			if (driver.findElements(By.xpath(ElementsLogin.Popup_welcome_close_gr)).size() != 0){
+				driver.findElement(By.xpath(ElementsLogin.Popup_welcome_close_gr)).click();
+				new WebDriverWait(driver, 10).
+				until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(ElementsLogin.Popup_welcome_close_gr)));
+			}
+	}
+	
 	
 	//open main website and close the pop-up window if exist
 	public static void openWebsiteAndClosePopUp(WebDriver driver, String website) throws Exception{
@@ -311,7 +313,7 @@ public class Tests_functions {
 		//open all thumbnails in a new tab each
 		for(int i=1; i <= thumbs; i++) {
 			WebElement webel = driver.findElement(By.xpath(element + String.valueOf(i) + "]"));	
-			new WebDriverWait(driver, 5).until( ExpectedConditions.elementToBeClickable(webel));
+ 			new WebDriverWait(driver, 5).until( ExpectedConditions.elementToBeClickable(webel));
 			new Actions (driver).keyDown(Keys.CONTROL).moveToElement(webel).click().build().perform();
 		}	
 		

@@ -17,17 +17,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import zipy_elements.*;
 
-public class Tests_recommendedThumbs_py extends Tests_dailyDealsThumbs_MAIN {
-			
-	
-	//Test - opening thumbnails in dailyDeal (Portugal - aliExpress)
+public class Tests_dailyDealsThumbs_gr extends Tests_dailyDealsThumbs_MAIN {
+
+
+	//Test - opening thumbnails in dailyDeal (Greece - aliExpress)
 	@Test		
-	public  void Tests_py_dailyDealThumbs() throws Exception {
-		System.out.println("Running test for Portugal site - aliExpress - dailyDeal thumbnails" );		
+	public  void Tests_gr_dailyDealThumbs() throws Exception {
+		System.out.println("Running test for Greece site - aliExpress - dailyDeal thumbnails" );		
 
 		//open the site
 		Thread.sleep(1000);
-		driver.get(ElementsWebsites.Zipy_py);
+		driver.get(ElementsWebsites.Zipy_gr);
 		String winHandleBefore = driver.getWindowHandle();
 		Thread.sleep(2000);
 		
@@ -39,14 +39,14 @@ public class Tests_recommendedThumbs_py extends Tests_dailyDealsThumbs_MAIN {
 		Assert.assertFalse(fails);
 	}
 	
-	//Test - opening thumbnails in dailyDeal (Portugal - ebay)
+	//Test - opening thumbnails in dailyDeal (Greece - ebay)
 	@Test		
-	public  void Tests_py_dailyDealThumbs_ebay() throws Exception {
-		System.out.println("Running test for Portugal site - ebay - dailyDeal thumbnails" );		
+	public  void Tests_gr_dailyDealThumbs_ebay() throws Exception {
+		System.out.println("Running test for Greece site - ebay - dailyDeal thumbnails" );		
 
 		//open the site
 		Thread.sleep(1000);
-		driver.get(ElementsWebsites.Zipy_py_ebay);
+		driver.get(ElementsWebsites.Zipy_gr_ebay);
 		String winHandleBefore = driver.getWindowHandle();
 		Thread.sleep(2000);
 
@@ -58,14 +58,14 @@ public class Tests_recommendedThumbs_py extends Tests_dailyDealsThumbs_MAIN {
 		Assert.assertFalse(fails);
 	}
 	
-	//Test - opening thumbnails in dailyDeal (Portugal - amazon)
+	//Test - opening thumbnails in dailyDeal (Greece - amazon)
 	@Test		
-	public  void Tests_py_dailyDealThumbs_amazon() throws Exception {
-		System.out.println("Running test for Portugal site - amazon - dailyDeal thumbnails" );		
+	public  void Tests_gr_dailyDealThumbs_amazon() throws Exception {
+		System.out.println("Running test for Greece site - amazon - dailyDeal thumbnails" );		
 
 		//open the site
 		Thread.sleep(1000);
-		driver.get(ElementsWebsites.Zipy_py_amazon);
+		driver.get(ElementsWebsites.Zipy_gr_amazon);
 		String winHandleBefore = driver.getWindowHandle();
 		Thread.sleep(2000);		
 
