@@ -32,12 +32,9 @@ public class Tests_buy_MAIN {
 		wait = new WebDriverWait(driver, 15);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS); 
-		
 
-
-		//enter site and close the pop-up window if exist
-		Tests_functions.openWebsiteAndClosePopUp(driver,ElementsWebsites.Zipy_il);
-
+		//enter site 
+		driver.get(ElementsWebsites.Zipy_il);
 		
 	}
 	
@@ -48,8 +45,7 @@ public class Tests_buy_MAIN {
 	
 	@AfterClass		
 	public static void killDriverProcess() throws IOException {		
-        Runtime.getRuntime().exec("taskkill /F /IM chromedriver.exe /T");	// Killing the chromedriver process in the end of the test.
-	 
+		driver.quit();
 	}
 
 }

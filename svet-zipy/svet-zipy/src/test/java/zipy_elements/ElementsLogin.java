@@ -12,7 +12,9 @@ public class ElementsLogin {
 	public static final String UserTopBar_close = "//span[@class='topbar__forms-close']";
 	public static final String UserTopBar = "/html//div[@id='topbar']/div[@class='default']//span[@class='topbar__user-link-no-name']";
 	
-	public static final String Username = "vikos120989@yandex.com";	
+	public static final String EmailCredit = "vikos120989@yandex.com";	
+	public static final String PasswordCredit = "123456";
+	public static final String Email = "test@mail.com";
 	public static final String Password = "123456";	
 
 	public static final String sideCategory1 = "/html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[1]";
@@ -73,7 +75,6 @@ public class ElementsLogin {
 	public static final String PhoneNumber_wiredIllegal = "012345678"; 
 	public static final String PhoneNumber_mobileIllegal = "0111111111"; 
 
-	public static final String Email = "test@mail.com";
 	public static final String Email_zipy = "testzipy1@gmail.com";
 	public static final String Email_zipy_password = "testzipy1testzipy1";
 	public static final String Email_empty = "  ";

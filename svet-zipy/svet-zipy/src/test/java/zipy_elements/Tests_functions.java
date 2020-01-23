@@ -53,7 +53,7 @@ public class Tests_functions {
 						
 		//enter login+password and wait for the logging-in
 		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.Login_usernameField))).click()
-		.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(ElementsLogin.Username, Keys.TAB, ElementsLogin.Password, Keys.ENTER)
+		.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(ElementsLogin.EmailCredit, Keys.TAB, ElementsLogin.PasswordCredit, Keys.ENTER)
 		.build().perform();
 		new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.UserTopBar)));											
 	}
