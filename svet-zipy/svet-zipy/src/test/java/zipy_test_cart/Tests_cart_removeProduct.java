@@ -143,10 +143,7 @@ public class Tests_cart_removeProduct extends Tests_cart_MAIN {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_cartRemove))).click();
 			
 		//reopen the cart			
-		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
-		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
-		wait.until(ExpectedConditions.visibilityOf(cartFrame));
+		WebElement cartFrame = Tests_functions.openCart(driver);
 		
 		// if we removed the first variation only, then the cart includes the title of product and its second variation only 
 		Assert.assertTrue((cartFrame.getText().contains(ProductTitle)) &&
@@ -172,9 +169,7 @@ public class Tests_cart_removeProduct extends Tests_cart_MAIN {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_paymentPopup_Remove))).click();
 
 		//reopen the cart	
-		driver.get(ElementsWebsites.Zipy_il);
-		driver.findElement(By.xpath(ElementsBuying.Product_openCart)).click();
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(ElementsBuying.Product_cartFrame))));
+		Tests_functions.openCart(driver);
 				
 		// if we managed to remove the product from the cart, it contains a message of empty cart
 		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cartIsEmpty)).isDisplayed());					
@@ -197,9 +192,7 @@ public class Tests_cart_removeProduct extends Tests_cart_MAIN {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_paymentPopup_moveToFavs))).click();
 
 		//reopen the cart	
-		driver.get(ElementsWebsites.Zipy_il);
-		driver.findElement(By.xpath(ElementsBuying.Product_openCart)).click();
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(ElementsBuying.Product_cartFrame))));
+		Tests_functions.openCart(driver);
 
 		//check if the cart contains the removed item  
 		boolean removedItem = driver.findElement(By.xpath(ElementsBuying.Product_cartIsEmpty)).isDisplayed();		

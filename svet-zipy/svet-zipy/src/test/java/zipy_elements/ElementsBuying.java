@@ -8,6 +8,7 @@ public class ElementsBuying {
 	public static final String SearchItemAli_link ="https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/rez-micro-usb-cable-usb-charging-cord-mobile-phone-nylon-xiaomi-android-samsung-hua-wei/32995752928/";
 	public static final String SearchItemAli_link2 ="https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/minhin-simulated-pearl-stud-earrings-women-bohemian-geometric-earrings-wedding-jewelry-korean-earrings/4000151362225/";
 	public static final String SearchItemAmazon_link ="https://www.zipy.co.il/p/amazon/bic-round-stic-xtra-life-ballpoint-pen-medium-point-1-0mm-black-36-count-36-count/B00347A8NK/";
+	
 	public static final String ProductFramed_color ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']/div[@class='featherlight-content quick-view']/div[@class='featherlight-content-wrap']/div/section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
 	public static final String ProductFramed_color_1 ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric-items']/div/ul/li[2]//span[@class='selectric-option-text']";
 	public static final String ProductFramed_length ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']/div[@class='featherlight-content quick-view']/div[@class='featherlight-content-wrap']/div/section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[2]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
@@ -25,25 +26,26 @@ public class ElementsBuying {
 	public static final String FinalBuy_button = "/html//form[@id='paymentBalanceForm']//button[@type='submit']";
 	public static final String BackToMain_button = "/html//div[@id='wrapper']/div[@class='pay']/div[@class='pay__main']/div[2]//div[@class='pay__step-success']/div[1]/div[@class='pay__step-success-finish']/a[@href='https://www.zipy.co.il/']";
 	public static final String Thanks_box = "/html//div[@id='wrapper']/div[@class='pay']/div[@class='pay__main']/div[2]//div[@class='pay__step-success']/div[1]/p[1]";
+	
 	public static final String ProductFramed_next = "/html/body/div[@role='dialog']//div[@class='featherlight-content quick-view']/span[1]/span[@class='ico ico--arrow-slider']";
-	public static final String Product_addToCart = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']//div[@class='product__buy-buttons']/a/span[@class='button__inner']";	
+	public static final String Product_addToCart = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']//div[@class='product__buy-buttons']/a/span";	
 	public static final String Product_addedToCart = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='product__buy-buttons-buy-now']/a[2]";
 	public static final String Product_openCart = "/html//div[@id='topbar']//span[@class='ico ico--cart']";
 	public static final String Product_closeCart = "/html//div[@id='topbar']//span[@class='ico ico--cart']";
-	public static final String Product_cartFrame = "/html/body/div[1]/div[3]/div/div[2]";
-	public static final String Product_cartRemove = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//span[@class='ico']";
-	public static final String Product_cartRemove2 = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[2]//span[@class='ico']";
-	public static final String Product_cartRemove3 = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[3]//span[@class='ico']";
-	public static final String Product_cart_moveToFavorites = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//span[@class='ico ico--pin']";	
-	public static final String Product_cart_returnToCart = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//div[@class='restore']/a";	
-	public static final String Product_cartPay = "/html/body/div[1]/div[3]/div/div[2]//a[@href='/payment/']";
-	public static final String Product_cartIsEmpty = "/html/body/div[1]/div[3]/div/div[2]//strong[.='הסל שלך ריק.']";
-	public static final String Product_cart_finalSum = "/html/body/div[1]/div[3]/div/div[2]//span[@class='sum__price']";
+	public static final String Product_cartFrame = "/html/body/div[1]/div[4]/div/div[2]/div/div";
+	public static final String Product_cartRemove = "/html/body/div[1]/div[4]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//span[@class='ico']";
+	public static final String Product_cartRemove2 = "/html/body/div[1]/div[4]/div/div[2]//div[@class='user-goods-list']/div[1]/div[2]//span[@class='ico']";
+	public static final String Product_cartRemove3 = "/html/body/div[1]/div[4]/div/div[2]//div[@class='user-goods-list']/div[1]/div[3]//span[@class='ico']";
+	public static final String Product_cart_moveToFavorites = "/html/body/div[1]/div[4]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//span[@class='ico ico--pin']";	
+	public static final String Product_cart_returnToCart = "/html/body/div[1]/div[4]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//span[@class='ico ico--cart']";	
+	public static final String Product_cartPay = "/html/body/div[1]/div[*]/div/div[2]//a[@href='/payment/']";
+	public static final String Product_cartIsEmpty = "/html/body/div[1]/div[4]/div/div[2]//strong[.='הסל שלך ריק.']";
+	public static final String Product_cart_finalSum = "/html/body/div[1]/div[4]/div/div[2]//span[@class='sum__price']";
 	public static final String Product_cart_finalSum_mobile = "//*[@id=\"paymentInfoForm\"]/div/div[5]/div/table/tfoot/tr/td[1]/span/span/span[1]";
-	public static final String Product_cart_oldPrice = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[2]//span[@class='price__old']";
-	public static final String Product_cart_newPrice = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//span[@class='price__current']";
-	public static final String Product_cart_topBarQuantity = "//*[@id=\"topbar\"]/div[2]/div[5]/span[2]/strong/span";
-	public static final String Product_cart_quantity = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//input";
+	public static final String Product_cart_oldPrice = "/html/body/div[1]/div[4]/div/div[2]//div[@class='user-goods-list']/div[1]/div[2]//span[@class='price__old']";
+	public static final String Product_cart_newPrice = "/html/body/div[1]/div[4]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//span[@class='price__current']";
+	public static final String Product_cart_topBarQuantity = "/html//div[@id='topbar']/div[@class='default']/div[4]/span[2]//span[@class='cart-count-value']";
+	public static final String Product_cart_quantity = "/html/body/div[1]/div[4]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//input";
 	public static final String Product_cart_quantity_mobile = "/html//div[@id='wrapper']/div[2]/div[2]/div[@class='user-goods-list']/div[1]/div//input";
 	public static final String Product_cart_quantity10plus_mobile = "/html//div[@id='wrapper']/div[2]/div[2]/div[@class='user-goods-list']/div[1]/div//input";
 	public static final String Product_cart_quantityDrop = "/html//div[@id='wrapper']/div[2]/div[2]/div[@class='user-goods-list']/div[1]/div//div[@class='counter']/a";
@@ -53,11 +55,11 @@ public class ElementsBuying {
 	//public static final String Product_favoritesButton = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]";
 	public static final String Product_favoritesButton = "/html//div[@id='topbar']//span[@class='ico ico--pin']";
 	public static final String Product_favoritesButton_popup = "/html/body/div[@role='dialog']//div[@class='featherlight-content-wrap']//section//div[@class='product__pin']/a/span[@class='product__pin-anchor']";
-	public static final String Product_favoritesFrame = "/html/body/div[1]/div[*]/div/div[1]//div[@class='user-goods-list']/div/div[1]//div[@class='text']";
-	public static final String Product_favoritesRemove = "/html/body/div[1]/div[*]/div/div[1]//div[@class='user-goods-list']/div/div[1]//span[@class='ico']";
+	public static final String Product_favoritesFrame = "/html/body/div[1]/div[4]/div/div[1]/div/div";
+	public static final String Product_favoritesRemove = "/html/body/div[1]/div[4]/div/div[1]//div[@class='user-goods-list']/div/div[1]//span[@class='ico']";
 	public static final String Product_closeFavorites = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]/strong[@class='topbar__items-link-count']";
 	public static final String Product_openFavorites = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]/strong[@class='topbar__items-link-count']";
-	public static final String Product_favoritesTitle = "/html/body/div[1]/div[3]/div/div[1]//ul[@class='user-goods-list-heading']/li[@class='title']";
+	public static final String Product_favoritesTitle = "/html/body/div[1]/div[4]/div/div[1]//ul[@class='user-goods-list-heading']/li[@class='title']";
 
 	public static final String Product_variationsColor ="/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']/div[@class='sell-wrap']/div[@class='buy-options']/table[@class='product__params']//div[@class='selectric']//span[@class='selectric-option-text']";
 	public static final String Product_variationsColorAgain = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td//div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
@@ -86,7 +88,7 @@ public class ElementsBuying {
 		
 	public static final String Product_noVariations = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/onebot-l2416-g4400-120g-ssd-4g-ddr4-1920-1080-23-8-all-in-one-computer-desktop-dual-core-all-in-one-pc-for-office-bussiness/32838774114/?utm_medium=email";
 	public static final String Product_noVariations2 = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/onebot-g32-31-5-inch-curved-led-gaming-monitor-144hz-1920-1080p-dvi-hd-ports-displayport-1800r-immersive-curvature/32887298148/?utm_medium=email";
-	public static final String Product_noVariationsAmazon = "https://www.zipy.co.il/p/amazon/sidetrak-portable-usb-monitor-12-5-screen-attaches-to-your-laptop-for-easy-travel-efficient-usb-power-compatible-with-mac-pc-chromebook-13-17-laptops-hd-ips-display-patent-pending/B07RJYQN9K/?utm_medium=email";
+	public static final String Product_noVariationsAmazon = "https://www.zipy.co.il/p/amazon/bm-premium-bp718-bp727-battery-charger-for-canon-hfr80-hfr82-hfr800-hfr70-hfr72-hfr700-hfm52-hfm500-hfr30-hfr32-hfr300-hfr40-hfr42-hfr400-hfr50-hfr52-hfr500-hfr60-hfr62-hfr600/B009ZWNKQ0/";
 	public static final String Product_oneVariation = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/A/32958346076/?utm_medium=email";
 	public static final String Product_twoVariations = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/rez-micro-usb-cable-usb-charging-cord-mobile-phone-nylon-xiaomi-android-samsung-for-hua-wei/32995752928/?utm_medium=email";
 	//no variations and no delivery : https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/sleeping-anti-schnarchen-nase-clip-silicone-magnetic-anti-snoring-nose-clips-breathing-stop-snore-apnea-antisnoring-clip-device/32952209706/?fd=

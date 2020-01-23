@@ -26,7 +26,7 @@ public class ElementsLogin {
 	public static final String sideCategoryi_jEnd = "]/div[2]/div[";
 	///html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[1]/div/div/div[j]/div[2]/div[i]
 
-	public static final String Login_button = "/html//div[@id='topbar']/div[@class='default']/div[4]/div[2]/span[@class='topbar__menu-item-link']/span[@class='topbar__menu-item-link--dotted']";
+	public static final String Login_button = "/html//div[@id='topbar']/div[@class='default']/div[3]/div[2]/span[@class='topbar__menu-item-link']/span[@class='ico ico--login']";
 	public static final String Login_button_Dev = "/html//div[@id='topbar']/div[@class='default']/div[3]/div[2]/span[@class='topbar__menu-item-link']/span[@class='topbar__menu-item-link--dotted']";
 	public static final String Logedin_button = "/html//div[@id='topbar']/div[@class='default']//span[@class='topbar__user-link-no-name']";
 	public static final String Login_disconnect = "/html//form[@id='profileForm']//a[@href='/user/logout']/span[@class='topbar__user-dropdown-logout-anchor']";
@@ -40,7 +40,7 @@ public class ElementsLogin {
 	public static final String Login_terms_checkedVi = "/html//form[@id='registerForm']/fieldset[@class='user-form__fields']/div[@class='field field--submit']/div[2]/label/u[@class='m--big']/span[@class='ico ico--check']";
 
 
-	public static final String SignUp_button = "/html//div[@id='topbar']/div[@class='default']/div[4]/div[1]/span/span[@class='topbar__menu-item-link--dotted']";
+	public static final String SignUp_button = "/html//div[@id='topbar']/div[@class='default']/div[3]/div[1]/span[@class='topbar__menu-item-link']";
 	public static final String SignUp_field_email = "i_signup-email";
 	public static final String SignUp_button_confirm = "/html//form[@id='registerForm']//button[@type='submit']";
 	public static final String SignUp_PasswordShown = "/html//form[@id='registerForm']/fieldset/div[3]/div[@class='field__field']/div//span[@class='ico ico--eye']";

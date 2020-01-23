@@ -27,6 +27,7 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 
 		//choose the product variation - first option from the droplist - and save variation name
 		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();		
+		Thread.sleep(500);
 		WebElement elementColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1));
 		String ProductElement1 = elementColor_1.getText();
 		elementColor_1.click();
@@ -38,7 +39,7 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 		// if we managed to add the product correctly, its title and its chosen variation are found in the cart:
 		Assert.assertTrue((cartFrame.getText().contains(ProductTitle))&&
 						(cartFrame.getText().contains(ProductElement1)));
-	
+	//
 	}
 			
 
@@ -52,13 +53,15 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");				
 
 		//choose the first variation - first option from the first droplist - and save its name
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();		
+		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();
+		Thread.sleep(500);
 		WebElement variationColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1));
 		String ProductVariation1 = variationColor_1.getText();
 		variationColor_1.click();
 		
 		//choose the second variation - first option from the second droplist - and save its name
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsLength))).click();		
+		Thread.sleep(500);
 		WebElement variationLength_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsLength_1));
 		String ProductVariation2 = variationLength_1.getText();
 		variationLength_1.click();
@@ -104,6 +107,7 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 			//add to the cart again
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 			WebElement cartFrame = Tests_functions.openCart(driver);
+			System.out.println(cartFrame.getText());
 
 			// if we managed to add the product correctly, its title and its chosen variations are found in the cart:
 			Assert.assertTrue((cartFrame.getText().contains(ProductTitle))&&
@@ -115,7 +119,7 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 
 		}	
 	
-			
+				
 	//Test - adding a same product twice to the cart, each time with two different variation (while the first is the same in both cases)
 	@Test		
 	public  void Tests_cart_addProductTwice_twoVariations() throws Exception {
@@ -127,12 +131,14 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 
 		//choose the first variation - first option from the first droplist - and save its name
 		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();		
+		Thread.sleep(500);
 		WebElement variationColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1));
 		String ProductVariation1 = variationColor_1.getText().trim();;
 		variationColor_1.click();
 		
 		//choose the second variation - first option from the second droplist - and save its name
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsLength))).click();		
+		Thread.sleep(500);
 		WebElement variationLength_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsLength_1));
 		String ProductVariation2 = variationLength_1.getText().trim();;
 		variationLength_1.click();
@@ -235,20 +241,20 @@ public class Tests_cart_addProduct_withVariations extends Tests_cart_MAIN {
 		driver.get(ElementsBuying.Product_noVariations);
 		
 		//add to the cart 
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_addToCart))).click();
 
 		//back to main page and open the cart			
 		driver.get(ElementsWebsites.Zipy_il);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
 		Thread.sleep(2000);
-		//change the quantity in the cart manually to 2
+		//change the quantity in the cart manually to 3
 		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity))).click()
-				.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys("2",Keys.ENTER).build().perform();
+				.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys("3",Keys.ENTER).build().perform();
 		
 		WebElement cartFrame = Tests_functions.openCart(driver);
 
 		// if we managed to add the product twice, its quantity in the cart is 2:
-		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity)).getAttribute("value").equals("2"));
+		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity)).getAttribute("value").equals("3"));
 		
 
 	}

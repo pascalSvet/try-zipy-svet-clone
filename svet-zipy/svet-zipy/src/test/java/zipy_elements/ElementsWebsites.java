@@ -88,5 +88,5 @@ public static final String Zipy_il_aliButton = "/html/body//ul[@class='stores']/
 public static final String Zipy_il_amazonButton = "/html/body//ul[@class='stores']/li[3]/a/span[@class='ico ico--shop-amazon']";
 public static final String Zipy_gr_aliButton = "/html/body//ul[@class='stores']//a/span[.='AliExpress']";
 public static final String Zipy_gr_amazonButton = "/html/body//ul[@class='stores']/li[3]/a/span[.='Amazon']";
-
+public static final String Zipy_il_lessThan5Button = "/html/body/div[1]/div[6]/div/ul/li[4]";
 }

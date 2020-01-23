@@ -4,12 +4,12 @@ public class ElementsRecommended {
 	
 	//buying - Elements 
 	// populars(6 elements):
-	public static final String populars = "//div[@id='wrapper']/section[*]/div[2]/a[";
+	public static final String populars = "//*[@id=\"wrapper\"]/section[*]/div[2]/a[";
 	//public static final String populars_6 =	"//div[@id='wrapper']/section[*]/div[2]/a[6]";*/
 	
 	// dailyDeal(8 elements):
-	public static final String dailyDeal = "/html/body/div[1]/div[*]/div/section/div/main/section/div[2]/div/div/div[1]/div/div[";
-	public static final String dailyDeal_3 = "/html/body/div[1]/div[*]/div/section/div/main/section/div[2]/div/div/div[1]/div/div[3]";
+	public static final String dailyDeal = "//*[@id=\"wrapper\"]/div[*]/div[1]/a[";
+	public static final String dailyDeal_3 = "//*[@id=\"wrapper\"]/div[*]/div[1]/a[3]";
 
 	public static final String dailyDeal_dev_3 = "//*[@id=\"wrapper\"]/div[*]/div[1]/a[3]";
 	
@@ -17,7 +17,7 @@ public class ElementsRecommended {
 	public static final String dailyDeal_tst = "//*[@id=\"wrapper\"]/div[4]/div[1]/a[";
 	public static final String dailyDeal_tst_3 = "//*[@id=\"wrapper\"]/div[4]/div[1]/a[3]";
 
-	public static final String dailyDeal_title = "//*[@id=\"wrapper\"]/div[4]/div[1]/a[";
+	public static final String dailyDeal_title = "//*[@id=\"wrapper\"]/div[*]/div[1]/a[";
 	public static final String populars_title = "//div[@id='wrapper']/section[@class='popularLinksBar']//span[@class='popularLinksBar__title_text']";
 
 	public static final String dailyDeal_onPage_3 = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[3]";

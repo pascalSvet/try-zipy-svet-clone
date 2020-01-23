@@ -14,14 +14,15 @@ import zipy_elements.*;
 
 public class Tests_cart_addProduct extends Tests_cart_MAIN {
 	
-	//Test - adding a product to the cart from product pop-up page
+	//Test - adding a product to the cart from quick pop-up page
 	@Test		
-	public  void Tests_cart_addProduct_fromProductPopupPage() throws Exception {
-		System.out.println("Running test for adding to favorites from the product pop-up page");		
+	public  void Tests_cart_addProduct_fromQuickPopup() throws Exception {
+		System.out.println("Running test for adding to favorites from the quick pop-up page");		
 
 		//open one of the deals products on the main page and save its name
 		driver.get(ElementsWebsites.Zipy_il_deals);
 		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3)).click();
+		Thread.sleep(1000);
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPopup)).getText().trim();
 
 		//choose variations if exist and add to the cart
@@ -64,8 +65,8 @@ public class Tests_cart_addProduct extends Tests_cart_MAIN {
 		driver.get(ElementsWebsites.Zipy_il);
 		
 		//chose the first category from side panel and choose the first sub category
-		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategory1))).click()
-		.moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategory1_1))).click().build().perform();
+		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1))).click()
+		.moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1_1))).click().build().perform();
 		
 		//click the third thumbnail and save its title	
 		driver.findElement(By.xpath(ElementsRecommended.category_3)).click();			
@@ -82,10 +83,10 @@ public class Tests_cart_addProduct extends Tests_cart_MAIN {
 		
 	}
 	
-	//Test - adding a product to the cart from second product pop-up page
+	//Test - adding a product to the cart from next quick pop-up page
 	@Test		
-	public  void Tests_cart_addProduct_fromSecondProductPopupPage() throws Exception {
-		System.out.println("Running test for adding to favorites from second product pop-up page");		
+	public  void Tests_cart_addProduct_fromQuickPopup_Next() throws Exception {
+		System.out.println("Running test for adding to favorites from next quick pop-up page");		
 
 		//open one of the deals products and 
 		driver.get(ElementsWebsites.Zipy_il_deals);

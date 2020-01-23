@@ -102,9 +102,11 @@ public class Tests_functions {
 	// A function for emptying the cart.
 	public static void emptyCart(WebDriver driver) throws Exception{
 		Thread.sleep(500);
+		WebDriverWait wait = new WebDriverWait(driver, 15);	
 		//while there is pay button in the cart, continue deleting the first product from the cart and reopen it
 		while (!driver.findElements(By.xpath(ElementsBuying.Product_cartPay)).isEmpty() ) {
 				driver.findElement(By.xpath(ElementsBuying.Product_cartRemove)).click();
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_cart_returnToCart)));
 				driver.findElement(By.xpath(ElementsBuying.Product_closeCart)).click();
 				driver.findElement(By.xpath(ElementsBuying.Product_openCart)).click();
 				Thread.sleep(500);
@@ -173,8 +175,8 @@ public class Tests_functions {
 		//while there is pay button in the cart, continue deleting the first product from the cart and reopen it
 		while (!driver.findElements(By.xpath(ElementsBuying.Product_favoritesTitle)).isEmpty() ) {
 				driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
-				driver.findElement(By.xpath(ElementsBuying.Product_closeFavorites)).click();
-				driver.findElement(By.xpath(ElementsBuying.Product_openFavorites)).click();
+				driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
+				driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
 				Thread.sleep(500);
 		}	
 	}

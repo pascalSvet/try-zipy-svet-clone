@@ -1,6 +1,7 @@
 package zipy_test_cart;
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -63,6 +64,7 @@ public class Tests_cart_addProduct_withLoggedUser extends Tests_cart_MAIN {
 		//disconnect from the user and then connect back 
 		Tests_functions.unLogIn(driver);
 		Thread.sleep(1000);
+
 		driver.get(ElementsWebsites.Zipy_il);
 		Tests_functions.logIn(driver);
 				

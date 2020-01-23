@@ -47,7 +47,8 @@ public class Tests_cart_price extends Tests_cart_MAIN {
 		driver.get(ElementsBuying.Product_oneVariation);
 
 		//choose the product variation - first option from the droplist
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsColor))).click();		
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsColor))).click();
+		Thread.sleep(500);
 		WebElement variationColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1));
 		variationColor_1.click();
 				
