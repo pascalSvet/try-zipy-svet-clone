@@ -58,6 +58,22 @@ public class Tests_functions {
 		new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.UserTopBar)));											
 	}
 	
+	// A function for login with test user.
+	public static void logInSpecial(WebDriver driver, String email, String password) throws Exception{
+			
+		//press login button		
+		JavascriptExecutor ex=(JavascriptExecutor)driver;
+		ex.executeScript("arguments[0].click()", driver.findElement(By.xpath(ElementsLogin.Login_button)));
+		Thread.sleep(500);
+						
+		//enter login+password and wait for the logging-in
+		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.Login_usernameField))).click()
+		.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(email, Keys.TAB, password, Keys.ENTER)
+		.build().perform();
+		new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.UserTopBar)));											
+	}
+		
+		
 	// A function for unloging.
 	public static void unLogIn(WebDriver driver) throws Exception{
 			
@@ -68,6 +84,25 @@ public class Tests_functions {
 		//enter login+password and wait for the logging-in
 		new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.Login_disconnect))).click();				
 	}
+
+	// A function for changing password.
+		public static void changePassword(WebDriver driver, String oldPassword, String newPassword) throws Exception{
+			WebDriverWait wait = new WebDriverWait(driver, 15);	
+
+			//enter private data and choose - change password 
+			driver.findElement(By.xpath(ElementsLogin.user_personalDataButton)).click();
+			driver.findElement(By.xpath(ElementsLogin.user_changePassword)).click();
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.user_changePassword_currentPassField)));
+			Thread.sleep(1000);
+			
+			new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.user_changePassword_currentPassField))).click()
+			.sendKeys(oldPassword, Keys.TAB, newPassword, Keys.TAB, newPassword,Keys.ENTER)
+			.build().perform();
+			Thread.sleep(1000);
+
+			//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.user_changePassword_succesMessageClose)));
+			
+		}
 	
 	//close the pop-up window if exist
 	public static void closePopUp(WebDriver driver) throws Exception{

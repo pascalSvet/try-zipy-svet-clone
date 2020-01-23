@@ -97,6 +97,16 @@ public class ElementsLogin {
 	public static final String Password_moreThan100signs = "12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901";
 	public static final String Password_empty = "  ";
 
+	public static final String user_personalDataButton = "/html//div[@id='topbar']/div[@class='default']//span[@class='topbar__user-link-no-name']";
+	public static final String user_changePassword = "/html//form[@id='profileForm']//a[@href='#popup_password-changing']";
+	public static final String user_changePassword_currentPassField = "/html//input[@id='i_profile-password-current']";
+	public static final String user_changePassword_newPassField = "/html//input[@id='i_profile-password-new']";
+	public static final String user_changePassword_newPassAgainField = "/html//input[@id='i_profile-password-repeat']";
+	public static final String user_changePassword_succesMessageVi = "/html/body/div[@aria-labelledby='popup_heading']//*[@class='ico ico--success']";
+	public static final String user_changePassword_succesMessageClose = "/html/body/div[@aria-labelledby='popup_heading']//*[@class='ico ico--close']";
+
+
+	
 
 
 }
