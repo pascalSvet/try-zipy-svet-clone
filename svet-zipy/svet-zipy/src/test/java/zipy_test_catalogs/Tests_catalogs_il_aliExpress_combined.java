@@ -16,10 +16,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import zipy_elements.*;
 
 @RunWith(Parameterized.class)
-public class Tests_catalogs_il_aliExpress extends Tests_catalogs_MAIN {
+public class Tests_catalogs_il_aliExpress_combined extends Tests_catalogs_MAIN {
 	
 	private static String num;
-	public Tests_catalogs_il_aliExpress(String num) {
+	public Tests_catalogs_il_aliExpress_combined(String num) {
 		super();
 		this.num = num;
 	}		
@@ -27,14 +27,14 @@ public class Tests_catalogs_il_aliExpress extends Tests_catalogs_MAIN {
 	@Parameterized.Parameters
 	public static Collection falseData(){
 		return Arrays.asList( new Object[][]{				
-						{"1"},	
-						{"2"},
-						{"3"},
-						{"4"},
-						{"5"},
-						{"6"},
-						{"7"},
-						{"8"},
+						{"1"},	//fashion
+						{"2"},	//cars
+						{"3"},	//electronics	
+						{"4"},	//computers
+						{"5"},	//photography	
+						{"6"},	//cellular
+						{"7"},	//home and garden
+						{"8"},	//jewelry
 						});
 	}
 	

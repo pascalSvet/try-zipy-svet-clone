@@ -16,10 +16,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import zipy_elements.*;
 
 @RunWith(Parameterized.class)
-public class Tests_catalogs_il_amazon extends Tests_catalogs_MAIN {
+public class Tests_catalogs_gr_amazon_combined extends Tests_catalogs_MAIN {
 	
 	private static String num;
-	public Tests_catalogs_il_amazon(String num) {
+	public Tests_catalogs_gr_amazon_combined(String num) {
 		super();
 		this.num = num;
 	}		
@@ -27,34 +27,34 @@ public class Tests_catalogs_il_amazon extends Tests_catalogs_MAIN {
 	@Parameterized.Parameters
 	public static Collection falseData(){
 		return Arrays.asList( new Object[][]{				
-						{"1"},	
-						{"2"},
-						{"3"},
-						{"4"},
-						{"5"},
-						{"6"},
-						{"7"},
-						{"8"},
-						{"9"},
+						{"1"},	//fashion
+						{"2"},	//cars
+						{"3"},	//electronics	
+						{"4"},	//computers
+						{"5"},	//photography	
+						{"6"},	//cellular
+						{"7"},	//home and garden
+						{"8"},	//watches
+						{"9"},	//books
 						});
 	}
 	
 	
 	//Test - opening all sub categories in amazon - Israel
 	@Test		
-	public  void Tests_categories_il_amazon() throws Exception {		
-		System.out.println("Running test for opening all subcategories in #" + num + " category from aliExpress - amazon");	
+	public  void Tests_categories_gr_amazon() throws Exception {		
+		System.out.println("Running test for opening all subcategories in #" + num + " category from amazon - Greece");	
 
 		counter++;
-		driver.get(ElementsWebsites.Zipy_il_withPopup);
+		driver.get(ElementsWebsites.Zipy_gr_withPopup);
 		if( counter ==1) {
-			Tests_functions.closePopUp(driver);
+			Tests_functions.closePopUp_gr(driver);
 		}
 		
 		int fails = 0;
 
-		wait.until( ExpectedConditions.elementToBeClickable(By.xpath(ElementsWebsites.Zipy_il_amazonButton))).click();
-		wait.until( ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
+		wait.until( ExpectedConditions.elementToBeClickable(By.xpath(ElementsWebsites.Zipy_gr_amazonButton))).click();
+		wait.until( ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_gr_withPopup)));
 		
 		driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1)).click();
 		String winHandleMain = driver.getWindowHandle();
