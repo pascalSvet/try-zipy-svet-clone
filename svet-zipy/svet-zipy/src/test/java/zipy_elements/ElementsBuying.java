@@ -33,7 +33,9 @@ public class ElementsBuying {
 	public static final String Product_openCart = "/html//div[@id='topbar']//span[@class='ico ico--cart']";
 	public static final String Product_closeCart = "/html//div[@id='topbar']//span[@class='ico ico--cart']";
 	public static final String Product_cartFrame = "/html/body/div[1]/div[4]/div/div[2]/div/div";
+	public static final String Product_cartFrame_dev = "/html/body/div[1]/div[3]/div/div[2]/div/div";
 	public static final String Product_cartRemove = "/html/body/div[1]/div[4]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//span[@class='ico']";
+	public static final String Product_cartRemove_dev = "/html/body/div[1]/div[3]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//span[@class='ico']";
 	public static final String Product_cartRemove2 = "/html/body/div[1]/div[4]/div/div[2]//div[@class='user-goods-list']/div[1]/div[2]//span[@class='ico']";
 	public static final String Product_cartRemove3 = "/html/body/div[1]/div[4]/div/div[2]//div[@class='user-goods-list']/div[1]/div[3]//span[@class='ico']";
 	public static final String Product_cart_moveToFavorites = "/html/body/div[1]/div[4]/div/div[2]//div[@class='user-goods-list']/div[1]/div[1]//span[@class='ico ico--pin']";	
@@ -56,7 +58,9 @@ public class ElementsBuying {
 	public static final String Product_favoritesButton = "/html//div[@id='topbar']//span[@class='ico ico--pin']";
 	public static final String Product_favoritesButton_popup = "/html/body/div[@role='dialog']//div[@class='featherlight-content-wrap']//section//div[@class='product__pin']/a/span[@class='product__pin-anchor']";
 	public static final String Product_favoritesFrame = "/html/body/div[1]/div[4]/div/div[1]/div/div";
+	public static final String Product_favoritesFrame_dev = "/html/body/div/div/div/div//div[@class='user-goods-list']/div/div";
 	public static final String Product_favoritesRemove = "/html/body/div[1]/div[4]/div/div[1]//div[@class='user-goods-list']/div/div[1]//span[@class='ico']";
+	public static final String Product_favoritesRemove_dev = "/html/body/div/div/div/div//div[@class='user-goods-list']/div/div//span[@class='ico']";
 	public static final String Product_closeFavorites = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]/strong[@class='topbar__items-link-count']";
 	public static final String Product_openFavorites = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]/strong[@class='topbar__items-link-count']";
 	public static final String Product_favoritesTitle = "/html/body/div[1]/div[4]/div/div[1]//ul[@class='user-goods-list-heading']/li[@class='title']";

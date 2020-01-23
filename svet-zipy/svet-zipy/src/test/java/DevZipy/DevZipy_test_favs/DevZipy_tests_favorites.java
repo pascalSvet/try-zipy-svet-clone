@@ -68,13 +68,13 @@ public class DevZipy_tests_favorites extends DevZipy_tests_favs_MAIN {
 		// open the favorites window and save its contents
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
 		Thread.sleep(500);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
-		
+		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame_dev)).getText();
+		System.out.println(favoritesFrame);
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 		
 		//at the end, remove the products from the favorites, for the future tests		
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
+		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove_dev)).click();
 	}
 
 	//Test - adding to favorites from product QuickPopup page
@@ -94,13 +94,13 @@ public class DevZipy_tests_favorites extends DevZipy_tests_favs_MAIN {
 		// open the favorites window and save its contents
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
 		Thread.sleep(500);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame_dev)).getText();
 		
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 		
 		//at the end, remove the products from the favorites, for the future tests		
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
+		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove_dev)).click();
 	}
 
 	
@@ -121,13 +121,13 @@ public class DevZipy_tests_favorites extends DevZipy_tests_favs_MAIN {
 		// open the favorites window and save its contents
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
 		Thread.sleep(500);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame_dev)).getText();
 		
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 		
 		//at the end, remove the products from the favorites, for the future tests		
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
+		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove_dev)).click();
 		
 	}
 		
@@ -150,13 +150,13 @@ public class DevZipy_tests_favorites extends DevZipy_tests_favs_MAIN {
 		// open the favorites window and save its contents
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
 		Thread.sleep(500);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame_dev)).getText();
 
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 		
 		//at the end, remove the products from the favorites, for the future tests		
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
+		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove_dev)).click();
 	}
 	
 
@@ -182,13 +182,13 @@ public class DevZipy_tests_favorites extends DevZipy_tests_favs_MAIN {
 		// open the favorites window and save its contents
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
 		Thread.sleep(500);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame_dev)).getText();
 		
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 		
 		//at the end, remove the products from the favorites, for the future tests		
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
+		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove_dev)).click();
 	}
 
 			
@@ -213,13 +213,13 @@ public class DevZipy_tests_favorites extends DevZipy_tests_favs_MAIN {
 		// open the favorites window and save its contents
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
 		Thread.sleep(500);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame_dev)).getText();
 		
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 		
 		//at the end, remove the products from the favorites, for the future tests		
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();		
+		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove_dev)).click();		
 	}
 	
 }
