@@ -48,5 +48,6 @@ public class ElementsRecommended {
 	public static final String category_mainCategoryStart = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[";
 	//  + num + "]/a/span[2]"
 	
-	
+	public static final String mainPage = "//*[@id=\"wrapper\"]/div[4]/div[1]/a[";
+
 }

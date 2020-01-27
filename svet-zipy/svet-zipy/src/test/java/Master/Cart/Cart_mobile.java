@@ -25,7 +25,7 @@ public class Cart_mobile extends Cart_MAIN {
 		System.out.println("Running test (in mobile version) for checking the final sum in the cart affected by changing the quantity in the cart");		
 
 		//change to mobile screen resolution
-		driver.manage().window().setSize(new Dimension(500,768));
+		driver.manage().window().setSize(new Dimension(320,480));
 
 		//get to the required product page and save its price
 		driver.get(ElementsBuying.Product_noVariations);
@@ -64,7 +64,7 @@ public class Cart_mobile extends Cart_MAIN {
 		System.out.println("Running test (in mobile version) for adding product to the cart and changing quantity manually in the cart, for more then 10 items");		
 
 		//change to mobile screen resolution
-		driver.manage().window().setSize(new Dimension(500,768));
+		driver.manage().window().setSize(new Dimension(320,480));
 
 		//add required product to the cart
 		Functions.addSampleProductToCart(driver);
@@ -100,7 +100,7 @@ public class Cart_mobile extends Cart_MAIN {
 		System.out.println("Running test (in mobile version) for removing product from the cart");		
 		
 		//change to mobile screen resolution
-		driver.manage().window().setSize(new Dimension(500,768));
+		driver.manage().window().setSize(new Dimension(320,480));
 
 		//add required product to the cart
 		Functions.addSampleProductToCart(driver);
@@ -120,7 +120,7 @@ public class Cart_mobile extends Cart_MAIN {
 		System.out.println("Running test (in mobile version) for removing product from the cart to favorites");		
 
 		//change to mobile screen resolution
-		driver.manage().window().setSize(new Dimension(500,700));
+		driver.manage().window().setSize(new Dimension(320,480));
 
 		//add required product to the cart and save its title
 		String ProductTitle = Functions.addSampleProductToCart(driver);

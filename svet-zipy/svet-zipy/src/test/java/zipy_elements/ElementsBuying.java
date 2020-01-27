@@ -102,4 +102,13 @@ public class ElementsBuying {
 	public static final String Product_sortBy = "//div[@id='wrapper']//main[@role='main']/section[@class='daily m--category m--plates']//div[@class='daily__heading-sort']/div[1]";
 	public static final String Product_toysTitle = "/html//div[@id='wrapper']//main[@role='main']/div[@class='elementor elementor-21138']//div[@class='elementor-section-wrap']/section[1]//div[@class='elementor-row']/div//div[@class='elementor-element elementor-element-3f21537b elementor-widget elementor-widget-heading']//h2[@class='elementor-heading-title elementor-size-default']";
 	
+	//aliexpress:
+	public static final String Aliexpress_PopupClose = "/html/body/div[5]//a[@href='javascript:;']";
+	public static final String Aliexpress_Localization ="//a[@id='switcher-info']/span[@class='currency']";
+	public static final String Aliexpress_PopupCurrency = "/html//div[@id='nav-global']/div[4]//div[@class='switcher-currency-c']/span[@class='select-item']";
+	public static final String Aliexpress_PopupCurrency_NIS = "/html//div[@id='nav-global']//div[@class='switcher-currency-c']/ul[@class='notranslate']/li[112]/a[@href='javascript:;']/em[.=' (  Israeli New Shekel  )']";
+	public static final String Aliexpress_Localization_Save = "/html//div[@id='nav-global']/div[4]//button[@type='button']";
+	
+	
+	
 }

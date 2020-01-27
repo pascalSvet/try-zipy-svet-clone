@@ -29,7 +29,7 @@ public class User_mobile extends User_MAIN {
 		System.out.println("running test (in mobile version) for changing the password");
 		
 		//change to mobile screen resolution
-		driver.manage().window().setSize(new Dimension(500,768));
+		driver.manage().window().setSize(new Dimension(320,480));
 		driver.get(ElementsWebsites.Zipy_il);
 
 		//enter private data and change password 
@@ -51,7 +51,7 @@ public class User_mobile extends User_MAIN {
 		System.out.println("running test (in mobile version) for changing the email");
 		
 		//change to mobile screen resolution
-		driver.manage().window().setSize(new Dimension(500,768));
+		driver.manage().window().setSize(new Dimension(320,480));
 		driver.get(ElementsWebsites.Zipy_il);
 
 		//enter private data and change password 

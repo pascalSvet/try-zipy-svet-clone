@@ -28,6 +28,8 @@ import zipy_elements.*;
 	
 public class Functions {
 	
+////////////// log-in functions: ////////////////////////////////////////////////////////
+	
 	// A function for login with test user.
 	public static void logIn(WebDriver driver) throws Exception{
 			
@@ -72,8 +74,7 @@ public class Functions {
 		.build().perform();
 		new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.UserTopBar)));											
 	}
-		
-		
+				
 	// A function for unloging.
 	public static void unLogIn(WebDriver driver) throws Exception{
 			
@@ -85,13 +86,17 @@ public class Functions {
 		new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.Login_disconnect))).click();				
 	}
 
+
+	
+////////////// user functions: ////////////////////////////////////////////////////////
+	
 	// A function for changing password.
 	public static void changePassword(WebDriver driver, String oldPassword, String newPassword) throws Exception{
 		WebDriverWait wait = new WebDriverWait(driver, 15);	
 
 		//enter private data and choose - change password 
 		driver.findElement(By.xpath(ElementsLogin.user_personalDataButton)).click();
-		if (driver.manage().window().getSize().getWidth()<=550) {
+		if (driver.manage().window().getSize().getWidth()<=400) {
 			driver.findElement(By.xpath(ElementsLogin.user_changePassword_mobile)).click();
 
 		} else {
@@ -112,7 +117,7 @@ public class Functions {
 
 		//enter private data and choose - change password 
 		driver.findElement(By.xpath(ElementsLogin.user_personalDataButton)).click();
-		if (driver.manage().window().getSize().getWidth()<=550) {
+		if (driver.manage().window().getSize().getWidth()<=400) {
 			driver.findElement(By.xpath(ElementsLogin.user_changeEmail_mobile)).click();
 		} else {
 			driver.findElement(By.xpath(ElementsLogin.user_changeEmail)).click();
@@ -126,7 +131,9 @@ public class Functions {
 		Thread.sleep(1000);		
 	}
 	
+
 	
+////////////// pop-up functions: ////////////////////////////////////////////////////////
 
 	//close the pop-up window if exist
 	public static void closePopUp(WebDriver driver) throws Exception{
@@ -146,18 +153,10 @@ public class Functions {
 			}
 	}
 	
+
 	
-	//open main website and close the pop-up window if exist
-	public static void openWebsiteAndClosePopUp(WebDriver driver, String website) throws Exception{
-			driver.get(website);
-				if (driver.findElements(By.xpath(ElementsLogin.Popup_welcome_close)).size() != 0){
-					driver.findElement(By.xpath(ElementsLogin.Popup_welcome_close)).click();
-					new WebDriverWait(driver, 10).
-					until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(ElementsLogin.Popup_welcome_close)));
-					driver.get(website);
-				}
-		}
-	
+////////////// cart functions: ////////////////////////////////////////////////////////
+		
 	// A function for emptying the cart.
 	public static void emptyCart(WebDriver driver) throws Exception{
 		Thread.sleep(500);
@@ -172,19 +171,7 @@ public class Functions {
 		}	
 	}
 
-	
-	// A function for open the cart and focus on the contents.
-	public static WebElement openCart(WebDriver driver) throws Exception{
-		//back to main page and open the cart			
-		driver.get(ElementsWebsites.Zipy_il);
-		WebDriverWait wait = new WebDriverWait(driver, 15);	
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
-		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
-		wait.until(ExpectedConditions.visibilityOf(cartFrame));
-		return(cartFrame);
-	}
-	
-	// A function for open and remove one product from the cart.
+	// A function for open and emptying the cart.
 	public static void openAndEmptyCart(WebDriver driver) throws Exception{
 		//back to main page and open the cart			
 		driver.get(ElementsWebsites.Zipy_il);
@@ -198,7 +185,18 @@ public class Functions {
 		}
 	}
 	
-	// A function for remove one product from the cart in mobile version.
+	// A function for open the cart and focus on the contents.
+	public static WebElement openCart(WebDriver driver) throws Exception{
+		//back to main page and open the cart			
+		driver.get(ElementsWebsites.Zipy_il);
+		WebDriverWait wait = new WebDriverWait(driver, 15);	
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
+		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
+		wait.until(ExpectedConditions.visibilityOf(cartFrame));
+		return(cartFrame);
+	}
+	
+	// A function for opening and removing product from the cart (in mobile version).
 	public static void openAndRemoveFromCart_mobile(WebDriver driver) throws Exception{
 		WebDriverWait wait = new WebDriverWait(driver, 15);	
 		Thread.sleep(1000);
@@ -210,7 +208,7 @@ public class Functions {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_paymentPopup_Remove))).click();
 	}
 	
-	// A function for remove one product from the cart in mobile version.
+	// A function for removing product from the cart (in mobile version).
 	public static void removeFromCart_mobile(WebDriver driver) throws Exception{
 		WebDriverWait wait = new WebDriverWait(driver, 15);	
 		Thread.sleep(1000);
@@ -219,7 +217,7 @@ public class Functions {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_paymentPopup_Remove))).click();
 	}
 	
-	// A function for remove one product from the cart in mobile version.
+	// A function for removing product from the cart to favorites (in mobile version).
 	public static void removeFromCart_toFavs_mobile(WebDriver driver) throws Exception{
 		WebDriverWait wait = new WebDriverWait(driver, 15);	
 		((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
@@ -240,25 +238,9 @@ public class Functions {
 		}	
 	}
 
-	// A function for deleting one item from favorites.
-	public static void emptyFavoritesOneItem(WebDriver driver) throws Exception{
-		Thread.sleep(500);		
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
-		
-	}
 	
-	// A function for adding a sample product to a cart (no variations, one unit).
-	public static String addSampleProductToCart(WebDriver driver) throws Exception{
-		WebDriverWait wait = new WebDriverWait(driver, 15);	
-
-		driver.get(ElementsBuying.Product_noVariations);
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
-		Thread.sleep(500);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_plusOne)));
-
-		return ProductTitle;		
-	}
+	
+////////////// price functions: ////////////////////////////////////////////////////////
 	
 	// A function for summing two product prices.
 	public static String priceSum(WebDriver driver, String price1, String price2) throws Exception{
@@ -290,17 +272,20 @@ public class Functions {
 	}
 	
 	// A function for multiplying string.
-		public static String stringMultiply(WebDriver driver, String price1, int num) throws Exception{
-			double firstPrice = Double.parseDouble(price1);
-			BigDecimal multTemp = BigDecimal.valueOf(firstPrice).multiply(BigDecimal.valueOf(num));
-			String Mult = String.valueOf(multTemp);
+	public static String stringMultiply(WebDriver driver, String price1, int num) throws Exception{
+		double firstPrice = Double.parseDouble(price1);
+		BigDecimal multTemp = BigDecimal.valueOf(firstPrice).multiply(BigDecimal.valueOf(num));
+		String Mult = String.valueOf(multTemp);
 
-			while((Mult.charAt(Mult.length() - 1) == '0' && Mult.contains(".")) || Mult.charAt(Mult.length() - 1) == '.') {
-				Mult = Mult.substring(0, Mult.length() - 1);			
-			}
-			return Mult;
+		while((Mult.charAt(Mult.length() - 1) == '0' && Mult.contains(".")) || Mult.charAt(Mult.length() - 1) == '.') {
+			Mult = Mult.substring(0, Mult.length() - 1);			
 		}
+		return Mult;
+	}
+
 	
+	
+//////////////product functions: ////////////////////////////////////////////////////////
 	
 	// A function for choosing color and size variations, if exist, in product frame.
 	public static void chooseVariations_ProductFramed(WebDriver driver) throws Exception{		
@@ -363,7 +348,25 @@ public class Functions {
 			}
 		}
 	}
+
 	
+	// A function for adding a sample product to a cart (no variations, one unit).
+	public static String addSampleProductToCart(WebDriver driver) throws Exception{
+		WebDriverWait wait = new WebDriverWait(driver, 15);	
+
+		driver.get(ElementsBuying.Product_noVariations);
+		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		Thread.sleep(500);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_plusOne)));
+
+		return ProductTitle;		
+	}
+
+
+	
+	
+//////////////thumbnails functions: ////////////////////////////////////////////////////////
 	
 	// A function for checking loading of every thumbnails in populars.
 	public  static boolean checkPopularTabs(WebDriver driver, int thumbs, String element) throws InterruptedException {
@@ -409,7 +412,7 @@ public class Functions {
 	
 	
 	// A function for checking loading of every thumbnails in dailyDeals.
-	public  static boolean checkDailyDealsTabs(WebDriver driver, int thumbs, String element) throws InterruptedException {
+	public  static boolean checkThumbnailsInTabs(WebDriver driver, int thumbs, String element) throws InterruptedException {
 		
 		int fails = 0;
 		Thread.sleep(2000);
@@ -449,4 +452,35 @@ public class Functions {
 		}
 		return (fails!=0);		
 	}
+	
+	
+	
+//////////////aliExpress functions: ////////////////////////////////////////////////////////
+
+	// A function for opening the same product in aliExpress site
+	public  static ArrayList<String> aliexpress_openSameProduct(WebDriver driver, ArrayList<String> tabs) throws InterruptedException {
+		
+		String id = driver.findElement(By.xpath("/html/body/div[1]/div[7]/div/div/div/div[1]/div/div[1]/div/div[2]")).getAttribute("data-id");
+		String aliexpressAddress = ElementsWebsites.AliexpressByID + id + ".html";
+
+		//switch to aliExpress tab		
+		driver.switchTo().window(tabs.get(1));
+		Thread.sleep(1000);
+		
+		driver.get(aliexpressAddress);
+		Thread.sleep(500);
+		
+		return tabs;
+	}
+		
+	// A function for changing the currency in aliExpress site
+	public  static void aliexpress_changeCurrency(WebDriver driver) throws InterruptedException {
+		driver.findElement(By.xpath(ElementsBuying.Aliexpress_Localization)).click();
+		driver.findElement(By.xpath(ElementsBuying.Aliexpress_PopupCurrency)).click();
+		driver.findElement(By.xpath(ElementsBuying.Aliexpress_PopupCurrency_NIS)).click();
+		driver.findElement(By.xpath(ElementsBuying.Aliexpress_Localization_Save)).click();
+		Thread.sleep(1000);
+	}
+		
+			
 }
