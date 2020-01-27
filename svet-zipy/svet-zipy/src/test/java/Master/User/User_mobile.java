@@ -20,7 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import junit.framework.Assert;
 import zipy_elements.*;
 
-public class User_password_mobile extends User_MAIN {
+public class User_mobile extends User_MAIN {
 			
 		
 	//TestsMobile - changing the password
@@ -43,6 +43,7 @@ public class User_password_mobile extends User_MAIN {
 		Functions.changePassword(driver, "123456", ElementsLogin.Email_zipy_password);
 	
 	}
+
 	
 	//TestsMobile - changing the email
 	@Test	
@@ -64,5 +65,6 @@ public class User_password_mobile extends User_MAIN {
 		Functions.changeEmail(driver, ElementsLogin.Email_zipy, ElementsLogin.Email_zipy_password);
 	
 	}
+	
 	
 }

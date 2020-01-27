@@ -87,23 +87,4 @@ public class User_password extends User_MAIN {
 	}
 
 	
-	//TEST - changing the email
-	@Test	
-	public  void user_changeEmail() throws Exception {
-		System.out.println("running test for changing the email");
-		
-		driver.get(ElementsWebsites.Zipy_il);
-
-		//enter private data and change password 
-		Functions.changeEmail(driver, ElementsLogin.Email_zipy2, ElementsLogin.Email_zipy_password);
-
-		//if changed correctly, there is a success message
-		Assert.assertFalse(driver.findElements(By.xpath(ElementsLogin.user_changePassword_succesMessageVi)).isEmpty());
-		
-		//change the email back at the end, for future tests
-		driver.get(ElementsWebsites.Zipy_il);
-		Functions.changeEmail(driver, ElementsLogin.Email_zipy, ElementsLogin.Email_zipy_password);
-	
-	}
-	
 }
