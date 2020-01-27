@@ -77,6 +77,7 @@ public class ElementsLogin {
 
 	public static final String Email_zipy = "testzipy1@gmail.com";
 	public static final String Email_zipy_password = "testzipy1testzipy1";
+	public static final String Email_zipy2 = "testzipy2@gmail.com";
 	public static final String Email_empty = "  ";
 	public static final String Email_domain_withoutAt = "testmail.com";
 	public static final String Email_domain_illegal = "test@1#1.com";
@@ -104,9 +105,14 @@ public class ElementsLogin {
 	public static final String user_changePassword_newPassAgainField = "/html//input[@id='i_profile-password-repeat']";
 	public static final String user_changePassword_succesMessageVi = "/html/body/div[@aria-labelledby='popup_heading']//*[@class='ico ico--success']";
 	public static final String user_changePassword_succesMessageClose = "/html/body/div[@aria-labelledby='popup_heading']//*[@class='ico ico--close']";
-
-
-	
+	public static final String user_changePassword_mobile = "/html//div[@id='topbar']/div[3]/div/label[5]/span[@class='ico ico--lock']";
+	public static final String user_recoverPassword = "/html//form[@id='loginForm']//div[@class='field__bottom']/a[1]";
+	public static final String user_recoverPassword_field = "/html//input[@id='i_forgot-phone-email']";
+	public static final String user_recoverPassword_reconnect = "/html//form[@id='forgotForm']//div[@class='field--success']//a";
+	public static final String user_recoverPassword_help = "/html//form[@id='forgotForm']/fieldset//a[@href='https://www.zipy.co.il/contact-us']";
+	public static final String user_changeEmail = "/html//form[@id='profileForm']//a[@href='#popup_email-changing']";
+	public static final String user_changeEmail_newEmaiField = "/html//input[@id='i_profile-email']";
+	public static final String user_changeEmail_mobile = "/html//div[@id='topbar']//span[@class='ico ico--email']";
 
 
 }

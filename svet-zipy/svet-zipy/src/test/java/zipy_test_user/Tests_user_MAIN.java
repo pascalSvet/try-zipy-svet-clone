@@ -41,7 +41,11 @@ import zipy_elements.*;
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 	
 		
+		driver.get(ElementsWebsites.Zipy_il);
 
+		//login with zipy user
+		Tests_functions.logInSpecial(driver, ElementsLogin.Email_zipy, ElementsLogin.Email_zipy_password);
+		
 	}
 	
 	

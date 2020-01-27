@@ -86,24 +86,48 @@ public class Tests_functions {
 	}
 
 	// A function for changing password.
-		public static void changePassword(WebDriver driver, String oldPassword, String newPassword) throws Exception{
-			WebDriverWait wait = new WebDriverWait(driver, 15);	
+	public static void changePassword(WebDriver driver, String oldPassword, String newPassword) throws Exception{
+		WebDriverWait wait = new WebDriverWait(driver, 15);	
 
-			//enter private data and choose - change password 
-			driver.findElement(By.xpath(ElementsLogin.user_personalDataButton)).click();
+		//enter private data and choose - change password 
+		driver.findElement(By.xpath(ElementsLogin.user_personalDataButton)).click();
+		if (driver.manage().window().getSize().getWidth()<=550) {
+			driver.findElement(By.xpath(ElementsLogin.user_changePassword_mobile)).click();
+
+		} else {
 			driver.findElement(By.xpath(ElementsLogin.user_changePassword)).click();
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.user_changePassword_currentPassField)));
-			Thread.sleep(1000);
-			
-			new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.user_changePassword_currentPassField))).click()
-			.sendKeys(oldPassword, Keys.TAB, newPassword, Keys.TAB, newPassword,Keys.ENTER)
-			.build().perform();
-			Thread.sleep(1000);
-
-			//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.user_changePassword_succesMessageClose)));
-			
 		}
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.user_changePassword_currentPassField)));
+		Thread.sleep(1000);
+		
+		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.user_changePassword_currentPassField))).click()
+		.sendKeys(oldPassword, Keys.TAB, newPassword, Keys.TAB, newPassword,Keys.ENTER)
+		.build().perform();
+		Thread.sleep(1000);		
+	}
 	
+	// A function for changing email.
+	public static void changeEmail(WebDriver driver, String newEmail, String password) throws Exception{
+		WebDriverWait wait = new WebDriverWait(driver, 15);	
+
+		//enter private data and choose - change password 
+		driver.findElement(By.xpath(ElementsLogin.user_personalDataButton)).click();
+		if (driver.manage().window().getSize().getWidth()<=550) {
+			driver.findElement(By.xpath(ElementsLogin.user_changeEmail_mobile)).click();
+		} else {
+			driver.findElement(By.xpath(ElementsLogin.user_changeEmail)).click();
+		}
+		Thread.sleep(1000);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.user_changeEmail_newEmaiField))).click();
+		Thread.sleep(1000);
+		
+		new Actions (driver).sendKeys(newEmail, Keys.TAB, newEmail, Keys.TAB, password,Keys.ENTER)
+		.build().perform();
+		Thread.sleep(1000);		
+	}
+	
+	
+
 	//close the pop-up window if exist
 	public static void closePopUp(WebDriver driver) throws Exception{
 			if (driver.findElements(By.xpath(ElementsLogin.Popup_welcome_close)).size() != 0){
