@@ -3,7 +3,6 @@
 ----
 
 ### Master
-{: .gitlab-orange}
 
 
 #### Cart
@@ -209,19 +208,23 @@
           
 ----        
                 
-### Test Zipy
+### Test
 {: .gitlab-orange}
 
     ** Test Main Page Thumbs **
     ** Test Populars **
     ** Test Favorites **
 
-----        
-
-### Dev Zipy
-{: .gitlab-orange}
+----   
+     
+<div class="panel panel-gitlab-orange">
+**Dev**
+{: .panel-heading}
+<div class="panel-body">
 
     **Test Main Page Thumbs**
     **Test Populars**
     **Test Favorites**
-  
+
+</div>
+</div> 
