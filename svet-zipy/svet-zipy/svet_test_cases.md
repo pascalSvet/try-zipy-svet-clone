@@ -7,14 +7,14 @@
 
 #### Cart
 
-    *AliExpress:*
+    **AliExpress:**
 	    - comparing to aliExpress !!!in process!!!
 	
 ----
 
 #### Cart
 
-    *Cart_addProduct:*
+    **Cart_addProduct:**
 	    - adding a product to the cart from product pop-up page
 	    - adding a product to the cart from second product pop-up page            
 	    - adding a product to the cart from less-than-5 tab
@@ -22,11 +22,11 @@
 	    - adding a product to the cart from product page
 	    - adding both a product from aliExpress and a product from Amazon to the cart
 
-    *Cart_addProduct_withLoggedUser:*
+    **Cart_addProduct_withLoggedUser:**
 	    - adding a product while unlogged, and the logging in and checking for the product in the cart
 	    - adding a product then disconnecting and logging in back, and checking for the product in the cart
 
-    *Cart_addProduct_withVariations:*
+    **Cart_addProduct_withVariations:**
 	    - adding a product to the cart - with one variation
 	    - adding a product to the cart - with two variations
 	    - adding a same product twice to the cart, each time with one different variation 
@@ -36,13 +36,13 @@
 	    - adding twice the same product to the cart, using quantity and then plus-one buttons
 	    - adding twice the same product to the cart, by changing quantity manually in the cart
   
-    *Cart_mobile:*
+    **Cart_mobile:**
 	    - checking the final sum in the cart affected by changing the quantity in the cart
 	    - adding product to the cart and changing quantity manually in the cart, for more then 10 items        
 	    - removing product from from the cart
 	    - removing product from the cart to favorites
 
-    *Cart_price:*
+    **Cart_price:**
             - checking the final sum in the cart includes the delivery
             - checking the final sum in the cart includes the discount
             - checking the final sum in the cart includes all products in the cart
@@ -51,7 +51,7 @@
             - checking the final sum in the cart affected by removing one of the products
             - checking the final sum in the cart affected by changing the quantity in the cart
             
-    *Cart_removeProduct:*
+    **Cart_removeProduct:**
             - removing product from the cart
             - removing product from the cart to the favorites
             - removing product from the cart and then returning it back
@@ -87,11 +87,11 @@
     
 #### Main Page Thumbs
 
-    *MainPageThumbs_greece:*
+    **MainPageThumbs_greece:**
       - opening main page thumbnails in Greece site
       - opening main page thumbnails in Greece site - ebay
       - opening main page thumbnails in Greece site - amazon
-    *MainPageThumbs_israel:*
+    **MainPageThumbs_israel:**
       - opening main page thumbnails in Israel site  
             	
 ----
@@ -110,25 +110,25 @@
           
 #### Populars
 
-    *Populars_israel:*
+    **Populars_israel:**
           - aliExpress
-    *Populars_greece:*
+    **Populars_greece:**
           - aliExpress
           - ebay
           - amazon
-    *Populars_cyprus:*
+    **Populars_cyprus:**
           - aliExpress
           - ebay
           - amazon      
-    *Populars_romania:*
+    **Populars_romania:**
           - aliExpress
           - ebay
           - amazon      
-    *Populars_italy:*
+    **Populars_italy:**
           - aliExpress
           - ebay
           - amazon      
-    *Populars_portugal:*
+    **Populars_portugal:**
           - aliExpress
           - ebay
           - amazon      	
@@ -137,13 +137,13 @@
      
 #### Sign Up
 
-    *Sign up with unused accounts, !!!entered by the user!!!:*
+    **Sign up with unused accounts, !!!entered by the user!!!:**
           - sign up with unused email, entered by the user
           - sign up with unused phone number, entered by the user
           - sign up with unused google account, entered by the user
           - sign up with unused facebook account, entered by the user 
         
-     *Negative Tests - by phone:*
+     **Negative Tests - by phone:**
           - existing number
           - empty number
           - number too short 
@@ -155,7 +155,7 @@
           - illegal wired phone number
           - sign up with incorrect phone, entered by the user !!!entered by user!!!
         
-     *Negative Tests - by google:*
+     **Negative Tests - by google:**
           - email with no google account
           - incorrect email
           - empty email 
@@ -163,7 +163,7 @@
           - wrong password
           - sign up with incorrect Google details, entered by user !!!entered by user!!!
         
-     *Negative Tests - by FB:*
+     **Negative Tests - by FB:**
           - email with no FB account
           - phone with no FB account
           - incorrect email
@@ -172,7 +172,7 @@
           - wrong password
           - sign up with incorrect FB details, entered by user !!!entered by user!!!
         
-     *Negative Tests - by email:*
+     **Negative Tests - by email:**
           - existing email
           - wrong email- domain without "@"
           - wrong email- empty
@@ -197,28 +197,28 @@
      
 #### User
 
-    *User_password:*
+    **User_password:**
           - changing the password
           - recovering the password  !!!entered by user!!!
-    *User_email:*
+    **User_email:**
           - changing the email          
-    *User_mobile:*
+    **User_mobile:**
           - TestsMobile - changing the password
           - TestsMobile - changing the email
           
 ----        
                 
-#### Test Zipy
+### Test Zipy
 
-### Test Main Page Thumbs
-### Test Populars
-### Test Favorites
+#### Test Main Page Thumbs
+#### Test Populars
+#### Test Favorites
    
 ----        
 
-#### Dev Zipy
+### Dev Zipy
 
-### Test Main Page Thumbs
-### Test Populars
-### Test Favorites
+#### Test Main Page Thumbs
+#### Test Populars
+#### Test Favorites
   
