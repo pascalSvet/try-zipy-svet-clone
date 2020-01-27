@@ -14,10 +14,10 @@ import zipy_elements.*;
 public class Aliexpress extends Aliexpress_MAIN {
 	
 	
-	//Test - appearance of favorite-pin icon on thumbnail, on mouse hover
+	//Test - comparing to aliExpress
 	@Test		
 	public  void Tests_Aliexpress() throws Exception {
-		System.out.println("Running test for appearance of favorite-pin icon on the daiy deals thumbnail, on mouse hover");		
+		System.out.println("Running test for comparing to aliExpress");		
 		
 		driver.get(ElementsWebsites.Aliexpress_sampleFromZipy);
 		

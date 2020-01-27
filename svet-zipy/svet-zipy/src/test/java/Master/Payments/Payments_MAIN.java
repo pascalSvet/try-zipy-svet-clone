@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import zipy_elements.*;
 
-public class Payment_MAIN {
+public class Payments_MAIN {
 	
 	static WebDriver driver;
 	boolean errorCaught;

@@ -47,12 +47,12 @@ public class User_password extends User_MAIN {
 	// The email used for recovery: testzipy1@gmail.com , password: testzipy1testzipy1
 	@Test	
 	public  void user_passwordRecovery_enteredByUser() throws Exception {
-	/*	
+	///*	
 		System.out.println("running test for recovering the password");
 		
 		//disconnect from the user
 		driver.get(ElementsWebsites.Zipy_il);
-		Tests_functions.unLogIn(driver);
+		Functions.unLogIn(driver);
 		Thread.sleep(1000);
 		
 		//press login button		
@@ -73,7 +73,7 @@ public class User_password extends User_MAIN {
 			Scanner i= new Scanner(System.in);
 			String  recovered_password= i.nextLine();	
 		driver.get(ElementsWebsites.Zipy_il);
-		Tests_functions.logInSpecial(driver, ElementsLogin.Email_zipy, recovered_password);
+		Functions.logInSpecial(driver, ElementsLogin.Email_zipy, recovered_password);
 
 		//if recovered successfully, the user logged in
 		new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.UserTopBar)));
@@ -82,8 +82,8 @@ public class User_password extends User_MAIN {
 				
 		//change the password back at the end, for future tests
 		driver.get(ElementsWebsites.Zipy_il);
-		Tests_functions.changePassword(driver, recovered_password, ElementsLogin.Email_zipy_password);
-	*/
+		Functions.changePassword(driver, recovered_password, ElementsLogin.Email_zipy_password);
+	//*/
 	}
 
 	

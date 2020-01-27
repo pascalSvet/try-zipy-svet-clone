@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import zipy_elements.*;
 
-public class Payment_item extends Payment_MAIN {
+public class Payments extends Payments_MAIN {
 	
 	
 	//Test - buying product, directy from search
