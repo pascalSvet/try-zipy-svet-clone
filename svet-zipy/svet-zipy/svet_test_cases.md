@@ -2,7 +2,8 @@
 
 ----
 
-###Master
+### Master
+{: .gitlab-orange}
 
 
 #### Cart
@@ -209,14 +210,16 @@
 ----        
                 
 ### Test Zipy
-    ```
-    **Test Main Page Thumbs**
-    **Test Populars**
-    **Test Favorites**
-    ```   
+{: .gitlab-orange}
+
+    ** Test Main Page Thumbs **
+    ** Test Populars **
+    ** Test Favorites **
+
 ----        
 
 ### Dev Zipy
+{: .gitlab-orange}
 
     **Test Main Page Thumbs**
     **Test Populars**
