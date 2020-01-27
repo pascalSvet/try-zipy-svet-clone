@@ -2,7 +2,7 @@
 
 ----
 
-### Master
+## Master
 
 
 #### Cart
@@ -208,8 +208,7 @@
           
 ----        
                 
-### Test
-{: .gitlab-orange}
+## Test
 
     ** Test Main Page Thumbs **
     ** Test Populars **
@@ -217,14 +216,8 @@
 
 ----   
      
-<div class="panel panel-gitlab-orange">
-**Dev**
-{: .panel-heading}
-<div class="panel-body">
+## Dev
 
     **Test Main Page Thumbs**
     **Test Populars**
     **Test Favorites**
-
-</div>
-</div> 
