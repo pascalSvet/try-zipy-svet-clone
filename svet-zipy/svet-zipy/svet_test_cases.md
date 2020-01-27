@@ -210,15 +210,15 @@
                 
 ### Test Zipy
 
-#### Test Main Page Thumbs
-#### Test Populars
-#### Test Favorites
+    **Test Main Page Thumbs**
+    **Test Populars**
+    **Test Favorites**
    
 ----        
 
 ### Dev Zipy
 
-#### Test Main Page Thumbs
-#### Test Populars
-#### Test Favorites
+    **Test Main Page Thumbs**
+    **Test Populars**
+    **Test Favorites**
   
