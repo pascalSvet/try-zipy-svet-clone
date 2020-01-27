@@ -26,9 +26,9 @@ public static final String Zipy_ro_amazon = "https://www.zipy.ro/amazon/?utm_med
 public static final String Zipy_it = "https://www.zipy.it/?utm_medium=email";				//Italy
 public static final String Zipy_it_ebay = "https://www.zipy.it/ebay/?utm_medium=email";
 public static final String Zipy_it_amazon = "https://www.zipy.it/amazon/?utm_medium=email";
-public static final String Zipy_py = "https://www.zipy.pt/?utm_medium=email";				//Portugal
-public static final String Zipy_py_ebay = "https://www.zipy.pt/ebay/?utm_medium=email";
-public static final String Zipy_py_amazon = "https://www.zipy.pt/amazon/?utm_medium=email";
+public static final String Zipy_pt = "https://www.zipy.pt/?utm_medium=email";				//Portugal
+public static final String Zipy_pt_ebay = "https://www.zipy.pt/ebay/?utm_medium=email";
+public static final String Zipy_pt_amazon = "https://www.zipy.pt/amazon/?utm_medium=email";
 
 public static final String Zipy_test = "https://zipy:zipy@www.test.zipy.co.il/?utm_medium=email";		//Test 
 public static final String Zipy_dev = "https://zipy:zipy@www.dev.zipy.co.il/?utm_medium=email";		//Developers
@@ -48,9 +48,9 @@ public static final String TestZipy_ro_amazon = "https://zipy:zipy@www.test.zipy
 public static final String TestZipy_it = "https://zipy:zipy@www.test.zipy.it/?utm_medium=email";					//Test Italy
 public static final String TestZipy_it_ebay = "https://zipy:zipy@www.test.zipy.it/ebay/?utm_medium=email";
 public static final String TestZipy_it_amazon = "https://zipy:zipy@www.test.zipy.it/amazon/?utm_medium=email";
-public static final String TestZipy_py = "https://zipy:zipy@www.test.zipy.pt/?utm_medium=email";					//Test Portugal
-public static final String TestZipy_py_ebay = "https://zipy:zipy@www.test.zipy.pt/ebay/?utm_medium=email";
-public static final String TestZipy_py_amazon = "https://zipy:zipy@www.test.zipy.pt/amazon/?utm_medium=email";
+public static final String TestZipy_pt = "https://zipy:zipy@www.test.zipy.pt/?utm_medium=email";					//Test Portugal
+public static final String TestZipy_pt_ebay = "https://zipy:zipy@www.test.zipy.pt/ebay/?utm_medium=email";
+public static final String TestZipy_pt_amazon = "https://zipy:zipy@www.test.zipy.pt/amazon/?utm_medium=email";
 
 
 //DEV Websites:
@@ -68,9 +68,9 @@ public static final String DevZipy_ro_amazon = "https://zipy:zipy@www.dev.zipy.r
 public static final String DevZipy_it = "https://zipy:zipy@www.dev.zipy.it/?utm_medium=email";					//Dev Italy
 public static final String DevZipy_it_ebay = "https://zipy:zipy@www.dev.zipy.it/ebay/?utm_medium=email";
 public static final String DevZipy_it_amazon = "https://zipy:zipy@www.dev.zipy.it/amazon/?utm_medium=email";
-public static final String DevZipy_py = "https://zipy:zipy@www.dev.zipy.pt/?utm_medium=email";					//Dev Portugal
-public static final String DevZipy_py_ebay = "https://zipy:zipy@www.dev.zipy.pt/ebay/?utm_medium=email";
-public static final String DevZipy_py_amazon = "https://zipy:zipy@www.dev.zipy.pt/amazon/?utm_medium=email";
+public static final String DevZipy_pt = "https://zipy:zipy@www.dev.zipy.pt/?utm_medium=email";					//Dev Portugal
+public static final String DevZipy_pt_ebay = "https://zipy:zipy@www.dev.zipy.pt/ebay/?utm_medium=email";
+public static final String DevZipy_pt_amazon = "https://zipy:zipy@www.dev.zipy.pt/amazon/?utm_medium=email";
 
 
 //deals:
