@@ -12,13 +12,16 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import zipy_elements.*;
 
-public class Loading extends Loading_MAIN {
+public class Loading_mobile extends Loading_MAIN {
 	
-	
-	//Test - presence of loader-spinner on thumbnail click
+
+	//TestsMobile - updating of loader-spinner after clicking on another thumbnail
 	@Test		
-	public  void Tests_loading_SpinnerPresent() throws Exception {
-		System.out.println("Running test for presence of loader-spinner on thumbnail click");		
+	public  void TestsMobile_loading_SpinnerPresent() throws Exception {
+		System.out.println("Running test (in mobile version) for presence of loader-spinner on thumbnail click");		
+		
+		//change to mobile screen resolution
+		driver.manage().window().setSize(new Dimension(320,480));
 		
 		driver.get(ElementsWebsites.Zipy_il_deals);
 
@@ -31,11 +34,10 @@ public class Loading extends Loading_MAIN {
 
 	}
 	
-
-	//Test - updating of loader-spinner after clicking on another thumbnail
+	//TestsMobile - updating of loader-spinner after clicking on another thumbnail
 	@Test		
-	public  void Tests_loading_SpinnerUpdate() throws Exception {
-		System.out.println("Running test for updating of loader-spinner after clicking on another thumbnail");		
+	public  void TestsMobile_loading_SpinnerUpdate() throws Exception {
+		System.out.println("Running test (in mobile version) for updating of loader-spinner after clicking on another thumbnail");		
 		
 		driver.get(ElementsWebsites.Zipy_il_deals);
 
@@ -50,5 +52,4 @@ public class Loading extends Loading_MAIN {
 		Assert.assertTrue(!spinner3.isDisplayed() && spinner4.isDisplayed());	
 
 	}
-
 }
