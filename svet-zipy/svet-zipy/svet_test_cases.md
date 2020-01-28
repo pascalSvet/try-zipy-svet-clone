@@ -83,6 +83,30 @@
     - adding to favorites from category thumbnail (from categories side panel)
 
 ----
+
+#### Gallery
+
+	 - updating gallery image according to the chosen variation
+	 - updating gallery image after changing chosen variation
+	 - updating gallery image after sliding left
+	 - updating updating gallery image after sliding right
+	 - updating gallery image after sliding more the once
+	 - adding image near the chosen variation according to the choice
+	 - updating image near the variation after changing the chosen variation
+
+----
+ 
+#### Loading
+
+    **Loading:**
+      - presence of loader-spinner on thumbnail click
+      - updating of loader-spinner after clicking on another thumbnail
+
+     **Loading_mobile:**
+      - TestsMobile - presence of loader-spinner on thumbnail click
+      - TestsMobile - updating of loader-spinner after clicking on another thumbnail
+      
+----
     
 #### Main Page Thumbs
 

@@ -68,7 +68,9 @@ public class ElementsBuying {
 	public static final String Product_variationsColor ="/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']/div[@class='sell-wrap']/div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
 	public static final String Product_variationsColorAgain = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td//div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
 	public static final String Product_variationsColor_1 = "/html//div[@id='wrapper']/div[@class='product__page']//section//div[@class='buy-options']/table[@class='product__params']//div[@class='select type-variations']/div[1]/div[@class='selectric-items']/div/ul/li[2]/span[@class='selectric-option']";
+	public static final String Product_variationsColor_1_img = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[2]/span/img";
 	public static final String Product_variationsColor_2 = "/html//div[@id='wrapper']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td//div[@class='select type-variations']/div[1]/div[@class='selectric-items']/div/ul/li[3]/span[@class='selectric-option']";
+	public static final String Product_variationsColor_2_img = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[3]/span/img";
 	public static final String Product_variationsColor_3 = "/html//div[@id='wrapper']/div[3]//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td//div[@class='select type-variations']/div[1]/div[@class='selectric-items']/div/ul/li[4]//span[@class='selectric-option-text']";
 	public static final String Product_variationsLength ="/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']/div[@class='sell-wrap']/div[@class='buy-options']/table[@class='product__params']/tbody/tr[2]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
 	public static final String Product_variationsLengthAgain ="/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']//div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric']/span[@class='ico ico--arrow-triangle-down']";
@@ -88,6 +90,13 @@ public class ElementsBuying {
 	public static final String Product_pin = "/html//div[@id='wrapper']//section//div[@class='product__pin']/a/span[@class='product__pin-anchor']";
 	public static final String Product_dailyDealsTitle = "/html/body//section[@class='one-block']//main[@role='main']/section//div[@class='daily__heading-deal']";
 
+	public static final String Product_galleryImage = "//*[@id=\"gallery\"]/figure/img";
+	public static final String Product_galleryImage_left = "/html//div[@id='gallery']/div/a[2]/span[@class='ico ico--arrow']";
+	public static final String Product_galleryImage_right = "/html//div[@id='gallery']/div/a[1]/span[@class='ico ico--arrow']";
+	public static final String Product_galleryImage_bottom1 = "//*[@id=\"thumbs\"]/div[1]/a/div[1]/img";
+	public static final String Product_galleryImage_bottom2 = "//*[@id=\"thumbs\"]/div[2]/a/div[1]/img";
+	public static final String Product_galleryImage_bottom3 = "//*[@id=\"thumbs\"]/div[3]/a/div[1]/img";
+	public static final String Product_gallery_nearVariation ="//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[1]/img";
 	public static final String Product_notFound = "//div[@id='wrapper']//main[@role='main']/section[@class='notfound']//div[@class='notfound__text-title']";
 		
 	public static final String Product_noVariations = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/onebot-l2416-g4400-120g-ssd-4g-ddr4-1920-1080-23-8-all-in-one-computer-desktop-dual-core-all-in-one-pc-for-office-bussiness/32838774114/?utm_medium=email";
