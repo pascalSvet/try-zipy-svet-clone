@@ -94,4 +94,5 @@ public static final String Aliexpress = "https://www.aliexpress.com";
 public static final String AliexpressByID = "https://www.aliexpress.com/item/";
 public static final String Aliexpress_sampleFromZipy = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/A/32983267719/#wrapper/?utm_medium=email";
 
+public static final String ProductWithColors = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/painter-hat-caps-beret-female-french-vintage-women-s-lady-street-cap-girl-s-warm-solid/4000115814986/?utm_medium=email";
 }
