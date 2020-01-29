@@ -11,10 +11,10 @@ public class ElementsRecommended {
 	public static final String dailyDeal = "//*[@id=\"wrapper\"]/div[*]/div[1]/a[";
 	public static final String dailyDeal_3 = "//*[@id=\"wrapper\"]/div[*]/div[1]/a[3]";
 	public static final String dailyDeal_dev_3 = "//*[@id=\"wrapper\"]/div[*]/div[1]/a[3]";
-	public static final String dailyDeal_3_thumbnail = "//*[@id=\"wrapper\"]/div[2]/main/section[2]/div[3]/div[3]";
-	public static final String dailyDeal_3_spinner = "//*[@id=\"wrapper\"]/div[2]/main/section[2]/div[3]/div[3]/div/div[1]/span/span";
-	public static final String dailyDeal_4_thumbnail = "//*[@id=\"wrapper\"]/div[2]/main/section[2]/div[3]/div[4]";
-	public static final String dailyDeal_4_spinner = "//*[@id=\"wrapper\"]/div[2]/main/section[2]/div[3]/div[4]/div/div[1]/span/span";
+	public static final String dailyDeal_3_thumbnail = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[3]";
+	public static final String dailyDeal_3_spinner = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[3]/div/div[1]/span/span";
+	public static final String dailyDeal_4_thumbnail = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[4]";
+	public static final String dailyDeal_4_spinner = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[4]/div/div[1]/span/span";
 
 	
 	// dailyDeal_tst(32 elements):

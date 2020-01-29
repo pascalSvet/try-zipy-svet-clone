@@ -24,13 +24,15 @@ public class Loading_mobile extends Loading_MAIN {
 		driver.manage().window().setSize(new Dimension(320,480));
 		
 		driver.get(ElementsWebsites.Zipy_il_deals);
-
+		
 		//click on thumbnail and check its spinner element
-		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_3_thumbnail)).click();		
+		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_3_thumbnail)).click();
 		WebElement spinner = driver.findElement(By.xpath(ElementsRecommended.dailyDeal_3_spinner));
 		
 		//if correct, spinner displayed
 		Assert.assertTrue(spinner.isDisplayed());	
+
+		driver.findElement(By.xpath(ElementsBuying.ProductFramed_close)).click();
 
 	}
 	
@@ -38,7 +40,8 @@ public class Loading_mobile extends Loading_MAIN {
 	@Test		
 	public  void TestsMobile_loading_SpinnerUpdate() throws Exception {
 		System.out.println("Running test (in mobile version) for updating of loader-spinner after clicking on another thumbnail");		
-		
+		driver.manage().window().setSize(new Dimension(320,480));
+
 		driver.get(ElementsWebsites.Zipy_il_deals);
 
 		//click one thumbnail and then another one and check their spinner elements
@@ -49,7 +52,11 @@ public class Loading_mobile extends Loading_MAIN {
 		WebElement spinner4 = driver.findElement(By.xpath(ElementsRecommended.dailyDeal_4_spinner));
 		
 		//if correct, spinner displayed on the second thumbnail only
-		Assert.assertTrue(!spinner3.isDisplayed() && spinner4.isDisplayed());	
+		Assert.assertTrue(!spinner3.isDisplayed() && spinner4.isDisplayed());
+		
+		//driver.findElement(By.xpath(ElementsBuying.ProductFramed_close)).click();
+		//driver.get(ElementsWebsites.Zipy_il);
+
 
 	}
 }

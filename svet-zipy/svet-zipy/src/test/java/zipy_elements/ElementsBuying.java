@@ -26,8 +26,9 @@ public class ElementsBuying {
 	public static final String FinalBuy_button = "/html//form[@id='paymentBalanceForm']//button[@type='submit']";
 	public static final String BackToMain_button = "/html//div[@id='wrapper']/div[@class='pay']/div[@class='pay__main']/div[2]//div[@class='pay__step-success']/div[1]/div[@class='pay__step-success-finish']/a[@href='https://www.zipy.co.il/']";
 	public static final String Thanks_box = "/html//div[@id='wrapper']/div[@class='pay']/div[@class='pay__main']/div[2]//div[@class='pay__step-success']/div[1]/p[1]";
-	
+		
 	public static final String ProductFramed_next = "/html/body/div[@role='dialog']//div[@class='featherlight-content quick-view']/span[1]/span[@class='ico ico--arrow-slider']";
+	public static final String ProductFramed_close = "/html/body/div[4]/div/div/div/span/span";
 	public static final String Product_addToCart = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']//div[@class='product__buy-buttons']/a/span";	
 	public static final String Product_addedToCart = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='product__buy-buttons-buy-now']/a[2]";
 	public static final String Product_openCart = "/html//div[@id='topbar']//span[@class='ico ico--cart']";
@@ -80,7 +81,7 @@ public class ElementsBuying {
 	public static final String Product_quantityManual_mobile = "/html//input[@id='accessibility-buy-product-amount']";
 	public static final String Product_quantityPlus = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']//div[@class='product__counter']/button[2]";
 	public static final String Product_quantityPlusAgain = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']//div[@class='product__counter']/button[2]";
-	public static final String Product_titleFromPicture = "//img[@class='product__specs-image']";
+	public static final String Product_titleFromPicture = "//img[@class='product__specs-image']"; //atribute:alt
 	public static final String Product_titleFromPopup = "/html//div[@role='dialog']//div[@class='featherlight-content-wrap']//section//h1[@class='product__title']";
 	public static final String Product_added = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='product__buy-buttons-buy-now']/a[2]//span[@class='amount-text']";
 	public static final String Product_heron = "//div[@id='wrapper']//main[@role='main']/section[@class='notfound']//div[@class='notfound__text-title']";
@@ -118,6 +119,30 @@ public class ElementsBuying {
 	public static final String Aliexpress_PopupCurrency_NIS = "/html//div[@id='nav-global']//div[@class='switcher-currency-c']/ul[@class='notranslate']/li[112]/a[@href='javascript:;']/em[.=' (  Israeli New Shekel  )']";
 	public static final String Aliexpress_Localization_Save = "/html//div[@id='nav-global']/div[4]//button[@type='button']";
 	
+	
+	//search:
+	public static final String Search_eng = "nike";
+	public static final String Search_heb = "נייק";
+	public static final String Search_pt1 = "eletrónica  preços  ";
+	public static final String Search_pt2 = "Futevôlei Cão ";
+	public static final String Search_special_apostrophe = "Zoy’s dress";
+	public static final String Search_special_dash = "dell-23";
+	public static final String Search_special_parenthesis = "taifu (12V)";
+	public static final String Search_special_bracket = "[sintron]";
+	public static final String Search_content = "//*[@id=\"desktop_search_fild\"]";
+	public static final String Search_orderBy_mobile = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/a[1]";
+	public static final String Search_notFound = "//div[@id='wrapper']//main[@role='main']/section//div[@class='notfound__text-title']";
+	public static final String Search_link_aliExpress = "https://www.aliexpress.com/item/4000392639189.html?spm=a2g0o.productlist.0.0.264a5504i6FRuu&algo_pvid=b9ee8b5f-c6e2-4552-a37d-ee9330c45486&algo_expid=b9ee8b5f-c6e2-4552-a37d-ee9330c45486-2&btsid=2e665580-6c2e-49dd-8ee1-899d1d4257f4&ws_ab_test=searchweb0_0,searchweb201602_6,searchweb201603_53";
+	public static final String Search_link_aliExpress_title = "//*[@id=\"root\"]/div/div[2]/div/div[2]/div[1]";
+	public static final String Search_link_ebay = "https://www.ebay.com/itm/ASICS-Womens-GEL-Nimbus-21-Running-Shoe/223546838586?_trkparms=5079%3A5000014535";
+	public static final String Search_link_ebay_title = "/html/head/meta[20]"; //atribute:content
+	public static final String Search_link_amazon = "https://www.amazon.com/Under-Armour-Womens-Play-Shorts/dp/B07Q33MCBR?pf_rd_p=e7ce1c29-3021-5430-acf8-3180e1263e92&pf_rd_r=SBXEZ2MV62HTWJNF6VR7&pd_rd_wg=2fIUM&ref_=pd_gw_ri&pd_rd_w=bNVEO&pd_rd_r=d28eb397-9195-4fcf-a6ce-197e3510eeff";
+	public static final String Search_link_amazon_title = "//*[@id=\"productTitle\"]";
+	public static final String Search_link_amazon_zipyTitle = "/html/head/meta[6]"; //atribute:content
+	public static final String Search_link_ebayDE = "https://www.ebay.de/itm/Big-Seven-Brian-Cargo-Hose-Comfort-Fit-Herren-Jeans-Hose/401091823499?_trkparms=pageci%3Aaaa79ac8-41dd-11ea-9c7c-74dbd180bd02%7Cparentrq%3Aeca2cb1b16f0a4b7fcbeb1e9fff8bb0a%7Ciid%3A1";
+	public static final String Search_link_ebayDY_title = "/html/head/meta[15]"; //atribute:content
+	public static final String Search_link_amazonDE = "https://www.amazon.de/Boldog-Laube-kuscheliger-Schal-Cashmerefeeling/dp/B00CYDMC0M?pf_rd_p=fc3dc759-a057-4598-848d-dce8d6cdd7c9&pd_rd_wg=hnUg5&pf_rd_r=Y7AGS67WZQ5SXGV657QR&ref_=pd_gw_unk&pd_rd_w=tCY9C&pd_rd_r=7592bd9b-9226-49ed-8d8d-27307d388f08";
+
 	
 	
 }
