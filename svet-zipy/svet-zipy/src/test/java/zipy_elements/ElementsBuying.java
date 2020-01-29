@@ -153,4 +153,8 @@ public class ElementsBuying {
 	public static final String Search_redirect = "//div[@id='wrapper']//main[@role='main']/section[@class='message-redirect']/div";
 	public static final String Search_smartSearchButton = "//div[@id='wrapper']//main[@role='main']/section[@class='shop-switch']//span[@class='switch__slider']";
 
+	public static final String error_502 = "/html//h1[.='502 Bad Gateway']";
+	public static final String error_oops = "/html//h1[.='Oops! :(']";
+
+	
 }

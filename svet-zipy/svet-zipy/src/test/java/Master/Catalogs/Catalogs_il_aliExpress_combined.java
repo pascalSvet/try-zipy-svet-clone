@@ -16,10 +16,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import zipy_elements.*;
 
 @RunWith(Parameterized.class)
-public class Сatalogs_il_aliExpress_combined extends Catalogs_MAIN {
+public class Catalogs_il_aliExpress_combined extends Catalogs_MAIN {
 	
 	private static String num;
-	public Сatalogs_il_aliExpress_combined(String num) {
+	public Catalogs_il_aliExpress_combined(String num) {
 		super();
 		this.num = num;
 	}		

@@ -15,7 +15,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import zipy_elements.*;
 
-public class Сatalogs_il_amazon_separated extends Catalogs_MAIN {
+public class Catalogs_il_amazon_separated extends Catalogs_MAIN {
 		
 	
 	//Test - opening all sub categories in amazon - Israel - 1 category - fashion
