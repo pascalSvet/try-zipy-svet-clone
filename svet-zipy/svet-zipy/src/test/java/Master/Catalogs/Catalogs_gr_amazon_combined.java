@@ -84,6 +84,15 @@ public class Catalogs_gr_amazon_combined extends Catalogs_MAIN {
 					}				
 				}		
 		}		     
+		
+		
+		if(fails!=0) {
+			System.out.println("in total " + fails + "failures in " + nameCategory + " category");
+			fails = 0;
+		} else {
+			System.out.println("no failures in " + nameCategory + " category");
+		}
+		
 		// if everything opened correct, then no fails caught
 		Assert.assertTrue(fails==0);	
 	}
