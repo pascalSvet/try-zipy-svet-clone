@@ -125,6 +125,10 @@ public class ElementsBuying {
 	public static final String Search_heb = "נייק";
 	public static final String Search_pt1 = "eletrónica  preços  ";
 	public static final String Search_pt2 = "Futevôlei Cão ";
+	public static final String Search_itemOnAliexpressOnly = "yuanqishun";
+	public static final String Search_itemNotOnAliexpress = "judea pearl";
+	public static final String Search_itemEverywhere = "dress";
+
 	public static final String Search_special_apostrophe = "Zoy’s dress";
 	public static final String Search_special_dash = "dell-23";
 	public static final String Search_special_parenthesis = "taifu (12V)";
@@ -146,7 +150,7 @@ public class ElementsBuying {
 	public static final String Search_autocompleteHint1 = "/html//form[@id='searchbar-form-one-block-page']/div/div/span[1]/span[@class='autocomplete_hint']";
 	public static final String Search_button = "//form[@id='searchbar-form-one-block-page']//span[@class='ico ico--magnifier']";
 	public static final String Search_delete = "/html//form[@id='searchbar-form-one-block-page']//span[@class='ico ico--cross']";
-	
-	
-	
+	public static final String Search_redirect = "//div[@id='wrapper']//main[@role='main']/section[@class='message-redirect']/div";
+	public static final String Search_smartSearchButton = "//div[@id='wrapper']//main[@role='main']/section[@class='shop-switch']//span[@class='switch__slider']";
+
 }

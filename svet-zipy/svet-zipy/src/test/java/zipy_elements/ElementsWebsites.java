@@ -9,11 +9,17 @@ public class ElementsWebsites {
 public static final String Zipy_il = "https://www.zipy.co.il/?utm_medium=email";			//Israel
 public static final String Zipy_ilRu = "https://ru.zipy.co.il/?utm_medium=email";			//Israel russian
 public static final String Zipy_il_ali = "https://www.https://www.zipy.co.il/אליאקספרס/?utm_medium=email";				//Israel
-public static final String Zipy_il_amazon = "https://www.https://www.https://www.zipy.co.il/amazon/?utm_medium=email";		
+public static final String Zipy_il_ali_withPopup = "https://www.https://www.zipy.co.il/אליאקספרס";				//Israel
+public static final String Zipy_il_amazon = "https://www.zipy.co.il/amazon/?utm_medium=email";		
 public static final String Zipy_il_withPopup = "https://www.zipy.co.il/";			
+public static final String Zipy_il_amazon_withPopup = "https://www.https://www.https://www.zipy.co.il/amazon";			
 
 public static final String Zipy_gr = "https://www.zipy.gr/?utm_medium=email";				//Greece
 public static final String Zipy_gr_ebay = "https://www.zipy.gr/ebay/?utm_medium=email";
+public static final String Zipy_gr_ebay_withPopup = "https://www.zipy.gr/ebay";
+public static final String Zipy_gr_ali = "https://www.zipy.gr/ali/?utm_medium=email";
+public static final String Zipy_gr_ali_withPopup = "https://www.zipy.gr/ali";
+
 public static final String Zipy_gr_amazon = "https://www.zipy.gr/amazon/?utm_medium=email";
 public static final String Zipy_gr_withPopup = "https://www.zipy.gr/";				
 
@@ -76,6 +82,7 @@ public static final String DevZipy_pt_amazon = "https://zipy:zipy@www.dev.zipy.p
 //deals:
 public static final String Zipy_il_deals = "https://www.zipy.co.il/deals/?utm_medium=email";
 public static final String Zipy_il_lessThan5 = "https://www.zipy.co.il/fiveshekel/?utm_medium=email";
+public static final String Zipy_il_lessThan5_withPopup = "https://www.zipy.co.il/fiveshekel";
 
 public static final String TestZipy_il_deals = "https://zipy:zipy@www.test.zipy.co.il/deals/?utm_medium=email";
 public static final String TestZipy_il_lessThan5 = "https://zipy:zipy@www.test.zipy.co.il/fiveshekel/?utm_medium=email";

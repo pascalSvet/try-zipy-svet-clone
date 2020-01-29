@@ -17,7 +17,7 @@ import zipy_elements.*;
 public class Search_links extends Search_MAIN {
 	
 	
-	//Test - searching in Israel site - link from aliExpress
+	//Test - searching on Israel site - link from aliExpress
 	@Test		
 	public  void Tests_Search_links_il_aliExpress() throws Exception {
 		System.out.println("Running test for searching in Israel site - link from aliExpress");		
@@ -39,7 +39,7 @@ public class Search_links extends Search_MAIN {
 	}
 
 
-	//Test - searching in Israel site - link from ebay
+	//Test - searching on Israel site - link from ebay
 	@Test		
 	public  void Tests_Search_links_il_ebay() throws Exception {
 		System.out.println("Running test for searching in Israel site - link from ebay");		
@@ -60,7 +60,7 @@ public class Search_links extends Search_MAIN {
 
 	}
 	
-	//Test - searching in Israel site - link from amazon
+	//Test - searching on Israel site - link from amazon
 	@Test		
 	public  void Tests_Search_links_il_amazon() throws Exception {
 		System.out.println("Running test for searching in Israel site - link from amazon");		
@@ -82,7 +82,7 @@ public class Search_links extends Search_MAIN {
 	}
 
 
-	//Test - searching in Greece site - link from aliExpress
+	//Test - searching on Greece site - link from aliExpress
 	@Test		
 	public  void Tests_Search_links_gr_aliExpress() throws Exception {
 		System.out.println("Running test for searching in Greece site - link from aliExpress");		
@@ -103,7 +103,7 @@ public class Search_links extends Search_MAIN {
 
 	}
 	
-	//Test - searching in Greece site - link from ebay.de
+	//Test - searching on Greece site - link from ebay.de
 	@Test		
 	public  void Tests_Search_links_gr_ebayDe() throws Exception {
 		System.out.println("Running test for searching in Greece site - link from ebay.de");		
@@ -124,7 +124,7 @@ public class Search_links extends Search_MAIN {
 
 	}
 
-	//Test - searching in Greece site - link from amazon.de
+	//Test - searching on Greece site - link from amazon.de
 	@Test		
 	public  void Tests_Search_links_gr_amazonDE() throws Exception {
 		System.out.println("Running test for searching in Greece site - link from amazon.de");		

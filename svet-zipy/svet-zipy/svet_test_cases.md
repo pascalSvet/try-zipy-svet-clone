@@ -157,7 +157,48 @@
           - amazon      	
  
 ----
-     
+
+#### Search
+
+    **Search_field:**
+          - clearing search field
+          - opening of dropdown autocomplete menu
+          - closing of dropdown autocomplete menu after clearing the search field
+          - performing search with autocomplete hint
+          - keeping the keyword in search field after switching to amazon
+          - keeping the keyword search after switching to ebay
+          - keeping the keyword search after switching to Less-than-5
+          - clearing the keyword in search field after switching to amazon
+          - clearing the keyword search after switching to ebay
+          - clearing the keyword search after switching to Less-than-5
+    
+    **Search_input:**
+          - searching in Israel site - in english
+          - searching in Israel site - in hebrew
+          - searching in Portugal site - in english
+          - searching in Portugal site - in portuguese with special characters
+          - searching with special signs - apostrophe
+          - searching with special signs - dash
+          - searching with special signs - parenthesis
+          - searching with special signs - bracket
+    
+    **Search_links:**
+          - searching on Israel site - link from aliExpress
+          - searching on Israel site - link from ebay
+          - searching on Israel site - link from amazon
+          - searching on Greece site - link from aliExpress
+          - searching on Greece site - link from ebay.de
+          - searching on Greece site - link from amazon.de
+    
+    **Search_redirect:**
+          - redirecting search results from amazon to other, if nothing found
+          - redirecting search results from ebay to other, if nothing found
+          - redirecting search results from ebay to other, more suitable, when smart search is on
+          - redirecting search results from other to any other, if nothing found
+
+          
+----
+              
 #### Sign Up
 
     **Sign up with unused accounts, !!!entered by the user!!!:**
@@ -245,3 +286,8 @@
     **Test Main Page Thumbs**
     **Test Populars**
     **Test Favorites**
+
+----   
+     
+## o
+   *o*
