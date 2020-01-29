@@ -142,7 +142,11 @@ public class ElementsBuying {
 	public static final String Search_link_ebayDE = "https://www.ebay.de/itm/Big-Seven-Brian-Cargo-Hose-Comfort-Fit-Herren-Jeans-Hose/401091823499?_trkparms=pageci%3Aaaa79ac8-41dd-11ea-9c7c-74dbd180bd02%7Cparentrq%3Aeca2cb1b16f0a4b7fcbeb1e9fff8bb0a%7Ciid%3A1";
 	public static final String Search_link_ebayDY_title = "/html/head/meta[15]"; //atribute:content
 	public static final String Search_link_amazonDE = "https://www.amazon.de/Boldog-Laube-kuscheliger-Schal-Cashmerefeeling/dp/B00CYDMC0M?pf_rd_p=fc3dc759-a057-4598-848d-dce8d6cdd7c9&pd_rd_wg=hnUg5&pf_rd_r=Y7AGS67WZQ5SXGV657QR&ref_=pd_gw_unk&pd_rd_w=tCY9C&pd_rd_r=7592bd9b-9226-49ed-8d8d-27307d388f08";
-
+	public static final String Search_autocompleteArrow1 = "/html//form[@id='searchbar-form-one-block-page']/div/div/span[1]/span[@class='ico ico--autocomplete']";
+	public static final String Search_autocompleteHint1 = "/html//form[@id='searchbar-form-one-block-page']/div/div/span[1]/span[@class='autocomplete_hint']";
+	public static final String Search_button = "//form[@id='searchbar-form-one-block-page']//span[@class='ico ico--magnifier']";
+	public static final String Search_delete = "/html//form[@id='searchbar-form-one-block-page']//span[@class='ico ico--cross']";
+	
 	
 	
 }
