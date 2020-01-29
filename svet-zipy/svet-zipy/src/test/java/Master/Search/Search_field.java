@@ -27,13 +27,31 @@ public class Search_field extends Search_MAIN {
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_eng);
 		driver.findElement(By.xpath(ElementsBuying.Search_delete)).click();
-		String serchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
 
-		//if succeed, then a dropdown menu with autocomplete hints will open
-		Assert.assertTrue("".equals(serchField));	
+		//if succeed, then the field will be empty
+		Assert.assertTrue("".equals(searchField));	
 	}
 	
 	
+	//Test - performing empty search
+	@Test		
+	public  void Tests_Search_field_emptyField() throws Exception {
+		System.out.println("Running test for performing empty search");		
+		
+		driver.get(ElementsWebsites.Zipy_il);
+
+		// enter search keyword and then clear the field
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
+			.sendKeys("", Keys.ENTER);
+		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		String searchFieldMessage = driver.findElement(By.id("desktop_search_fild")).getAttribute("class"); 
+
+		//if succeed, then the field will be empty and the "type a product name" message will shake
+		Assert.assertTrue("shake".equals(searchFieldMessage) && "".equals(searchField));	
+	}
+
+		
 	//Test - opening of dropdown autocomplete menu
 	@Test		
 	public  void Tests_Search_field_dropdownOpen() throws Exception {
@@ -88,14 +106,14 @@ public class Search_field extends Search_MAIN {
 		
 		//save the new search name
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String serchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
 
 		
 		System.out.println(hint1);
-		System.out.println(serchField);
+		System.out.println(searchField);
 
 		//if search succeed correctly, the search field contains the hint and there is option for ordering the results
-		Assert.assertTrue( hint1.equals(serchField) &&
+		Assert.assertTrue( hint1.equals(searchField) &&
 				!driver.findElements(By.xpath(ElementsBuying.Product_sortBy)).isEmpty() );	
 	}
 	
@@ -113,10 +131,10 @@ public class Search_field extends Search_MAIN {
 		
 		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_amazonButton)).click();	
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String serchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
 
 		//if succeed, then a search field will keep the keyword
-		Assert.assertTrue(ElementsBuying.Search_eng.equals(serchField));	
+		Assert.assertTrue(ElementsBuying.Search_eng.equals(searchField));	
 	}
 
 	
@@ -133,10 +151,10 @@ public class Search_field extends Search_MAIN {
 		
 		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_ebayButton)).click();	
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String serchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
 
 		//if succeed, then a search field will keep the keyword
-		Assert.assertTrue(ElementsBuying.Search_eng.equals(serchField));	
+		Assert.assertTrue(ElementsBuying.Search_eng.equals(searchField));	
 	}
 
 	
@@ -153,10 +171,10 @@ public class Search_field extends Search_MAIN {
 		
 		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_lessThan5Button)).click();	
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String serchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
 
 		//if succeed, then a search field will keep the keyword
-		Assert.assertTrue(ElementsBuying.Search_eng.equals(serchField));	
+		Assert.assertTrue(ElementsBuying.Search_eng.equals(searchField));	
 
 	}
 	
@@ -175,10 +193,10 @@ public class Search_field extends Search_MAIN {
 
 		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_amazonButton)).click();	
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String serchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
 
 		//if succeed, then a search field will keep the keyword
-		Assert.assertTrue("".equals(serchField));	
+		Assert.assertTrue("".equals(searchField));	
 
 	}
 	
@@ -197,10 +215,10 @@ public class Search_field extends Search_MAIN {
 
 		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_ebayButton)).click();	
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String serchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
 
 		//if succeed, then a search field will keep the keyword
-		Assert.assertTrue("".equals(serchField));	
+		Assert.assertTrue("".equals(searchField));	
 	}
 
 	
@@ -218,10 +236,10 @@ public class Search_field extends Search_MAIN {
 
 		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_lessThan5Button)).click();	
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String serchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
 
 		//if succeed, then a search field will keep the keyword
-		Assert.assertTrue("".equals(serchField));	
+		Assert.assertTrue("".equals(searchField));	
 	}
 	
 }
