@@ -306,6 +306,7 @@ public class Functions {
 			choose = driver.findElement(By.xpath(ElementsBuying.ProductFramed_color)).getText().trim();
 			if (Arrays.asList(chooseInternational).contains(choose)) {
 				driver.findElement(By.xpath(ElementsBuying.ProductFramed_color)).click();
+				Thread.sleep(2000);
 				new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_color_1))).click();
 				Thread.sleep(500);
 			}
@@ -316,6 +317,7 @@ public class Functions {
 			choose = driver.findElement(By.xpath(ElementsBuying.ProductFramed_length)).getText().trim();
 			if (Arrays.asList(chooseInternational).contains(choose)) {
 				driver.findElement(By.xpath(ElementsBuying.ProductFramed_length)).click();
+				Thread.sleep(2000);
 				new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_length_1))).click();
 				Thread.sleep(500);
 			}
@@ -339,6 +341,7 @@ public class Functions {
 			choose = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).getText().trim();
 			if (Arrays.asList(chooseInternational).contains(choose)) {
 				driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();
+				Thread.sleep(2000);
 				new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsColor_1))).click();
 				Thread.sleep(500);
 			}
@@ -349,6 +352,7 @@ public class Functions {
 			choose = driver.findElement(By.xpath(ElementsBuying.Product_variationsLength)).getText().trim();
 			if (Arrays.asList(chooseInternational).contains(choose)) {
 				driver.findElement(By.xpath(ElementsBuying.Product_variationsLength)).click();
+				Thread.sleep(2000);
 				new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsLength_1))).click();
 				Thread.sleep(500);
 			}
