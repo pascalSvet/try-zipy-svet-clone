@@ -21,10 +21,10 @@ public class Errors_502 extends Errors_MAIN {
 
 	
 	
-	//Test - catching 502 error while opening many tabs in aliexpress #1 category - Greece
+	//Test - catching 502 error while opening many tabs in categories - Greece
 	@Test		
 	public  void Tests_errors502_gr_aliExpress() throws Exception {		
-		System.out.println("Running test for catching 502 error while opening many tabs in aliexpress categories - Greece");	
+		System.out.println("Running test for catching 502 error while opening many tabs in categories - Greece");	
 
 		driver.get(ElementsWebsites.Zipy_gr);
 		Functions.advertNote_close_gr(driver);
@@ -36,10 +36,10 @@ public class Errors_502 extends Errors_MAIN {
 	}
 
 	
-	//Test - catching 502 error while opening many tabs in aliexpress #1 category - Portugal
+	//Test - catching 502 error while opening many tabs in categories - Portugal
 	@Test		
 	public  void Tests_errors502_pt_aliExpress() throws Exception {		
-		System.out.println("Running test for catching 502 error while opening many tabs in aliexpress categories - Portugal");	
+		System.out.println("Running test for catching 502 error while opening many tabs in categories - Portugal");	
 
 		driver.get(ElementsWebsites.Zipy_pt);
 		Functions.advertNote_close_gr(driver);
@@ -50,10 +50,10 @@ public class Errors_502 extends Errors_MAIN {
 		Assert.assertFalse(fails);	
 	}
 	
-	//Test - catching 502 error while opening many tabs in aliexpress #1 category - Israel
+	//Test - catching 502 error while opening many tabs in categories - Israel
 	@Test		
 	public  void Tests_errors502_il_aliExpress() throws Exception {		
-		System.out.println("Running test for catching 502 error while opening many tabs in aliexpress categories - Israel");	
+		System.out.println("Running test for catching 502 error while opening many tabs in categories - Israel");	
 
 		driver.get(ElementsWebsites.Zipy_il);
 		Functions.advertNote_close_gr(driver);

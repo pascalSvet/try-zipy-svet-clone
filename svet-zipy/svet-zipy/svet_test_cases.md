@@ -68,7 +68,19 @@
     - Сatalogs_gr_aliExpress_separated
     - Сatalogs_gr_amazon_combined
     - Сatalogs_gr_amazon_separated
-  
+ 	
+----
+
+#### Errors
+
+    **Errors_502**
+	    - catching 502 error while opening many tabs in categories - Greece
+	    - catching 502 error while opening many tabs in categories - Portugal
+	    - catching 502 error while opening many tabs in categories - Israel
+	    - catching 502 error while opening many tabs in deals - Greece
+	    - catching 502 error while opening many tabs in deals - Portugal
+	    - catching 502 error while opening many tabs in deals - Israel
+	  
 ----
     
 #### Favorites
