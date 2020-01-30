@@ -1,7 +1,8 @@
 ## Cart tests
 ----
 
-###Cart_addProduct:
+### Cart_addProduct:
+
 
   **adding a product to the cart from quick pop-up page**
   
@@ -65,7 +66,7 @@
  
 ----
 
-###Cart_addProduct_withLoggedUser:
+### Cart_addProduct_withLoggedUser:
 
   **adding a product while unlogged, and the logging in and checking for the product in the cart**
   
@@ -90,7 +91,7 @@
    
 ----
 
-###Cart_addProduct_withVariations:**
+### Cart_addProduct_withVariations:**
 
   **adding a product to the cart - with one variation**
   
@@ -168,7 +169,7 @@
 
 ----
      
-###Cart_mobile:
+### Cart_mobile:
 
   **checking the final sum in the cart affected by changing the quantity in the cart**
   
@@ -208,7 +209,7 @@
    
 ----
 
-###Cart_price:**
+### Cart_price:**
 
   **checking the final sum in the cart includes the delivery**
   
@@ -284,7 +285,7 @@
    
 ----
             
-###Cart_removeProduct:
+### Cart_removeProduct:
 
   **removing product from the cart**
   
