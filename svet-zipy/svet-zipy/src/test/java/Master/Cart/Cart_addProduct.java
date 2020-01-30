@@ -17,9 +17,9 @@ public class Cart_addProduct extends Cart_MAIN {
 	//Test - adding a product to the cart from quick pop-up page
 	@Test		
 	public  void Tests_cart_addProduct_fromQuickPopup() throws Exception {
-		System.out.println("Running test for adding to favorites from the quick pop-up page");		
+		System.out.println("Running test for adding a product to the cart from quick pop-up page");		
 
-		//open one of the deals products on the main page and save its name
+		//open one of the deals products and save its name
 		driver.get(ElementsWebsites.Zipy_il_deals);
 		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3)).click();
 		Thread.sleep(1000);
@@ -37,8 +37,8 @@ public class Cart_addProduct extends Cart_MAIN {
 	
 	//Test - adding a product to the cart from less-than-5 tab
 	@Test		
-	public  void Tests_cart_addProduct_fromLessThen5() throws Exception {
-		System.out.println("Running test for adding to favorites from the less-than-5 tab");		
+	public  void Tests_cart_addProduct_fromLessThan5() throws Exception {
+		System.out.println("Running test for adding a product to the cart from the less-than-5 tab");		
 
 		//open the less-than-5 tab
 		driver.get(ElementsWebsites.Zipy_il_lessThan5);
@@ -57,10 +57,10 @@ public class Cart_addProduct extends Cart_MAIN {
 	}
 
 	 
-	//Test - adding a product to the cart from category (from categories side panel)
+	//Test - adding a product to the cart from category 
 	@Test		
 	public  void Tests_cart_addProduct_fromCategory() throws Exception {
-		System.out.println("Running test for adding to favorites from category thumbnail");		
+		System.out.println("Running test for adding a product to the cart from category");		
 		
 		driver.get(ElementsWebsites.Zipy_il);
 		
@@ -86,7 +86,7 @@ public class Cart_addProduct extends Cart_MAIN {
 	//Test - adding a product to the cart from next quick pop-up page
 	@Test		
 	public  void Tests_cart_addProduct_fromQuickPopup_Next() throws Exception {
-		System.out.println("Running test for adding to favorites from next quick pop-up page");		
+		System.out.println("Running test for adding to the cart from next quick pop-up page");		
 
 		//open one of the deals products and 
 		driver.get(ElementsWebsites.Zipy_il_deals);

@@ -109,7 +109,7 @@ public class ElementsBuying {
 
 	public static final String lessThan5_Open ="/html/body/div[@class='wrap wrap_with_mehes']//ul[@class='stores']//a/span";
 	public static final String lessThan5_dealThumbnail1 = "//*[@id=\"wrapper\"]/div[2]/main/section[2]/div[2]/div[1]/a";
-	public static final String Product_sortBy = "//div[@id='wrapper']//main[@role='main']/section[@class='daily m--category m--plates']//div[@class='daily__heading-sort']/div[1]";
+	public static final String Product_sortBy = "//div[@id='wrapper']//main[@role='main']/section[@class='daily m--category m--plates']//div[@class='daily__heading-sort-item daily__heading-sort-item-sort-by']";
 	public static final String Product_toysTitle = "/html//div[@id='wrapper']//main[@role='main']/div[@class='elementor elementor-21138']//div[@class='elementor-section-wrap']/section[1]//div[@class='elementor-row']/div//div[@class='elementor-element elementor-element-3f21537b elementor-widget elementor-widget-heading']//h2[@class='elementor-heading-title elementor-size-default']";
 	
 	//aliexpress:

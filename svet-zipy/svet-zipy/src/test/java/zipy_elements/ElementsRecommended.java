@@ -26,7 +26,8 @@ public class ElementsRecommended {
 
 	public static final String dailyDeal_onPage_3 = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[3]";
 	public static final String dailyDeal_onPage_3_title = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[3]/a";
-	
+	public static final String dailyDeal_onPage_i = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[";
+
 	public static final String Product_PinThumbIcon = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[3]/div/div[@class='daily__item-info']/button[@class='daily__item-pin']";
 	public static final String Product_PinThumbIcon_Selected = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[3]/div/div[@class='daily__item-info']/button[@class='daily__item-pin m--active']";
 	public static final String Product_PinThumbIcon_colorUnselected = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[3]/div/div[@class='daily__item-info']/button[@class='daily__item-pin']/span";

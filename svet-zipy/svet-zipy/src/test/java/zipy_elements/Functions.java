@@ -152,8 +152,14 @@ public class Functions {
 				until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(ElementsLogin.Popup_welcome_close_gr)));
 			}
 	}
-	
 
+	
+	//close the advert pop-up note if exist (in greece version)
+	public static void advertNote_close_gr(WebDriver driver) throws Exception{
+			if (!driver.findElements(By.xpath(ElementsLogin.Start_advertNote_close)).isEmpty()){
+				driver.findElement(By.xpath(ElementsLogin.Start_advertNote_close)).click();
+			}
+	}
 	
 ////////////// cart functions: ////////////////////////////////////////////////////////
 		
@@ -366,7 +372,7 @@ public class Functions {
 
 	
 	
-//////////////thumbnails functions: ////////////////////////////////////////////////////////
+//////////////tabs functions: ////////////////////////////////////////////////////////
 	
 	// A function for checking loading of every thumbnails in populars.
 	public  static boolean checkPopularTabs(WebDriver driver, int thumbs, String element) throws InterruptedException {
@@ -407,11 +413,12 @@ public class Functions {
 		if(fails!=0) {
 			System.out.println("in total: " + fails + " of categories failed to load");			
 		}
+		driver.switchTo().window(tabs.get(0));
 		return (fails!=0);		
 	}
 	
 	
-	// A function for checking loading of every thumbnails in dailyDeals.
+	// A function for checking loading of every thumbnails on page.
 	public  static boolean checkThumbnailsInTabs(WebDriver driver, int thumbs, String element) throws InterruptedException {
 		
 		int fails = 0;
@@ -450,8 +457,49 @@ public class Functions {
 		if(fails!=0) {
 			System.out.println("in total: " + fails + " of thumbs failed to load");			
 		}
+		driver.switchTo().window(tabs.get(0));
 		return (fails!=0);		
 	}
+	
+	
+	// A function for checking 502 error of every link on page
+	public  static boolean checkCategoriesInTabs_error502(WebDriver driver, int thumbs, String element) throws InterruptedException {
+		
+		int fails = 0;
+		Thread.sleep(2000);
+
+		//open all thumbnails in a new tab each
+		for(int i=1; i <= thumbs; i++) {
+			WebElement webel = driver.findElement(By.xpath(element + String.valueOf(i) + "]"));	
+			new WebDriverWait(driver, 10).until( ExpectedConditions.elementToBeClickable(webel));
+			new Actions (driver).keyDown(Keys.CONTROL).moveToElement(webel).click().build().perform();
+		}	
+		
+		//check every tab
+		ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());			
+		for(int i=1; i<=thumbs; i++){
+			driver.switchTo().window(tabs.get(i));
+			
+			//catch 502 error if exist
+			try {
+				boolean t = !driver.getTitle().contains("502"); 
+			}
+			catch (Exception ex) {
+					fails++;
+					System.out.println("the link:  " + driver.getCurrentUrl() + " encountered an 502 error" );			
+			}
+			driver.close();
+		}
+		
+		if(fails!=0) {
+			System.out.println("in total: " + fails + "links encountered an 502 error");			
+		} else {
+			System.out.println("none 502 error catched");			
+		}
+		driver.switchTo().window(tabs.get(0));
+		return (fails!=0);		
+	}
+
 	
 	
 	

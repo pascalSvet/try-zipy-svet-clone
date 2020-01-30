@@ -17,17 +17,24 @@ public class ElementsLogin {
 	public static final String Email = "test@mail.com";
 	public static final String Password = "123456";	
 
-	public static final String sideCategory1 = "/html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[1]";
+	public static final String sideCategory1 = "/html//div[@id='topbar']/div[@class='default']//span[@class='topbar-catalogue__btn_icon']";
 	public static final String sideCategory1_1 = "/html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[1]/div/div/div[1]/div[2]/div[1]";
 	public static final String sideCategoryUp1 = "/html//div[@id='topbar']/div[@class='default']//span[@class='topbar-catalogue__btn_icon']";
+	public static final String sideCategoryUpi = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[";
 	public static final String sideCategoryUp1_1 = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[1]/div/div/div[1]/div[2]/div[1]";
+	public static final String sideCategoryUp1_i = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[1]/div/div/div[1]/div[2]/div[";
+	public static final String sideCategoryUp2_i = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[2]/div/div/div[1]/div[2]/div[";
+	public static final String sideCategoryUp3_i = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[3]/div/div/div[1]/div[2]/div[";
+	public static final String sideCategoryUp8_i = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[8]/div/div/div[1]/div[2]/div[";
 	public static final String sideCategoryi = "/html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[";
 	///html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[i]
 	public static final String sideCategoryi_jStart = "/html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[";
 	public static final String sideCategoryi_jMiddle = "]/div/div/div[";
 	public static final String sideCategoryi_jEnd = "]/div[2]/div[";
 	///html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[1]/div/div/div[j]/div[2]/div[i]
-
+	
+	public static final String Start_advertNote_close = "/html//button[@id='onesignal-popover-cancel-button']";
+	
 	public static final String Login_button = "/html//div[@id='topbar']/div[@class='default']/div[3]/div[2]/span[@class='topbar__menu-item-link']/span[@class='ico ico--login']";
 	public static final String Login_button_Dev = "/html//div[@id='topbar']/div[@class='default']/div[3]/div[2]/span[@class='topbar__menu-item-link']/span[@class='topbar__menu-item-link--dotted']";
 	public static final String Logedin_button = "/html//div[@id='topbar']/div[@class='default']//span[@class='topbar__user-link-no-name']";
