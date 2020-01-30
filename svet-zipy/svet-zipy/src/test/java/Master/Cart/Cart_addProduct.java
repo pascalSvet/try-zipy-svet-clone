@@ -21,9 +21,11 @@ public class Cart_addProduct extends Cart_MAIN {
 
 		//open one of the deals products and save its name
 		driver.get(ElementsWebsites.Zipy_il_deals);
+		//make sure there is no 400 error
 		if(driver.getTitle().contains("404")) {
 			System.out.println("test failed because of 404 eror");
-		}
+			Assert.assertTrue(false);
+		} 
 		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3)).click();
 		Thread.sleep(1000);
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPopup)).getText().trim();
@@ -45,9 +47,11 @@ public class Cart_addProduct extends Cart_MAIN {
 
 		//open the less-than-5 tab
 		driver.get(ElementsWebsites.Zipy_il_lessThan5);
+		//make sure there is no 400 error
 		if(driver.getTitle().contains("404")) {
 			System.out.println("test failed because of 404 eror");
-		}
+			Assert.assertTrue(false);
+		} 
 		//click the third thumbnail and save its title	
 		driver.findElement(By.xpath(ElementsRecommended.lessThan5_3)).click();	
 		String ProductTitle = driver.findElement(By.xpath(ElementsRecommended.lessThan5_3_title)).getText().trim();
@@ -68,9 +72,11 @@ public class Cart_addProduct extends Cart_MAIN {
 		System.out.println("Running test for adding a product to the cart from category");		
 		
 		driver.get(ElementsWebsites.Zipy_il);
+		//make sure there is no 400 error
 		if(driver.getTitle().contains("404")) {
 			System.out.println("test failed because of 404 eror");
-		}
+			Assert.assertTrue(false);
+		} 
 		//chose the first category from side panel and choose the first sub category
 		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1))).click()
 		.moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1_1))).click().build().perform();
@@ -97,9 +103,11 @@ public class Cart_addProduct extends Cart_MAIN {
 
 		//open one of the deals products and 
 		driver.get(ElementsWebsites.Zipy_il_deals);
+		//make sure there is no 400 error
 		if(driver.getTitle().contains("404")) {
 			System.out.println("test failed because of 404 eror");
-		}
+			Assert.assertTrue(false);
+		} 
 		
 		String currentUrl = driver.getCurrentUrl();
 		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3)).click();
@@ -128,9 +136,11 @@ public class Cart_addProduct extends Cart_MAIN {
 
 		//get to the required product page and save its title
 		driver.get(ElementsBuying.Product_noVariations);
+		//make sure there is no 400 error
 		if(driver.getTitle().contains("404")) {
 			System.out.println("test failed because of 404 eror");
-		}
+			Assert.assertTrue(false);
+		} 
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 		
 		//add to the cart
@@ -148,9 +158,11 @@ public class Cart_addProduct extends Cart_MAIN {
 		
 		//get to the aliExpress product page and save its title
 		driver.get(ElementsBuying.Product_noVariations);
+		//make sure there is no 400 error
 		if(driver.getTitle().contains("404")) {
 			System.out.println("test failed because of 404 eror");
-		}
+			Assert.assertTrue(false);
+		} 
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 		
 		//add to the cart
