@@ -82,6 +82,7 @@ public class ElementsBuying {
 	public static final String Product_quantityPlus = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']//div[@class='product__counter']/button[2]";
 	public static final String Product_quantityPlusAgain = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']//div[@class='product__counter']/button[2]";
 	public static final String Product_titleFromPicture = "//img[@class='product__specs-image']"; //atribute:alt
+	public static final String Product_titleFromPicture_amazon = "/html/head/meta[6]";  //atribute:content
 	public static final String Product_titleFromPopup = "/html//div[@role='dialog']//div[@class='featherlight-content-wrap']//section//h1[@class='product__title']";
 	public static final String Product_added = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='product__buy-buttons-buy-now']/a[2]//span[@class='amount-text']";
 	public static final String Product_heron = "//div[@id='wrapper']//main[@role='main']/section[@class='notfound']//div[@class='notfound__text-title']";

@@ -141,7 +141,7 @@ public class Cart_addProduct extends Cart_MAIN {
 
 		//get to the amazon product page and save its title
 		driver.get(ElementsBuying.Product_noVariationsAmazon);
-		String ProductTitleAmazon = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		String ProductTitleAmazon = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture_amazon)).getAttribute("content");
 		
 		//add to the cart
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_addToCart))).click();
