@@ -308,7 +308,7 @@ public class Functions {
 				driver.findElement(By.xpath(ElementsBuying.ProductFramed_color)).click();
 				Thread.sleep(2000);
 				new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_color_1))).click();
-				Thread.sleep(500);
+				Thread.sleep(1500);
 			}
 		}
 		//choose the first size if there is such an option
@@ -319,7 +319,7 @@ public class Functions {
 				driver.findElement(By.xpath(ElementsBuying.ProductFramed_length)).click();
 				Thread.sleep(2000);
 				new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_length_1))).click();
-				Thread.sleep(500);
+				Thread.sleep(1500);
 			}
 		}
 		
@@ -343,7 +343,7 @@ public class Functions {
 				driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();
 				Thread.sleep(2000);
 				new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsColor_1))).click();
-				Thread.sleep(500);
+				Thread.sleep(1500);
 			}
 		}
 		//choose the first size if there is such option
@@ -354,7 +354,7 @@ public class Functions {
 				driver.findElement(By.xpath(ElementsBuying.Product_variationsLength)).click();
 				Thread.sleep(2000);
 				new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsLength_1))).click();
-				Thread.sleep(500);
+				Thread.sleep(1500);
 			}
 		}
 	}
