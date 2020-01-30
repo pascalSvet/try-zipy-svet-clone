@@ -64,7 +64,9 @@
       **if we managed to add the products, both titles are in the cart
       -at the end, remove the product from the cart, for the future tests
  
+ 
 ----
+
 
 ### Cart_addProduct_withLoggedUser:
 
@@ -88,8 +90,10 @@
       -disconnect from the user and then connect back 
       **if we managed to add the product, its title is found in the cart
       -empty the cart and unlogging at the end for the next tests
+ 
    
 ----
+
 
 ### Cart_addProduct_withVariations:**
 
@@ -167,7 +171,9 @@
       -change the quantity in the cart manually to 3
       **if we managed to add the product twice, its quantity in the cart is 2
 
+
 ----
+ 
      
 ### Cart_mobile:
 
@@ -206,8 +212,10 @@
       - open the favorites window and save its contents
       **if we managed to remove the product, the cart won't contain its title, but the favorites will contain it			
       -at the end, remove the products from the favorites, for the future tests		
+  
    
 ----
+
 
 ### Cart_price:**
 
@@ -283,7 +291,9 @@
       -reopen the cart and change the quantity manually to "1"
       - the final sum supposed to be of 1 unit only :
    
+   
 ----
+  
             
 ### Cart_removeProduct:
 
@@ -355,5 +365,9 @@
       -open the favorites window and save its contents
       -if we managed to remove the product, the cart won't contain its title, but the favorites will contain it:		
       -at the end, remove the products from the favorites, for the future tests		
+
+--
+--
+
   
     
