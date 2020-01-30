@@ -22,10 +22,16 @@ public class Cart_addProduct_withLoggedUser extends Cart_MAIN {
 		System.out.println("Running test for adding product to the cart while the user unlogged, and then logging in");		
 		
 
-		//get to the required product page and save its title
+		//get to the required product page
 		driver.get(ElementsBuying.Product_noVariations);
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		//save its name
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
-		
+
 		//add to the cart
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_added)));
@@ -39,7 +45,7 @@ public class Cart_addProduct_withLoggedUser extends Cart_MAIN {
 		// if we managed to add the product, its title is found in the cart:
 		Assert.assertTrue(cartFrame.getText().contains(ProductTitle));
 		
-		//empty the cart and disconect from the user for the next tests
+		//empty the cart and disconnect from the user for the next tests
 		Functions.openAndEmptyCart(driver);
 		Functions.unLogIn(driver);				
 		}
@@ -54,8 +60,14 @@ public class Cart_addProduct_withLoggedUser extends Cart_MAIN {
 		driver.get(ElementsWebsites.Zipy_il);
 		Functions.logIn(driver);
 		
-		//get to the required product page and save its title
+		//get to the required product page
 		driver.get(ElementsBuying.Product_noVariations);
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		//save its name
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 		
 		//add to the cart /

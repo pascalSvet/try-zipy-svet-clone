@@ -21,8 +21,14 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 	public  void Tests_cart_addProduct_oneVariation() throws Exception {
 		System.out.println("Running test for adding product to the cart - with one variation)");		
 		
-		//get to the required product page and save its title
+		//get to the required product page
 		driver.get(ElementsBuying.Product_oneVariation);
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		//save its name
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");		
 
 		//choose the product variation - first option from the droplist - and save variation name
@@ -39,7 +45,6 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		// if we managed to add the product correctly, its title and its chosen variation are found in the cart:
 		Assert.assertTrue((cartFrame.getText().contains(ProductTitle))&&
 						(cartFrame.getText().contains(ProductElement1)));
-	//
 	}
 			
 
@@ -48,8 +53,14 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 	public  void Tests_cart_addProduct_twoVariations() throws Exception {
 		System.out.println("Running test for adding product to the cart - with two variations)");		
 		
-		//get to the required product page and save its title
+		//get to the required product page
 		driver.get(ElementsBuying.Product_twoVariations);
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		//save its name
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");				
 
 		//choose the first variation - first option from the first droplist - and save its name
@@ -82,8 +93,14 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 	public  void Tests_cart_addProductTwice_oneVariation() throws Exception {
 			System.out.println("Running test for adding product to the cart twice, each time with one different variation");		
 			
-			//get to the required product page and save its title
+			//get to the required product page
 			driver.get(ElementsBuying.Product_oneVariation);
+			//make sure there is no 400 error
+			if(driver.getTitle().contains("404")) {
+				System.out.println("test failed because of 404 eror");
+				Assert.assertTrue(false);
+			}
+			//save its name
 			String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");		
 
 			//choose the product variation - first option from the droplist - and save elements name
@@ -125,8 +142,14 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 	public  void Tests_cart_addProductTwice_twoVariations() throws Exception {
 		System.out.println("adding a same product twice to the cart, each time with two different variation (while the first is the same in both cases)");		
 		
-		//get to the required product page and save its title
+		//get to the required product page
 		driver.get(ElementsBuying.Product_twoVariations);
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		//save its name
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");				
 
 		//choose the first variation - first option from the first droplist - and save its name
@@ -175,9 +198,15 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 	public  void Tests_cart_addProduct_plusOne() throws Exception {
 		System.out.println("Running test for adding twice the same product to the cart, using plus-one button ");		
 		
-		//get to the required product page and save its title
+		//get to the required product page
 		driver.get(ElementsBuying.Product_noVariations);
-		
+
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+
 		//add to the cart and then add another one to the cart with the plus-one button
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_plusOne))).click();
@@ -195,8 +224,14 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 	public  void Tests_cart_addProduct_quantityTwo() throws Exception {
 		System.out.println("Running test for adding twice the same product to the cart, using quantity button");				
 		
-		//get to the required product page and save its title
+		//get to the required product page
 		driver.get(ElementsBuying.Product_noVariations);
+
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
 		
 		//increase the quantity to 2 and then add to the cart 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_quantityPlus))).click();
@@ -216,10 +251,16 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 	public  void Tests_cart_addProduct_quantityTwo_plusOne() throws Exception {
 		System.out.println("Running test for adding twice the same product to the cart, using quantity and then plus-one button");		
 
-		//get to the required product page and save its title
+		//get to the required product page
 		driver.get(ElementsBuying.Product_noVariations);
-		
-		//ad to the cart and then increase the quantity to another 2 and add to the cart again 
+
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+
+		//add to the cart and then increase the quantity to another 2 and add to the cart again 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_addToCart))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_quantityPlusAgain))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_plusOne))).click();
@@ -237,9 +278,15 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 	public  void Tests_cart_addProduct_changeQuantity() throws Exception {
 		System.out.println("Running test for adding twice the same product to the cart, by changing quantity manually in the cart");		
 		
-		//get to the required product page and save its title
+		//get to the required product page
 		driver.get(ElementsBuying.Product_noVariations);
-		
+
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+
 		//add to the cart 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_addToCart))).click();
 

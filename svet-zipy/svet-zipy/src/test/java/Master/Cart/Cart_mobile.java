@@ -27,9 +27,16 @@ public class Cart_mobile extends Cart_MAIN {
 		//change to mobile screen resolution
 		driver.manage().window().setSize(new Dimension(320,480));
 
-		//get to the required product page and save its price
+		//get to the required product page  
 		driver.get(ElementsBuying.Product_noVariations);
 		Thread.sleep(500);
+
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		//save its price
 		String price = Functions.priceSum(driver, ElementsBuying.Product_price, ElementsBuying.Product_delivery).trim();
 		
 		//increase the quantity to 2 and then add to the cart 
@@ -87,7 +94,7 @@ public class Cart_mobile extends Cart_MAIN {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
 		String Quantity = driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity_mobile)).getAttribute("value");
 
-		// the final quantity supposed to be 11 units :
+		// if succeed, the final quantity supposed to be 11 units :
 		Assert.assertTrue(Quantity.equals("11"));
 				
 		//remove the product at the end, for the future tests

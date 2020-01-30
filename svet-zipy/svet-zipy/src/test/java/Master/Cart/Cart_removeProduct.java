@@ -20,8 +20,16 @@ public class Cart_removeProduct extends Cart_MAIN {
 	public  void Tests_cart_removeProduct() throws Exception {
 		System.out.println("Running test for removing product from the cart");		
 
-		//get to the required product page and save its title
+		//get to the required product page  
 		driver.get(ElementsBuying.Product_noVariations);
+
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		
+		//save its title
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 		
 		//add to the cart
@@ -40,8 +48,16 @@ public class Cart_removeProduct extends Cart_MAIN {
 	public  void Tests_cart_removeProduct_toFavorites() throws Exception {
 		System.out.println("Running test for removing product from the cart to the favorites");		
 
-		//get to the required product page and save its title
+		//get to the required product page
 		driver.get(ElementsBuying.Product_noVariations);
+
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		
+		//save its title
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 		
 		//add to the cart
@@ -78,8 +94,16 @@ public class Cart_removeProduct extends Cart_MAIN {
 	public  void Tests_cart_removeProduct_return() throws Exception {
 		System.out.println("Running test for removing product from the cart and then returning it back");		
 	
-		//get to the required product page and save its title
+		//get to the required product page
 		driver.get(ElementsBuying.Product_noVariations);
+
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		
+		//save its title
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 		
 		//add to the cart
@@ -109,8 +133,16 @@ public class Cart_removeProduct extends Cart_MAIN {
 	public  void Tests_cart_removeProduct_partOfVariations() throws Exception {
 		System.out.println("Running test for removing one of the variations of the same product which is in the cart");		
 
-		//get to the required product page and save its title
+		//get to the required product page 
 		driver.get(ElementsBuying.Product_oneVariation);
+
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		
+		//save its title
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");		
 
 		//choose the product variation - first option from the droplist - and save its name
@@ -157,8 +189,16 @@ public class Cart_removeProduct extends Cart_MAIN {
 	public  void Tests_cart_removeProduct_fromPayment() throws Exception {
 		System.out.println("Running test for removing product from the payment page");		
 
-		//get to the required product page and save its title
+		//get to the required product page 
 		driver.get(ElementsBuying.Product_noVariations);
+
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		
+		//save its title
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 		
 		//add to the cart and proceed to the payment
@@ -180,8 +220,16 @@ public class Cart_removeProduct extends Cart_MAIN {
 	public  void Tests_cart_removeProduct_toFavorites_fromPayment() throws Exception {
 		System.out.println("Running test for removing product to favorites from the payment page");		
 
-		//get to the required product page and save its title
+		//get to the required product page
 		driver.get(ElementsBuying.Product_noVariations);
+
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		
+		//save its title
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 		
 		//add to the cart and proceed to the payment

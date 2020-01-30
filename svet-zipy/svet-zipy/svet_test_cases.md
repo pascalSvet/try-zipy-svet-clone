@@ -14,10 +14,10 @@
 #### Cart
 
     **Cart_addProduct:**
-	    - adding a product to the cart from product pop-up page
+	    - adding a product to the cart from quick pop-up page
 	    - adding a product to the cart from second product pop-up page            
 	    - adding a product to the cart from less-than-5 tab
-	    - adding a product to the cart from category (from categories side panel)
+	    - adding a product to the cart from category 
 	    - adding a product to the cart from product page
 	    - adding both a product from aliExpress and a product from Amazon to the cart
 
@@ -55,6 +55,9 @@
             - removing product from the cart to the favorites
             - removing product from the cart and then returning it back
             - adding same product twice with different variations, and then removing one of them from the cart
+            - removing product from the payment page   
+            - removing product to favorites from the payment page
+    
     
 ----
 

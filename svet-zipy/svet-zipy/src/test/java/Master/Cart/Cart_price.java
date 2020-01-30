@@ -22,10 +22,17 @@ public class Cart_price extends Cart_MAIN {
 	public  void Tests_cart_price_includesDelivery() throws Exception {
 		System.out.println("Running test for checking the final sum in the cart includes the delivery ");		
 
-		//get to the required product page and save the sum of its price and delivery price/
+		//get to the required product page  
 		driver.get(ElementsBuying.Product_noVariations);
+		
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		
+		//save the sum of its price and delivery price/
 		String Sum = Functions.priceSum(driver,ElementsBuying.Product_price,ElementsBuying.Product_delivery).trim();
-
 
 		//add to the cart
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
@@ -46,6 +53,12 @@ public class Cart_price extends Cart_MAIN {
 		//get to the required product page
 		driver.get(ElementsBuying.Product_oneVariation);
 
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+				
 		//choose the product variation - first option from the droplist
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsColor))).click();
 		Thread.sleep(500);
@@ -71,9 +84,16 @@ public class Cart_price extends Cart_MAIN {
 	public  void Tests_cart_price_sumOfProducts() throws Exception {
 		System.out.println("Running test for checking the final sum in the cart includes all products in the cart ");		
 
-		//get to the first product page and save its price
+		//get to the first product page
 		driver.get(ElementsBuying.Product_noVariations);
 		Thread.sleep(500);
+		
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		//save its price
 		String price1 = Functions.priceSum(driver, ElementsBuying.Product_price, ElementsBuying.Product_delivery).trim();
 		
 		//add to the cart 
@@ -105,15 +125,21 @@ public class Cart_price extends Cart_MAIN {
 	public  void Tests_cart_price_quantity() throws Exception {
 		System.out.println("Running test for checking the final sum in the cart affected by the quantity of the product");		
 
-		//get to the first product page and save its price
+		//get to the product page
 		driver.get(ElementsBuying.Product_noVariations);
+		
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
 				
 		//increase the quantity to 2 and save the price
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlus))).click();
 		Thread.sleep(3000);
 		String price = Functions.priceSum(driver, ElementsBuying.Product_price, ElementsBuying.Product_delivery).trim();
 		
-		//the sum of two products
+		//save the sum of two units
 		String Sum = Functions.stringSum(driver,price,price).trim();
 						
 		//add to the cart 
@@ -135,6 +161,12 @@ public class Cart_price extends Cart_MAIN {
 		//get to the required product page
 		driver.get(ElementsBuying.Product_oneVariation);
 
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+					
 		//choose the product variation - first option from the droplist and save its price
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsColor))).click();		
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsColor_1))).click();;
@@ -151,7 +183,7 @@ public class Cart_price extends Cart_MAIN {
 		Thread.sleep(3000);
 		String price2 = driver.findElement(By.xpath(ElementsBuying.Product_discount)).getText().trim();	
 		
-		//the sum of two variations
+		//save the sum of two variations
 		String Sum = Functions.stringSum(driver,price1,price2).trim();
 		
 		//add to the cart 
@@ -172,17 +204,33 @@ public class Cart_price extends Cart_MAIN {
 	public  void Tests_cart_price_removingProduct() throws Exception {
 		System.out.println("Running test for checking the final sum in the cart affected by removing one of the products ");		
 
-		//get to the first product page and save its price
+		//get to the first product page 
 		driver.get(ElementsBuying.Product_noVariations);
 		Thread.sleep(500);
+		
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		
+		//save its price			
 		String price1 = Functions.priceSum(driver, ElementsBuying.Product_price, ElementsBuying.Product_delivery).trim();
 		
 		//add to the cart 
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 
-		//get to the second product page and save its price
+		//get to the second product page 
 		driver.get(ElementsBuying.Product_noVariations2);
 		Thread.sleep(500);
+		
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		
+		//save its price	
 		String price2 = Functions.priceSum(driver, ElementsBuying.Product_price, ElementsBuying.Product_delivery).trim();
 		
 		//add to the cart
@@ -210,9 +258,16 @@ public class Cart_price extends Cart_MAIN {
 	public  void Tests_cart_price_changeQuantity() throws Exception {
 		System.out.println("Running test for checking the final sum in the cart affected by changing the quantity in the cart");		
 
-		//get to the required product page and save its price
+		//get to the required product page 
 		driver.get(ElementsBuying.Product_noVariations);
 		Thread.sleep(500);
+
+		//make sure there is no 400 error
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}
+		//save its price
 		String price = Functions.priceSum(driver, ElementsBuying.Product_price, ElementsBuying.Product_delivery).trim();
 		
 		//increase the quantity to 2 and then add to the cart 
