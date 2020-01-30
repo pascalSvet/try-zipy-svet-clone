@@ -23,6 +23,8 @@ public class ElementsLogin {
 	public static final String sideCategoryUpi = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[";
 	public static final String sideCategoryUp1_1 = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[1]/div/div/div[1]/div[2]/div[1]";
 	public static final String sideCategoryUp1_i = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[1]/div/div/div[1]/div[2]/div[";
+	public static final String sideCategoryUp1_i_secondRow = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[1]/div/div/div[2]/div[2]/div[";
+	public static final String sideCategoryUp1_i_thirdRow = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[1]/div/div/div[3]/div[2]/div[";
 	public static final String sideCategoryUp2_i = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[2]/div/div/div[1]/div[2]/div[";
 	public static final String sideCategoryUp3_i = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[3]/div/div/div[1]/div[2]/div[";
 	public static final String sideCategoryUp8_i = "//*[@id=\"topbar\"]/div[2]/div[1]/div/div/section/div/ul/li[8]/div/div/div[1]/div[2]/div[";

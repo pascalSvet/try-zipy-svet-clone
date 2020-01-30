@@ -27,7 +27,8 @@ public class Cart_addProduct extends Cart_MAIN {
 			Assert.assertTrue(false);
 		} 
 		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3)).click();
-		Thread.sleep(1000);
+		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_deals_withPopup)));
+		Thread.sleep(2000);
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPopup)).getText().trim();
 
 		//choose variations if exist and add to the cart
@@ -112,12 +113,14 @@ public class Cart_addProduct extends Cart_MAIN {
 		String currentUrl = driver.getCurrentUrl();
 		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3)).click();
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(currentUrl)));
+		Thread.sleep(2000);			
 		currentUrl = driver.getCurrentUrl();
 		
 
 		//move to the next product and save its name
 		driver.findElement(By.xpath(ElementsBuying.ProductFramed_next)).click();
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(currentUrl)));
+		Thread.sleep(2000);			
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPopup)).getText().trim();
 
 		//choose variations if exist and add to the cart

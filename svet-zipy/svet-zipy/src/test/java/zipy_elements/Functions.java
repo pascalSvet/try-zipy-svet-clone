@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
@@ -146,7 +147,8 @@ public class Functions {
 	
 	//close the pop-up window if exist (in greece version)
 	public static void closePopUp_gr(WebDriver driver) throws Exception{
-			if (driver.findElements(By.xpath(ElementsLogin.Popup_welcome_close_gr)).size() != 0){
+
+		if (driver.findElements(By.xpath(ElementsLogin.Popup_welcome_close_gr)).size() != 0){
 				driver.findElement(By.xpath(ElementsLogin.Popup_welcome_close_gr)).click();
 				new WebDriverWait(driver, 10).
 				until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(ElementsLogin.Popup_welcome_close_gr)));
@@ -155,10 +157,11 @@ public class Functions {
 
 	
 	//close the advert pop-up note if exist (in greece version)
-	public static void advertNote_close_gr(WebDriver driver) throws Exception{
-			if (!driver.findElements(By.xpath(ElementsLogin.Start_advertNote_close)).isEmpty()){
+	public static void advertNote_close_gr(WebDriver driver) throws Exception{	
+		if (!driver.findElements(By.xpath(ElementsLogin.Start_advertNote_close)).isEmpty()) {
 				driver.findElement(By.xpath(ElementsLogin.Start_advertNote_close)).click();
-			}
+		}
+					
 	}
 	
 ////////////// cart functions: ////////////////////////////////////////////////////////
@@ -306,7 +309,7 @@ public class Functions {
 			choose = driver.findElement(By.xpath(ElementsBuying.ProductFramed_color)).getText().trim();
 			if (Arrays.asList(chooseInternational).contains(choose)) {
 				driver.findElement(By.xpath(ElementsBuying.ProductFramed_color)).click();
-				Thread.sleep(2000);
+				Thread.sleep(2500);
 				new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_color_1))).click();
 				Thread.sleep(2000);
 			}
@@ -317,7 +320,7 @@ public class Functions {
 			choose = driver.findElement(By.xpath(ElementsBuying.ProductFramed_length)).getText().trim();
 			if (Arrays.asList(chooseInternational).contains(choose)) {
 				driver.findElement(By.xpath(ElementsBuying.ProductFramed_length)).click();
-				Thread.sleep(2000);
+				Thread.sleep(2500);
 				new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_length_1))).click();
 				Thread.sleep(2000);
 			}
@@ -341,7 +344,7 @@ public class Functions {
 			choose = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).getText().trim();
 			if (Arrays.asList(chooseInternational).contains(choose)) {
 				driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();
-				Thread.sleep(2000);
+				Thread.sleep(2500);
 				new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsColor_1))).click();
 				Thread.sleep(2000);
 			}
@@ -352,7 +355,7 @@ public class Functions {
 			choose = driver.findElement(By.xpath(ElementsBuying.Product_variationsLength)).getText().trim();
 			if (Arrays.asList(chooseInternational).contains(choose)) {
 				driver.findElement(By.xpath(ElementsBuying.Product_variationsLength)).click();
-				Thread.sleep(2000);
+				Thread.sleep(2500);
 				new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsLength_1))).click();
 				Thread.sleep(2000);
 			}
@@ -449,7 +452,8 @@ public class Functions {
 				boolean t = driver.findElement(By.xpath(ElementsBuying.Product_pin)).isDisplayed(); 
 			}
 			catch (Exception ex) {
-				if(driver.getTitle().contains("404")) {					
+				if(driver.getTitle().contains("404")) {	
+					System.out.println("the link :" + driver.getCurrentUrl() + "encountered an 404 error");
 				}
 				else if(!driver.findElements((By.xpath(ElementsBuying.Product_notFound))).isEmpty()) {
 					System.out.println("the product:  \"" + driver.getTitle() + "\" failed to load \n it's link: " + driver.getCurrentUrl());
@@ -467,7 +471,7 @@ public class Functions {
 	
 	
 	// A function for checking 502 error of every link on page
-	public  static boolean checkCategoriesInTabs_error502(WebDriver driver, int thumbs, String element) throws InterruptedException {
+	public  static boolean checkLinksInTabs_error502(WebDriver driver, int thumbs, String element) throws InterruptedException {
 		
 		int fails = 0;
 		Thread.sleep(2000);
@@ -483,20 +487,18 @@ public class Functions {
 		ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());			
 		for(int i=1; i<=thumbs; i++){
 			driver.switchTo().window(tabs.get(i));
-			
+
 			//catch 502 error if exist
-			try {
-				boolean t = !driver.getTitle().contains("502"); 
-			}
-			catch (Exception ex) {
+			boolean tr = driver.getTitle().contains("502"); 
+			if (tr ==true) {
 					fails++;
-					System.out.println("the link:  " + driver.getCurrentUrl() + " encountered an 502 error" );			
+					System.out.println("the link:  " + driver.getCurrentUrl() + "/n encountered an 502 error" );			
 			}
 			driver.close();
 		}
 		
 		if(fails!=0) {
-			System.out.println("in total: " + fails + "links encountered an 502 error");			
+			System.out.println("in total: " + fails + " links encountered an 502 error");			
 		} else {
 			System.out.println("none 502 error catched");			
 		}
@@ -504,6 +506,49 @@ public class Functions {
 		return (fails!=0);		
 	}
 
+	// A function for checking 502 error of every link on page
+	public  static boolean checkCategoriesInTabs_error502(WebDriver driver, int first, int second, String element, String element2) throws InterruptedException {
+		
+		int fails = 0;
+		Thread.sleep(2000);
+
+		//open all thumbnails in a new tab each
+		
+		for(int i=1; i <= first; i++) {
+			WebElement webel = driver.findElement(By.xpath(element + String.valueOf(i) + "]"));					
+			new WebDriverWait(driver, 10).until( ExpectedConditions.elementToBeClickable(webel));
+			new Actions (driver).keyDown(Keys.CONTROL).moveToElement(webel).click().build().perform();
+		}
+		
+		for(int i=1; i <= second; i++) {
+			WebElement webel = driver.findElement(By.xpath(element2 + String.valueOf(i) + "]"));	
+			new WebDriverWait(driver, 10).until( ExpectedConditions.elementToBeClickable(webel));
+			new Actions (driver).keyDown(Keys.CONTROL).moveToElement(webel).click().build().perform();
+		}	
+
+		
+		//check every tab
+		ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());			
+		for(int i=1; i<=(second + first); i++){
+			driver.switchTo().window(tabs.get(i));
+
+			//catch 502 error if exist
+			boolean tr = driver.getTitle().contains("502"); 
+			if (tr ==true) {
+					fails++;
+					System.out.println("the link:  " + driver.getCurrentUrl() + "/n encountered an 502 error" );			
+			}
+			driver.close();
+		}
+		
+		if(fails!=0) {
+			System.out.println("in total: " + fails + " links encountered an 502 error");			
+		} else {
+			System.out.println("none 502 error catched");			
+		}
+		driver.switchTo().window(tabs.get(0));
+		return (fails!=0);		
+	}
 	
 	
 	

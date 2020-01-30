@@ -156,6 +156,7 @@ public class ElementsBuying {
 
 	public static final String error_502 = "/html//h1[.='502 Bad Gateway']";
 	public static final String error_oops = "/html//h1[.='Oops! :(']";
+	public static final String error_502_type2 ="/html//div[@id='cf-error-details']//span[@class='cf-error-code']";
 
 	
 }
