@@ -1,3 +1,8 @@
+import { GlNewDropdown } from '@gitlab/ui';
+
+
+
+
 ## Cart tests
 ----
 
@@ -372,16 +377,16 @@
 
 
 
-<try>
-<summary>dropdown coteret</summary>
-*trying2
-*trying2
-*trying2
-<br>
+<try> <summary>dropdown </summary>
 text
 text
 text
 </try>
 
-  
+
+<gl-new-dropdown text="Some dropdown">
+<gl-dropdown-header>First group</gl-dropdown-header>
+<gl-dropdown-item>Second item</gl-dropdown-item>
+<gl-dropdown-item>Last item</gl-dropdown-item>
+</gl-new-dropdown>
     
