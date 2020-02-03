@@ -32,7 +32,8 @@
  
  
 <details><summary><strong>recovering the password    !!!entered by user!!!</strong></summary>
-<p>    
+<p>  
+  
   - enter main page and disconnect from the user
   - press login button		
   - recover the password by email 
@@ -45,6 +46,7 @@
 
 ### User_email:
 <p>
+
 <details><summary><strong>changing the email</strong></summary> 
 - enter main page
 - enter private data and change password 
