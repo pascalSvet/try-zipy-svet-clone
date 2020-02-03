@@ -1,7 +1,3 @@
-import { GlNewDropdown } from '@gitlab/ui';
-
-
-
 
 ## Cart tests
 ----
@@ -383,10 +379,3 @@ text
 text
 </try>
 
-
-<gl-new-dropdown text="Some dropdown">
-<gl-dropdown-header>First group</gl-dropdown-header>
-<gl-dropdown-item>Second item</gl-dropdown-item>
-<gl-dropdown-item>Last item</gl-dropdown-item>
-</gl-new-dropdown>
-    

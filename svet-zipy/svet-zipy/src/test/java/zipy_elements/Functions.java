@@ -232,6 +232,7 @@ public class Functions {
 		((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_payment_Remove))).click();
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_paymentPopup_moveToFavs))).click();
 	}
 	

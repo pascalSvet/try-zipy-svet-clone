@@ -25,7 +25,7 @@ public class Cart_mobile extends Cart_MAIN {
 		System.out.println("Running test (in mobile version) for checking the final sum in the cart affected by changing the quantity in the cart");		
 
 		//change to mobile screen resolution
-		driver.manage().window().setSize(new Dimension(320,480));
+		driver.manage().window().setSize(new Dimension(320,600));
 
 		//get to the required product page  
 		driver.get(ElementsBuying.Product_noVariations);
@@ -71,7 +71,7 @@ public class Cart_mobile extends Cart_MAIN {
 		System.out.println("Running test (in mobile version) for adding product to the cart and changing quantity manually in the cart, for more then 10 items");		
 
 		//change to mobile screen resolution
-		driver.manage().window().setSize(new Dimension(320,480));
+		driver.manage().window().setSize(new Dimension(320,600));
 
 		//add required product to the cart
 		Functions.addSampleProductToCart(driver);
@@ -84,7 +84,7 @@ public class Cart_mobile extends Cart_MAIN {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_cart_quantityDrop))).click();
 		Thread.sleep(1000);
 		driver.findElement(By.xpath(ElementsBuying.Product_cart_quantityDrop_10)).click();
-		Thread.sleep(1000);
+		Thread.sleep(2500);
 
 		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity10plus_mobile))).click()
 		.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys("11",Keys.ENTER).build().perform();
@@ -127,7 +127,7 @@ public class Cart_mobile extends Cart_MAIN {
 		System.out.println("Running test (in mobile version) for removing product from the cart to favorites");		
 
 		//change to mobile screen resolution
-		driver.manage().window().setSize(new Dimension(320,480));
+		driver.manage().window().setSize(new Dimension(150,650));
 
 		//add required product to the cart and save its title
 		String ProductTitle = Functions.addSampleProductToCart(driver);
