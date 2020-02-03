@@ -63,13 +63,13 @@
 
 #### Catalogs
 
-    - Сatalogs_il_aliExpress_combined
+    - Сatalogs_il_aliExpress_combined (with parameters)
     - Сatalogs_il_aliExpress_separated
-    - Сatalogs_il_amazon_combined
+    - Сatalogs_il_amazon_combined (with parameters)
     - Сatalogs_il_amazon_separated
-    - Сatalogs_gr_aliExpress_combined
+    - Сatalogs_gr_aliExpress_combined (with parameters)
     - Сatalogs_gr_aliExpress_separated
-    - Сatalogs_gr_amazon_combined
+    - Сatalogs_gr_amazon_combined (with parameters)
     - Сatalogs_gr_amazon_separated
  	
 ----
@@ -88,14 +88,16 @@
     
 #### Favorites
 
-    - appearance of favorite-pin icon on thumbnail, on mouse hover
-    - correct colors of favorite-pin button
-    - adding to favorites from product page
-    - adding to favorites from product pop-up page
-    - adding to favorites from daiy deals thumbnail
-    - adding to favorites from less-than-5 tab
-    - adding to favorites from search thumbnail
-    - adding to favorites from category thumbnail (from categories side panel)
+    **Favorites_icon**
+      - appearance of favorite-pin icon on thumbnail, on mouse hover
+      - correct colors of favorite-pin button
+    **Favorites_adding**
+      - adding to favorites from product page
+      - adding to favorites from product pop-up page
+      - adding to favorites from daily deals thumbnail
+      - adding to favorites from less-than-5 tab
+      - adding to favorites from search thumbnail
+      - adding to favorites from category 
 
 ----
 

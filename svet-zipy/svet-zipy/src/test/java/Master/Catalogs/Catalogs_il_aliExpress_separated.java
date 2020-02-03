@@ -348,7 +348,7 @@ public class Catalogs_il_aliExpress_separated extends Catalogs_MAIN {
 		Assert.assertTrue(fails==0);	
 	}
 		
-	//Test - opening all sub categories in aliExpress - Israel - 7 category - and
+	//Test - opening all sub categories in aliExpress - Israel - 7 category - house and garden
 	@Test		
 	public  void Tests_categories_il_aliExpress_7category() throws Exception {		
 		System.out.println("Running test for opening all subcategories in #" + "7" + " category from aliExpress - Israel");	
@@ -403,7 +403,7 @@ public class Catalogs_il_aliExpress_separated extends Catalogs_MAIN {
 		Assert.assertTrue(fails==0);	
 	}
 
-	//Test - opening all sub categories in aliExpress - Israel - 8 category - jewelry
+	//Test - opening all sub categories in aliExpress - Israel - 8 category - jewelry and watches
 	@Test		
 	public  void Tests_categories_il_aliExpress_8category() throws Exception {		
 		System.out.println("Running test for opening all subcategories in #" + "8" + " category from aliExpress - Israel");	
