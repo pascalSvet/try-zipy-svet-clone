@@ -368,28 +368,25 @@
 
 
 
+
+
+
+
+<try2>
+<summary>dropdown coteret</summary>
+    - trying2
+    - trying2
+    - trying2
+<br>
+</try2>
+
+
 <test>
 -trying1
 -trying1
 -trying1
+
 </test>
 
-----
-
-<test2>
-<summary>coteret2</summary>
-    - trying2
-    - trying2
-    - trying2
-    - trying2
-</test2>
-
-----
-
-<details3 open>
-<summary>Want to ruin the surprise?</summary>
-    - trying3
-    - trying3
-</details3>
   
     
