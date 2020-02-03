@@ -380,15 +380,12 @@ text
 </try>
 
 <div>
-  <b-dropdown id="dropdown-dropright" dropright text="Drop-Right" variant="primary" class="m-2">
-    <b-dropdown-item href="#">Action</b-dropdown-item>
-    <b-dropdown-item href="#">Another action</b-dropdown-item>
-    <b-dropdown-item href="#">Something else here</b-dropdown-item>
-  </b-dropdown>
-
-  <b-dropdown id="dropdown-dropleft" dropleft text="Drop-Left" variant="primary" class="m-2">
-    <b-dropdown-item href="#">Action</b-dropdown-item>
-    <b-dropdown-item href="#">Another action</b-dropdown-item>
-    <b-dropdown-item href="#">Something else here</b-dropdown-item>
+  <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
+    <b-dropdown-item>First Action</b-dropdown-item>
+    <b-dropdown-item>Second Action</b-dropdown-item>
+    <b-dropdown-item>Third Action</b-dropdown-item>
+    <b-dropdown-divider></b-dropdown-divider>
+    <b-dropdown-item active>Active action</b-dropdown-item>
+    <b-dropdown-item disabled>Disabled action</b-dropdown-item>
   </b-dropdown>
 </div>
