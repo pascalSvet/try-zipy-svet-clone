@@ -372,21 +372,16 @@
 
 
 
-<try2>
+<try>
 <summary>dropdown coteret</summary>
-    - trying2
-    - trying2
-    - trying2
+*trying2
+*trying2
+*trying2
 <br>
-</try2>
-
-
-<test>
--trying1
--trying1
--trying1
-
-</test>
+text
+text
+text
+</try>
 
   
     
