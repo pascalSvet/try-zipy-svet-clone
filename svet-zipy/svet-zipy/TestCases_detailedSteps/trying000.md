@@ -20,7 +20,9 @@
 
 
 <details><summary>**changing the password**</summary>
-<p> 
+<p>
+test details:
+ 
     -enter main page
     -enter private data and change password 
     **if changed correctly, there is a success message
@@ -28,7 +30,7 @@
 </p>
 </details>
    
-<details><summary>**recovering the password    !!!entered by user!!!**</summary>
+<details2><summary>**recovering the password    !!!entered by user!!!**</summary>
 <p>   
     -enter main page and disconnect from the user
     -press login button		
