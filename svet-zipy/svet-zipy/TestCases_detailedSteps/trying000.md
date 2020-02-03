@@ -19,20 +19,20 @@
 ### User_password:
 
 <details><summary>changing the password</summary>
-<p>
-test process:
+<p>   
  
-    -enter main page
-    -enter private data and change password 
-    **if changed correctly, there is a success message
-    -change the password back at the end, for future tests
-.</p>
-</details>
+  - enter main page and disconnect from the user
+  - press login button		
+  - recover the password by email 
+  - ask user to enter the new password from the email: 		
+  * if recovered successfully, the user logged in
+  - change the password back at the end, for future tests
+</p>
+</details> 
  
  
 <details><summary><strong>recovering the password    !!!entered by user!!!</strong></summary>
-<p>   
- 
+<p>    
   - enter main page and disconnect from the user
   - press login button		
   - recover the password by email 
@@ -44,16 +44,13 @@ test process:
 
 
 ### User_email:
-
-<details><summary><strong>changing the email</strong></summary>
-<p> 
-
+<p>
+<details><summary><strong>changing the email</strong></summary> 
 - enter main page
 - enter private data and change password 
 * if changed correctly, there is a success message
 - change the email back at the end, for future tests
-</p>
 </details> 
-
+</p>
 
  
