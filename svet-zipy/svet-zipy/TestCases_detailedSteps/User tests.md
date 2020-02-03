@@ -1,54 +1,66 @@
 
-## User  tests
-----
+# User  tests
 
 
 ### User_password:
 
-
-  **changing the password**
-  
-    -enter main page
-    -enter private data and change password 
-    **if changed correctly, there is a success message
-    -change the password back at the end, for future tests
+<details><summary><strong>changing the password</strong></summary>
+<p>   
    
-  **recovering the password    !!!entered by user!!!** 
+- enter main page
+- enter private data and change password 
+- if changed correctly, there is a success message
+- change the password back at the end, for future tests
+</p>
+</details> 
    
-    -enter main page and disconnect from the user
-    -press login button		
-    -recover the password by email 
-    - ask user to enter the new password from the email: 		
-    **if recovered successfully, the user logged in
-    -change the password back at the end, for future tests
-	
-
+<details><summary><strong>recovering the password    !!!entered by user!!!</strong></summary> 
+ <p>   
+   
+- enter main page and disconnect from the user
+- press login button		
+- recover the password by email 
+-  ask user to enter the new password from the email: 		
+- if recovered successfully, the user logged in
+- change the password back at the end, for future tests
+</p>
+</details> 
+ 	
+----
 
 ### User_email:
 
-  **changing the email  **
+<details><summary><strong>changing the email<details><summary><strong>
+<p>   
+   
+- enter main page
+- enter private data and change password 
+- if changed correctly, there is a success message
+- change the email back at the end, for future tests
+</p>
+</details> 
   
-    -enter main page
-    -enter private data and change password 
-    **if changed correctly, there is a success message
-    -change the email back at the end, for future tests
-
- 
+----
  
 ### User_mobile:
 
-
-  **TestsMobile - changing the password**
-  
-    -change to mobile screen resolution and enter main page
-    -enter private data and change password 
-    **if changed correctly, there is a success message
-    -change the password back at the end, for future tests
+<details><summary><strong>TestsMobile - changing the password</strong></summary>
+<p>   
    
-  **TestsMobile - changing the email** 
+- change to mobile screen resolution and enter main page
+- enter private data and change password 
+- if changed correctly, there is a success message
+- change the password back at the end, for future tests
+</p>
+</details> 
+    
+<details><summary><strong>TestsMobile - changing the email</strong></summary> 
+ <p>   
    
-    -change to mobile screen resolution and enter main page
-    -enter private data and change email 
-    **if changed correctly, there is a success message
-    -change the password back at the end, for future tests
+- change to mobile screen resolution and enter main page
+- enter private data and change email 
+- if changed correctly, there is a success message
+- change the password back at the end, for future tests
+ </p>
+</details> 
     
