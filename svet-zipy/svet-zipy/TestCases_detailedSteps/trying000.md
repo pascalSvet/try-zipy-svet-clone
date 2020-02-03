@@ -30,7 +30,7 @@ test process:
 </details>
  
  
-<details><summary>recovering the password    !!!entered by user!!!</summary>
+<details><summary><strong>recovering the password    !!!entered by user!!!</strong></summary>
 <p>   
  
   - enter main page and disconnect from the user
@@ -39,20 +39,20 @@ test process:
   - ask user to enter the new password from the email: 		
   * if recovered successfully, the user logged in
   - change the password back at the end, for future tests
-.</p>
+</p>
 </details>  	
 
 
 ### User_email:
 
-<details><summary>changing the email</summary>
+<details><summary><strong>changing the email</strong></summary>
 <p> 
 
 - enter main page
 - enter private data and change password 
 * if changed correctly, there is a success message
 - change the email back at the end, for future tests
-.</p>
+</p>
 </details> 
 
 
