@@ -32,14 +32,13 @@ test process:
  
 <details><summary>recovering the password    !!!entered by user!!!</summary>
 <p>   
- test process:
  
-    -enter main page and disconnect from the user
-    -press login button		
-    -recover the password by email 
-    - ask user to enter the new password from the email: 		
-    **if recovered successfully, the user logged in
-    -change the password back at the end, for future tests
+  -enter main page and disconnect from the user
+  -press login button		
+  -recover the password by email 
+  -ask user to enter the new password from the email: 		
+  **if recovered successfully, the user logged in
+  -change the password back at the end, for future tests
 .</p>
 </details>  	
 
