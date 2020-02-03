@@ -154,7 +154,9 @@ test details here are the same as on parameterized test case
 
 
 ### Сatalogs_gr_aliExpress_combined
-<p>   
+
+<details><summary><strong>opening all sub categories in aliExpress - Greece (with parameters)</strong></summary>
+<p>    
 
 - our parameters to test- categories in the catalog:
     - fashion

@@ -5,40 +5,57 @@
 ### Errors_502:
 
 
-  **catching 502 error while opening many tabs in categories - Greece**
+<details><summary><strong>catching 502 error while opening many tabs in categories - Greece</strong></summary>
+<p>
   
-    - open main page
-    - open first category from catalog, and open first 17 items in different tabs
-    ** if correct, all categories loaded
+- open main page
+- open first category from catalog, and open first 17 items in different tabs
+- if correct, all categories loaded
+</p>
+</details> 
+      
+<details><summary><strong>catching 502 error while opening many tabs in categories - Portugal</strong></summary> 
+<p>
+     
+- open main page
+- open first category from catalog, and open first 17 items in different tabs
+- if correct, all categories loaded
+</p>
+</details> 
+              
+<details><summary><strong>catching 502 error while opening many tabs in categories - Israel</strong></summary>
+<p>
+    
+- open main page
+- open first category from catalog, and open first 17 items in different tabs
+- if correct, all categories loaded
+</p>
+</details> 
+      		
+<details><summary><strong>catching 502 error while opening many tabs in deals - Greece</strong></summary>
+<p>
+    
+- open deals page
+- scroll down and open first 16 deals in different tabs
+- if correct, all deals loaded
+</p>
+</details> 
    
-  **catching 502 error while opening many tabs in categories - Portugal** 
+<details><summary><strong>catching 502 error while opening many tabs in deals - Portugal</strong></summary>
+ <p>
    
-    - open main page
-    - open first category from catalog, and open first 17 items in different tabs
-    ** if correct, all categories loaded
-           
-  **catching 502 error while opening many tabs in categories - Israel**
+- open deals page
+- scroll down and open first 16 deals in different tabs
+- if correct, all deals loaded
+</p>
+</details> 
   
-    - open main page
-    - open first category from catalog, and open first 17 items in different tabs
-    ** if correct, all categories loaded
-   		
-  **catching 502 error while opening many tabs in deals - Greece**
-  
-    - open deals page
-    - scroll down and open first 16 deals in different tabs
-    ** if correct, all deals loaded
+<details><summary><strong>catching 502 error while opening many tabs in deals - Israel</strong></summary>
+ <p>
    
-  **catching 502 error while opening many tabs in deals - Portugal**
-  
-    - open deals page
-    - scroll down and open first 16 deals in different tabs
-    ** if correct, all deals loaded
-  
-  **catching 502 error while opening many tabs in deals - Israel**
-  
-    - open deals page
-    - scroll down and open first 16 deals in different tabs
-    ** if correct, all deals loaded
- 
+- open deals page
+- scroll down and open first 16 deals in different tabs
+- if correct, all deals loaded
+</p>
+</details>  
  
