@@ -48,42 +48,13 @@ test process:
 
 <details><summary>changing the email</summary>
 <p> 
-test process:
-     
-    -enter main page
-    -enter private data and change password 
-    **if changed correctly, there is a success message
-    -change the email back at the end, for future tests
+
+-enter main page
+-enter private data and change password 
+**if changed correctly, there is a success message
+-change the email back at the end, for future tests
 .</p>
 </details> 
 
 
-### trying
-<details><summary>main coteret</summary>
-<p>
-  <details1><summary>first</summary>
-  <p>		
-  test process:
-		 
-    -enter main page
-    -enter private data and change password 
-    **if changed correctly, there is a success message
-    -change the password back at the end, for future tests
-  .</p>
-  </details1>	
-
-  <details2><summary>first</summary>
-  <p>		
-  test process:
-		 
-    -enter main page
-    -enter private data and change password 
-    **if changed correctly, there is a success message
-    -change the password back at the end, for future tests
-  .</p>
-  </details2>	
-
-.</p>
-</details> 
- 
  
