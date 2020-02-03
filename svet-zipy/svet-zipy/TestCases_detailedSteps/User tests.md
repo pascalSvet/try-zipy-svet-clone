@@ -15,7 +15,7 @@
 </details> 
    
 <details><summary><strong>recovering the password    !!!entered by user!!!</strong></summary> 
- <p>   
+<p>   
    
 - enter main page and disconnect from the user
 - press login button		
@@ -30,9 +30,9 @@
 
 ### User_email:
 
-<details><summary><strong>changing the email<details><summary><strong>
+<details><summary><strong>changing the email</strong></summary> 
 <p>   
-
+   
 - enter main page
 - enter private data and change password 
 - if changed correctly, there is a success message
