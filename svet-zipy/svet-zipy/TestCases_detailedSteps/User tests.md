@@ -26,8 +26,7 @@
 
 ### User_email:
 
-
-  **changing the email **
+  **changing the email  **
   
     -enter main page
     -enter private data and change password 
