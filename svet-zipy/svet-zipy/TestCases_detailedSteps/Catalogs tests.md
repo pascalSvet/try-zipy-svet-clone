@@ -7,6 +7,7 @@
 
 <details><summary><strong>opening all sub categories in aliExpress - Israel (with parameters)</strong></summary>
 <p>      
+
 - our parameters to test- categories in the catalog: 
     - fashion
     - cars 
@@ -78,6 +79,7 @@ test details here are the same as on parameterized test case
 
  <details><summary><strong>opening all sub categories in amazon - Israel (with parameters)</strong></summary>
  <p>   
+
 - our parameters to test- categories in the catalog:  
     - fashion
     - cars 
@@ -153,6 +155,7 @@ test details here are the same as on parameterized test case
 
 ### Сatalogs_gr_aliExpress_combined
 <p>   
+
 - our parameters to test- categories in the catalog:
     - fashion
     - cars 
@@ -224,6 +227,7 @@ test details here are the same as on parameterized test case
 
 <details><summary><strong>opening all sub categories in amazon - Greece (with parameters)</strong></summary>
 <p>   
+
 - our parameters to test- categories in the catalog:
     - fashion
     - cars 
