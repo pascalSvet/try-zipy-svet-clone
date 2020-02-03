@@ -138,12 +138,12 @@
 
 #### Payments
 
-    - buying product, directy from search
+    - buying product, directly from search
     - buying product from the cart
     - buying all products from the cart
     - buying product directly from its page, when there is another product in the cart
-    - byuing product from aliExpress
-    - byuing product from amazon
+    - buying product from aliExpress
+    - buying product from amazon
     - buying random product, from lessThan5 tab 
 
 ---- 
@@ -211,7 +211,7 @@
           - redirecting search results from amazon to other, if nothing found
           - redirecting search results from ebay to other, if nothing found
           - redirecting search results from ebay to other, more suitable, when smart search is on
-          - redirecting search results from other to any other, if nothing found
+          - redirecting search results from aliExpress to other, if nothing found
 
           
 ----

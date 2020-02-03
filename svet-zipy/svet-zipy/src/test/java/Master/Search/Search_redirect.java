@@ -21,6 +21,7 @@ public class Search_redirect extends Search_MAIN {
 	public  void Tests_Search_redirect_Amazon() throws Exception {
 		System.out.println("Running test for redirecting search results from amazon to other , if nothing found");		
 		
+		//open main amazon page
 		driver.get(ElementsWebsites.Zipy_il_amazon);
 
 		// perform search for a product that is definitely not on the site
@@ -38,6 +39,7 @@ public class Search_redirect extends Search_MAIN {
 	public  void Tests_Search_redirect_Ebay() throws Exception {
 		System.out.println("Running test for redirecting search results from ebay to other, if nothing found");		
 		
+		//open main ebay page
 		driver.get(ElementsWebsites.Zipy_gr_ebay);
 
 		// perform search for a product that is definitely not on the site
@@ -60,6 +62,7 @@ public class Search_redirect extends Search_MAIN {
 	public  void Tests_Search_redirect_Ebay_smartSearch() throws Exception {
 		System.out.println("Running test for redirecting search results from ebay to other, more suitable, when smart search is on");		
 		
+		//open main ebay page
 		driver.get(ElementsWebsites.Zipy_gr_ebay);
 
 		// perform search for a product that is definitely not on the site
@@ -87,6 +90,7 @@ public class Search_redirect extends Search_MAIN {
 	public  void Tests_Search_redirect_AliExpress() throws Exception {
 		System.out.println("Running test for redirecting search results from aliExpress to other, if nothing found");		
 		
+		//open main aliExpress page
 		driver.get(ElementsWebsites.Zipy_gr_ali);
 
 		// perform search for a product that is definitely not on the site

@@ -22,6 +22,7 @@ public class Search_input extends Search_MAIN {
 	public  void Tests_Search_il_eng() throws Exception {
 		System.out.println("Running test for searching in Israel site - in english");		
 		
+		//open the main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// perform search and open the product
@@ -38,6 +39,7 @@ public class Search_input extends Search_MAIN {
 	public  void Tests_Search_il_native() throws Exception {
 		System.out.println("Running test for searching in Israel site - in hebrew");		
 		
+		//open the main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// perform search and open the product
@@ -54,6 +56,7 @@ public class Search_input extends Search_MAIN {
 	public  void Tests_Search_pt_eng() throws Exception {
 		System.out.println("Running test for searching in Portugal site - in english");		
 		
+		//open the main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// perform search and open the product
@@ -70,9 +73,10 @@ public class Search_input extends Search_MAIN {
 	public  void Tests_Search_pt_native1() throws Exception {
 		System.out.println("Running test for searching in Portugal site - in portuguese with special characters");		
 		
+		//open the main page
 		driver.get(ElementsWebsites.Zipy_pt);
 
-		// perform search with the first part of special characters in portuguesep
+		// perform search with the first part of special characters in portuguese
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_pt1, Keys.ENTER);
 		Boolean firstPart = driver.findElements(By.xpath(ElementsBuying.Product_sortBy)).isEmpty();
@@ -94,6 +98,7 @@ public class Search_input extends Search_MAIN {
 	public  void Tests_Search_specialSigns_apostrophe() throws Exception {
 		System.out.println("Running test for searching with special signs - apostrophe");		
 		
+		//open the main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// perform search and open the product
@@ -113,6 +118,7 @@ public class Search_input extends Search_MAIN {
 	public  void Tests_Search_specialSigns_dash() throws Exception {
 		System.out.println("Running test for searching with special signs - dash");		
 		
+		//open the main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// perform search and open the product
@@ -133,6 +139,7 @@ public class Search_input extends Search_MAIN {
 	public  void Tests_Search_specialSigns_parenthesis() throws Exception {
 		System.out.println("Running test for searching with special signs - parenthesis");		
 		
+		//open the main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// perform search and open the product
@@ -152,6 +159,7 @@ public class Search_input extends Search_MAIN {
 	public  void Tests_Search_specialSigns_bracket() throws Exception {
 		System.out.println("Running test for searching with special signs - bracket");		
 		
+		//open the main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// perform search and open the product

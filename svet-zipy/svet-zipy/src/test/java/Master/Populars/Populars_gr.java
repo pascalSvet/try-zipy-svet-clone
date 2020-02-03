@@ -25,7 +25,7 @@ public class Populars_gr extends Populars_MAIN {
 	public  void Tests_gr_popularsThumbs() throws Exception {
 		System.out.println("Running test for Greece site - aliExpress - populars thumbnails" );		
 
-		//open the site
+		//open the main page
 		Thread.sleep(1000);
 		driver.get(ElementsWebsites.Zipy_gr);
 		String winHandleBefore = driver.getWindowHandle();
@@ -45,13 +45,13 @@ public class Populars_gr extends Populars_MAIN {
 	public  void Tests_gr_popularsThumbs_ebay() throws Exception {
 		System.out.println("Running test for Greece site - ebay - populars thumbnails" );		
 
-		//open the site
+		//open the main ebay page
 		Thread.sleep(1000);
 		driver.get(ElementsWebsites.Zipy_gr_ebay);
 		String winHandleBefore = driver.getWindowHandle();
 		Thread.sleep(2000);
 		
-		//opening all thumbnails in different tabs, and counting the number of thumbnails that failed to open
+		//opening all thumbnails in different tabs and check their loading
 		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsRecommended.populars);
 		driver.switchTo().window(winHandleBefore);
 
@@ -64,13 +64,13 @@ public class Populars_gr extends Populars_MAIN {
 	public  void Tests_gr_popularsThumbs_amazon() throws Exception {
 		System.out.println("Running test for Greece site - amazon - populars thumbnails" );		
 
-		//open the site
+		//open the main amazon page
 		Thread.sleep(1000);
 		driver.get(ElementsWebsites.Zipy_gr_amazon);
 		String winHandleBefore = driver.getWindowHandle();
 		Thread.sleep(2000);
 
-		//opening all thumbnails in different tabs, and counting the number of thumbnails that failed to open
+		//opening all thumbnails in different tabs and check their loading
 		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsRecommended.populars);
 		driver.switchTo().window(winHandleBefore);
 

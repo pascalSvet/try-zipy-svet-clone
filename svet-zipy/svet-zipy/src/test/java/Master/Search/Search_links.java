@@ -44,7 +44,7 @@ public class Search_links extends Search_MAIN {
 	public  void Tests_Search_links_il_ebay() throws Exception {
 		System.out.println("Running test for searching in Israel site - link from ebay");		
 		
-		//open product on aliExpress and save its title
+		//open product on ebay and save its title
 		driver.get(ElementsBuying.Search_link_ebay);
 		String titleOnEbay = driver.findElement(By.xpath(ElementsBuying.Search_link_ebay_title)).getAttribute("content");
 
@@ -55,7 +55,7 @@ public class Search_links extends Search_MAIN {
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
 		String titleOnzipy = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 
-		//if search succeed, the product we found on zipy is the same from aliExpress
+		//if search succeed, the product we found on zipy is the same from ebay
 		Assert.assertTrue(titleOnEbay.equals(titleOnzipy));	
 
 	}
@@ -76,7 +76,7 @@ public class Search_links extends Search_MAIN {
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
 		String titleOnzipy = driver.findElement(By.xpath(ElementsBuying.Search_link_amazon_zipyTitle)).getAttribute("content");
 
-		//if search succeed, the product we found on zipy is the same from aliExpress
+		//if search succeed, the product we found on zipy is the same from amazon
 		Assert.assertTrue(titleOnamazon.equals(titleOnzipy));	
 
 	}
@@ -119,7 +119,7 @@ public class Search_links extends Search_MAIN {
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_gr_withPopup)));
 		String titleOnzipy = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 
-		//if search succeed, the product we found on zipy is the same from aliExpress
+		//if search succeed, the product we found on zipy is the same from ebay.de
 		Assert.assertTrue(titleOnEbay.equals(titleOnzipy));	
 
 	}
@@ -140,7 +140,7 @@ public class Search_links extends Search_MAIN {
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_gr_withPopup)));
 		String titleOnzipy = driver.findElement(By.xpath(ElementsBuying.Search_link_amazon_zipyTitle)).getAttribute("content");
 
-		//if search succeed, the product we found on zipy is the same from aliExpress
+		//if search succeed, the product we found on zipy is the same from amazon.de
 		Assert.assertTrue(titleOnamazon.equals(titleOnzipy));	
 
 	}

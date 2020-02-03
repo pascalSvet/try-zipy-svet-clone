@@ -25,14 +25,14 @@ public class Populars_il extends Populars_MAIN {
 	public  void Tests_il_popularsThumbs() throws Exception {
 		System.out.println("Running test for Israel site - aliExpress - populars thumbnails" );		
 
-		//open the site
+		//open the main page
 		Thread.sleep(1000);
 		driver.get(ElementsWebsites.Zipy_il);
 		String winHandleBefore = driver.getWindowHandle();
 		Thread.sleep(2000);
 
 
-		//opening all thumbnails in different tabs, and counting the number of thumbnails that failed to open
+		//opening all thumbnails in different tabs and check their loading
 		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsRecommended.populars);
 		driver.switchTo().window(winHandleBefore);
 

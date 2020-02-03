@@ -22,10 +22,10 @@ public class MainPageThumbs_gr extends MainPageThumbs_MAIN {
 
 	//Test - opening main page thumbnails in Greece site
 	@Test		
-	public  void Tests_gr_dailyDealThumbs() throws Exception {
+	public  void Tests_gr_MainThumbs() throws Exception {
 		System.out.println("Running test for opening main page thumbnails in Greece site" );		
 
-		//open the site
+		//open the main page
 		Thread.sleep(1000);
 		driver.get(ElementsWebsites.Zipy_gr);
 		String winHandleBefore = driver.getWindowHandle();
@@ -41,10 +41,10 @@ public class MainPageThumbs_gr extends MainPageThumbs_MAIN {
 	
 	//Test - opening main page thumbnails in Greece site - ebay
 	@Test		
-	public  void Tests_gr_dailyDealThumbs_ebay() throws Exception {
+	public  void Tests_gr_MainThumbs_ebay() throws Exception {
 		System.out.println("opening main page thumbnails in Greece site - ebay" );		
 
-		//open the site
+		//open the main ebay page
 		Thread.sleep(1000);
 		driver.get(ElementsWebsites.Zipy_gr_ebay);
 		String winHandleBefore = driver.getWindowHandle();
@@ -60,10 +60,10 @@ public class MainPageThumbs_gr extends MainPageThumbs_MAIN {
 	
 	//Test - opening main page thumbnails in Greece site - amazon
 	@Test		
-	public  void Tests_gr_dailyDealThumbs_amazon() throws Exception {
+	public  void Tests_gr_MainThumbs_amazon() throws Exception {
 		System.out.println("opening main page thumbnails in Greece site - amazon" );		
 
-		//open the site
+		//open the main amazon page
 		Thread.sleep(1000);
 		driver.get(ElementsWebsites.Zipy_gr_amazon);
 		String winHandleBefore = driver.getWindowHandle();

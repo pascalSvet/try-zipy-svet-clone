@@ -2,6 +2,7 @@
 ## Favorites tests
 ----
 
+
 ### Favorites_icon:
 
 
@@ -9,7 +10,7 @@
   
     -open deals page
     -move mouse over one of the thumbnails
-      // if correct, the pin button is visible:		
+    **if correct, the pin button is visible:		
    
   **correct colors of favorite-pin button** 
    
@@ -18,6 +19,7 @@
     -save the color of pin icon, click it and save the new color
     **if correct, the unselected color is grey and the selected color is pink:
     -at the end, remove the product from the favorites, for the future tests	
+
 
 
 ### Favorites_adding:

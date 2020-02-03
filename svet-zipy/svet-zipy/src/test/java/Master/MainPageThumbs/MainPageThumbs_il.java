@@ -26,7 +26,7 @@ public class MainPageThumbs_il extends MainPageThumbs_MAIN {
 	public  void Tests_il_dailyDealThumbs() throws Exception {
 		System.out.println("Running test for opening main page thumbnails in Israel site" );		
 
-		//open the site
+		//open the main page
 		Thread.sleep(1000);
 		driver.get(ElementsWebsites.Zipy_il_withPopup);
 		Functions.closePopUp(driver);

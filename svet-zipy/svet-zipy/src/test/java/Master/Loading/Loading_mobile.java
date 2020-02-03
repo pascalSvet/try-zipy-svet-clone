@@ -23,6 +23,7 @@ public class Loading_mobile extends Loading_MAIN {
 		//change to mobile screen resolution
 		driver.manage().window().setSize(new Dimension(320,480));
 		
+		//open the deals page
 		driver.get(ElementsWebsites.Zipy_il_deals);
 		
 		//click on thumbnail and check its spinner element
@@ -54,9 +55,6 @@ public class Loading_mobile extends Loading_MAIN {
 		//if correct, spinner displayed on the second thumbnail only
 		Assert.assertTrue(!spinner3.isDisplayed() && spinner4.isDisplayed());
 		
-		//driver.findElement(By.xpath(ElementsBuying.ProductFramed_close)).click();
-		//driver.get(ElementsWebsites.Zipy_il);
-
 
 	}
 }

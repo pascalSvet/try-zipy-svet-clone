@@ -21,7 +21,7 @@ public class Payments extends Payments_MAIN {
 	public  void buy_from_search() throws Exception {
 	System.out.println("Running test for finding and buying a sample product");
 	
-		//login  
+		//login with credited user
 		Functions.logInVika(driver);		
 				
 		// perform search and open the product
@@ -32,11 +32,11 @@ public class Payments extends Payments_MAIN {
 		//choose the color and size options 
 		Functions.chooseVariations_ProductFramed(driver);
 		
-		//buy
+		//buy directly
 		driver.findElement(By.xpath(ElementsBuying.Checkout_button)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(ElementsBuying.FinalBuy_button)))).click();
 		
-		// if we managed to buy there is a message of "thank you for bying":
+		// if we managed to buy there is a message of "thank you for buying"
 		wait.until(ExpectedConditions.urlToBe("https://www.zipy.co.il/payment/success"));
 		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Thanks_box)).getText().contains(ElementsHeb.ThanksForBuying_heb));
 
@@ -48,7 +48,7 @@ public class Payments extends Payments_MAIN {
 	public  void buy_from_cart() throws Exception {
 	System.out.println("Running test for buying a product from the cart");
 	
-		//login  
+		//login with credited user
 		Functions.logInVika(driver);		
 				
 		// open the product page
@@ -66,11 +66,11 @@ public class Payments extends Payments_MAIN {
 		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
 		wait.until(ExpectedConditions.visibilityOf(cartFrame));
 				
-		//buy
+		//buy from cart
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_cartPay))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(ElementsBuying.FinalBuy_button)))).click();
 
-		// if we managed to buy there is a message of "thank you for bying":
+		// if we managed to buy there is a message of "thank you for buying"
 		wait.until(ExpectedConditions.urlToBe("https://www.zipy.co.il/payment/success"));
 		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Thanks_box)).getText().contains(ElementsHeb.ThanksForBuying_heb));
 
@@ -82,7 +82,7 @@ public class Payments extends Payments_MAIN {
 	public  void buy_From_cartAll() throws Exception {
 	System.out.println("Running test for buying all products from the cart");
 	
-		//login  
+		//login with credited user
 		Functions.logInVika(driver);		
 				
 		// open the first product page
@@ -105,7 +105,7 @@ public class Payments extends Payments_MAIN {
 		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
 		wait.until(ExpectedConditions.visibilityOf(cartFrame));
 				
-		//buy
+		//buy from cart
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_cartPay))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(ElementsBuying.FinalBuy_button)))).click();
 		wait.until(ExpectedConditions.urlToBe("https://www.zipy.co.il/payment/success"));
@@ -115,7 +115,7 @@ public class Payments extends Payments_MAIN {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
 		wait.until(ExpectedConditions.visibilityOf(cartFrame));
 		
-		// if we managed to buy all products, there is a message of empty cart:
+		// if we managed to buy all products, there is a message of empty cart
 		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cartIsEmpty)).isDisplayed());					
 
 	}	
@@ -126,7 +126,7 @@ public class Payments extends Payments_MAIN {
 	public  void buy_fromLinkDirectly_cartNotEmpty() throws Exception {
 	System.out.println("Running test for buying a product directly from its page, when there is another product in the cart");
 	
-		//login  
+		//login with credited user
 		Functions.logInVika(driver);		
 				
 		// open the first product page
@@ -151,7 +151,7 @@ public class Payments extends Payments_MAIN {
 		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
 		wait.until(ExpectedConditions.visibilityOf(cartFrame));
 		
-		// if we managed to buy all products, including the one that was in the cart, there is a message of empty cart:
+		// if we managed to buy all products, including the one that was in the cart, there is a message of empty cart
 		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Product_cartIsEmpty)).isDisplayed());					
 
 	}	
@@ -162,7 +162,7 @@ public class Payments extends Payments_MAIN {
 	public  void buy_from_aliExpress() throws Exception {
 	System.out.println("Running test for finding and buying a sample product");
 	
-		//login  
+		//login with credited user
 		Functions.logInVika(driver);		
 				
 		// open the product page
@@ -171,12 +171,12 @@ public class Payments extends Payments_MAIN {
 		//choose the color and size options
 		Functions.chooseVariations_ProductPage(driver);
 		
-		//buy
+		//buy directly
 		driver.findElement(By.xpath(ElementsBuying.Checkout_button)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(ElementsBuying.FinalBuy_button)))).click();
 		wait.until(ExpectedConditions.urlToBe("https://www.zipy.co.il/payment/success"));
 
-		// if we managed to buy there is a message of "thank you for bying":
+		// if we managed to buy there is a message of "thank you for buying"
 		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Thanks_box)).getText().contains(ElementsHeb.ThanksForBuying_heb));
 
 	}
@@ -187,7 +187,7 @@ public class Payments extends Payments_MAIN {
 	public  void buy_from_amazon() throws Exception {
 	System.out.println("Running test for buying a sample product directly from amazon");
 	
-		//login  
+		//login with credited user 
 		Functions.logInVika(driver);		
 				
 		// open the product page
@@ -200,7 +200,7 @@ public class Payments extends Payments_MAIN {
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(ElementsBuying.FinalBuy_button)))).click();
 		wait.until(ExpectedConditions.urlToBe("https://www.zipy.co.il/payment/success"));
 		
-		// if we managed to buy there is a message of "thank you for bying":
+		// if we managed to buy there is a message of "thank you for buying"
 		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Thanks_box)).getText().contains(ElementsHeb.ThanksForBuying_heb));				
 	}
 	 
@@ -210,7 +210,7 @@ public class Payments extends Payments_MAIN {
 	public  void buy_from_lessThan5() throws Exception {
 	System.out.println("Running test for buying random product, from lessThan5 tab ");
 	
-		//login  
+		//login with credited user
 		Functions.logInVika(driver);		
 		
 		//open the lessThan5 tab and pick the first product in deals 
@@ -221,11 +221,11 @@ public class Payments extends Payments_MAIN {
 		//choose the color and size options if exist
 		Functions.chooseVariations_ProductFramed(driver);
 
-		//buy
+		//buy directly
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Checkout_button))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.FinalBuy_button))).click();
 		
-		// if we managed to buy there is a message of "thank you for bying":
+		// if we managed to buy there is a message of "thank you for buying"
 		wait.until(ExpectedConditions.urlToBe("https://www.zipy.co.il/payment/success"));
 		Assert.assertTrue(driver.findElement(By.xpath(ElementsBuying.Thanks_box)).getText().contains(ElementsHeb.ThanksForBuying_heb));
 	}

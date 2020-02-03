@@ -22,11 +22,12 @@ public class Gallery extends Gallery_MAIN {
 	public  void Tests_Gallery_imageOfChosenVariation() throws Exception {
 		System.out.println("Running test for updating gallery image according to the chosen variation");		
 		
+		//open required product and save its main picture at gallery
 		driver.get(ElementsWebsites.ProductWithColors);
 		Thread.sleep(1000);
 		String gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
 
-		//save the image of the first variation
+		//choose the first variation and save its image
 		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();
 		Thread.sleep(1000);
 		String variation1_image = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1_img)).getAttribute("src");		
@@ -46,6 +47,7 @@ public class Gallery extends Gallery_MAIN {
 	public  void Tests_Gallery_imageOfChangedVariation() throws Exception {
 		System.out.println("Running test for updating gallery image after changing chosen variation");		
 		
+		//open required product and save its main picture at gallery
 		driver.get(ElementsWebsites.ProductWithColors);
 		Thread.sleep(1000);
 		String gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
@@ -76,8 +78,10 @@ public class Gallery extends Gallery_MAIN {
 	public  void Tests_Gallery_sliderImages_left() throws Exception {
 		System.out.println("Running test for updating gallery image after sliding left");		
 		
+		//open required product
 		driver.get(ElementsWebsites.ProductWithColors);
 		
+		//save the main picture image and the second bottom image in gallery 
 		String gallery_bottomImage2 = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage_bottom2)).getAttribute("src");					
 		String gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
 
@@ -96,8 +100,10 @@ public class Gallery extends Gallery_MAIN {
 	public  void Tests_Gallery_sliderImages_right() throws Exception {
 		System.out.println("Running test for updating gallery image after sliding right");		
 		
+		//open required product
 		driver.get(ElementsWebsites.ProductWithColors);
 		
+		//save the main picture image and the first bottom image in gallery 
 		String gallery_bottomImage1 = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage_bottom1)).getAttribute("src");		
 		String gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
 
@@ -121,8 +127,10 @@ public class Gallery extends Gallery_MAIN {
 	public  void Tests_Gallery_sliderImages_leftTwice() throws Exception {
 		System.out.println("Running test for updating gallery image after sliding more the once");		
 		
+		//open required product
 		driver.get(ElementsWebsites.ProductWithColors);
 		
+		//save the main picture image and the third bottom image in gallery 
 		String gallery_bottomImage3 = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage_bottom3)).getAttribute("src");					
 		String gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
 
@@ -145,6 +153,7 @@ public class Gallery extends Gallery_MAIN {
 	public  void Tests_Gallery_imageNearChosenVariation() throws Exception {
 		System.out.println("Running test for adding image near the chosen variation according to the choice");		
 		
+		//open required product
 		driver.get(ElementsWebsites.ProductWithColors);
 		Thread.sleep(1000);
 
@@ -154,6 +163,7 @@ public class Gallery extends Gallery_MAIN {
 		String variation1_image = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1_img)).getAttribute("src");		
 		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1)).click();
 
+		//save the image appeared near the chosen variation
 		String nearVariation_image = driver.findElement(By.xpath(ElementsBuying.Product_gallery_nearVariation)).getAttribute("src");
 		
 		//if correct, the images are identical 
@@ -165,6 +175,7 @@ public class Gallery extends Gallery_MAIN {
 	public  void Tests_Gallery_imageNearChosenVariation_update() throws Exception {
 		System.out.println("Running test for updating image near the variation after changing the chosen variation");		
 		
+		//open required product
 		driver.get(ElementsWebsites.ProductWithColors);
 		Thread.sleep(1000);
 
@@ -180,6 +191,7 @@ public class Gallery extends Gallery_MAIN {
 		String variation2_image = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_2_img)).getAttribute("src");		
 		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_2)).click();
 
+		//save the image appeared near the chosen variation
 		String nearVariation_image = driver.findElement(By.xpath(ElementsBuying.Product_gallery_nearVariation)).getAttribute("src");
 		
 		//if correct, the images are identical 

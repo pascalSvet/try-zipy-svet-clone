@@ -20,6 +20,7 @@ public class Loading extends Loading_MAIN {
 	public  void Tests_loading_SpinnerPresent() throws Exception {
 		System.out.println("Running test for presence of loader-spinner on thumbnail click");		
 		
+		//open the deals page
 		driver.get(ElementsWebsites.Zipy_il_deals);
 
 		//click on thumbnail and check its spinner element
@@ -37,6 +38,7 @@ public class Loading extends Loading_MAIN {
 	public  void Tests_loading_SpinnerUpdate() throws Exception {
 		System.out.println("Running test for updating of loader-spinner after clicking on another thumbnail");		
 		
+		//open the deals page
 		driver.get(ElementsWebsites.Zipy_il_deals);
 
 		//click one thumbnail and then another one and check their spinner elements
