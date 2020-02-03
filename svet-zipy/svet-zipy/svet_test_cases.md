@@ -150,28 +150,28 @@
           
 #### Populars
 
-    **Populars_israel:**
-          - aliExpress
-    **Populars_greece:**
-          - aliExpress
-          - ebay
-          - amazon
-    **Populars_cyprus:**
-          - aliExpress
-          - ebay
-          - amazon      
-    **Populars_romania:**
-          - aliExpress
-          - ebay
-          - amazon      
-    **Populars_italy:**
-          - aliExpress
-          - ebay
-          - amazon      
-    **Populars_portugal:**
-          - aliExpress
-          - ebay
-          - amazon      	
+    **Israel site:**
+          - populars thumbnails on aliExpress page
+    **Greece site:**
+          - populars thumbnails on aliExpress page
+          - populars thumbnails on ebay page
+          - populars thumbnails on amazon page
+    **Cyprus site:**
+          - populars thumbnails on aliExpress page
+          - populars thumbnails on ebay page
+          - populars thumbnails on amazon page   
+    **Romania site:**
+          - populars thumbnails on aliExpress page
+          - populars thumbnails on ebay page
+          - populars thumbnails on amazon page   
+    **Italy site:**
+          - populars thumbnails on aliExpress page
+          - populars thumbnails on ebay page
+          - populars thumbnails on amazon page  
+    **Portugal site:**
+          - populars thumbnails on aliExpress page
+          - populars thumbnails on ebay page
+          - populars thumbnails on amazon page    	
  
 ----
 
@@ -293,7 +293,7 @@
 ## Test
 
     ** Test Main Page Thumbs **
-    ** Test Populars **
+    ** Test Populars Thumbs**
     ** Test Favorites **
 
 
@@ -301,9 +301,9 @@
      
 ## Dev
 
-    **Test Main Page Thumbs**
-    **Test Populars**
-    **Test Favorites**
+    **Dev Main Page Thumbs**
+    **Dev Populars Thumbs**
+    **Dev Favorites**
 
 ----   
   

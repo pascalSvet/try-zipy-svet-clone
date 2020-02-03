@@ -61,7 +61,7 @@
     -buy directly
     **if we managed to buy there is a message of "thank you for buying"
  
-  **buying random product, from lessThan5 tab **
+  **buying random product, from lessThan5 tab**
  
     -login with credited user
     -open the lessThan5 tab and pick the first product in deals 

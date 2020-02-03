@@ -3,9 +3,9 @@
 ----
 
 
-### Populars_israel:
+### Israel site:
 
-  **aliExpress**
+  **populars thumbnails on aliExpress page**
   
     -open the main page
     -opening all thumbnails in different tabs and check their loading
@@ -13,53 +13,60 @@
 
 
 
-### Populars_greece:
+### Greece site:
 
-  **aliExpress**  
+  **populars thumbnails on aliExpress page**  
   
     -open the main page
     -opening all thumbnails in different tabs and check their loading
     **if we managed to open all products correctly, there will be no fails:
   
-  **ebay** 
+  **populars thumbnails on ebay page** 
     
     -open the main ebay page
     -opening all thumbnails in different tabs and check their loading
     **if we managed to open all products correctly, there will be no fails:  
-  **amazon**     
+
+  **populars thumbnails on amazon page**     
   
     -open the main amazon page
     -opening all thumbnails in different tabs and check their loading
     **if we managed to open all products correctly, there will be no fails:
 
 
-### Populars_cyprus:
+### Cyprus site:
+
+  **populars thumbnails on aliExpress page**  
+  **populars thumbnails on ebay page** 
+  **populars thumbnails on amazon page**     
+
     test details here are the same as in Greece test case  
-  **aliExpress**  
-  **ebay**   
-  **amazon**   
 
 
 
-### Populars_romania:
+### Romania site:
+
+  **populars thumbnails on aliExpress page**  
+  **populars thumbnails on ebay page** 
+  **populars thumbnails on amazon page**     
+
     test details here are the same as in Greece test case  
-  **aliExpress**  
-  **ebay**   
-  **amazon**     
 
 
+### Italy site:
 
-### Populars_italy:
+  **populars thumbnails on aliExpress page**  
+  **populars thumbnails on ebay page** 
+  **populars thumbnails on amazon page**        
+
     test details here are the same as in Greece test case  
-  **aliExpress**  
-  **ebay**   
-  **amazon**       
 
 
+### Portugal site:
 
-### Populars_portugal:
+  **populars thumbnails on aliExpress page**  
+  **populars thumbnails on ebay page** 
+  **populars thumbnails on amazon page**        
+ 
     test details here are the same as in Greece test case  
-  **aliExpress**  
-  **ebay**   
-  **amazon**      
 
