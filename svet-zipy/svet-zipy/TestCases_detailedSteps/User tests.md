@@ -32,14 +32,14 @@
 
 <details><summary><strong>changing the email<details><summary><strong>
 <p>   
-   
+
 - enter main page
 - enter private data and change password 
 - if changed correctly, there is a success message
 - change the email back at the end, for future tests
 </p>
 </details> 
-  
+
 ----
  
 ### User_mobile:
