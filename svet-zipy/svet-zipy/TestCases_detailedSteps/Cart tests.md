@@ -369,19 +369,21 @@
 
 
 <test>
-text
+trying1
 </test>
 
-<test>
-<summary>How do I dropdown?</summary>
-<br>
-text
-</test>
+----
 
-<details open>
+<test2>
+<summary>coteret2</summary>
+trying1
+</test2>
+
+----
+
+<details3 open>
 <summary>Want to ruin the surprise?</summary>
-<br>
-Well, you asked for it!
-</details>
+trying3
+</details3>
   
     
