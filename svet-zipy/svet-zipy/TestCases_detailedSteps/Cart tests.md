@@ -366,8 +366,22 @@
       -if we managed to remove the product, the cart won't contain its title, but the favorites will contain it:		
       -at the end, remove the products from the favorites, for the future tests		
 
---
---
 
+
+<test>
+text
+</test>
+
+<test>
+<summary>How do I dropdown?</summary>
+<br>
+text
+</test>
+
+<details open>
+<summary>Want to ruin the surprise?</summary>
+<br>
+Well, you asked for it!
+</details>
   
     
