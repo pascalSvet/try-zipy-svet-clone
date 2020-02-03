@@ -19,6 +19,7 @@ public class Aliexpress extends Aliexpress_MAIN {
 	public  void Tests_Aliexpress() throws Exception {
 		System.out.println("Running test for comparing to aliExpress");		
 		
+		//enter to aliExpress product on zipy site
 		driver.get(ElementsWebsites.Aliexpress_sampleFromZipy);
 		
 		//open the same product in aliExpress

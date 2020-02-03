@@ -49,6 +49,8 @@ public class Negative_signUp_byGoogle extends signUp_MAIN {
 			@Test		
 			public  void N_signUp_byGoogle() throws InterruptedException {				
 				System.out.println("Running test with email: " + paramGoogle + ", and password: " + paramGPassword);
+
+				//enter main page
 				driver.get(ElementsWebsites.Zipy_il);
 				String winHandleBefore = driver.getWindowHandle();
 
@@ -77,10 +79,12 @@ public class Negative_signUp_byGoogle extends signUp_MAIN {
 					logged = (driver.findElement(By.xpath(ElementsLogin.UserTopBar)).getText().contains(ElementsHeb.SignedIn_ezorIshi));
 					
 				}
+				//checking for an error in logging 
 				catch (Exception exc) {
 					System.out.println("Negative test - failed as expected");
 					errorCaught = true;
 				}
+				//if succeed, the test caught an error as expected and the user is not logged in
 				finally {
 					driver.switchTo().window(winHandleBefore);
 					Assert.assertTrue(errorCaught || !logged);		
@@ -97,6 +101,8 @@ public class Negative_signUp_byGoogle extends signUp_MAIN {
 		public  void N_signUp_byGoogle_EnteredByUser() throws InterruptedException {
 		/*		
 				System.out.println("Running test with incorrect email and password entered by user");
+				
+				//enter main page
 				driver.get(ElementsWebsites.Zipy_il);
 			
 				//press signup button		
@@ -114,7 +120,7 @@ public class Negative_signUp_byGoogle extends signUp_MAIN {
 						Scanner m= new Scanner(System.in);
 						String  Temp_googlePassword= m.nextLine();
 			try {
-				// enter google account identifiers: 
+				// enter google account identifiers from user: 
 				wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.SignUp_google_field)))
 				.sendKeys(Temp_google, Keys.ENTER);
 				wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.SignUp_googlePassword_field)))
@@ -126,10 +132,12 @@ public class Negative_signUp_byGoogle extends signUp_MAIN {
 				logged = (driver.findElement(By.xpath(ElementsLogin.UserTopBar)).getText().contains(ElementsHeb.SignedIn_ezorIshi));
 				
 			}
+			//checking for an error in logging 
 			catch (Exception exc) {
 				System.out.println("Negative test - failed as expected");
 				errorCaught = true;
 			}
+			//if succeed, the test caught an error as expected and the user is not logged in
 			finally {	
 				Assert.assertTrue(errorCaught || !logged);		
 			}	

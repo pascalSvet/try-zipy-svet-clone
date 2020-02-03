@@ -28,6 +28,7 @@ public class User_email extends User_MAIN {
 	public  void user_changeEmail() throws Exception {
 		System.out.println("running test for changing the email");
 		
+		//enter main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		//enter private data and change password 

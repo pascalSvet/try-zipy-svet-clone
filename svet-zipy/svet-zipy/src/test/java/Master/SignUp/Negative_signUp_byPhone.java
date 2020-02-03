@@ -50,7 +50,8 @@ public class Negative_signUp_byPhone extends signUp_MAIN {
 		@Test		
 		public  void N_signUp_byPhone_existingNumber() throws InterruptedException {
 			System.out.println("Running test with phone: " + paramPhone);
-				
+			
+			//enter main page
 			driver.get(ElementsWebsites.Zipy_il);
 
 					//press signup button		
@@ -76,15 +77,17 @@ public class Negative_signUp_byPhone extends signUp_MAIN {
 						.sendKeys(phone_code, Keys.ENTER);
 					}
 							
-					//check if user logged in (if so, appears new button "איזור אישי")
+					//check if user logged in
 					new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.UserTopBar)));
 					logged = (driver.findElement(By.xpath(ElementsLogin.UserTopBar)).getText().contains(ElementsHeb.SignedIn_ezorIshi));
 					
 				}
+				//checking for an error in logging 
 				catch (Exception exc) {
 					System.out.println("Negative test - failed as expected");
 					errorCaught = true;
 				}
+				//if succeed, the test caught an error as expected and the user is not logged in
 				finally {	
 					Assert.assertTrue(errorCaught || !logged);		
 				}	
@@ -99,6 +102,7 @@ public class Negative_signUp_byPhone extends signUp_MAIN {
 		@Test		
 		public  void N_signUp_byPhone_numberEnteredByUser() throws InterruptedException {			
 			/*	
+			//enter main page
 			driver.get(ElementsWebsites.Zipy_il);
 		
 			try {
@@ -109,7 +113,7 @@ public class Negative_signUp_byPhone extends signUp_MAIN {
 				//choose signup by phone
 				driver.findElement(By.xpath(ElementsLogin.SignUp_phone_button)).click();
 				
-				// enter temporary phone number** : 		
+				// enter temporary phone number from user: 		
 						System.out.println("Please enter your phone number:   ");
 						Scanner k= new Scanner(System.in);
 						String  Temp_phoneNumber= k.nextLine();		
@@ -117,7 +121,7 @@ public class Negative_signUp_byPhone extends signUp_MAIN {
 				.sendKeys(Temp_phoneNumber, Keys.ENTER);
 				wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(ElementsLogin.SignUp_phone_pressEnter)))).click();
 				
-				// enter phone code: 		
+				// enter phone code from user: 		
 				if(!driver.findElement(By.xpath(ElementsLogin.SignUp_phone_messageExist)).isEnabled()) {
 						System.out.println("Please enter the code from your phone:  ");
 						Scanner j= new Scanner(System.in);
@@ -131,10 +135,12 @@ public class Negative_signUp_byPhone extends signUp_MAIN {
 				logged = (driver.findElement(By.xpath(ElementsLogin.UserTopBar)).getText().contains(ElementsHeb.SignedIn_ezorIshi));
 				
 			}
+			//checking for an error in logging 
 			catch (Exception ex) {
 				System.out.println("The test failed as expexted");
 				errorCaught = true;
 			}
+			//if succeed, the test caught an error as expected and the user is not logged in
 			finally {	
 				Assert.assertTrue(errorCaught || !logged);		
 			}	

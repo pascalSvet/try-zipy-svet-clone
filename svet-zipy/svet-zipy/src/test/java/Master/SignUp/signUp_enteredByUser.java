@@ -18,13 +18,15 @@ public class signUp_enteredByUser extends signUp_MAIN {
 	@Test		
 	public  void signUp_byEmail_newEmailByUser() throws InterruptedException {
 		System.out.println("Running test with email and password entered by user");
+		
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		//press signup button		
 		JavascriptExecutor ex=(JavascriptExecutor)driver;
 		ex.executeScript("arguments[0].click()", driver.findElement(By.xpath(ElementsLogin.SignUp_button)));
 	
-		// ask user and enter e-mail, with default password: 		
+		//ask user and enter e-mail, with default password and use them to sign up: 		
 			System.out.println("Please enter your e-mail:  ");
 			Scanner i= new Scanner(System.in);
 			String  temp_mail= i.nextLine();	
@@ -35,6 +37,8 @@ public class signUp_enteredByUser extends signUp_MAIN {
 		//check if user logged in
 		new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.UserTopBar)));
 		Boolean logged = (driver.findElement(By.xpath(ElementsLogin.UserTopBar)).getText().contains(ElementsHeb.SignedIn_ezorIshi));
+
+		//if succeed, there is "private area" button
 		Assert.assertTrue(logged);
 		
 	}	
@@ -43,6 +47,8 @@ public class signUp_enteredByUser extends signUp_MAIN {
 	@Test		
 	public  void signUp_byPhone_newPhoneByUser() throws InterruptedException {
 		System.out.println("Running test with phone number entered by user");
+
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		//press signup button		
@@ -52,7 +58,7 @@ public class signUp_enteredByUser extends signUp_MAIN {
 		//choose signup by phone
 		driver.findElement(By.xpath(ElementsLogin.SignUp_phone_button)).click();
 		
-		// ask user and enter temporary phone number: 		
+		//ask user to enter temporary phone number and use it to sign up: 		
 				System.out.println("Please enter your phone number:   ");
 				Scanner k= new Scanner(System.in);
 				String  Temp_phoneNumber= k.nextLine();		
@@ -61,7 +67,7 @@ public class signUp_enteredByUser extends signUp_MAIN {
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(ElementsLogin.SignUp_phone_pressEnter)))).click();
 		
 		
-		// ask user and enter phone code: 		
+		//ask user to enter phone code and use it to confirm: 		
 		if(!driver.findElement(By.xpath(ElementsLogin.SignUp_phone_messageExist)).isEnabled()) {
 			System.out.println("Please enter the code from your phone:  ");
 			Scanner j= new Scanner(System.in);
@@ -73,6 +79,8 @@ public class signUp_enteredByUser extends signUp_MAIN {
 		//check if user logged in
 		new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.UserTopBar)));
 		Boolean logged = (driver.findElement(By.xpath(ElementsLogin.UserTopBar)).getText().contains(ElementsHeb.SignedIn_ezorIshi));
+
+		//if succeed, there is "private area" button
 		Assert.assertTrue(logged);	
 	
 	}
@@ -81,6 +89,8 @@ public class signUp_enteredByUser extends signUp_MAIN {
 	@Test		
 	public  void signUp_byGoogle_newGoogleByUser() throws InterruptedException {
 		System.out.println("Running test with google account entered by user");
+
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		//press signup button		
@@ -93,7 +103,7 @@ public class signUp_enteredByUser extends signUp_MAIN {
 		       driver.switchTo().window(currentWindow);
 		}
 				
-		// ask user and enter google account identifiers: 		
+		// ask user to enter google account identifiers and use them to sign up: 	 		
 				System.out.println("Please enter your gmail or phone from your google account:   ");
 				Scanner k= new Scanner(System.in);
 				String  Temp_google= k.nextLine();	
@@ -108,6 +118,8 @@ public class signUp_enteredByUser extends signUp_MAIN {
 		//check if user logged in
 		new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.UserTopBar)));
 		Boolean logged = (driver.findElement(By.xpath(ElementsLogin.UserTopBar)).getText().contains(ElementsHeb.SignedIn_ezorIshi));
+
+		//if succeed, there is "private area" button
 		Assert.assertTrue(logged);	
 		
 	}	
@@ -116,6 +128,8 @@ public class signUp_enteredByUser extends signUp_MAIN {
 	@Test		
 	public  void signUp_byFB_newFBbyUser() throws InterruptedException {
 		System.out.println("Running test with facebook account entered by user");
+
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		//press signup button		
@@ -130,7 +144,7 @@ public class signUp_enteredByUser extends signUp_MAIN {
 		}
 			
 				
-		// ask user and enter FB account identifiers: 		
+		// ask user to enter FB account identifiers and use them to sign up: 		
 				System.out.println("Please enter your facebook mail or phone:   ");
 				Scanner k= new Scanner(System.in);
 				String  Temp_fb= k.nextLine();	
@@ -148,6 +162,8 @@ public class signUp_enteredByUser extends signUp_MAIN {
 		//check if user logged in
 		new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.UserTopBar)));
 		Boolean logged = (driver.findElement(By.xpath(ElementsLogin.UserTopBar)).getText().contains(ElementsHeb.SignedIn_ezorIshi));
+		
+		//if succeed, there is "private area" button
 		Assert.assertTrue(logged);
 		
 		

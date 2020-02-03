@@ -179,6 +179,7 @@
 
     **Search_field:**
           - clearing search field
+          - performing empty search
           - opening of dropdown autocomplete menu
           - closing of dropdown autocomplete menu after clearing the search field
           - performing search with autocomplete hint
@@ -222,7 +223,7 @@
           - sign up with unused email, entered by the user
           - sign up with unused phone number, entered by the user
           - sign up with unused google account, entered by the user
-          - sign up with unused facebook account, entered by the user 
+          - sign up with unused facebook account, entered by the user
         
      **Negative Tests - by phone:**
           - existing number
@@ -305,6 +306,4 @@
     **Test Favorites**
 
 ----   
-     
-## o
-   *o*
+  

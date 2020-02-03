@@ -50,6 +50,8 @@ public class Negative_signUp_byFB extends signUp_MAIN {
 			@Test		
 			public  void N_signUp_byFB() throws InterruptedException {				
 				System.out.println("Running test with email: " + paramEmail + ", and password: " + paramPassword);
+
+				//enter main page
 				driver.get(ElementsWebsites.Zipy_il);
 				String winHandleBefore = driver.getWindowHandle();
 
@@ -76,10 +78,12 @@ public class Negative_signUp_byFB extends signUp_MAIN {
 					new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.UserTopBar)));
 					logged = (driver.findElement(By.xpath(ElementsLogin.UserTopBar)).getText().contains(ElementsHeb.SignedIn_ezorIshi));					
 				}
+				//checking for an error in logging 
 				catch (Exception exc) {
 					System.out.println("Negative test - failed as expected");
 					errorCaught = true;
 				}
+				//if succeed, the test caught an error as expected and the user is not logged in
 				finally {	
 					driver.switchTo().window(winHandleBefore);
 					Assert.assertTrue(errorCaught || !logged);		
@@ -97,6 +101,9 @@ public class Negative_signUp_byFB extends signUp_MAIN {
 				/*	
 				System.out.println("Running test with incorrect email and password entered by user");
 			
+				//enter main page
+				driver.get(ElementsWebsites.Zipy_il);
+				
 				//press signup button		
 				JavascriptExecutor ex=(JavascriptExecutor)driver;
 				ex.executeScript("arguments[0].click()", driver.findElement(By.xpath(ElementsLogin.SignUp_button)));
@@ -128,10 +135,12 @@ public class Negative_signUp_byFB extends signUp_MAIN {
 					logged = (driver.findElement(By.xpath(ElementsLogin.UserTopBar)).getText().contains(ElementsHeb.SignedIn_ezorIshi));
 					
 				}
+				//checking for an error in logging 
 				catch (Exception exc) {
 					System.out.println("Negative test - failed as expected");
 					errorCaught = true;
 				}
+				//if succeed, the test caught an error as expected and the user is not logged in
 				finally {	
 					Assert.assertTrue(errorCaught || !logged);		
 				}	

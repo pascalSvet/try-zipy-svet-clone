@@ -21,6 +21,7 @@ public class Search_field extends Search_MAIN {
 	public  void Tests_Search_field_clear() throws Exception {
 		System.out.println("Running test for clearing search field");		
 		
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// enter search keyword and then clear the field
@@ -39,6 +40,7 @@ public class Search_field extends Search_MAIN {
 	public  void Tests_Search_field_emptyField() throws Exception {
 		System.out.println("Running test for performing empty search");		
 		
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// enter search keyword and then clear the field
@@ -57,6 +59,7 @@ public class Search_field extends Search_MAIN {
 	public  void Tests_Search_field_dropdownOpen() throws Exception {
 		System.out.println("Running test for opening of dropdown autocomplete menu");		
 		
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// enter search keyword
@@ -73,12 +76,14 @@ public class Search_field extends Search_MAIN {
 	public  void Tests_Search_field_dropdownClose() throws Exception {
 		System.out.println("Running test for closing of dropdown autocomplete menu after clearing the search field");		
 		
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// enter search keyword
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_eng);
 		
+		//clear the search field
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Search_autocompleteArrow1)));
 		driver.findElement(By.xpath(ElementsBuying.Search_delete)).click();
 		Thread.sleep(1000);
@@ -93,6 +98,7 @@ public class Search_field extends Search_MAIN {
 	public  void Tests_Search_field_autocomplete() throws Exception {
 		System.out.println("Running test for performing search with autocomplete hint");		
 		
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// enter search keyword
@@ -123,12 +129,14 @@ public class Search_field extends Search_MAIN {
 	public  void Tests_Search_field_keepSearchForAmazon() throws Exception {
 		System.out.println("Running test for keeping the keyword search field after switching to amazon");		
 		
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// enter search keyword
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_eng, Keys.ENTER);
 		
+		//switch to amazon
 		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_amazonButton)).click();	
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
 		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
@@ -143,12 +151,14 @@ public class Search_field extends Search_MAIN {
 	public  void Tests_Search_field_keepSearchForEbay() throws Exception {
 		System.out.println("Running test for keeping the keyword search after switching to ebay");		
 		
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// enter search keyword
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_eng, Keys.ENTER);
 		
+		//switch to ebay
 		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_ebayButton)).click();	
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
 		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
@@ -163,12 +173,14 @@ public class Search_field extends Search_MAIN {
 	public  void Tests_Search_field_keepSearchForLessthan5() throws Exception {
 		System.out.println("Running test for keeping the keyword search after switching to Less-than-5");		
 		
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		// enter search keyword
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_eng, Keys.ENTER);
-		
+
+		//switch to Less-than-5
 		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_lessThan5Button)).click();	
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
 		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
@@ -184,6 +196,7 @@ public class Search_field extends Search_MAIN {
 	public  void Tests_Search_field_clearSearchForAmazon() throws Exception {
 		System.out.println("Running test for clearing the keyword search field after switching to amazon");		
 		
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		//perform search and then clear the field
@@ -191,11 +204,12 @@ public class Search_field extends Search_MAIN {
 			.sendKeys(ElementsBuying.Search_eng, Keys.ENTER);
 		driver.findElement(By.xpath(ElementsBuying.Search_delete)).click();
 
+		//switch to amazon
 		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_amazonButton)).click();	
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
 		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
 
-		//if succeed, then a search field will keep the keyword
+		//if succeed, then a search field will be empty
 		Assert.assertTrue("".equals(searchField));	
 
 	}
@@ -206,18 +220,20 @@ public class Search_field extends Search_MAIN {
 	public  void Tests_Search_field_clearSearchForEbay() throws Exception {
 		System.out.println("Running test for clearing the keyword search after switching to ebay");		
 		
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		//perform search and then clear the field
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_eng, Keys.ENTER);
 		driver.findElement(By.xpath(ElementsBuying.Search_delete)).click();
-
+		
+		//switch to ebay
 		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_ebayButton)).click();	
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
 		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
 
-		//if succeed, then a search field will keep the keyword
+		//if succeed, then a search field will be empty
 		Assert.assertTrue("".equals(searchField));	
 	}
 
@@ -227,6 +243,7 @@ public class Search_field extends Search_MAIN {
 	public  void Tests_Search_field_clearSearchForLessthan5() throws Exception {
 		System.out.println("Running test for clearing the keyword search after switching to Less-than-5");		
 		
+		//open main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		//perform search and then clear the field
@@ -234,11 +251,12 @@ public class Search_field extends Search_MAIN {
 			.sendKeys(ElementsBuying.Search_eng, Keys.ENTER);
 		driver.findElement(By.xpath(ElementsBuying.Search_delete)).click();
 
+		//switch to Less-than-5
 		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_lessThan5Button)).click();	
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
 		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
 
-		//if succeed, then a search field will keep the keyword
+		//if succeed, then a search field will be empty
 		Assert.assertTrue("".equals(searchField));	
 	}
 	

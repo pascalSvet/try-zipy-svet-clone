@@ -28,7 +28,7 @@ public class User_mobile extends User_MAIN {
 	public  void TestsMobile_user_passwordChange() throws Exception {
 		System.out.println("running test (in mobile version) for changing the password");
 		
-		//change to mobile screen resolution
+		//change to mobile screen resolution and enter main page
 		driver.manage().window().setSize(new Dimension(320,480));
 		driver.get(ElementsWebsites.Zipy_il);
 
@@ -50,11 +50,11 @@ public class User_mobile extends User_MAIN {
 	public  void TestsMobile_user_changeEmail() throws Exception {
 		System.out.println("running test (in mobile version) for changing the email");
 		
-		//change to mobile screen resolution
+		//change to mobile screen resolution and enter main page
 		driver.manage().window().setSize(new Dimension(320,480));
 		driver.get(ElementsWebsites.Zipy_il);
 
-		//enter private data and change password 
+		//enter private data and change email 
 		Functions.changeEmail(driver, ElementsLogin.Email_zipy2, ElementsLogin.Email_zipy_password);
 
 		//if changed correctly, there is a success message

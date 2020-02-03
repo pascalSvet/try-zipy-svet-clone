@@ -28,6 +28,7 @@ public class User_password extends User_MAIN {
 	public  void user_passwordChange() throws Exception {
 		System.out.println("running test for changing the password");
 		
+		//enter main page
 		driver.get(ElementsWebsites.Zipy_il);
 
 		//enter private data and change password 
@@ -50,7 +51,7 @@ public class User_password extends User_MAIN {
 	///*	
 		System.out.println("running test for recovering the password");
 		
-		//disconnect from the user
+		//enter main page and disconnect from the user
 		driver.get(ElementsWebsites.Zipy_il);
 		Functions.unLogIn(driver);
 		Thread.sleep(1000);

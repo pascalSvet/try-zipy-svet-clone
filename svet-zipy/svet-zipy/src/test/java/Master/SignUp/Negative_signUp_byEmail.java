@@ -61,6 +61,7 @@ public class Negative_signUp_byEmail extends signUp_MAIN {
 		public  void N_signUp_wrongEmailOrPassword() throws InterruptedException {
 			System.out.println("Running test with email: " + paramEmail + ", and password: " + paramPassword);
 			
+			//enter main page
 			driver.get(ElementsWebsites.Zipy_il);
 
 				//press signup button		
@@ -81,10 +82,12 @@ public class Negative_signUp_byEmail extends signUp_MAIN {
 				logged = (driver.findElement(By.xpath(ElementsLogin.UserTopBar)).getText().contains(ElementsHeb.SignedIn_ezorIshi));
 				
 			}
+			//checking for an error in logging 
 			catch (Exception exc) {
 				System.out.println("Negative test - failed as expected");
 				errorCaught = true;
 			}
+			//if succeed, the test caught an error as expected and the user is not logged in
 			finally {	
 				Assert.assertTrue(errorCaught || !logged);		
 			}	
@@ -99,6 +102,8 @@ public class Negative_signUp_byEmail extends signUp_MAIN {
 		@Test		
 		public  void N_signUp_byEmail_uncheckedTerms() throws InterruptedException {
 			System.out.println("Running test with unchecked terms of use");
+
+			//enter main page
 			driver.get(ElementsWebsites.Zipy_il);
 
 				//press signup button		
@@ -116,10 +121,12 @@ public class Negative_signUp_byEmail extends signUp_MAIN {
 				new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.UserTopBar)));
 				logged = (driver.findElement(By.xpath(ElementsLogin.UserTopBar)).getText().contains(ElementsHeb.SignedIn_ezorIshi));				
 			}
+			//checking for an error in logging 
 			catch (Exception exc) {
 				System.out.println("Negative test - failed as expected");
 				errorCaught = true;
 			}
+			//if succeed, the test caught an error as expected and the user is not logged in
 			finally {	
 				Assert.assertTrue(errorCaught || !logged);		
 			}	
@@ -130,7 +137,10 @@ public class Negative_signUp_byEmail extends signUp_MAIN {
 		public  void N_signUp_byEmail_enteredByUser() throws InterruptedException {
 			/*	
 			System.out.println("Running test with incorrect email and password, entered by the user");	
+						
+			//enter main page
 			driver.get(ElementsWebsites.Zipy_il);
+			
 			try {
 				//press signup button		
 				JavascriptExecutor ex=(JavascriptExecutor)driver;
@@ -153,10 +163,12 @@ public class Negative_signUp_byEmail extends signUp_MAIN {
 				logged = (driver.findElement(By.xpath(ElementsLogin.UserTopBar)).getText().contains(ElementsHeb.SignedIn_ezorIshi));
 				
 			}
+			//checking for an error in logging 
 			catch (Exception ex) {
 				System.out.println("Negative test - failed as expected");
 				errorCaught = true;
 			}
+			//if succeed, the test caught an error as expected and the user is not logged in
 			finally {	
 				Assert.assertTrue(errorCaught || !logged);		
 			}	*/
