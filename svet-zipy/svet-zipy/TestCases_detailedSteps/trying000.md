@@ -20,8 +20,7 @@
 
 
 <details><summary>**changing the password**</summary>
-<p>
-  
+<p> 
     -enter main page
     -enter private data and change password 
     **if changed correctly, there is a success message
@@ -29,7 +28,7 @@
 </p>
 </details>
    
-<details2><summary>**recovering the password    !!!entered by user!!!**</summary>
+<details><summary>**recovering the password    !!!entered by user!!!**</summary>
 <p>   
     -enter main page and disconnect from the user
     -press login button		
@@ -56,21 +55,20 @@
 ### User_mobile:
 
 
-<details3><summary>**TestsMobile - changing the password**</summary>
+<details9><summary>**TestsMobile - changing the password**</summary>
 <p>  
     -change to mobile screen resolution and enter main page
     -enter private data and change password 
     **if changed correctly, there is a success message
     -change the password back at the end, for future tests
 </p>
-</details3> 
+
   
-<details3><summary>**TestsMobile - changing the email**</summary>
+<summary>**TestsMobile - changing the email**</summary>
 <p>   
- 
     -change to mobile screen resolution and enter main page
     -enter private data and change email 
     **if changed correctly, there is a success message
     -change the password back at the end, for future tests
 </p>
-</details3>     
+</details9>     
