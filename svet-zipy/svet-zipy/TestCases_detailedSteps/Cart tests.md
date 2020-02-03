@@ -230,11 +230,11 @@
    
 - change to mobile screen resolution
 - get to the required product page
-		-make sure there is no 400 error
-		-save its price
+- make sure there is no 400 error
+- save its price
 - increase the quantity to 2 and then add to the cart 
 - reopen the cart and change the quantity manually to "1"
-  - the final sum supposed to be of 1 unit only 
+- the final sum supposed to be of 1 unit only 
 - remove the product at the end, for the future tests
 </p>
 </details> 
@@ -267,7 +267,7 @@
 - change to mobile screen resolution
 - add required product to the cart and save its title
 - remove the product to favorites and reopen the cart
-  - open the favorites window and save its contents
+- open the favorites window and save its contents
 - if we managed to remove the product, the cart won't contain its title, but the favorites will contain it			
 - at the end, remove the products from the favorites, for the future tests		
  </p>
@@ -277,7 +277,7 @@
 ----
 
 
-### Cart_price:</strong></summary>
+### Cart_price:
 
 <details><summary><strong>checking the final sum in the cart includes the delivery</strong></summary>
 <p>
@@ -368,7 +368,7 @@
 - save its price
 - increase the quantity to 2 and then add to the cart 
 - reopen the cart and change the quantity manually to "1"
-- the final sum supposed to be of 1 unit only :
+- the final sum supposed to be of 1 unit only
 </p>
 </details> 
       
@@ -400,7 +400,7 @@
 - back to main page and open the cart			
 - remove the item and choose adding it to favorites
 - check if the cart contains the removed item  
-  - open the favorites window and save its contents
+- open the favorites window and save its contents
 - if we managed to remove the product, the cart won't contain its title, but the favorites will contain it:			
 - at the end, remove the products from the favorites, for the future tests		
 </p>
@@ -456,7 +456,7 @@
 - add to the cart and proceed to the payment
 - remove the product
 - reopen the cart	
-- check if the cart contains the removed item  
+- check if the cart contains the removed item
 - open the favorites window and save its contents
 - if we managed to remove the product, the cart won't contain its title, but the favorites will contain it:		
 - at the end, remove the products from the favorites, for the future tests		
