@@ -6,9 +6,8 @@
 ### Сatalogs_il_aliExpress_combined
 
 <details><summary><strong>opening all sub categories in aliExpress - Israel (with parameters)</strong></summary>
-<p>   
-   
-- our parameters to test- categories in the catalog 
+<p>      
+- our parameters to test- categories in the catalog: 
     - fashion
     - cars 
     - electronics  
@@ -78,9 +77,8 @@ test details here are the same as on parameterized test case
 ### Сatalogs_il_amazon_combined
 
  <details><summary><strong>opening all sub categories in amazon - Israel (with parameters)</strong></summary>
- <p> 
-  
-- our parameters to test- categories in the catalog  
+ <p>   
+- our parameters to test- categories in the catalog:  
     - fashion
     - cars 
     - electronics  
@@ -154,9 +152,8 @@ test details here are the same as on parameterized test case
 
 
 ### Сatalogs_gr_aliExpress_combined
-<p> 
-  
-- our parameters to test- categories in the catalog 
+<p>   
+- our parameters to test- categories in the catalog:
     - fashion
     - cars 
     - electronics  
@@ -225,9 +222,8 @@ test details here are the same as on parameterized test case
   
 ### Сatalogs_gr_amazon_combined
 
- <details><summary><strong>opening all sub categories in amazon - Greece (with parameters)</strong></summary>
- <p> 
-  
+<details><summary><strong>opening all sub categories in amazon - Greece (with parameters)</strong></summary>
+<p>   
 - our parameters to test- categories in the catalog:
     - fashion
     - cars 
@@ -247,7 +243,7 @@ test details here are the same as on parameterized test case
 - if failed to load, return the category name and its link
 - return the number of fails in current category
 - if everything opened correct, then no fails caught
- </p>
+</p>
 </details> 
 
 
