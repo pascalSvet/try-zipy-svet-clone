@@ -108,8 +108,8 @@
 ### Negative Tests - by google:
 
 <details>
-</strong></summary> (with parameters):</strong></summary> 
-<p>   
+<summary><strong>(with parameters):</strong></summary> 
+<p>    
      
 - our parameters to test - email and password : 
       email with no google account 
@@ -149,7 +149,7 @@
 ### Negative Tests - by FB:
 
 <details>
-</strong></summary> (with parameters):</strong></summary> 
+<summary><strong>(with parameters):</strong></summary> 
 <p>   
      
 - our parameters to test - email and password : 		
@@ -192,8 +192,8 @@
 ### Negative Tests - by Email:
 
 <details>
-</strong></summary> (with parameters):</strong></summary> 
- <p>   
+<summary><strong>(with parameters):</strong></summary> 
+<p>  
   
 - our parameters to test - email and password: 		
       existing email  
