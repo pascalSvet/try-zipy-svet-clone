@@ -208,6 +208,7 @@ public class Cart_removeProduct extends Cart_MAIN {
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 		
 		//add to the cart and proceed to the payment
+		Thread.sleep(2000);
 		driver.findElement(By.xpath(ElementsBuying.PayNow_button)).click();
 
 		//remove the product
@@ -241,6 +242,7 @@ public class Cart_removeProduct extends Cart_MAIN {
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 		
 		//add to the cart and proceed to the payment
+		Thread.sleep(2000);
 		driver.findElement(By.xpath(ElementsBuying.PayNow_button)).click();
 
 		//remove the product
