@@ -4,7 +4,8 @@
 
 ### Payment:
 
-<details><summary><strong>buying product, directly from search</strong></summary> 
+<details>
+<summary><strong>buying product, directly from search</strong></summary> 
 <p>  
   
 - login with credited user
@@ -15,7 +16,8 @@
 </p>
 </details> 
    
-<details><summary><strong>buying product from the cart</strong></summary>  
+<details>
+<summary><strong>buying product from the cart</strong></summary>  
 <p>  
      
 - login with credited user
@@ -28,7 +30,8 @@
 </p>
 </details> 
            
-<details><summary><strong>buying all products from the cart</strong></summary> 
+<details>
+<summary><strong>buying all products from the cart</strong></summary> 
 <p>  
     
 - login with credited user
@@ -43,7 +46,8 @@
 </p>
 </details> 
   		
-<details><summary><strong>buying product directly from its page, when there is another product in the cart</strong></summary> 
+<details>
+<summary><strong>buying product directly from its page, when there is another product in the cart</strong></summary> 
 <p>  
     
 - login with credited user
@@ -56,7 +60,8 @@
 </p>
 </details> 
     
-<details><summary><strong>buying product from aliExpress</strong></summary> 
+<details>
+<summary><strong>buying product from aliExpress</strong></summary> 
 <p>  
     
 - login with credited user
@@ -67,7 +72,8 @@
 </p>
 </details> 
  		
-<details><summary><strong>buying product from amazon</strong></summary> 
+<details>
+<summary><strong>buying product from amazon</strong></summary> 
  <p>  
    
 - login with credited user
@@ -78,7 +84,8 @@
 </p>
 </details> 
   
-<details><summary><strong>buying random product, from lessThan5 tab</strong></summary> 
+<details>
+<summary><strong>buying random product, from lessThan5 tab</strong></summary> 
 <p>  
    
 - login with credited user

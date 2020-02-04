@@ -5,7 +5,8 @@
 ### Errors_502:
 
 
-<details><summary><strong>catching 502 error while opening many tabs in categories - Greece</strong></summary>
+<details>
+<summary><strong>catching 502 error while opening many tabs in categories - Greece</strong></summary>
 <p>
   
 - open main page
@@ -14,7 +15,8 @@
 </p>
 </details> 
       
-<details><summary><strong>catching 502 error while opening many tabs in categories - Portugal</strong></summary> 
+<details>
+<summary><strong>catching 502 error while opening many tabs in categories - Portugal</strong></summary> 
 <p>
      
 - open main page
@@ -23,7 +25,8 @@
 </p>
 </details> 
               
-<details><summary><strong>catching 502 error while opening many tabs in categories - Israel</strong></summary>
+<details>
+<summary><strong>catching 502 error while opening many tabs in categories - Israel</strong></summary>
 <p>
     
 - open main page
@@ -32,7 +35,8 @@
 </p>
 </details> 
       		
-<details><summary><strong>catching 502 error while opening many tabs in deals - Greece</strong></summary>
+<details>
+<summary><strong>catching 502 error while opening many tabs in deals - Greece</strong></summary>
 <p>
     
 - open deals page
@@ -41,7 +45,8 @@
 </p>
 </details> 
    
-<details><summary><strong>catching 502 error while opening many tabs in deals - Portugal</strong></summary>
+<details>
+<summary><strong>catching 502 error while opening many tabs in deals - Portugal</strong></summary>
  <p>
    
 - open deals page
@@ -50,7 +55,8 @@
 </p>
 </details> 
   
-<details><summary><strong>catching 502 error while opening many tabs in deals - Israel</strong></summary>
+<details>
+<summary><strong>catching 502 error while opening many tabs in deals - Israel</strong></summary>
  <p>
    
 - open deals page

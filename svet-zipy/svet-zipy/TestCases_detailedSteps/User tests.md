@@ -4,7 +4,8 @@
 
 ### User_password:
 
-<details><summary><strong>changing the password</strong></summary>
+<details>
+<summary><strong>changing the password</strong></summary>
 <p>   
    
 - enter main page
@@ -14,7 +15,8 @@
 </p>
 </details> 
    
-<details><summary><strong>recovering the password    !!!entered by user!!!</strong></summary> 
+<details>
+<summary><strong>recovering the password    !!!entered by user!!!</strong></summary> 
 <p>   
    
 - enter main page and disconnect from the user
@@ -30,7 +32,8 @@
 
 ### User_email:
 
-<details><summary><strong>changing the email</strong></summary> 
+<details>
+<summary><strong>changing the email</strong></summary> 
 <p>   
    
 - enter main page
@@ -44,7 +47,8 @@
  
 ### User_mobile:
 
-<details><summary><strong>TestsMobile - changing the password</strong></summary>
+<details>
+<summary><strong>TestsMobile - changing the password</strong></summary>
 <p>   
    
 - change to mobile screen resolution and enter main page
@@ -54,7 +58,8 @@
 </p>
 </details> 
     
-<details><summary><strong>TestsMobile - changing the email</strong></summary> 
+<details>
+<summary><strong>TestsMobile - changing the email</strong></summary> 
  <p>   
    
 - change to mobile screen resolution and enter main page

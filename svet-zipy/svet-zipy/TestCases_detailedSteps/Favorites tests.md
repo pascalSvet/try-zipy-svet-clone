@@ -6,7 +6,8 @@
 ### Favorites_icon:
 
 
-<details><summary><strong>appearance of favorite-pin icon on thumbnail, on mouse hover</strong></summary>
+<details>
+<summary><strong>appearance of favorite-pin icon on thumbnail, on mouse hover</strong></summary>
 <p>
   
 - open deals page
@@ -15,7 +16,8 @@
 </p>
 </details> 
    
-<details><summary><strong>correct colors of favorite-pin button</strong></summary> 
+<details>
+<summary><strong>correct colors of favorite-pin button</strong></summary> 
 <p>
    
 - open deals page
@@ -31,7 +33,8 @@
 ### Favorites_adding:
 
            
-<details><summary><strong>adding to favorites from product page</strong></summary>
+<details>
+<summary><strong>adding to favorites from product page</strong></summary>
 <p> 
  
 - get to the required product page and save its title
@@ -42,7 +45,8 @@
 </p>
 </details> 
     		
-<details><summary><strong>adding to favorites from product pop-up page</strong></summary>
+<details>
+<summary><strong>adding to favorites from product pop-up page</strong></summary>
 <p>
    
 - open one of the products on the main page and save its name
@@ -53,7 +57,8 @@
 </p>
 </details> 
     
-<details><summary><strong>adding to favorites from daily deals thumbnail</strong></summary>
+<details>
+<summary><strong>adding to favorites from daily deals thumbnail</strong></summary>
 <p>
    
 - open the deals page
@@ -65,7 +70,8 @@
 </p>
 </details> 
    
-<details><summary><strong>adding to favorites from less-than-5 tab</strong></summary>
+<details>
+<summary><strong>adding to favorites from less-than-5 tab</strong></summary>
 <p> 
 
 - open the less-than-5 tab
@@ -77,7 +83,8 @@
 </p>
 </details> 
   
-<details><summary><strong>adding to favorites from search thumbnail</strong></summary>
+<details>
+<summary><strong>adding to favorites from search thumbnail</strong></summary>
 <p>
    
 - open the main page
@@ -90,7 +97,8 @@
 </p>
 </details> 
     
-<details><summary><strong>adding to favorites from category</strong></summary>
+<details>
+<summary><strong>adding to favorites from category</strong></summary>
 <p>
    
 - open the main page

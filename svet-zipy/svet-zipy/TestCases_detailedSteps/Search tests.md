@@ -5,7 +5,8 @@
 ### Search_field:
 
 
-<details><summary><strong>clearing search field</strong></summary> 
+<details>
+<summary><strong>clearing search field</strong></summary> 
 <p>   
      
 - open main page
@@ -14,7 +15,8 @@
 </p>
 </details> 
 
-<details><summary><strong>performing empty search</strong></summary> 
+<details>
+<summary><strong>performing empty search</strong></summary> 
 <p>   
      		  		
 - open main page
@@ -23,7 +25,8 @@
 </p>
 </details> 
 		
-<details><summary><strong>opening of dropdown autocomplete menu</strong></summary>  
+<details>
+<summary><strong>opening of dropdown autocomplete menu</strong></summary>  
 <p>   
       
 - open main page
@@ -32,7 +35,8 @@
 </p>
 </details> 
 		         
-<details><summary><strong>closing of dropdown autocomplete menu after clearing the search field</strong></summary> 
+<details>
+<summary><strong>closing of dropdown autocomplete menu after clearing the search field</strong></summary> 
  <p>   
     
 - open main page
@@ -42,7 +46,8 @@
 </p>
 </details> 
 		 		
-<details><summary><strong>performing search with autocomplete hint</strong></summary> 
+<details>
+<summary><strong>performing search with autocomplete hint</strong></summary> 
 <p>   
      
 - open main page
@@ -53,7 +58,8 @@
 </p>
 </details> 
 		   
-<details><summary><strong>keeping the keyword in search field after switching to amazon</strong></summary> 
+<details>
+<summary><strong>keeping the keyword in search field after switching to amazon</strong></summary> 
   
 - open main page
 - enter search keyword
@@ -62,7 +68,8 @@
 </p>
 </details> 
 		    
-<details><summary><strong>keeping the keyword search after switching to ebay</strong></summary> 
+<details>
+<summary><strong>keeping the keyword search after switching to ebay</strong></summary> 
   
 - open main page
 - enter search keyword
@@ -71,7 +78,8 @@
 </p>
 </details> 
 			  
- <details><summary><strong>keeping the keyword search after switching to Less-than-5</strong></summary> 
+ <details>
+ <summary><strong>keeping the keyword search after switching to Less-than-5</strong></summary> 
 <p>   
      
 - open main page
@@ -81,7 +89,8 @@
 </p>
 </details> 
 				   		
-<details><summary><strong>clearing the keyword in search field after switching to amazon</strong></summary> 
+<details>
+<summary><strong>clearing the keyword in search field after switching to amazon</strong></summary> 
 <p>   
      
 - open main page
@@ -91,7 +100,8 @@
 </p>
 </details> 
 		   
-<details><summary><strong>clearing the keyword search after switching to ebay</strong></summary> 
+<details>
+<summary><strong>clearing the keyword search after switching to ebay</strong></summary> 
 <p>   
      
 - open main page
@@ -101,7 +111,8 @@
 </p>
 </details> 
 		    
-<details><summary><strong>clearing the keyword search after switching to Less-than-5</strong></summary> 
+<details>
+<summary><strong>clearing the keyword search after switching to Less-than-5</strong></summary> 
 <p>   
      
 - open main page
@@ -115,7 +126,8 @@
  
 ### Search_input:
 
-<details><summary><strong>searching in Israel site - in english</strong></summary> 
+<details>
+<summary><strong>searching in Israel site - in english</strong></summary> 
 <p>   
      
 - open the main page
@@ -124,7 +136,8 @@
 </p>
 </details> 
    
-<details><summary><strong>searching in Israel site - in hebrew</strong></summary> 
+<details>
+<summary><strong>searching in Israel site - in hebrew</strong></summary> 
 <p>   
      
 - open the main page
@@ -133,7 +146,8 @@
 </p>
 </details> 
 		  
-<details><summary><strong>searching in Portugal site - in english</strong></summary> 
+<details>
+<summary><strong>searching in Portugal site - in english</strong></summary> 
 <p>   
      
 - open the main page
@@ -142,7 +156,8 @@
 </p>
 </details> 
    
-<details><summary><strong>searching in Portugal site - in portuguese with special characters</strong></summary> 
+<details>
+<summary><strong>searching in Portugal site - in portuguese with special characters</strong></summary> 
 <p>   
      
 - open the main page
@@ -152,7 +167,8 @@
 </p>
 </details> 
 		
-<details><summary><strong>searching with special signs - apostrophe</strong></summary> 
+<details>
+<summary><strong>searching with special signs - apostrophe</strong></summary> 
 <p>   
      
 - open the main page
@@ -161,7 +177,8 @@
 </p>
 </details> 
    
-<details><summary><strong>searching with special signs - dash</strong></summary> 
+<details>
+<summary><strong>searching with special signs - dash</strong></summary> 
 <p>   
      
 - open the main page
@@ -170,7 +187,8 @@
 </p>
 </details> 
 		   
-<details><summary><strong>searching with special signs - parenthesis</strong></summary> 
+<details>
+<summary><strong>searching with special signs - parenthesis</strong></summary> 
  <p>   
     
 - open the main page
@@ -179,7 +197,8 @@
 </p>
 </details> 
    
-<details><summary><strong>searching with special signs - bracket</strong></summary> 
+<details>
+<summary><strong>searching with special signs - bracket</strong></summary> 
 <p>   
      
 - open the main page
@@ -192,7 +211,8 @@
  
 ### Search_links:</strong></summary> 
 
-<details><summary><strong>searching on Israel site - link from aliExpress</strong></summary> 
+<details>
+<summary><strong>searching on Israel site - link from aliExpress</strong></summary> 
 <p>   
    
 - open product on aliExpress and save its title
@@ -201,7 +221,8 @@
 </p>
 </details> 
    
-<details><summary><strong>searching on Israel site - link from ebay</strong></summary> 
+<details>
+<summary><strong>searching on Israel site - link from ebay</strong></summary> 
  <p>   
    
 - open product on ebay and save its title
@@ -210,7 +231,8 @@
 </p>
 </details> 
    
-<details><summary><strong>searching on Israel site - link from amazon</strong></summary> 
+<details>
+<summary><strong>searching on Israel site - link from amazon</strong></summary> 
 <p>   
      
 - open product on amazon and save its title
@@ -228,7 +250,8 @@
 </p>
 </details> 
    
-<details><summary><strong>searching on Greece site - link from ebay.de</strong></summary> 
+<details>
+<summary><strong>searching on Greece site - link from ebay.de</strong></summary> 
  <p>   
     
 - open product on ebay.de and save its title
@@ -237,7 +260,8 @@
  </p>
 </details> 
    
-<details><summary><strong>searching on Greece site - link from amazon.de</strong></summary> 
+<details>
+<summary><strong>searching on Greece site - link from amazon.de</strong></summary> 
 <p>   
    
 - open product on amazon.de and save its title
@@ -250,7 +274,8 @@
   
 ### Search_redirect:
 
-<details><summary><strong>redirecting search results from amazon to other, if nothing found</strong></summary> 
+<details>
+<summary><strong>redirecting search results from amazon to other, if nothing found</strong></summary> 
 <p>   
      
 - open main amazon page
@@ -259,7 +284,8 @@
 </p>
 </details> 
    
-<details><summary><strong>redirecting search results from ebay to other, if nothing found</strong></summary>  
+<details>
+<summary><strong>redirecting search results from ebay to other, if nothing found</strong></summary>  
 <p>   
      
 - open main ebay page
@@ -269,7 +295,8 @@
  </p>
 </details> 
           
-<details><summary><strong>redirecting search results from ebay to other, more suitable, when smart search is on</strong></summary> 
+<details>
+<summary><strong>redirecting search results from ebay to other, more suitable, when smart search is on</strong></summary> 
 <p>   
      
 - open main ebay page
@@ -280,7 +307,8 @@
 </p>
 </details> 
    
-<details><summary><strong>redirecting search results from other to any other, if nothing found</strong></summary> 
+<details>
+<summary><strong>redirecting search results from other to any other, if nothing found</strong></summary> 
  <p>   
     
 - open main aliExpress page

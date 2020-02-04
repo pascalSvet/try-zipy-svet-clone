@@ -5,7 +5,8 @@
 
 ### Sign up with unused accounts:    !!!entered by the user!!!
 
-<details><summary><strong>sign up with unused email, entered by the user</strong></summary> 
+<details>
+<summary><strong>sign up with unused email, entered by the user</strong></summary> 
 <p>   
    
 - open main page
@@ -29,7 +30,8 @@
 </p>
 </details> 
              
-<details><summary><strong>sign up with unused google account, entered by the user</strong></summary> 
+<details>
+<summary><strong>sign up with unused google account, entered by the user</strong></summary> 
 <p>   
    
 - open main page
@@ -41,7 +43,8 @@
 </p>
 </details> 
 		
-<details><summary><strong>sign up with unused facebook account, entered by the user</strong></summary> 
+<details>
+<summary><strong>sign up with unused facebook account, entered by the user</strong></summary> 
 <p>   
   
 - open main page
@@ -57,7 +60,8 @@
  
 ### Negative Tests - by phone:
 
-<details><summary><strong>(with parameters):</strong></summary> 
+<details>
+<summary><strong>(with parameters):</strong></summary> 
 <p>   
      
 - our parameters to test - phone numbers: 
@@ -85,7 +89,8 @@
 </details> 
 
    		
-<details><summary><strong>sign up with incorrect phone by the user      !!!entered by user!!!</strong></summary>  
+<details>
+<summary><strong>sign up with incorrect phone by the user      !!!entered by user!!!</strong></summary>  
 <p>   
    
 - press signup button		
@@ -102,7 +107,8 @@
   
 ### Negative Tests - by google:
 
- </strong></summary> (with parameters):</strong></summary> 
+<details>
+</strong></summary> (with parameters):</strong></summary> 
 <p>   
      
 - our parameters to test - email and password : 
@@ -123,7 +129,8 @@
 </p>
 </details> 
     	
-<details><summary><strong>sign up with incorrect Google details, entered by user !!!entered by user!!!</strong></summary>  
+<details>
+<summary><strong>sign up with incorrect Google details, entered by user !!!entered by user!!!</strong></summary>  
 <p>   
    
 - enter main page
@@ -141,7 +148,8 @@
   
 ### Negative Tests - by FB:
 
- </strong></summary> (with parameters):</strong></summary> 
+<details>
+</strong></summary> (with parameters):</strong></summary> 
 <p>   
      
 - our parameters to test - email and password : 		
@@ -163,7 +171,8 @@
 </p>
 </details> 
 
-<details><summary><strong>sign up with incorrect FB details, entered by user !!!entered by user!!!</strong></summary> 
+<details>
+<summary><strong>sign up with incorrect FB details, entered by user !!!entered by user!!!</strong></summary> 
  <p>   
   
 - enter main page				
@@ -182,6 +191,10 @@
   
  ### Negative Tests - by Email:
 
+<details>
+</strong></summary> (with parameters):</strong></summary> 
+ <p>   
+  
 - our parameters to test - email and password: 		
       existing email  
       wrong email- domain without "@"
@@ -212,7 +225,8 @@
 </details> 
 	    
 
-<details><summary><strong>sign up with unchecked terms of use</strong></summary> 
+<details>
+<summary><strong>sign up with unchecked terms of use</strong></summary> 
 <p>   
    
 - enter main page
@@ -226,7 +240,8 @@
 	
   
   
-<details><summary><strong>sign up with incorrect email and password, by the user !!!entered by user!!!</strong></summary> 
+<details>
+<summary><strong>sign up with incorrect email and password, by the user !!!entered by user!!!</strong></summary> 
  <p>   
   
 - enter main page

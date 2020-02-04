@@ -5,7 +5,8 @@
 
 ### MainPageThumbs_greece :
 
-<details><summary><strong>opening main page thumbnails in Greece site</strong></summary> 
+<details>
+<summary><strong>opening main page thumbnails in Greece site</strong></summary> 
 <p> 
   
 - open the main page
@@ -14,7 +15,8 @@
 </p>
 </details> 
 
-<details><summary><strong>opening main page thumbnails in Greece site - ebay</strong></summary>  
+<details>
+<summary><strong>opening main page thumbnails in Greece site - ebay</strong></summary>  
 <p> 
      
 - open the main ebay page
@@ -23,7 +25,8 @@
 </p>
 </details> 
 
-<details><summary><strong>opening main page thumbnails in Greece site - amazon</strong></summary> 
+<details>
+<summary><strong>opening main page thumbnails in Greece site - amazon</strong></summary> 
 <p> 
     
 - open the main amzon page
@@ -36,7 +39,8 @@
 
 ### MainPageThumbs_israel:
 
-<details><summary><strong>opening main page thumbnails in Israel site</strong></summary> 
+<details>
+<summary><strong>opening main page thumbnails in Israel site</strong></summary> 
 <p> 
     
 - open the main page

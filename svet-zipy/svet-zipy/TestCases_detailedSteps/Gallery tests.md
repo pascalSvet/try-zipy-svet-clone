@@ -5,7 +5,8 @@
 ### Gallery:
 
 
-<details><summary><strong>updating gallery image according to the chosen variation</strong></summary>
+<details>
+<summary><strong>updating gallery image according to the chosen variation</strong></summary>
 <p>   
      
 - open required product and save its main picture at gallery
@@ -15,7 +16,8 @@
 </p>
 </details> 
       
-<details><summary><strong>updating gallery image after changing chosen variation</strong></summary> 
+<details>
+<summary><strong>updating gallery image after changing chosen variation</strong></summary> 
 <p>   
       
 - open required product and save its main picture at gallery
@@ -26,7 +28,8 @@
 </p>
 </details> 
               
-<details><summary><strong>updating gallery image after sliding left</strong></summary>
+<details>
+<summary><strong>updating gallery image after sliding left</strong></summary>
 <p>   
      
 - open required product
@@ -36,7 +39,8 @@
 </p>
 </details> 
       		
-<details><summary><strong>updating updating gallery image after sliding right</strong></summary>
+<details>
+<summary><strong>updating updating gallery image after sliding right</strong></summary>
 <p>   
      
 - open required product
@@ -47,7 +51,8 @@
 </p>
 </details> 
       
-<details><summary><strong>updating gallery image after sliding more the once</strong></summary>
+<details>
+<summary><strong>updating gallery image after sliding more the once</strong></summary>
 <p>   
      
 - open required product
@@ -58,7 +63,8 @@
 </p>
 </details> 
    		
-<details><summary><strong>adding image near the chosen variation according to the choice</strong></summary>
+<details>
+<summary><strong>adding image near the chosen variation according to the choice</strong></summary>
 <p>   
      
 - open required product
@@ -68,7 +74,8 @@
 </p>
 </details> 
     
-<details><summary><strong>updating image near the variation after changing the chosen variation</strong></summary>
+<details>
+<summary><strong>updating image near the variation after changing the chosen variation</strong></summary>
 <p>   
     
 - open required product

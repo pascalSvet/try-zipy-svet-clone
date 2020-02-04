@@ -141,33 +141,45 @@ test details here are the same as on parameterized test case
 <p>   
 test details here are the same as on parameterized test case  
  </p>
-</details>    
-<details><summary><strong>opening all sub categories in amazon - Israel - 4 category - computers</strong></summary>  
+</details>
+    
+<details>
+<summary><strong>opening all sub categories in amazon - Israel - 4 category - computers</strong></summary>  
 <p>   
 test details here are the same as on parameterized test case  
  </p>
-</details>    
-<details><summary><strong>opening all sub categories in amazon - Israel - 5 category - photography</strong></summary>   
+</details> 
+   
+<details>
+<summary><strong>opening all sub categories in amazon - Israel - 5 category - photography</strong></summary>   
 <p>   
 test details here are the same as on parameterized test case  
  </p>
-</details>   
-<details><summary><strong>opening all sub categories in amazon - Israel - 6 category - cellular</strong></summary>    
+</details>
+   
+<details>
+<summary><strong>opening all sub categories in amazon - Israel - 6 category - cellular</strong></summary>    
  <p>   
 test details here are the same as on parameterized test case  
  </p>
 </details> 
-<details><summary><strong>opening all sub categories in amazon - Israel - 7 category - house and garden</strong></summary>   
-<p>   
-test details here are the same as on parameterized test case  
- </p>
-</details>  
-<details><summary><strong>opening all sub categories in amazon - Israel - 8 category - jewelry and watches</strong></summary>
+
+<details>
+<summary><strong>opening all sub categories in amazon - Israel - 7 category - house and garden</strong></summary>   
 <p>   
 test details here are the same as on parameterized test case  
  </p>
 </details> 
-<details><summary><strong>opening all sub categories in amazon - Israel - 9 category - books</strong></summary>
+ 
+<details>
+<summary><strong>opening all sub categories in amazon - Israel - 8 category - jewelry and watches</strong></summary>
+<p>   
+test details here are the same as on parameterized test case  
+ </p>
+</details> 
+
+<details>
+<summary><strong>opening all sub categories in amazon - Israel - 9 category - books</strong></summary>
 <p>   
 test details here are the same as on parameterized test case  
  </p>
@@ -177,7 +189,8 @@ test details here are the same as on parameterized test case
 
 ### Сatalogs_gr_aliExpress_combined
 
-<details><summary><strong>opening all sub categories in aliExpress - Greece (with parameters)</strong></summary>
+<details>
+<summary><strong>opening all sub categories in aliExpress - Greece (with parameters)</strong></summary>
 <p>    
 
 - our parameters to test- categories in the catalog:
@@ -204,42 +217,57 @@ test details here are the same as on parameterized test case
 
 ### Сatalogs_gr_aliExpress_separated
 
-<details><summary><strong>opening all sub categories in aliExpress - Greece - 1 category - fashion</strong></summary> 
+<details>
+<summary><strong>opening all sub categories in aliExpress - Greece - 1 category - fashion</strong></summary> 
+<p>   
+test details here are the same as on parameterized test case  
+ </p>
+</details>
+  
+<details>
+<summary><strong>opening all sub categories in aliExpress - Greece - 2 category - cars</strong></summary>  
+<p>   
+test details here are the same as on parameterized test case  
+ </p>
+</details> 
+
+<details>
+<summary><strong>opening all sub categories in aliExpress - Greece - 3 category - electronics</strong></summary> 
 <p>   
 test details here are the same as on parameterized test case  
  </p>
 </details>  
-<details><summary><strong>opening all sub categories in aliExpress - Greece - 2 category - cars</strong></summary>  
+   
+<details>
+<summary><strong>opening all sub categories in aliExpress - Greece - 4 category - computers</strong></summary>  
 <p>   
 test details here are the same as on parameterized test case  
  </p>
 </details> 
-<details><summary><strong>opening all sub categories in aliExpress - Greece - 3 category - electronics</strong></summary> 
-<p>   
-test details here are the same as on parameterized test case  
- </p>
-</details>     
-<details><summary><strong>opening all sub categories in aliExpress - Greece - 4 category - computers</strong></summary>  
-<p>   
-test details here are the same as on parameterized test case  
- </p>
-</details> 
-<details><summary><strong>opening all sub categories in aliExpress - Greece - 5 category - photography</strong></summary>  
+
+<details>
+<summary><strong>opening all sub categories in aliExpress - Greece - 5 category - photography</strong></summary>  
  <p>   
 test details here are the same as on parameterized test case  
  </p>
-</details>   
-<details><summary><strong>opening all sub categories in aliExpress - Greece - 6 category - cellular</strong></summary>     
+</details> 
+  
+<details>
+<summary><strong>opening all sub categories in aliExpress - Greece - 6 category - cellular</strong></summary>     
 <p>   
 test details here are the same as on parameterized test case  
  </p>
 </details> 
-<details><summary><strong>opening all sub categories in aliExpress - Greece - 7 category - house and garden</strong></summary>  
+
+<details>
+<summary><strong>opening all sub categories in aliExpress - Greece - 7 category - house and garden</strong></summary>  
 <p>   
 test details here are the same as on parameterized test case  
  </p>
-</details>    
-<details><summary><strong>opening all sub categories in aliExpress - Greece - 8 category - jewelry and watches</strong></summary>
+</details>   
+ 
+<details>
+<summary><strong>opening all sub categories in aliExpress - Greece - 8 category - jewelry and watches</strong></summary>
 <p>   
 test details here are the same as on parameterized test case  
  </p>
@@ -249,7 +277,8 @@ test details here are the same as on parameterized test case
   
 ### Сatalogs_gr_amazon_combined
 
-<details><summary><strong>opening all sub categories in amazon - Greece (with parameters)</strong></summary>
+<details>
+<summary><strong>opening all sub categories in amazon - Greece (with parameters)</strong></summary>
 <p>   
 
 - our parameters to test- categories in the catalog:
@@ -278,47 +307,64 @@ test details here are the same as on parameterized test case
 ### Сatalogs_gr_amazon_separated
 
 
-<details><summary><strong>opening all sub categories in amazon - Greece - 1 category - fashion</strong></summary>  
+<details>
+<summary><strong>opening all sub categories in amazon - Greece - 1 category - fashion</strong></summary>  
+<p>   
+test details here are the same as on parameterized test case  
+ </p>
+</details>
+ 
+<details>
+<summary><strong>opening all sub categories in amazon - Greece - 2 category - cars</strong></summary>   
 <p>   
 test details here are the same as on parameterized test case  
  </p>
 </details> 
-<details><summary><strong>opening all sub categories in amazon - Greece - 2 category - cars</strong></summary>   
-<p>   
-test details here are the same as on parameterized test case  
- </p>
-</details> 
-<details><summary><strong>opening all sub categories in amazon - Greece - 3 category - electronics</strong></summary>  
+
+<details>
+<summary><strong>opening all sub categories in amazon - Greece - 3 category - electronics</strong></summary>  
  <p>   
 test details here are the same as on parameterized test case  
  </p>
 </details>  
-<details><summary><strong>opening all sub categories in amazon - Greece - 4 category - computers</strong></summary>  
-<p>   
-test details here are the same as on parameterized test case  
- </p>
-</details>    
-<details><summary><strong>opening all sub categories in amazon - Greece - 5 category - photography</strong></summary>   
-<p>   
-test details here are the same as on parameterized test case  
- </p>
-</details>   
-<details><summary><strong>opening all sub categories in amazon - Greece - 6 category - cellular</strong></summary>    
+
+<details>
+<summary><strong>opening all sub categories in amazon - Greece - 4 category - computers</strong></summary>  
 <p>   
 test details here are the same as on parameterized test case  
  </p>
 </details>  
-<details><summary><strong>opening all sub categories in amazon - Greece - 7 category - house and garden</strong></summary> 
-<p>   
-test details here are the same as on parameterized test case  
- </p>
-</details>     
-<details><summary><strong>opening all sub categories in amazon - Greece - 8 category - jewelry and watches</strong></summary>
+  
+<details>
+<summary><strong>opening all sub categories in amazon - Greece - 5 category - photography</strong></summary>   
 <p>   
 test details here are the same as on parameterized test case  
  </p>
 </details> 
-<details><summary><strong>opening all sub categories in amazon - Greece - 9 category - books</strong></summary>
+  
+<details>
+<summary><strong>opening all sub categories in amazon - Greece - 6 category - cellular</strong></summary>    
+<p>   
+test details here are the same as on parameterized test case  
+ </p>
+</details>
+  
+<details>
+<summary><strong>opening all sub categories in amazon - Greece - 7 category - house and garden</strong></summary> 
+<p>   
+test details here are the same as on parameterized test case  
+ </p>
+</details> 
+    
+<details>
+<summary><strong>opening all sub categories in amazon - Greece - 8 category - jewelry and watches</strong></summary>
+<p>   
+test details here are the same as on parameterized test case  
+ </p>
+</details> 
+
+<details>
+<summary><strong>opening all sub categories in amazon - Greece - 9 category - books</strong></summary>
 <p>   
 test details here are the same as on parameterized test case  
  </p>

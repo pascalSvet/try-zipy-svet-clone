@@ -5,7 +5,8 @@
 
 ### Israel site:
 
-<details><summary><strong>populars thumbnails on aliExpress page</strong></summary>
+<details>
+<summary><strong>populars thumbnails on aliExpress page</strong></summary>
 <p> 
   
 - open the main page
@@ -18,7 +19,8 @@
 
 ### Greece site:
 
-<details><summary><strong>populars thumbnails on aliExpress page</strong></summary>  
+<details>
+<summary><strong>populars thumbnails on aliExpress page</strong></summary>  
 <p> 
     
 - open the main page
@@ -27,7 +29,8 @@
 </p>
 </details> 
   
-<details><summary><strong>populars thumbnails on ebay page</strong></summary> 
+<details>
+<summary><strong>populars thumbnails on ebay page</strong></summary> 
 <p> 
       
 - open the main ebay page
@@ -36,7 +39,8 @@
 </p>
 </details> 
 
-<details><summary><strong>populars thumbnails on amazon page</strong></summary>     
+<details>
+<summary><strong>populars thumbnails on amazon page</strong></summary>     
 <p> 
     
 - open the main amazon page
@@ -49,19 +53,22 @@
 
 ### Cyprus site:
 
-<details><summary><strong>populars thumbnails on aliExpress page</strong></summary> 
+<details>
+<summary><strong>populars thumbnails on aliExpress page</strong></summary> 
 <p>   
 test details here are the same as in Greece test case  
 </p>
 </details> 
    
-<details><summary><strong>populars thumbnails on ebay page</strong></summary>
+<details>
+<summary><strong>populars thumbnails on ebay page</strong></summary>
 <p> 
 test details here are the same as in Greece test case     
 </p>
 </details> 
    
-<details><summary><strong>populars thumbnails on amazon page</strong></summary>   
+<details>
+<summary><strong>populars thumbnails on amazon page</strong></summary>   
 <p>
 test details here are the same as in Greece test case   
 </p>
@@ -73,19 +80,22 @@ test details here are the same as in Greece test case
 
 ### Romania site:
 
-<details><summary><strong>populars thumbnails on aliExpress page</strong></summary> 
+<details>
+<summary><strong>populars thumbnails on aliExpress page</strong></summary> 
 <p>   
 test details here are the same as in Greece test case  
 </p>
 </details> 
    
-<details><summary><strong>populars thumbnails on ebay page</strong></summary>
+<details>
+<summary><strong>populars thumbnails on ebay page</strong></summary>
 <p> 
 test details here are the same as in Greece test case     
 </p>
 </details> 
    
-<details><summary><strong>populars thumbnails on amazon page</strong></summary>   
+<details>
+<summary><strong>populars thumbnails on amazon page</strong></summary>   
 <p>
 test details here are the same as in Greece test case   
 </p>
@@ -95,19 +105,22 @@ test details here are the same as in Greece test case
 
 ### Italy site:
 
-<details><summary><strong>populars thumbnails on aliExpress page</strong></summary> 
+<details>
+<summary><strong>populars thumbnails on aliExpress page</strong></summary> 
 <p>   
 test details here are the same as in Greece test case  
 </p>
 </details> 
    
-<details><summary><strong>populars thumbnails on ebay page</strong></summary>
+<details>
+<summary><strong>populars thumbnails on ebay page</strong></summary>
 <p> 
 test details here are the same as in Greece test case     
 </p>
 </details> 
    
-<details><summary><strong>populars thumbnails on amazon page</strong></summary>   
+<details>
+<summary><strong>populars thumbnails on amazon page</strong></summary>   
 <p>
 test details here are the same as in Greece test case   
 </p>
@@ -117,19 +130,22 @@ test details here are the same as in Greece test case
 
 ### Portugal site:
 
-<details><summary><strong>populars thumbnails on aliExpress page</strong></summary> 
+<details>
+<summary><strong>populars thumbnails on aliExpress page</strong></summary> 
 <p>   
 test details here are the same as in Greece test case  
 </p>
 </details> 
    
-<details><summary><strong>populars thumbnails on ebay page</strong></summary>
+<details>
+<summary><strong>populars thumbnails on ebay page</strong></summary>
 <p> 
 test details here are the same as in Greece test case     
 </p>
 </details> 
    
-<details><summary><strong>populars thumbnails on amazon page</strong></summary>   
+<details>
+<summary><strong>populars thumbnails on amazon page</strong></summary>   
 <p>
 test details here are the same as in Greece test case   
 </p>
