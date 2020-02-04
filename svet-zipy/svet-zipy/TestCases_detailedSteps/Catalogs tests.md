@@ -5,7 +5,8 @@
 
 ### Сatalogs_il_aliExpress_combined
 
-<details><summary><strong>opening all sub categories in aliExpress - Israel (with parameters)</strong></summary>
+<details>
+<summary><strong>opening all sub categories in aliExpress - Israel (with parameters)</strong></summary>
 <p>      
 
 - our parameters to test- categories in the catalog: 
@@ -32,42 +33,57 @@
 
 ### Сatalogs_il_aliExpress_separated
 
-<details><summary><strong>opening all sub categories in aliExpress - Israel - 1 category - fashion</strong></summary>  
-<p>   
-test details here are the same as on parameterized test case  
- </p>
-</details>  
-<details><summary><strong>opening all sub categories in aliExpress - Israel - 2 category - cars</strong></summary>  
-<p>   
-test details here are the same as on parameterized test case  
- </p>
-</details>  
-<details><summary><strong>opening all sub categories in aliExpress - Israel - 3 category - electronics</strong></summary>  
-<p>   
-test details here are the same as on parameterized test case  
- </p>
-</details>    
-<details><summary><strong>opening all sub categories in aliExpress - Israel - 4 category - computers</strong></summary>     
+<details>
+<summary><strong>opening all sub categories in aliExpress - Israel - 1 category - fashion</strong></summary>  
 <p>   
 test details here are the same as on parameterized test case  
  </p>
 </details> 
-<details><summary><strong>opening all sub categories in aliExpress - Israel - 5 category - photography</strong></summary> 
+ 
+<details>
+<summary><strong>opening all sub categories in aliExpress - Israel - 2 category - cars</strong></summary>  
 <p>   
 test details here are the same as on parameterized test case  
  </p>
-</details>     
-<details><summary><strong>opening all sub categories in aliExpress - Israel - 6 category - cellular</strong></summary>  
+</details> 
+ 
+<details>
+<summary><strong>opening all sub categories in aliExpress - Israel - 3 category - electronics</strong></summary>  
 <p>   
 test details here are the same as on parameterized test case  
  </p>
-</details>    
-<details><summary><strong>opening all sub categories in aliExpress - Israel - 7 category - house and garden</strong></summary> 
+</details> 
+   
+<details>
+<summary><strong>opening all sub categories in aliExpress - Israel - 4 category - computers</strong></summary>     
 <p>   
 test details here are the same as on parameterized test case  
  </p>
-</details>     
-<details><summary><strong>opening all sub categories in aliExpress - Israel - 8 category - jewelry and watches</strong></summary>
+</details> 
+
+<details>
+<summary><strong>opening all sub categories in aliExpress - Israel - 5 category - photography</strong></summary> 
+<p>   
+test details here are the same as on parameterized test case  
+ </p>
+</details> 
+    
+<details>
+<summary><strong>opening all sub categories in aliExpress - Israel - 6 category - cellular</strong></summary>  
+<p>   
+test details here are the same as on parameterized test case  
+ </p>
+</details>
+   
+<details>
+<summary><strong>opening all sub categories in aliExpress - Israel - 7 category - house and garden</strong></summary> 
+<p>   
+test details here are the same as on parameterized test case  
+ </p>
+</details> 
+    
+<details>
+<summary><strong>opening all sub categories in aliExpress - Israel - 8 category - jewelry and watches</strong></summary>
 <p>   
 test details here are the same as on parameterized test case  
  </p>
@@ -77,7 +93,8 @@ test details here are the same as on parameterized test case
 
 ### Сatalogs_il_amazon_combined
 
- <details><summary><strong>opening all sub categories in amazon - Israel (with parameters)</strong></summary>
+ <details>
+ <summary><strong>opening all sub categories in amazon - Israel (with parameters)</strong></summary>
  <p>   
 
 - our parameters to test- categories in the catalog:  
@@ -105,17 +122,22 @@ test details here are the same as on parameterized test case
 
 ### Сatalogs_il_amazon_separated
 
-<details><summary><strong>opening all sub categories in amazon - Israel - 1 category - fashion</strong></summary> 
+<details>
+<summary><strong>opening all sub categories in amazon - Israel - 1 category - fashion</strong></summary> 
 <p>   
 test details here are the same as on parameterized test case  
  </p>
-</details> 
-<details><summary><strong>opening all sub categories in amazon - Israel - 2 category - cars</strong></summary>   
+</details>
+ 
+<details>
+<summary><strong>opening all sub categories in amazon - Israel - 2 category - cars</strong></summary>   
 <p>   
 test details here are the same as on parameterized test case  
  </p>
-</details> 
-<details><summary><strong>opening all sub categories in amazon - Israel - 3 category - electronics</strong></summary>  
+</details>
+ 
+<details>
+<summary><strong>opening all sub categories in amazon - Israel - 3 category - electronics</strong></summary>  
 <p>   
 test details here are the same as on parameterized test case  
  </p>

@@ -33,12 +33,13 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 
 		//choose the product variation - first option from the droplist - and save variation name
 		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();		
-		Thread.sleep(500);
+		Thread.sleep(1500);
 		WebElement elementColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1));
-		String ProductElement1 = elementColor_1.getText();
+		String ProductElement1 = elementColor_1.getText().trim();
 		elementColor_1.click();
 		
 		//add to the cart
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 		WebElement cartFrame = Functions.openCart(driver);
 
@@ -51,7 +52,7 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 	//Test - adding a product to the cart - with two variations
 	@Test		
 	public  void Tests_cart_addProduct_twoVariations() throws Exception {
-		System.out.println("Running test for adding product to the cart - with two variations)");		
+		System.out.println("Running test for adding product to the cart - with two variations");		
 		
 		//get to the required product page
 		driver.get(ElementsBuying.Product_twoVariations);
@@ -65,19 +66,20 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 
 		//choose the first variation - first option from the first droplist - and save its name
 		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();
-		Thread.sleep(500);
+		Thread.sleep(1500);
 		WebElement variationColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1));
-		String ProductVariation1 = variationColor_1.getText();
+		String ProductVariation1 = variationColor_1.getText().trim();
 		variationColor_1.click();
 		
 		//choose the second variation - first option from the second droplist - and save its name
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsLength))).click();		
-		Thread.sleep(500);
+		Thread.sleep(1500);
 		WebElement variationLength_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsLength_1));
-		String ProductVariation2 = variationLength_1.getText();
+		String ProductVariation2 = variationLength_1.getText().trim();
 		variationLength_1.click();
 		
 		//add to the cart
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 		WebElement cartFrame = Functions.openCart(driver);
 
@@ -111,20 +113,21 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 			variationColor_1.click();						
 			
 			//add to the cart
+			Thread.sleep(2000);
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlusAgain)));
 
 			//choose another product variation - second option from the droplist - and save its name
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsColorAgain))).click();
-			Thread.sleep(3000);
+			Thread.sleep(3500);
 			WebElement variationColor_2 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_3));
 			String ProductVariation2 = variationColor_2.getText().trim();
 			variationColor_2.click();
 			
 			//add to the cart again
+			Thread.sleep(2000);
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 			WebElement cartFrame = Functions.openCart(driver);
-			System.out.println(cartFrame.getText());
 
 			// if we managed to add the product correctly, its title and its chosen variations are found in the cart:
 			Assert.assertTrue((cartFrame.getText().contains(ProductTitle))&&
@@ -167,6 +170,7 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		variationLength_1.click();
 		
 		//add to the cart
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlusAgain)));
 
@@ -178,6 +182,7 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		variationLength_2.click();
 
 		//add to the cart again
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 
 		WebElement cartFrame = Functions.openCart(driver);
@@ -208,7 +213,9 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		}
 
 		//add to the cart and then add another one to the cart with the plus-one button
+		Thread.sleep(1500);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		Thread.sleep(1500);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_plusOne))).click();
 
 		WebElement cartFrame = Functions.openCart(driver);
@@ -235,6 +242,7 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		
 		//increase the quantity to 2 and then add to the cart 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_quantityPlus))).click();
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_addToCart))).click();
 
 		WebElement cartFrame = Functions.openCart(driver);
@@ -261,8 +269,10 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		}
 
 		//add to the cart and then increase the quantity to another 2 and add to the cart again 
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_addToCart))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_quantityPlusAgain))).click();
+		Thread.sleep(1000);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_plusOne))).click();
 
 		WebElement cartFrame = Functions.openCart(driver);
@@ -288,12 +298,13 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		}
 
 		//add to the cart 
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_addToCart))).click();
 
 		//back to main page and open the cart			
 		driver.get(ElementsWebsites.Zipy_il);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		//change the quantity in the cart manually to 3
 		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity))).click()
 				.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys("3",Keys.ENTER).build().perform();

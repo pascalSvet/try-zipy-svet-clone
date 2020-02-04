@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import zipy_elements.*;
 
@@ -43,16 +44,21 @@ public class Favorites_adding extends Favorites_MAIN {
 		//open one of the products on the main page and save its name
 		driver.get(ElementsWebsites.Zipy_il);
 		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_3)).click();
+		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPopup)).getText().trim();
 
 		//add to favorites
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton_popup)).click();
-			
+		Thread.sleep(2000);
+		
 		// open the favorites window and save its contents
 		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
-		Thread.sleep(500);
+		Thread.sleep(2000);
 		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
-		
+
+		System.out.println(favoritesFrame);
+		System.out.println(ProductTitle);
+
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 		
@@ -160,8 +166,8 @@ public class Favorites_adding extends Favorites_MAIN {
 		driver.get(ElementsWebsites.Zipy_il);
 		
 		//chose the first category from side panel and choose the first sub category
-		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategory1))).click()
-		.moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategory1_1))).click().build().perform();
+		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1))).click()
+		.moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1_1))).click().build().perform();
 		
 		//click the pin button on the third thumbnail
 		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsRecommended.category_3)))

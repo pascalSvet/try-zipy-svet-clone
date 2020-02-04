@@ -33,6 +33,7 @@ public class Cart_addProduct_withLoggedUser extends Cart_MAIN {
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 
 		//add to the cart
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_added)));
 
@@ -71,6 +72,7 @@ public class Cart_addProduct_withLoggedUser extends Cart_MAIN {
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 		
 		//add to the cart /
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 		
 		//disconnect from the user and then connect back 

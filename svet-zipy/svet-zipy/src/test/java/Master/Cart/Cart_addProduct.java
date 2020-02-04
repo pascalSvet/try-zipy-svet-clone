@@ -36,7 +36,9 @@ public class Cart_addProduct extends Cart_MAIN {
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPopup)).getText().trim();
 
 		//choose variations if exist and add to the cart
+		Thread.sleep(2000);
 		Functions.chooseVariations_ProductFramed(driver);
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_addToCart))).click();
 		WebElement cartFrame = Functions.openCart(driver);
 		
@@ -65,6 +67,7 @@ public class Cart_addProduct extends Cart_MAIN {
 					
 		//choose variations if exist and add to the cart
 		Functions.chooseVariations_ProductFramed(driver);
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_addToCart))).click();		
 		WebElement cartFrame = Functions.openCart(driver);
 		
@@ -98,6 +101,7 @@ public class Cart_addProduct extends Cart_MAIN {
 		
 		//choose variations if exist and add to the cart
 		Functions.chooseVariations_ProductFramed(driver);
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_addToCart))).click();
 		WebElement cartFrame = Functions.openCart(driver);
 		
@@ -141,6 +145,7 @@ public class Cart_addProduct extends Cart_MAIN {
 
 		//choose variations if exist and add to the cart
 		Functions.chooseVariations_ProductFramed(driver);
+		Thread.sleep(2000);	
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_addToCart))).click();
 		WebElement cartFrame = Functions.openCart(driver);
 
@@ -166,6 +171,7 @@ public class Cart_addProduct extends Cart_MAIN {
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 		
 		//add to the cart
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 		WebElement cartFrame = Functions.openCart(driver);
 
@@ -176,7 +182,7 @@ public class Cart_addProduct extends Cart_MAIN {
 	//Test - adding both a product from aliExpress and a product from Amazon to the cart 
 	@Test		
 	public  void Tests_cart_addProduct_aliExpressPlusAmazon() throws Exception {
-		System.out.println("Running test for adding product to the cart (product without variations)");		
+		System.out.println("Running test for adding product to the cart (one from aliExpress and one from amazon)");		
 		
 		//get to the aliExpress product page 
 		driver.get(ElementsBuying.Product_noVariations);
@@ -190,6 +196,7 @@ public class Cart_addProduct extends Cart_MAIN {
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
 		
 		//add to the cart
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 
 		//get to the amazon product page
@@ -203,9 +210,11 @@ public class Cart_addProduct extends Cart_MAIN {
 		String ProductTitleAmazon = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture_amazon)).getAttribute("content");
 		
 		//add to the cart
+		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_addToCart))).click();
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addedToCart))).click();
-		
+		Thread.sleep(1000);
+
 		WebElement cartFrame = Functions.openCart(driver);
 
 		// if we managed to add the products, both titles are in the cart:
