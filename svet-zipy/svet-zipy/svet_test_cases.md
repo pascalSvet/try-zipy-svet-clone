@@ -31,6 +31,7 @@
  
 - adding a product while unlogged, and the logging in and checking for the product in the cart
 - adding a product then disconnecting and logging in back, and checking for the product in the cart
+
 </p>
 </details> 
  
@@ -83,6 +84,8 @@
 - removing product to favorites from the payment page
 </p>
 </details> 
+
+[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Cart%20tests.md)
            
 ----
 
@@ -109,6 +112,8 @@
  </p>
 </details> 
   	
+[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Catalogs%20tests.md)
+
 ----
 
 #### Errors
@@ -124,6 +129,8 @@
 - catching 502 error while opening many tabs in deals - Israel
 </p>
 </details> 
+
+[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Errors%20tests.md)
    	  
 ----
     
@@ -149,6 +156,8 @@
 - adding to favorites from category 
 </p>
 </details> 
+
+[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Favorites%20tests.md)
    
 ----
 
@@ -166,6 +175,8 @@
 - updating image near the variation after changing the chosen variation
 </p>
 </details> 
+
+[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Gallery%20tests.md)
    
 ----
  
@@ -187,6 +198,8 @@
 - TestsMobile - updating of loader-spinner after clicking on another thumbnail
 </p>
 </details> 
+
+[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Loading%20tests.md)
         
 ----
     
@@ -208,6 +221,8 @@
 - opening main page thumbnails in Israel site  
 </p>
 </details> 
+
+[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/MainPage%20tests.md)
               	
 ----
 
@@ -225,6 +240,8 @@
 - buying random product, from lessThan5 tab 
 </p>
 </details> 
+
+[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Payment%20tests.md)
 
 ---- 
           
@@ -286,6 +303,8 @@
 - populars thumbnails on amazon page    	
 </p>
 </details> 
+
+[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Populars%20tests.md)
   
 ----
 
@@ -347,6 +366,8 @@
 </p>
 </details> 
  
+ 
+[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Search%20tests.md)
           
 ----
               
@@ -431,6 +452,8 @@
 - sign up with incorrect email and password, entered by the user !!!user input required!!!
 </p>
 </details> 
+
+[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/SignUp%20tests.md)
  
 ----        
      
@@ -461,6 +484,8 @@
  </p>
 </details> 
  
+
+[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/User%20tests.md)
  
           
 ----        
