@@ -15,7 +15,7 @@
 </details> 
    
 <details>
-<summary><strong>recovering the password    !!!entered by user!!!</strong></summary> 
+<summary><strong>recovering the password    !!!user input required!!!</strong></summary> 
 <p>   
    
 - enter main page and disconnect from the user

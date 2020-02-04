@@ -33,6 +33,7 @@ public class Payments extends Payments_MAIN {
 		Functions.chooseVariations_ProductFramed(driver);
 		
 		//buy directly
+		Thread.sleep(2000);
 		driver.findElement(By.xpath(ElementsBuying.Checkout_button)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(ElementsBuying.FinalBuy_button)))).click();
 		
@@ -58,6 +59,7 @@ public class Payments extends Payments_MAIN {
 		Functions.chooseVariations_ProductPage(driver);
 
 		//add to the cart
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 
 		//back to main page and open the cart			
@@ -90,6 +92,7 @@ public class Payments extends Payments_MAIN {
 
 		//choose the variations and add to the cart
 		Functions.chooseVariations_ProductPage(driver);
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 
 		// open the second product page
@@ -97,6 +100,7 @@ public class Payments extends Payments_MAIN {
 
 		//choose the variations and add to the cart
 		Functions.chooseVariations_ProductPage(driver);
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 
 		//back to main page and open the cart			
@@ -134,6 +138,7 @@ public class Payments extends Payments_MAIN {
 
 		//choose the variations and add to the cart
 		Functions.chooseVariations_ProductPage(driver);
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
 
 		// open the second product page
@@ -142,6 +147,7 @@ public class Payments extends Payments_MAIN {
 		//choose the variations and buy directly
 		Functions.chooseVariations_ProductPage(driver);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.PayNow_button))).click();
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(ElementsBuying.FinalBuy_button)))).click();
 		wait.until(ExpectedConditions.urlToBe("https://www.zipy.co.il/payment/success"));
 		
@@ -172,6 +178,7 @@ public class Payments extends Payments_MAIN {
 		Functions.chooseVariations_ProductPage(driver);
 		
 		//buy directly
+		Thread.sleep(2000);
 		driver.findElement(By.xpath(ElementsBuying.Checkout_button)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(ElementsBuying.FinalBuy_button)))).click();
 		wait.until(ExpectedConditions.urlToBe("https://www.zipy.co.il/payment/success"));
@@ -196,6 +203,7 @@ public class Payments extends Payments_MAIN {
 		//choose the variations and buy directly
 		Functions.chooseVariations_ProductPage(driver);
 		
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.PayNow_button))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(ElementsBuying.FinalBuy_button)))).click();
 		wait.until(ExpectedConditions.urlToBe("https://www.zipy.co.il/payment/success"));
@@ -222,6 +230,7 @@ public class Payments extends Payments_MAIN {
 		Functions.chooseVariations_ProductFramed(driver);
 
 		//buy directly
+		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Checkout_button))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.FinalBuy_button))).click();
 		

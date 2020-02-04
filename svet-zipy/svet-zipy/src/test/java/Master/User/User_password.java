@@ -44,7 +44,7 @@ public class User_password extends User_MAIN {
 	}
 	
 	//TEST - recovering the password
-	// The recovered password entered by user. (The comment markers should be deleted if this test is needed)
+	// !!!user input required!!! (The comment markers should be deleted if this test is needed)
 	// The email used for recovery: testzipy1@gmail.com , password: testzipy1testzipy1
 	@Test	
 	public  void user_passwordRecovery_enteredByUser() throws Exception {

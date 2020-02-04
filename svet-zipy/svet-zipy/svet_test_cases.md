@@ -2,7 +2,7 @@
 
 ----
 
-## Master
+## MASTER SITE
 
 
 #### AliExpress
@@ -375,7 +375,7 @@
 - wired phone number
 - illegal mobile number
 - illegal wired phone number
-- sign up with incorrect phone, entered by the user !!!entered by user!!!
+- sign up with incorrect phone, entered by the user !!!user input required!!!
 </p>
 </details> 
        
@@ -388,7 +388,7 @@
 - empty email 
 - empty password
 - wrong password
-- sign up with incorrect Google details, entered by user !!!entered by user!!!
+- sign up with incorrect Google details, entered by user !!!user input required!!!
 </p>
 </details> 
       
@@ -402,7 +402,7 @@
 - empty email 
 - empty password
 - wrong password
-- sign up with incorrect FB details, entered by user !!!entered by user!!!
+- sign up with incorrect FB details, entered by user !!!user input required!!!
 </p>
 </details> 
        
@@ -428,7 +428,7 @@
 - wrong password - longer than 100 chars
 - wrong password - empty
 - sign up with unchecked terms of use
-- sign up with incorrect email and password, entered by the user !!!entered by user!!!
+- sign up with incorrect email and password, entered by the user !!!user input required!!!
 </p>
 </details> 
  
@@ -440,7 +440,7 @@
 <p>   
  
 - changing the password
-- recovering the password  !!!entered by user!!!
+- recovering the password  !!!user input required!!!
 </p>
 </details> 
  
@@ -466,11 +466,11 @@
 ----        
 ----        
                 
-## Test
+## TEST SITE
 
 <details><summary> Test Main Page Thumbs</summary>
 <p>   
-same as mastr site:
+same as master site:
  
 - Test_MainPageThumbs_greece
 - Test_MainPageThumbs_israel
@@ -495,7 +495,7 @@ same as master site:
 
 <details><summary> Test Favorites </summary>
 <p>   
-same as mastr site:
+same as master site:
  
 - Favorites_icon
 - Favorites_adding
@@ -507,7 +507,7 @@ same as mastr site:
 ----   
 ----   
      
-## Dev
+## DEV SITE
 
 <details><summary>Dev Main Page Thumbs</summary>
 <p>   
@@ -536,12 +536,11 @@ same as master site:
 
 <details><summary>Dev Favorites</summary>
 <p>   
-same as mastr site:
+same as master site:
  
 - Favorites_icon
 - Favorites_adding
 
 </p>
 </details> 
-----   
   

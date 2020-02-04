@@ -90,7 +90,7 @@
 
    		
 <details>
-<summary><strong>sign up with incorrect phone by the user      !!!entered by user!!!</strong></summary>  
+<summary><strong>sign up with incorrect phone by the user      !!!user input required!!!</strong></summary>  
 <p>   
    
 - press signup button		
@@ -130,7 +130,7 @@
 </details> 
     	
 <details>
-<summary><strong>sign up with incorrect Google details, entered by user !!!entered by user!!!</strong></summary>  
+<summary><strong>sign up with incorrect Google details, entered by user !!!user input required!!!</strong></summary>  
 <p>   
    
 - enter main page
@@ -172,7 +172,7 @@
 </details> 
 
 <details>
-<summary><strong>sign up with incorrect FB details, entered by user !!!entered by user!!!</strong></summary> 
+<summary><strong>sign up with incorrect FB details, entered by user !!!user input required!!!</strong></summary> 
  <p>   
   
 - enter main page				
@@ -240,7 +240,7 @@
   
   
 <details>
-<summary><strong>sign up with incorrect email and password, by the user !!!entered by user!!!</strong></summary> 
+<summary><strong>sign up with incorrect email and password, by the user !!!user input required!!!</strong></summary> 
  <p>   
   
 - enter main page
