@@ -65,16 +65,15 @@
 <p>   
      
 - our parameters to test - phone numbers: 
-
-      existing number
-      empty number                
-      number too short    		
-      number too long  
-      number including non digit signs in the middle              
-      number starting not with 0   		
-      wired phone number 
-      illegal mobile number              
-      illegal wired phone number
+    - existing number
+    - empty number                
+    - number too short    		
+    - number too long  
+    - number including non digit signs in the middle              
+    - number starting not with 0   		
+    - wired phone number 
+    - illegal mobile number              
+    - illegal wired phone number
     
     
 - enter main page
@@ -113,12 +112,11 @@
 <p>    
      
 - our parameters to test - email and password : 
-
-      email with no google account 
-      incorrect email    		
-      empty email 
-      empty password              
-      wrong password   	
+    - email with no google account 
+    - incorrect email    		
+    - empty email 
+    - empty password              
+    - wrong password   	
     
 - enter main page
 - press signup button		
@@ -155,13 +153,12 @@
 <p>   
      
 - our parameters to test - email and password : 		
-
-      email with no FB account
-      phone with no FB account
-      incorrect email
-      empty email
-      empty password
-      wrong password
+    - email with no FB account
+    - phone with no FB account
+    - incorrect email
+    - empty email
+    - empty password
+    - wrong password
     
 - enter main page
 - press signup button		
@@ -199,24 +196,22 @@
 <p>  
   
 - our parameters to test - email and password: 		
-
-      existing email  
-      wrong email- domain without "@"
-      wrong email- empty
-      wrong email- domain with non-alphanumeric
-      wrong email- empty domain
-      wrong email- no dot after domain
-      wrong email- no ending
-      wrong email- ending with non-alphabetic
-      wrong email- starting with non-alphanumeric
-      wrong email- name with space
-      wrong email- empty name
-      wrong email- domain with one char only
-      wrong email- ending with one char only
-      wrong email- longer than 254 chars
-      wrong password - shorter than 5 chars
-      wrong password - longer than 100 chars
-      wrong password - empty
+    - existing email  
+    - wrong email- domain without "@"
+    - wrong email- empty
+    - wrong email- domain with non-alphanumeric
+    - wrong email- empty domain
+    - wrong email- no dot after domain
+    - wrong email- no ending
+    - wrong email- ending with non-alphabetic
+    - wrong email- starting with non-alphanumeric
+    - wrong email- name with space
+    - wrong email- empty name
+    - wrong email- domain with one char only
+    - wrong email- ending with one char only
+    - wrong email- longer than 254 chars
+    - wrong password - shorter than 5 chars
+    - wrong password - empty
     
 - enter main page
 - press signup button		
