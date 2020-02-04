@@ -2,7 +2,8 @@ package zipy_elements;
 
 public class ElementsLogin {
 	
-	// login and sign-up Elements:
+//// start page: ////////////////////////////////////////////////////////
+
 	public static final String Popup_welcome_close = "//button[@title='Close']";	
 	public static final String Popup_welcome_close_gr = "//div[@id='tucson-body']/a[@title='Close']";	
 
@@ -11,12 +12,13 @@ public class ElementsLogin {
 
 	public static final String UserTopBar_close = "//span[@class='topbar__forms-close']";
 	public static final String UserTopBar = "/html//div[@id='topbar']/div[@class='default']//span[@class='topbar__user-link-no-name']";
-	
-	public static final String EmailCredit = "vikos120989@yandex.com";	
-	public static final String PasswordCredit = "123456";
-	public static final String Email = "test@mail.com";
-	public static final String Password = "123456";	
 
+	public static final String Start_advertNote_close = "/html//button[@id='onesignal-popover-cancel-button']";
+
+	
+	
+//// categories: ////////////////////////////////////////////////////////	
+	
 	public static final String sideCategory1 = "/html//div[@id='topbar']/div[@class='default']//span[@class='topbar-catalogue__btn_icon']";
 	public static final String sideCategory1_1 = "/html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[1]/div/div/div[1]/div[2]/div[1]";
 	public static final String sideCategoryUp1 = "/html//div[@id='topbar']/div[@class='default']//span[@class='topbar-catalogue__btn_icon']";
@@ -35,7 +37,9 @@ public class ElementsLogin {
 	public static final String sideCategoryi_jEnd = "]/div[2]/div[";
 	///html/body/div[1]/div[5]/div/section/div/aside/section/div/div[2]/ul/li[1]/div/div/div[j]/div[2]/div[i]
 	
-	public static final String Start_advertNote_close = "/html//button[@id='onesignal-popover-cancel-button']";
+
+	
+//// log in: ////////////////////////////////////////////////////////
 	
 	public static final String Login_button = "/html//div[@id='topbar']/div[@class='default']/div[3]/div[2]/span[@class='topbar__menu-item-link']/span[@class='ico ico--login']";
 	public static final String Login_button_Dev = "/html//div[@id='topbar']/div[@class='default']/div[3]/div[2]/span[@class='topbar__menu-item-link']/span[@class='topbar__menu-item-link--dotted']";
@@ -50,6 +54,9 @@ public class ElementsLogin {
 	public static final String Login_terms_uncheckedVi = "/html//form[@id='registerForm']/fieldset[@class='user-form__fields']/div[@class='field field--submit']/div[2]/label/u[@class='m--big']";
 	public static final String Login_terms_checkedVi = "/html//form[@id='registerForm']/fieldset[@class='user-form__fields']/div[@class='field field--submit']/div[2]/label/u[@class='m--big']/span[@class='ico ico--check']";
 
+	
+	
+//// sign up: ////////////////////////////////////////////////////////
 
 	public static final String SignUp_button = "/html//div[@id='topbar']/div[@class='default']/div[3]/div[1]/span[@class='topbar__menu-item-link']";
 	public static final String SignUp_field_email = "i_signup-email";
@@ -72,7 +79,9 @@ public class ElementsLogin {
 	public static final String SignUp_phone_fieldCode ="/html//input[@id='i_sign-code']";
 	public static final String SignUp_phone_messageExist = "/html//form[@id='phoneNumberForm']//p[.='מספר זה כבר קיים במערכת']";
 
-	// phone and mail parameters:
+	
+	
+//// phone: ////////////////////////////////////////////////////////
 	public static final String PhoneNumber = "+97253-9821817"; //from https://miracletele.com/sms/receive/IL/972539822586
 	public static final String PhoneNumber_short = "+97253-98218"; 
 	public static final String PhoneNumber_long = "+97253-98218171234"; 
@@ -84,6 +93,15 @@ public class ElementsLogin {
 	public static final String PhoneNumber_wiredIllegal = "012345678"; 
 	public static final String PhoneNumber_mobileIllegal = "0111111111"; 
 
+	
+	
+//// email: ////////////////////////////////////////////////////////
+
+	public static final String EmailCredit = "vikos120989@yandex.com";	
+	public static final String PasswordCredit = "123456";
+	public static final String Email = "test@mail.com";
+	public static final String Password = "123456";	
+	
 	public static final String Email_zipy = "testzipy1@gmail.com";
 	public static final String Email_zipy_password = "testzipy1testzipy1";
 	public static final String Email_zipy2 = "testzipy2@gmail.com";
@@ -106,6 +124,10 @@ public class ElementsLogin {
 	public static final String Password_short = "123";
 	public static final String Password_moreThan100signs = "12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901";
 	public static final String Password_empty = "  ";
+
+	
+	
+//// user data: ////////////////////////////////////////////////////////
 
 	public static final String user_personalDataButton = "/html//div[@id='topbar']/div[@class='default']//span[@class='topbar__user-link-no-name']";
 	public static final String user_changePassword = "/html//form[@id='profileForm']//a[@href='#popup_password-changing']";

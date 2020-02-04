@@ -23,7 +23,7 @@ public class Gallery extends Gallery_MAIN {
 		System.out.println("Running test for updating gallery image according to the chosen variation");		
 		
 		//open required product and save its main picture at gallery
-		driver.get(ElementsWebsites.ProductWithColors);
+		driver.get(ElementsBuying.ProductWithColors);
 		Thread.sleep(1000);
 		String gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
 
@@ -48,7 +48,7 @@ public class Gallery extends Gallery_MAIN {
 		System.out.println("Running test for updating gallery image after changing chosen variation");		
 		
 		//open required product and save its main picture at gallery
-		driver.get(ElementsWebsites.ProductWithColors);
+		driver.get(ElementsBuying.ProductWithColors);
 		Thread.sleep(1000);
 		String gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
 
@@ -79,7 +79,7 @@ public class Gallery extends Gallery_MAIN {
 		System.out.println("Running test for updating gallery image after sliding left");		
 		
 		//open required product
-		driver.get(ElementsWebsites.ProductWithColors);
+		driver.get(ElementsBuying.ProductWithColors);
 		
 		//save the main picture image and the second bottom image in gallery 
 		String gallery_bottomImage2 = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage_bottom2)).getAttribute("src");					
@@ -101,7 +101,7 @@ public class Gallery extends Gallery_MAIN {
 		System.out.println("Running test for updating gallery image after sliding right");		
 		
 		//open required product
-		driver.get(ElementsWebsites.ProductWithColors);
+		driver.get(ElementsBuying.ProductWithColors);
 		
 		//save the main picture image and the first bottom image in gallery 
 		String gallery_bottomImage1 = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage_bottom1)).getAttribute("src");		
@@ -128,7 +128,7 @@ public class Gallery extends Gallery_MAIN {
 		System.out.println("Running test for updating gallery image after sliding more the once");		
 		
 		//open required product
-		driver.get(ElementsWebsites.ProductWithColors);
+		driver.get(ElementsBuying.ProductWithColors);
 		
 		//save the main picture image and the third bottom image in gallery 
 		String gallery_bottomImage3 = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage_bottom3)).getAttribute("src");					
@@ -154,7 +154,7 @@ public class Gallery extends Gallery_MAIN {
 		System.out.println("Running test for adding image near the chosen variation according to the choice");		
 		
 		//open required product
-		driver.get(ElementsWebsites.ProductWithColors);
+		driver.get(ElementsBuying.ProductWithColors);
 		Thread.sleep(1000);
 
 		//save the image of the first variation
@@ -176,7 +176,7 @@ public class Gallery extends Gallery_MAIN {
 		System.out.println("Running test for updating image near the variation after changing the chosen variation");		
 		
 		//open required product
-		driver.get(ElementsWebsites.ProductWithColors);
+		driver.get(ElementsBuying.ProductWithColors);
 		Thread.sleep(1000);
 
 		//choose first variation 

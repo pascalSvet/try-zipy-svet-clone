@@ -5,7 +5,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ElementsWebsites {
 	
-// Websites:
+//// Master site: ////////////////////////////////////////////////////////
+	
 public static final String Zipy_il = "https://www.zipy.co.il/?utm_medium=email";			//Israel
 public static final String Zipy_ilRu = "https://ru.zipy.co.il/?utm_medium=email";			//Israel russian
 public static final String Zipy_il_ali = "https://www.https://www.zipy.co.il/אליאקספרס/?utm_medium=email";				//Israel
@@ -40,7 +41,10 @@ public static final String Zipy_pt_withPopup = "https://www.zipy.pt";
 public static final String Zipy_test = "https://zipy:zipy@www.test.zipy.co.il/?utm_medium=email";		//Test 
 public static final String Zipy_dev = "https://zipy:zipy@www.dev.zipy.co.il/?utm_medium=email";		//Developers
 
-//TEST Websites:
+
+
+//// Test site: ////////////////////////////////////////////////////////
+
 public static final String TestZipy_il = "https://zipy:zipy@www.test.zipy.co.il/?utm_medium=email";				//Test Israel
 public static final String TestZipy_ilRu = "https://zipy:zipy@ru.zipy.co.il/?utm_medium=email";				//Test Israel russian
 public static final String TestZipy_gr = "https://zipy:zipy@www.test.zipy.gr/?utm_medium=email";					//Test Greece
@@ -60,7 +64,9 @@ public static final String TestZipy_pt_ebay = "https://zipy:zipy@www.test.zipy.p
 public static final String TestZipy_pt_amazon = "https://zipy:zipy@www.test.zipy.pt/amazon/?utm_medium=email";
 
 
-//DEV Websites:
+
+//// Dev site: ////////////////////////////////////////////////////////
+
 public static final String DevZipy_il = "https://zipy:zipy@www.dev.zipy.co.il/?utm_medium=email";				//Dev Israel
 public static final String DevZipy_ilRu = "https://zipy:zipy@ru.zipy.co.il/?utm_medium=email";					//Dev Israel russian
 public static final String DevZipy_gr = "https://zipy:zipy@www.dev.zipy.gr/?utm_medium=email";					//Dev Greece
@@ -80,7 +86,9 @@ public static final String DevZipy_pt_ebay = "https://zipy:zipy@www.dev.zipy.pt/
 public static final String DevZipy_pt_amazon = "https://zipy:zipy@www.dev.zipy.pt/amazon/?utm_medium=email";
 
 
-//deals:
+
+//// deals, categories, ali, amazon, ebay: ////////////////////////////////////////////////////////
+
 public static final String Zipy_il_deals = "https://www.zipy.co.il/deals/?utm_medium=email";
 public static final String Zipy_il_lessThan5 = "https://www.zipy.co.il/fiveshekel/?utm_medium=email";
 public static final String Zipy_il_lessThan5_withPopup = "https://www.zipy.co.il/fiveshekel";
@@ -106,5 +114,4 @@ public static final String Aliexpress = "https://www.aliexpress.com";
 public static final String AliexpressByID = "https://www.aliexpress.com/item/";
 public static final String Aliexpress_sampleFromZipy = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/A/32983267719/#wrapper/?utm_medium=email";
 
-public static final String ProductWithColors = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/painter-hat-caps-beret-female-french-vintage-women-s-lady-street-cap-girl-s-warm-solid/4000115814986/?utm_medium=email";
 }

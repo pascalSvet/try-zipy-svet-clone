@@ -114,10 +114,6 @@ public class Search_field extends Search_MAIN {
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
 		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
 
-		
-		System.out.println(hint1);
-		System.out.println(searchField);
-
 		//if search succeed correctly, the search field contains the hint and there is option for ordering the results
 		Assert.assertTrue( hint1.equals(searchField) &&
 				!driver.findElements(By.xpath(ElementsBuying.Product_sortBy)).isEmpty() );	
