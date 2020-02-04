@@ -85,7 +85,7 @@
 </p>
 </details> 
 
-[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Cart%20tests.md)
+[link to detailed scenarios](https://gitlab.com/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Cart%20tests.md)
            
 ----
 
@@ -112,7 +112,7 @@
  </p>
 </details> 
   	
-[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Catalogs%20tests.md)
+[link to detailed scenarios](https://gitlab.com/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Catalogs%20tests.md)
 
 ----
 
@@ -130,7 +130,7 @@
 </p>
 </details> 
 
-[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Errors%20tests.md)
+[link to detailed scenarios](https://gitlab.com/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Errors%20tests.md)
    	  
 ----
     
@@ -157,7 +157,7 @@
 </p>
 </details> 
 
-[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Favorites%20tests.md)
+[link to detailed scenarios](https://gitlab.com/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Favorites%20tests.md)
    
 ----
 
@@ -176,7 +176,7 @@
 </p>
 </details> 
 
-[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Gallery%20tests.md)
+[link to detailed scenarios](https://gitlab.com/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Gallery%20tests.md)
    
 ----
  
@@ -199,7 +199,7 @@
 </p>
 </details> 
 
-[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Loading%20tests.md)
+[link to detailed scenarios](https://gitlab.com/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Loading%20tests.md)
         
 ----
     
@@ -222,7 +222,7 @@
 </p>
 </details> 
 
-[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/MainPage%20tests.md)
+[link to detailed scenarios](https://gitlab.com/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/MainPage%20tests.md)
               	
 ----
 
@@ -241,7 +241,7 @@
 </p>
 </details> 
 
-[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Payment%20tests.md)
+[link to detailed scenarios](https://gitlab.com/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Payment%20tests.md)
 
 ---- 
           
@@ -304,7 +304,7 @@
 </p>
 </details> 
 
-[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Populars%20tests.md)
+[link to detailed scenarios](https://gitlab.com/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Populars%20tests.md)
   
 ----
 
@@ -367,7 +367,7 @@
 </details> 
  
  
-[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Search%20tests.md)
+[link to detailed scenarios](https://gitlab.com/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/Search%20tests.md)
           
 ----
               
@@ -453,7 +453,7 @@
 </p>
 </details> 
 
-[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/SignUp%20tests.md)
+[link to detailed scenarios](https://gitlab.com/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/SignUp%20tests.md)
  
 ----        
      
@@ -485,7 +485,7 @@
 </details> 
  
 
-[link to detailed scenarios](/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/User%20tests.md)
+[link to detailed scenarios](https://gitlab.com/morozov_igor/zipyqasvet/-/blob/master/svet-zipy/svet-zipy/TestCases_detailedSteps/User%20tests.md)
  
           
 ----        
