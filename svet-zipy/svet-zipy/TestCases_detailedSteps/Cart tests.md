@@ -5,7 +5,8 @@
 ### Cart_addProduct:
 
 
-<details><summary><strong>adding a product to the cart from quick pop-up page</strong></summary>
+<details>
+<summary><strong>adding a product to the cart from quick pop-up page</strong></summary>
 <p>
    
 - open deals page
@@ -17,7 +18,8 @@
 </p>
 </details> 
       
-<details><summary><strong>adding a product to the cart from second product pop-up page</strong></summary> 
+<details>
+<summary><strong>adding a product to the cart from second product pop-up page</strong></summary> 
 <p>
     
 - open deals page
@@ -31,7 +33,8 @@
 </p>
 </details> 
               
-<details><summary><strong>adding a product to the cart from less-than-5 tab</strong></summary>
+<details>
+<summary><strong>adding a product to the cart from less-than-5 tab</strong></summary>
 <p>
    
 - open the less-than-5 tab
@@ -43,7 +46,8 @@
 </p>
 </details> 
       		
-<details><summary><strong>adding a product to the cart from category</strong></summary>
+<details>
+<summary><strong>adding a product to the cart from category</strong></summary>
 <p>
    
 - open main page
@@ -56,7 +60,8 @@
 </p>
 </details> 
       
-<details><summary><strong>adding a product to the cart from product page</strong></summary>
+<details>
+<summary><strong>adding a product to the cart from product page</strong></summary>
 <p>
    
 - get to the required product page 
@@ -67,7 +72,8 @@
 </p>
 </details> 
      
-<details><summary><strong>adding both a product from aliExpress and a product from Amazon to the cart</strong></summary>
+<details>
+<summary><strong>adding both a product from aliExpress and a product from Amazon to the cart</strong></summary>
  <p>
   
 - get to the aliExpress product page 
@@ -89,7 +95,8 @@
 
 ### Cart_addProduct_withLoggedUser:
 
-<details><summary><strong>adding a product while unlogged, and the logging in and checking for the product in the cart</strong></summary>
+<details>
+<summary><strong>adding a product while unlogged, and the logging in and checking for the product in the cart</strong></summary>
 <p>
    
 - get to the required product page
@@ -102,7 +109,8 @@
  </p>
 </details> 
      
-<details><summary><strong>adding a product then disconnecting and logging in back, and checking for the product in the cart</strong></summary>
+<details>
+<summary><strong>adding a product then disconnecting and logging in back, and checking for the product in the cart</strong></summary>
 <p>
    
 - connect to the user
@@ -122,7 +130,8 @@
 
 ### Cart_addProduct_withVariations:</strong></summary>
 
-<details><summary><strong>adding a product to the cart - with one variation</strong></summary>
+<details>
+<summary><strong>adding a product to the cart - with one variation</strong></summary>
 <p>
    
 - get to the required product page
@@ -134,7 +143,8 @@
  </p>
 </details> 
      
-<details><summary><strong>adding a product to the cart - with two variations</strong></summary>
+<details>
+<summary><strong>adding a product to the cart - with two variations</strong></summary>
 <p>
    
 - get to the required product page
@@ -147,7 +157,8 @@
 </p>
 </details> 
       
-<details><summary><strong>adding a same product twice to the cart, each time with one different variation</strong></summary>
+<details>
+<summary><strong>adding a same product twice to the cart, each time with one different variation</strong></summary>
 <p>
     
 - get to the required product page
@@ -162,7 +173,8 @@
 </p>
 </details> 
       
-<details><summary><strong>adding a same product twice to the cart, each time with two different variation (while the first is the same in both cases)</strong></summary>
+<details>
+<summary><strong>adding a same product twice to the cart, each time with two different variation (while the first is the same in both cases)</strong></summary>
 <p>
     
 - get to the required product page
@@ -178,7 +190,8 @@
  </p>
 </details> 
     		         
-<details><summary><strong>adding twice the same product to the cart, using plus-one button</strong></summary>
+<details>
+<summary><strong>adding twice the same product to the cart, using plus-one button</strong></summary>
 <p>
    
 - get to the required product page
@@ -188,7 +201,8 @@
 </p>
 </details> 
       
-<details><summary><strong>adding twice the same product to the cart, using quantity button</strong></summary>
+<details>
+<summary><strong>adding twice the same product to the cart, using quantity button</strong></summary>
 <p>
    
 - get to the required product page
@@ -198,7 +212,8 @@
 </p>
 </details> 
       
-<details><summary><strong>adding twice the same product to the cart, using quantity and then plus-one buttons</strong></summary>
+<details>
+<summary><strong>adding twice the same product to the cart, using quantity and then plus-one buttons</strong></summary>
 <p>
    
 - get to the required product page
@@ -208,7 +223,8 @@
 </p>
 </details> 
       
-<details><summary><strong>adding twice the same product to the cart, by changing quantity manually in the cart</strong></summary>
+<details>
+<summary><strong>adding twice the same product to the cart, by changing quantity manually in the cart</strong></summary>
 <p>
    
 - get to the required product page
@@ -225,7 +241,8 @@
      
 ### Cart_mobile:
 
-<details><summary><strong>checking the final sum in the cart affected by changing the quantity in the cart</strong></summary>
+<details>
+<summary><strong>checking the final sum in the cart affected by changing the quantity in the cart</strong></summary>
 <p>
    
 - change to mobile screen resolution
@@ -239,7 +256,8 @@
 </p>
 </details> 
       
-<details><summary><strong>adding product to the cart and changing quantity manually in the cart, for more then 10 items</strong></summary> 
+<details>
+<summary><strong>adding product to the cart and changing quantity manually in the cart, for more then 10 items</strong></summary> 
 <p>
    
 - change to mobile screen resolution
@@ -251,7 +269,8 @@
 </p>
 </details> 
              
-<details><summary><strong>removing product from from the cart</strong></summary>
+<details>
+<summary><strong>removing product from from the cart</strong></summary>
 <p>
    
 - change to mobile screen resolution
@@ -261,7 +280,8 @@
 </p>
 </details> 
       
-<details><summary><strong>removing product from the cart to favorites</strong></summary>
+<details>
+<summary><strong>removing product from the cart to favorites</strong></summary>
 <p>
    
 - change to mobile screen resolution
@@ -279,7 +299,8 @@
 
 ### Cart_price:
 
-<details><summary><strong>checking the final sum in the cart includes the delivery</strong></summary>
+<details>
+<summary><strong>checking the final sum in the cart includes the delivery</strong></summary>
 <p>
    
 - get to the required product page  
@@ -290,7 +311,8 @@
 </p>
 </details> 
       
-<details><summary><strong>checking the final sum in the cart includes the discount</strong></summary>
+<details>
+<summary><strong>checking the final sum in the cart includes the discount</strong></summary>
 <p>
    
 - get to the required product page
@@ -301,7 +323,8 @@
  </p>
 </details> 
      
-<details><summary><strong>checking the final sum in the cart includes all products in the cart</strong></summary>
+<details>
+<summary><strong>checking the final sum in the cart includes all products in the cart</strong></summary>
  <p>
   
 - get to the first product page
@@ -316,7 +339,8 @@
  </p>
 </details> 
      
-<details><summary><strong>checking the final sum in the cart affected by the quantity of the product</strong></summary>
+<details>
+<summary><strong>checking the final sum in the cart affected by the quantity of the product</strong></summary>
 <p>
    
 - get to the product page
@@ -328,7 +352,8 @@
 </p>
 </details> 
       		   
-<details><summary><strong>checking the final sum in the cart includes all different variations of the same product</strong></summary>
+<details>
+<summary><strong>checking the final sum in the cart includes all different variations of the same product</strong></summary>
 <p>
    
 - get to the required product page
@@ -343,7 +368,8 @@
 </p>
 </details> 
       
-<details><summary><strong>checking the final sum in the cart affected by removing one of the products</strong></summary>
+<details>
+<summary><strong>checking the final sum in the cart affected by removing one of the products</strong></summary>
 <p>
    
 - get to the first product page 
@@ -360,7 +386,8 @@
 </p>
 </details> 
       
-<details><summary><strong>checking the final sum in the cart affected by changing the quantity in the cart</strong></summary>
+<details>
+<summary><strong>checking the final sum in the cart affected by changing the quantity in the cart</strong></summary>
 <p>
    
 - get to the required product page 
@@ -378,7 +405,8 @@
             
 ### Cart_removeProduct:
 
-<details><summary><strong>removing product from the cart</strong></summary>
+<details>
+<summary><strong>removing product from the cart</strong></summary>
 <p>
    
 - get to the required product page  
@@ -390,7 +418,8 @@
 </p>
 </details> 
       
-<details><summary><strong>removing product from the cart to the favorites</strong></summary>
+<details>
+<summary><strong>removing product from the cart to the favorites</strong></summary>
 <p>
    
 - get to the required product page
@@ -406,7 +435,8 @@
 </p>
 </details> 
       
-<details><summary><strong>removing product from the cart and then returning it back</strong></summary>
+<details>
+<summary><strong>removing product from the cart and then returning it back</strong></summary>
 <p>
    
 - get to the required product page
@@ -419,7 +449,8 @@
 </p>
 </details> 
       
-<details><summary><strong>adding same product twice with different variations, and then removing one of them from the cart</strong></summary>
+<details>
+<summary><strong>adding same product twice with different variations, and then removing one of them from the cart</strong></summary>
 <p>
    
 - get to the required product page 
@@ -434,7 +465,8 @@
 - reopen the cart			
 - if we removed the first variation only, then the cart includes the title of product and its second variation only 
    
-<details><summary><strong>removing product from the payment page</strong></summary>
+<details>
+<summary><strong>removing product from the payment page</strong></summary>
 <p>
    
 - get to the required product page 
@@ -447,7 +479,8 @@
 </p>
 </details> 
       
-<details><summary><strong>removing product to favorites from the payment page</strong></summary>
+<details>
+<summary><strong>removing product to favorites from the payment page</strong></summary>
 <p>
  
 - get to the required product page

@@ -5,32 +5,44 @@
 
 ### MainPageThumbs_greece :
 
-  **opening main page thumbnails in Greece site**
+<details><summary><strong>opening main page thumbnails in Greece site</strong></summary> 
+<p> 
   
-    -open the main page
-    -open all thumbnails in different tabs, and check if any of them  failed to open
-    **if we managed to open all products correctly, there will be no fails
+- open the main page
+- open all thumbnails in different tabs, and check if any of them  failed to open
+- if we managed to open all products correctly, there will be no fails
+</p>
+</details> 
 
-  **opening main page thumbnails in Greece site - ebay** 
-   
-    -open the main ebay page
-    -open all thumbnails in different tabs, and check if any of them  failed to open
-    **if we managed to open all products correctly, there will be no fails
+<details><summary><strong>opening main page thumbnails in Greece site - ebay</strong></summary>  
+<p> 
+     
+- open the main ebay page
+- open all thumbnails in different tabs, and check if any of them  failed to open
+- if we managed to open all products correctly, there will be no fails
+</p>
+</details> 
 
-  **opening main page thumbnails in Greece site - amazon**
-  
-    -open the main amzon page
-    -open all thumbnails in different tabs, and check if any of them  failed to open
-    **if we managed to open all products correctly, there will be no fails
+<details><summary><strong>opening main page thumbnails in Greece site - amazon</strong></summary> 
+<p> 
+    
+- open the main amzon page
+- open all thumbnails in different tabs, and check if any of them  failed to open
+- if we managed to open all products correctly, there will be no fails
+</p>
+</details> 
  
-
+----
 
 ### MainPageThumbs_israel:
 
-  **opening main page thumbnails in Israel site**
-  
-    -open the main page
-    -open all thumbnails in different tabs, and check if any of them  failed to open
-    **if we managed to open all products correctly, there will be no fails
+<details><summary><strong>opening main page thumbnails in Israel site</strong></summary> 
+<p> 
+    
+- open the main page
+- open all thumbnails in different tabs, and check if any of them  failed to open
+- if we managed to open all products correctly, there will be no fails
+</p>
+</details> 
 
    

@@ -5,68 +5,133 @@
 
 ### Israel site:
 
-  **populars thumbnails on aliExpress page**
+<details><summary><strong>populars thumbnails on aliExpress page</strong></summary>
+<p> 
   
-    -open the main page
-    -opening all thumbnails in different tabs and check their loading
-    **if we managed to open all products correctly, there will be no fails:
+- open the main page
+- opening all thumbnails in different tabs and check their loading
+- if we managed to open all products correctly, there will be no fails:
+</p>
+</details> 
 
-
+----
 
 ### Greece site:
 
-  **populars thumbnails on aliExpress page**  
-  
-    -open the main page
-    -opening all thumbnails in different tabs and check their loading
-    **if we managed to open all products correctly, there will be no fails:
-  
-  **populars thumbnails on ebay page** 
+<details><summary><strong>populars thumbnails on aliExpress page</strong></summary>  
+<p> 
     
-    -open the main ebay page
-    -opening all thumbnails in different tabs and check their loading
-    **if we managed to open all products correctly, there will be no fails:  
-
-  **populars thumbnails on amazon page**     
+- open the main page
+- opening all thumbnails in different tabs and check their loading
+- if we managed to open all products correctly, there will be no fails:
+</p>
+</details> 
   
-    -open the main amazon page
-    -opening all thumbnails in different tabs and check their loading
-    **if we managed to open all products correctly, there will be no fails:
+<details><summary><strong>populars thumbnails on ebay page</strong></summary> 
+<p> 
+      
+- open the main ebay page
+- opening all thumbnails in different tabs and check their loading
+- if we managed to open all products correctly, there will be no fails:  
+</p>
+</details> 
 
+<details><summary><strong>populars thumbnails on amazon page</strong></summary>     
+<p> 
+    
+- open the main amazon page
+- opening all thumbnails in different tabs and check their loading
+- if we managed to open all products correctly, there will be no fails:
+</p>
+</details> 
+
+----
 
 ### Cyprus site:
 
-  **populars thumbnails on aliExpress page**  
-  **populars thumbnails on ebay page** 
-  **populars thumbnails on amazon page**     
+<details><summary><strong>populars thumbnails on aliExpress page</strong></summary> 
+<p>   
+test details here are the same as in Greece test case  
+</p>
+</details> 
+   
+<details><summary><strong>populars thumbnails on ebay page</strong></summary>
+<p> 
+test details here are the same as in Greece test case     
+</p>
+</details> 
+   
+<details><summary><strong>populars thumbnails on amazon page</strong></summary>   
+<p>
+test details here are the same as in Greece test case   
+</p>
+</details> 
+    
 
-    test details here are the same as in Greece test case  
 
 
 
 ### Romania site:
 
-  **populars thumbnails on aliExpress page**  
-  **populars thumbnails on ebay page** 
-  **populars thumbnails on amazon page**     
-
-    test details here are the same as in Greece test case  
+<details><summary><strong>populars thumbnails on aliExpress page</strong></summary> 
+<p>   
+test details here are the same as in Greece test case  
+</p>
+</details> 
+   
+<details><summary><strong>populars thumbnails on ebay page</strong></summary>
+<p> 
+test details here are the same as in Greece test case     
+</p>
+</details> 
+   
+<details><summary><strong>populars thumbnails on amazon page</strong></summary>   
+<p>
+test details here are the same as in Greece test case   
+</p>
+</details> 
+     
 
 
 ### Italy site:
 
-  **populars thumbnails on aliExpress page**  
-  **populars thumbnails on ebay page** 
-  **populars thumbnails on amazon page**        
-
-    test details here are the same as in Greece test case  
+<details><summary><strong>populars thumbnails on aliExpress page</strong></summary> 
+<p>   
+test details here are the same as in Greece test case  
+</p>
+</details> 
+   
+<details><summary><strong>populars thumbnails on ebay page</strong></summary>
+<p> 
+test details here are the same as in Greece test case     
+</p>
+</details> 
+   
+<details><summary><strong>populars thumbnails on amazon page</strong></summary>   
+<p>
+test details here are the same as in Greece test case   
+</p>
+</details> 
+     
 
 
 ### Portugal site:
 
-  **populars thumbnails on aliExpress page**  
-  **populars thumbnails on ebay page** 
-  **populars thumbnails on amazon page**        
- 
-    test details here are the same as in Greece test case  
-
+<details><summary><strong>populars thumbnails on aliExpress page</strong></summary> 
+<p>   
+test details here are the same as in Greece test case  
+</p>
+</details> 
+   
+<details><summary><strong>populars thumbnails on ebay page</strong></summary>
+<p> 
+test details here are the same as in Greece test case     
+</p>
+</details> 
+   
+<details><summary><strong>populars thumbnails on amazon page</strong></summary>   
+<p>
+test details here are the same as in Greece test case   
+</p>
+</details> 
+    

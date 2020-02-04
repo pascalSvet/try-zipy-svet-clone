@@ -5,49 +5,62 @@
 
 ### Sign up with unused accounts:    !!!entered by the user!!!
 
-  **sign up with unused email, entered by the user**
-  
-    -open main page
-    -press signup button		
-    -ask user and enter e-mail, with default password and use them to sign up		
-    -check if user logged in
-    **if succeed, there is "private area" button  
+<details><summary><strong>sign up with unused email, entered by the user</strong></summary> 
+<p>   
    
-  **sign up with unused phone number, entered by the user** 
-  
-    -open main page
-    -press signup button		
-    -choose signup by phone
-    -ask user to enter temporary phone number and use it to sign up 		
-    -ask user to enter phone code and use it to confirm 		
-    -check if user logged in
-    **if succeed, there is "private area" button
+- open main page
+- press signup button		
+- ask user and enter e-mail, with default password and use them to sign up		
+- check if user logged in
+- if succeed, there is "private area" button  
+</p>
+</details> 
+   
+<details><summary><strong>sign up with unused phone number, entered by the user</strong></summary>  
+<p>   
+   
+- open main page
+- press signup button		
+- choose signup by phone
+- ask user to enter temporary phone number and use it to sign up 		
+- ask user to enter phone code and use it to confirm 		
+- check if user logged in
+- if succeed, there is "private area" button
+</p>
+</details> 
              
-  **sign up with unused google account, entered by the user**
-  
-    -open main page
-    -press signup button		
-    -choose signup by google
-    -ask user to enter google account identifiers and use them to sign up 		
-    -check if user logged in
-    **if succeed, there is "private area" button
+<details><summary><strong>sign up with unused google account, entered by the user</strong></summary> 
+<p>   
+   
+- open main page
+- press signup button		
+- choose signup by google
+- ask user to enter google account identifiers and use them to sign up 		
+- check if user logged in
+- if succeed, there is "private area" button
+</p>
+</details> 
 		
-  **sign up with unused facebook account, entered by the user**
- 
-    -open main page
-    -press signup button		
-    -choose signup by FB
-    -ask user to enter FB account identifiers and use them to sign up		
-    -check if user logged in
-    **if succeed, there is "private area" button
- 
- 
+<details><summary><strong>sign up with unused facebook account, entered by the user</strong></summary> 
+<p>   
+  
+- open main page
+- press signup button		
+- choose signup by FB
+- ask user to enter FB account identifiers and use them to sign up		
+- check if user logged in
+- if succeed, there is "private area" button 
+</p>
+</details> 
+ 	
+----
  
 ### Negative Tests - by phone:
 
-  **(with parameters):**
-    
-    -our parameters to test - phone numbers: 
+<details><summary><strong>(with parameters):</strong></summary> 
+<p>   
+     
+- our parameters to test - phone numbers: 
       existing number
       empty number                
       number too short    		
@@ -59,67 +72,79 @@
       illegal wired phone number
     
     
-    -enter main page
-    -press signup button		
-    -choose signup by phone
-    -enter phone number according to the parameters			
-    -press sign-up button if enabled
-    -enter phone code if needed: 		
-    -check if user logged in
-    -checking for an error in logging 
-    **if succeed, the test caught an error as expected and the user is not logged in
+- enter main page
+- press signup button		
+- choose signup by phone
+- enter phone number according to the parameters			
+- press sign-up button if enabled
+- enter phone code if needed: 		
+- check if user logged in
+- checking for an error in logging 
+- if succeed, the test caught an error as expected and the user is not logged in
+</p>
+</details> 
 
    		
-  **sign up with incorrect phone by the user      !!!entered by user!!!** 
-  
-    -press signup button		
-    -choose signup by phone
-    -enter temporary phone number from user		
-    -enter phone code from user	 		
-    -check if user logged in
-    -checking for an error in logging 
-    **if succeed, the test caught an error as expected and the user is not logged in
-  
-  
+<details><summary><strong>sign up with incorrect phone by the user      !!!entered by user!!!</strong></summary>  
+<p>   
+   
+- press signup button		
+- choose signup by phone
+- enter temporary phone number from user		
+- enter phone code from user	 		
+- check if user logged in
+- checking for an error in logging 
+- if succeed, the test caught an error as expected and the user is not logged in  
+ </p>
+</details> 
+ 	
+----  
   
 ### Negative Tests - by google:
 
- **(with parameters):**
-    
-    -our parameters to test - email and password : 
+ </strong></summary> (with parameters):</strong></summary> 
+<p>   
+     
+- our parameters to test - email and password : 
       email with no google account 
       incorrect email    		
       empty email 
       empty password              
       wrong password   	
     
-    -enter main page
-    -press signup button		
-    -choose signup by google
-    -move to google frame
-    -enter google account identifiers: 
-    -check if user logged in
-    -checking for an error in logging 
-    **if succeed, the test caught an error as expected and the user is not logged in
+- enter main page
+- press signup button		
+- choose signup by google
+- move to google frame
+- enter google account identifiers: 
+- check if user logged in
+- checking for an error in logging 
+- if succeed, the test caught an error as expected and the user is not logged in
+</p>
+</details> 
     	
-  **sign up with incorrect Google details, entered by user !!!entered by user!!!** 
-  
-    -enter main page
-    -press signup button		
-    -choose signup by google
-    -ask user for google account identifiers: 		
-    -enter google account identifiers from user: 
-    -check if user logged in
-    -checking for an error in logging 
-    **if succeed, the test caught an error as expected and the user is not logged in
-  
-  
+<details><summary><strong>sign up with incorrect Google details, entered by user !!!entered by user!!!</strong></summary>  
+<p>   
+   
+- enter main page
+- press signup button		
+- choose signup by google
+- ask user for google account identifiers: 		
+- enter google account identifiers from user: 
+- check if user logged in
+- checking for an error in logging 
+- if succeed, the test caught an error as expected and the user is not logged in
+</p>
+</details> 
+  	
+----
   
 ### Negative Tests - by FB:
 
- **(with parameters):**
-    
-    -our parameters to test - email and password : 		
+ </strong></summary> (with parameters):</strong></summary> 
+<p>   
+     
+- our parameters to test - email and password : 		
       email with no FB account
       phone with no FB account
       incorrect email
@@ -127,32 +152,37 @@
       empty password
       wrong password
     
-    -enter main page
-    -press signup button		
-    -choose signup by FB
-    -move to FB frame
-    -enter FB account identifiers and accept connection: 		
-    -check if user logged in
-    -checking for an error in logging 
-    **if succeed, the test caught an error as expected and the user is not logged in
+- enter main page
+- press signup button		
+- choose signup by FB
+- move to FB frame
+- enter FB account identifiers and accept connection: 		
+- check if user logged in
+- checking for an error in logging 
+- if succeed, the test caught an error as expected and the user is not logged in
+</p>
+</details> 
 
-  **sign up with incorrect FB details, entered by user !!!entered by user!!!**
+<details><summary><strong>sign up with incorrect FB details, entered by user !!!entered by user!!!</strong></summary> 
+ <p>   
   
-    -enter main page				
-    -press signup button		
-    -choose signup by FB
-    -move to FB frame
-    -ask user for FB account identifiers: 		
-    -enter FB account identifiers: 		
-    -check if user logged in
-    -checking for an error in logging 
-    **if succeed, the test caught an error as expected and the user is not logged in
+- enter main page				
+- press signup button		
+- choose signup by FB
+- move to FB frame
+- ask user for FB account identifiers: 		
+- enter FB account identifiers: 		
+- check if user logged in
+- checking for an error in logging 
+- if succeed, the test caught an error as expected and the user is not logged in
+</p>
+</details> 
 
   
   
  ### Negative Tests - by Email:
 
-    -our parameters to test - email and password: 		
+- our parameters to test - email and password: 		
       existing email  
       wrong email- domain without "@"
       wrong email- empty
@@ -171,32 +201,40 @@
       wrong password - longer than 100 chars
       wrong password - empty
     
-    -enter main page
-    -press signup button		
-    -check terms
-    -enter login+password 
-    -check if user logged in (if so, appears new button "איזור אישי")
-    -checking for an error in logging 
-    **if succeed, the test caught an error as expected and the user is not logged in
+- enter main page
+- press signup button		
+- check terms
+- enter login+password 
+- check if user logged in (if so, appears new button "איזור אישי")
+- checking for an error in logging 
+- if succeed, the test caught an error as expected and the user is not logged in
+</p>
+</details> 
 	    
 
-  **sign up with unchecked terms of use**
-  
-    -enter main page
-    -press signup button		
-    -enter login+password and click signup manually
-    -check if user logged in (if so, appears new button "איזור אישי")
-    -checking for an error in logging 
-    **if succeed, the test caught an error as expected and the user is not logged in
+<details><summary><strong>sign up with unchecked terms of use</strong></summary> 
+<p>   
+   
+- enter main page
+- press signup button		
+- enter login+password and click signup manually
+- check if user logged in (if so, appears new button "איזור אישי")
+- checking for an error in logging 
+- if succeed, the test caught an error as expected and the user is not logged in
+</p>
+</details> 
 	
   
   
-  **sign up with incorrect email and password, entered by the user !!!entered by user!!!**
+<details><summary><strong>sign up with incorrect email and password, by the user !!!entered by user!!!</strong></summary> 
+ <p>   
   
-    -enter main page
-    -press signup button		
-    -enter temporary e-mail by user: 		
-    -check terms and enter login from above + password 
-    -check if user logged in (if so, appears new button "איזור אישי")
-    -checking for an error in logging 
-    **if succeed, the test caught an error as expected and the user is not logged in
+- enter main page
+- press signup button		
+- enter temporary e-mail by user: 		
+- check terms and enter login from above + password 
+- check if user logged in (if so, appears new button "איזור אישי")
+- checking for an error in logging 
+- if succeed, the test caught an error as expected and the user is not logged in
+</p>
+</details> 
