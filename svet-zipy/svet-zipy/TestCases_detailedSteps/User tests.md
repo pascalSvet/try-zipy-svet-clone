@@ -4,8 +4,7 @@
 
 ### User_password:
 
-<details>
-<summary><strong>changing the password</strong></summary>
+<details><summary><strong>changing the password</strong></summary>
 <p>   
    
 - enter main page

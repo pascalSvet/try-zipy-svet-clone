@@ -7,303 +7,537 @@
 
 #### AliExpress
 
-    - comparing to aliExpress !!!in process!!!
+- comparing to aliExpress !!!in process!!!
 	
 ----
 
 #### Cart
 
-    **Cart_addProduct:**
-	    - adding a product to the cart from quick pop-up page
-	    - adding a product to the cart from second product pop-up page            
-	    - adding a product to the cart from less-than-5 tab
-	    - adding a product to the cart from category 
-	    - adding a product to the cart from product page
-	    - adding both a product from aliExpress and a product from Amazon to the cart
-
-    **Cart_addProduct_withLoggedUser:**
-	    - adding a product while unlogged, and the logging in and checking for the product in the cart
-	    - adding a product then disconnecting and logging in back, and checking for the product in the cart
-
-    **Cart_addProduct_withVariations:**
-	    - adding a product to the cart - with one variation
-	    - adding a product to the cart - with two variations
-	    - adding a same product twice to the cart, each time with one different variation 
-	    - adding a same product twice to the cart, each time with two different variation (while the first is the same in both cases)        
-	    - adding twice the same product to the cart, using plus-one button
-	    - adding twice the same product to the cart, using quantity button
-	    - adding twice the same product to the cart, using quantity and then plus-one buttons
-	    - adding twice the same product to the cart, by changing quantity manually in the cart
-  
-    **Cart_mobile:**
-	    - checking the final sum in the cart affected by changing the quantity in the cart
-	    - adding product to the cart and changing quantity manually in the cart, for more then 10 items        
-	    - removing product from from the cart
-	    - removing product from the cart to favorites
-
-    **Cart_price:**
-            - checking the final sum in the cart includes the delivery
-            - checking the final sum in the cart includes the discount
-            - checking the final sum in the cart includes all products in the cart
-            - checking the final sum in the cart affected by the quantity of the product
-            - checking the final sum in the cart includes all different variations of the same product
-            - checking the final sum in the cart affected by removing one of the products
-            - checking the final sum in the cart affected by changing the quantity in the cart
-            
-    **Cart_removeProduct:**
-            - removing product from the cart
-            - removing product from the cart to the favorites
-            - removing product from the cart and then returning it back
-            - adding same product twice with different variations, and then removing one of them from the cart
-            - removing product from the payment page   
-            - removing product to favorites from the payment page
+<details><summary>Cart_addProduct:</summary>
+<p>   
+ 
+- adding a product to the cart from quick pop-up page
+- adding a product to the cart from second product pop-up page            
+- adding a product to the cart from less-than-5 tab
+- adding a product to the cart from category 
+- adding a product to the cart from product page
+- adding both a product from aliExpress and a product from Amazon to the cart
+</p>
+</details> 
+ 
+   
+<details><summary>Cart_addProduct_withLoggedUser:</summary>
+<p>   
+ 
+- adding a product while unlogged, and the logging in and checking for the product in the cart
+- adding a product then disconnecting and logging in back, and checking for the product in the cart
+</p>
+</details> 
+ 
+   
+<details><summary>Cart_addProduct_withVariations:</summary>
+<p>   
+ 
+- adding a product to the cart - with one variation
+- adding a product to the cart - with two variations
+- adding a same product twice to the cart, each time with one different variation 
+- adding a same product twice to the cart, each time with two different variation (while the first is the same in both cases)        
+- adding twice the same product to the cart, using plus-one button
+- adding twice the same product to the cart, using quantity button
+- adding twice the same product to the cart, using quantity and then plus-one buttons
+- adding twice the same product to the cart, by changing quantity manually in the cart
+ </p>
+</details> 
     
-    
+<details><summary>Cart_mobile:</summary>
+<p>   
+ 
+- checking the final sum in the cart affected by changing the quantity in the cart
+- adding product to the cart and changing quantity manually in the cart, for more then 10 items        
+- removing product from from the cart
+- removing product from the cart to favorites
+</p>
+</details> 
+   
+<details><summary>Cart_price:</summary>
+<p>   
+ 
+- checking the final sum in the cart includes the delivery
+- checking the final sum in the cart includes the discount
+- checking the final sum in the cart includes all products in the cart
+- checking the final sum in the cart affected by the quantity of the product
+- checking the final sum in the cart includes all different variations of the same product
+- checking the final sum in the cart affected by removing one of the products
+- checking the final sum in the cart affected by changing the quantity in the cart
+</p>
+</details> 
+               
+<details><summary>Cart_removeProduct:</summary>
+<p>   
+ 
+- removing product from the cart
+- removing product from the cart to the favorites
+- removing product from the cart and then returning it back
+- adding same product twice with different variations, and then removing one of them from the cart
+- removing product from the payment page   
+- removing product to favorites from the payment page
+</p>
+</details> 
+           
 ----
 
 #### Catalogs
 
-    - Сatalogs_il_aliExpress_combined (with parameters)
-    - Сatalogs_il_aliExpress_separated
-    - Сatalogs_il_amazon_combined (with parameters)
-    - Сatalogs_il_amazon_separated
-    - Сatalogs_gr_aliExpress_combined (with parameters)
-    - Сatalogs_gr_aliExpress_separated
-    - Сatalogs_gr_amazon_combined (with parameters)
-    - Сatalogs_gr_amazon_separated
- 	
+<details><summary>Сatalogs_il:</summary>
+<p>   
+ 
+- Сatalogs_il_aliExpress_combined (with parameters)
+- Сatalogs_il_aliExpress_separated
+- Сatalogs_il_amazon_combined (with parameters)
+- Сatalogs_il_amazon_separated
+</p>
+</details> 
+  
+  
+ <details><summary>Сatalogs_gr:</summary>
+<p>   
+  
+- Сatalogs_gr_aliExpress_combined (with parameters)
+- Сatalogs_gr_aliExpress_separated
+- Сatalogs_gr_amazon_combined (with parameters)
+- Сatalogs_gr_amazon_separated
+ </p>
+</details> 
+  	
 ----
 
 #### Errors
 
-    **Errors_502**
-	    - catching 502 error while opening many tabs in categories - Greece
-	    - catching 502 error while opening many tabs in categories - Portugal
-	    - catching 502 error while opening many tabs in categories - Israel
-	    - catching 502 error while opening many tabs in deals - Greece
-	    - catching 502 error while opening many tabs in deals - Portugal
-	    - catching 502 error while opening many tabs in deals - Israel
-	  
+<details><summary>Errors_502</summary>
+<p>   
+ 
+- catching 502 error while opening many tabs in categories - Greece
+- catching 502 error while opening many tabs in categories - Portugal
+- catching 502 error while opening many tabs in categories - Israel
+- catching 502 error while opening many tabs in deals - Greece
+- catching 502 error while opening many tabs in deals - Portugal
+- catching 502 error while opening many tabs in deals - Israel
+</p>
+</details> 
+   	  
 ----
     
 #### Favorites
 
-    **Favorites_icon**
-      - appearance of favorite-pin icon on thumbnail, on mouse hover
-      - correct colors of favorite-pin button
-    **Favorites_adding**
-      - adding to favorites from product page
-      - adding to favorites from product pop-up page
-      - adding to favorites from daily deals thumbnail
-      - adding to favorites from less-than-5 tab
-      - adding to favorites from search thumbnail
-      - adding to favorites from category 
+<details><summary>Favorites_icon</summary>
+<p>   
+ 
+- appearance of favorite-pin icon on thumbnail, on mouse hover
+- correct colors of favorite-pin button
+</p>
+</details> 
 
+
+<details><summary>Favorites_adding</summary>
+ <p>   
+ 
+- adding to favorites from product page
+- adding to favorites from product pop-up page
+- adding to favorites from daily deals thumbnail
+- adding to favorites from less-than-5 tab
+- adding to favorites from search thumbnail
+- adding to favorites from category 
+</p>
+</details> 
+   
 ----
 
 #### Gallery
 
-	 - updating gallery image according to the chosen variation
-	 - updating gallery image after changing chosen variation
-	 - updating gallery image after sliding left
-	 - updating updating gallery image after sliding right
-	 - updating gallery image after sliding more the once
-	 - adding image near the chosen variation according to the choice
-	 - updating image near the variation after changing the chosen variation
-
+<details><summary>Gallery</summary>
+ <p> 
+ 
+- updating gallery image according to the chosen variation
+- updating gallery image after changing chosen variation
+- updating gallery image after sliding left
+- updating updating gallery image after sliding right
+- updating gallery image after sliding more the once
+- adding image near the chosen variation according to the choice
+- updating image near the variation after changing the chosen variation
+</p>
+</details> 
+   
 ----
  
 #### Loading
 
-    **Loading:**
-      - presence of loader-spinner on thumbnail click
-      - updating of loader-spinner after clicking on another thumbnail
-
-     **Loading_mobile:**
-      - TestsMobile - presence of loader-spinner on thumbnail click
-      - TestsMobile - updating of loader-spinner after clicking on another thumbnail
-      
+<details><summary>Loading:</summary>
+<p>   
+ 
+- presence of loader-spinner on thumbnail click
+- updating of loader-spinner after clicking on another thumbnail
+</p>
+</details> 
+  
+  
+ <details><summary>Loading_mobile:</summary>
+ <p>   
+ 
+- TestsMobile - presence of loader-spinner on thumbnail click
+- TestsMobile - updating of loader-spinner after clicking on another thumbnail
+</p>
+</details> 
+        
 ----
     
 #### Main Page Thumbs
 
-    **MainPageThumbs_greece:**
-      - opening main page thumbnails in Greece site
-      - opening main page thumbnails in Greece site - ebay
-      - opening main page thumbnails in Greece site - amazon
-    **MainPageThumbs_israel:**
-      - opening main page thumbnails in Israel site  
-            	
+<details><summary>MainPageThumbs_greece:</summary>
+<p>   
+ 
+- opening main page thumbnails in Greece site
+- opening main page thumbnails in Greece site - ebay
+- opening main page thumbnails in Greece site - amazon
+</p>
+</details> 
+  
+  
+<details><summary>MainPageThumbs_israel:</summary>
+ <p>   
+ 
+- opening main page thumbnails in Israel site  
+</p>
+</details> 
+              	
 ----
 
 #### Payments
 
-    - buying product, directly from search
-    - buying product from the cart
-    - buying all products from the cart
-    - buying product directly from its page, when there is another product in the cart
-    - buying product from aliExpress
-    - buying product from amazon
-    - buying random product, from lessThan5 tab 
+<details><summary>Payments:</summary>
+ <p> 
+ 
+- buying product, directly from search
+- buying product from the cart
+- buying all products from the cart
+- buying product directly from its page, when there is another product in the cart
+- buying product from aliExpress
+- buying product from amazon
+- buying random product, from lessThan5 tab 
+</p>
+</details> 
 
 ---- 
           
 #### Populars
 
-    **Israel site:**
-          - populars thumbnails on aliExpress page
-    **Greece site:**
-          - populars thumbnails on aliExpress page
-          - populars thumbnails on ebay page
-          - populars thumbnails on amazon page
-    **Cyprus site:**
-          - populars thumbnails on aliExpress page
-          - populars thumbnails on ebay page
-          - populars thumbnails on amazon page   
-    **Romania site:**
-          - populars thumbnails on aliExpress page
-          - populars thumbnails on ebay page
-          - populars thumbnails on amazon page   
-    **Italy site:**
-          - populars thumbnails on aliExpress page
-          - populars thumbnails on ebay page
-          - populars thumbnails on amazon page  
-    **Portugal site:**
-          - populars thumbnails on aliExpress page
-          - populars thumbnails on ebay page
-          - populars thumbnails on amazon page    	
+<details><summary>Israel site:</summary>
+<p>   
  
+- populars thumbnails on aliExpress page
+</p>
+</details> 
+ 
+ 
+<details><summary>Greece site:</summary>
+<p>   
+ 
+- populars thumbnails on aliExpress page
+- populars thumbnails on ebay page
+- populars thumbnails on amazon page
+</p>
+</details> 
+ 
+ 
+<details><summary>Cyprus site:</summary>
+<p>   
+ 
+- populars thumbnails on aliExpress page
+- populars thumbnails on ebay page
+- populars thumbnails on amazon page 
+</p>
+</details> 
+   
+   
+<details><summary>Romania site:</summary>
+<p>   
+ 
+- populars thumbnails on aliExpress page
+- populars thumbnails on ebay page
+- populars thumbnails on amazon page
+</p>
+</details> 
+    
+    
+<details><summary>Italy site:</summary>
+<p>   
+ 
+- populars thumbnails on aliExpress page
+- populars thumbnails on ebay page
+- populars thumbnails on amazon page 
+</p>
+</details> 
+  
+  
+<details><summary>Portugal site:</summary>
+<p>   
+ 
+- populars thumbnails on aliExpress page
+- populars thumbnails on ebay page
+- populars thumbnails on amazon page    	
+</p>
+</details> 
+  
 ----
 
 #### Search
 
-    **Search_field:**
-          - clearing search field
-          - performing empty search
-          - opening of dropdown autocomplete menu
-          - closing of dropdown autocomplete menu after clearing the search field
-          - performing search with autocomplete hint
-          - keeping the keyword in search field after switching to amazon
-          - keeping the keyword search after switching to ebay
-          - keeping the keyword search after switching to Less-than-5
-          - clearing the keyword in search field after switching to amazon
-          - clearing the keyword search after switching to ebay
-          - clearing the keyword search after switching to Less-than-5
+<details><summary>Search_field:</summary>
+<p>   
+ 
+- clearing search field
+- performing empty search
+- opening of dropdown autocomplete menu
+- closing of dropdown autocomplete menu after clearing the search field
+- performing search with autocomplete hint
+- keeping the keyword in search field after switching to amazon
+- keeping the keyword search after switching to ebay
+- keeping the keyword search after switching to Less-than-5
+- clearing the keyword in search field after switching to amazon
+- clearing the keyword search after switching to ebay
+- clearing the keyword search after switching to Less-than-5
+</p>
+</details> 
+     
+     
+<details><summary>Search_input:</summary>
+<p>   
+ 
+- searching in Israel site - in english
+- searching in Israel site - in hebrew
+- searching in Portugal site - in english
+- searching in Portugal site - in portuguese with special characters
+- searching with special signs - apostrophe
+- searching with special signs - dash
+- searching with special signs - parenthesis
+- searching with special signs - bracket
+ </p>
+</details> 
     
-    **Search_input:**
-          - searching in Israel site - in english
-          - searching in Israel site - in hebrew
-          - searching in Portugal site - in english
-          - searching in Portugal site - in portuguese with special characters
-          - searching with special signs - apostrophe
-          - searching with special signs - dash
-          - searching with special signs - parenthesis
-          - searching with special signs - bracket
     
-    **Search_links:**
-          - searching on Israel site - link from aliExpress
-          - searching on Israel site - link from ebay
-          - searching on Israel site - link from amazon
-          - searching on Greece site - link from aliExpress
-          - searching on Greece site - link from ebay.de
-          - searching on Greece site - link from amazon.de
-    
-    **Search_redirect:**
-          - redirecting search results from amazon to other, if nothing found
-          - redirecting search results from ebay to other, if nothing found
-          - redirecting search results from ebay to other, more suitable, when smart search is on
-          - redirecting search results from aliExpress to other, if nothing found
-
+<details><summary>Search_links:</summary>
+<p>   
+ 
+- searching on Israel site - link from aliExpress
+- searching on Israel site - link from ebay
+- searching on Israel site - link from amazon
+- searching on Greece site - link from aliExpress
+- searching on Greece site - link from ebay.de
+- searching on Greece site - link from amazon.de
+</p>
+</details> 
+     
+     
+<details><summary>Search_redirect:</summary>
+<p>   
+ 
+- redirecting search results from amazon to other, if nothing found
+- redirecting search results from ebay to other, if nothing found
+- redirecting search results from ebay to other, more suitable, when smart search is on
+- redirecting search results from aliExpress to other, if nothing found
+</p>
+</details> 
+ 
           
 ----
               
 #### Sign Up
 
-    **Sign up with unused accounts, !!!entered by the user!!!:**
-          - sign up with unused email, entered by the user
-          - sign up with unused phone number, entered by the user
-          - sign up with unused google account, entered by the user
-          - sign up with unused facebook account, entered by the user
+<details><summary>Sign up with unused accounts, !!!entered by the user!!!:</summary>
+<p>   
+ 
+- sign up with unused email, entered by the user
+- sign up with unused phone number, entered by the user
+- sign up with unused google account, entered by the user
+- sign up with unused facebook account, entered by the user
+ </p>
+</details> 
         
-     **Negative Tests - by phone:**
-          - existing number
-          - empty number
-          - number too short 
-          - number too long 
-          - number including non digit signs in the middle
-          - number starting not with 0
-          - wired phone number
-          - illegal mobile number
-          - illegal wired phone number
-          - sign up with incorrect phone, entered by the user !!!entered by user!!!
         
-     **Negative Tests - by google:**
-          - email with no google account
-          - incorrect email
-          - empty email 
-          - empty password
-          - wrong password
-          - sign up with incorrect Google details, entered by user !!!entered by user!!!
-        
-     **Negative Tests - by FB:**
-          - email with no FB account
-          - phone with no FB account
-          - incorrect email
-          - empty email 
-          - empty password
-          - wrong password
-          - sign up with incorrect FB details, entered by user !!!entered by user!!!
-        
-     **Negative Tests - by email:**
-          - existing email
-          - wrong email- domain without "@"
-          - wrong email- empty
-          - wrong email- domain with non-alphanumeric
-          - wrong email- empty domain
-          - wrong email- no dot after domain
-          - wrong email- no ending
-          - wrong email- ending with non-alphabetic
-          - wrong email- starting with non-alphanumeric
-          - wrong email- name with space
-          - wrong email- empty name
-          - wrong email- domain with one char only
-          - wrong email- ending with one char only
-          - wrong email- longer than 254 chars
-          - wrong password - shorter than 5 chars
-          - wrong password - longer than 100 chars
-          - wrong password - empty
-          - sign up with unchecked terms of use
-          - sign up with incorrect email and password, entered by the user !!!entered by user!!!
-
+ <details><summary>Negative Tests - by phone:</summary>
+ <p>   
+ 
+- existing number
+- empty number
+- number too short 
+- number too long 
+- number including non digit signs in the middle
+- number starting not with 0
+- wired phone number
+- illegal mobile number
+- illegal wired phone number
+- sign up with incorrect phone, entered by the user !!!entered by user!!!
+</p>
+</details> 
+       
+         
+ <details><summary>Negative Tests - by google:</summary>
+ <p>   
+ 
+- email with no google account
+- incorrect email
+- empty email 
+- empty password
+- wrong password
+- sign up with incorrect Google details, entered by user !!!entered by user!!!
+</p>
+</details> 
+      
+         
+ <details><summary>Negative Tests - by FB:</summary>
+ <p>   
+ 
+- email with no FB account
+- phone with no FB account
+- incorrect email
+- empty email 
+- empty password
+- wrong password
+- sign up with incorrect FB details, entered by user !!!entered by user!!!
+</p>
+</details> 
+       
+         
+ <details><summary>Negative Tests - by email:</summary>
+ <p>   
+ 
+- existing email
+- wrong email- domain without "@"
+- wrong email- empty
+- wrong email- domain with non-alphanumeric
+- wrong email- empty domain
+- wrong email- no dot after domain
+- wrong email- no ending
+- wrong email- ending with non-alphabetic
+- wrong email- starting with non-alphanumeric
+- wrong email- name with space
+- wrong email- empty name
+- wrong email- domain with one char only
+- wrong email- ending with one char only
+- wrong email- longer than 254 chars
+- wrong password - shorter than 5 chars
+- wrong password - longer than 100 chars
+- wrong password - empty
+- sign up with unchecked terms of use
+- sign up with incorrect email and password, entered by the user !!!entered by user!!!
+</p>
+</details> 
+ 
 ----        
      
 #### User
 
-    **User_password:**
-          - changing the password
-          - recovering the password  !!!entered by user!!!
-    **User_email:**
-          - changing the email          
-    **User_mobile:**
-          - TestsMobile - changing the password
-          - TestsMobile - changing the email
+<details><summary>User_password:</summary>
+<p>   
+ 
+- changing the password
+- recovering the password  !!!entered by user!!!
+</p>
+</details> 
+ 
+ 
+<details><summary>User_email:</summary>
+<p>   
+ 
+- changing the email  
+</p>
+</details> 
+        
+         
+<details><summary>User_mobile:</summary>
+<p>   
+ 
+- TestsMobile - changing the password
+- TestsMobile - changing the email
+ </p>
+</details> 
           
 ----        
                 
 ## Test
 
-    ** Test Main Page Thumbs **
-    ** Test Populars Thumbs**
-    ** Test Favorites **
+<details><summary> Test Main Page Thumbs</summary>
+<p>   
+same as mastr site:
+ 
+- Test_MainPageThumbs_greece
+- Test_MainPageThumbs_israel
+
+</p>
+</details> 
+
+
+<details><summary> Test Populars Thumbs</summary>
+<p>   
+same as master site:
+ 
+- Israel site
+- Greece site
+- Cyprus site
+- Romania site
+- Italy site
+- Portugal site
+</p>
+</details> 
+
+
+<details><summary> Test Favorites </summary>
+<p>   
+same as mastr site:
+ 
+- Favorites_icon
+- Favorites_adding
+
+</p>
+</details> 
 
 
 ----   
      
 ## Dev
 
-    **Dev Main Page Thumbs**
-    **Dev Populars Thumbs**
-    **Dev Favorites**
+<details><summary>Dev Main Page Thumbs</summary>
+<p>   
+same as master site:
+ 
+- Dev_MainPageThumbs_greece
+- Dev_MainPageThumbs_israel
 
+</p>
+</details> 
+
+
+<details><summary>Dev Populars Thumbs</summary>
+<p>   
+same as master site:
+ 
+- Israel site
+- Greece site
+- Cyprus site
+- Romania site
+- Italy site
+- Portugal site
+</p>
+</details> 
+
+
+<details><summary>Dev Favorites</summary>
+<p>   
+same as mastr site:
+ 
+- Favorites_icon
+- Favorites_adding
+
+</p>
+</details> 
 ----   
   
