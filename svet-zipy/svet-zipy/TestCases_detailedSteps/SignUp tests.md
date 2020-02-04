@@ -65,6 +65,7 @@
 <p>   
      
 - our parameters to test - phone numbers: 
+
       existing number
       empty number                
       number too short    		
@@ -112,6 +113,7 @@
 <p>    
      
 - our parameters to test - email and password : 
+
       email with no google account 
       incorrect email    		
       empty email 
@@ -153,6 +155,7 @@
 <p>   
      
 - our parameters to test - email and password : 		
+
       email with no FB account
       phone with no FB account
       incorrect email
@@ -196,6 +199,7 @@
 <p>  
   
 - our parameters to test - email and password: 		
+
       existing email  
       wrong email- domain without "@"
       wrong email- empty
