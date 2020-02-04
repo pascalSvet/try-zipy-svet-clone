@@ -101,12 +101,14 @@ public class ElementsBuying {
 	public static final String Product_gallery_nearVariation ="//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[1]/img";
 	public static final String Product_notFound = "//div[@id='wrapper']//main[@role='main']/section[@class='notfound']//div[@class='notfound__text-title']";
 		
-	public static final String Product_noVariations = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/onebot-l2416-g4400-120g-ssd-4g-ddr4-1920-1080-23-8-all-in-one-computer-desktop-dual-core-all-in-one-pc-for-office-bussiness/32838774114/?utm_medium=email";
+//	public static final String Product_noVariations = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/onebot-l2416-g4400-120g-ssd-4g-ddr4-1920-1080-23-8-all-in-one-computer-desktop-dual-core-all-in-one-pc-for-office-bussiness/32838774114/?utm_medium=email";
+	public static final String Product_noVariations = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/sleeping-anti-schnarchen-nase-clip-silicone-magnetic-anti-snoring-nose-clips-breathing-stop-snore-apnea-antisnoring-clip-device/32952209706/?utm_medium=email";
 	public static final String Product_noVariations2 = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/onebot-g32-31-5-inch-curved-led-gaming-monitor-144hz-1920-1080p-dvi-hd-ports-displayport-1800r-immersive-curvature/32887298148/?utm_medium=email";
 	public static final String Product_noVariationsAmazon = "https://www.zipy.co.il/p/amazon/bm-premium-bp718-bp727-battery-charger-for-canon-hfr80-hfr82-hfr800-hfr70-hfr72-hfr700-hfm52-hfm500-hfr30-hfr32-hfr300-hfr40-hfr42-hfr400-hfr50-hfr52-hfr500-hfr60-hfr62-hfr600/B009ZWNKQ0/";
 	public static final String Product_oneVariation = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/A/32958346076/?utm_medium=email";
+	//one var:  https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/A/32847534585/?utm_medium=email
 	public static final String Product_twoVariations = "https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/rez-micro-usb-cable-usb-charging-cord-mobile-phone-nylon-xiaomi-android-samsung-for-hua-wei/32995752928/?utm_medium=email";
-	//no variations and no delivery : https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/sleeping-anti-schnarchen-nase-clip-silicone-magnetic-anti-snoring-nose-clips-breathing-stop-snore-apnea-antisnoring-clip-device/32952209706/?fd=
+	//no variations and no delivery : https://www.zipy.co.il/p/%D7%90%D7%9C%D7%99%D7%90%D7%A7%D7%A1%D7%A4%D7%A8%D7%A1/sleeping-anti-schnarchen-nase-clip-silicone-magnetic-anti-snoring-nose-clips-breathing-stop-snore-apnea-antisnoring-clip-device/32952209706/?utm_medium=email
 
 	public static final String lessThan5_Open ="/html/body/div[@class='wrap wrap_with_mehes']//ul[@class='stores']//a/span";
 	public static final String lessThan5_dealThumbnail1 = "//*[@id=\"wrapper\"]/div[2]/main/section[2]/div[2]/div[1]/a";
