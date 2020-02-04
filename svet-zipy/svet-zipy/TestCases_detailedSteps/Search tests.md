@@ -209,7 +209,7 @@
 
 ----
  
-### Search_links:</strong></summary> 
+### Search_links: 
 
 <details>
 <summary><strong>searching on Israel site - link from aliExpress</strong></summary> 
@@ -240,7 +240,8 @@
 - if search succeed, the product we found on zipy is the same from amazon   
 </p>
 </details> 
-   
+ 
+ <details>  
  </strong></summary> searching on Greece site - link from aliExpress</strong></summary> 
  <p>   
     
