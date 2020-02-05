@@ -24,11 +24,10 @@ public class Loading extends Loading_MAIN {
 		driver.get(ElementsWebsites.Zipy_il_deals);
 
 		//click on thumbnail and check its spinner element
-		driver.findElement(By.xpath(ElementsThumbs.dailyDeal_3_thumbnail)).click();		
-		WebElement spinner = driver.findElement(By.xpath(ElementsThumbs.dailyDeal_3_spinner));
+		act.click(ElementsThumbs.dailyDeal_3_thumbnail, driver);
 		
 		//if correct, spinner displayed
-		Assert.assertTrue(spinner.isDisplayed());	
+		Assert.assertTrue(act.elementDisplayed(ElementsThumbs.dailyDeal_3_spinner, driver));	
 
 	}
 	
@@ -42,11 +41,11 @@ public class Loading extends Loading_MAIN {
 		driver.get(ElementsWebsites.Zipy_il_deals);
 
 		//click one thumbnail and then another one and check their spinner elements
-		driver.findElement(By.xpath(ElementsThumbs.dailyDeal_3_thumbnail)).click();
-		driver.findElement(By.xpath(ElementsThumbs.dailyDeal_4_thumbnail)).click();		
+		act.click(ElementsThumbs.dailyDeal_3_thumbnail, driver);
+		act.click(ElementsThumbs.dailyDeal_4_thumbnail, driver);
 
-		WebElement spinner3 = driver.findElement(By.xpath(ElementsThumbs.dailyDeal_3_spinner));
-		WebElement spinner4 = driver.findElement(By.xpath(ElementsThumbs.dailyDeal_4_spinner));
+		WebElement spinner3 = act.saveElement(ElementsThumbs.dailyDeal_3_spinner, driver);
+		WebElement spinner4 = act.saveElement(ElementsThumbs.dailyDeal_4_spinner, driver);
 		
 		//if correct, spinner displayed on the second thumbnail only
 		Assert.assertTrue(!spinner3.isDisplayed() && spinner4.isDisplayed());	

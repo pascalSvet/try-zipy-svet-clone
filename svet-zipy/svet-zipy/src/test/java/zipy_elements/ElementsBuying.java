@@ -7,7 +7,7 @@ public class ElementsBuying {
 
 	public static final String ProductFramed_next = "/html/body/div[@role='dialog']//div[@class='featherlight-content quick-view']/span[1]/span[@class='ico ico--arrow-slider']";
 	public static final String ProductFramed_close = "/html/body/div[4]/div/div/div/span/span";
-	public static final String Product_addToCart = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']//div[@class='product__buy-buttons']/a/span";	
+	public static final String Product_addToCart = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']//div[@class='product__buy-buttons']/a/span[@class='ico ico--cart']";	
 	public static final String Product_addedToCart = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='product__buy-buttons-buy-now']/a[2]";
 	public static final String Product_openCart = "/html//div[@id='topbar']//span[@class='ico ico--cart']";
 	public static final String Product_closeCart = "/html//div[@id='topbar']//span[@class='ico ico--cart']";
@@ -33,7 +33,8 @@ public class ElementsBuying {
 	public static final String Product_cart_quantityDrop_1 = "/html//div[@role='dialog']//div[@id='popup_cart-count']/div[@class='cart-count']/a[1]";
 	public static final String Product_cart_quantityDrop_10 = "/html//div[@role='dialog']//div[@id='popup_cart-count']/div[@class='cart-count']/a[10]";
 
-	
+	public static final String paymentSuccess_page = "https://www.zipy.co.il/payment/success";
+
 	
 //// favorites: ////////////////////////////////////////////////////////
 
@@ -49,36 +50,38 @@ public class ElementsBuying {
 
 	
 	
-//// product page: ////////////////////////////////////////////////////////
+////product page: ////////////////////////////////////////////////////////
 
-	public static final String Product_variationsColor ="/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']/div[@class='sell-wrap']/div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
-	public static final String Product_variationsColorAgain = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td//div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
-	public static final String Product_variationsColor_i = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[";
-	public static final String Product_variationsColor_1 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[2]";
-	public static final String Product_variationsColor_1_img = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[2]/span/img";
-	public static final String Product_variationsColor_1_imgSelected = "//*[@id='wrapper']/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[2]/span/img";
-	public static final String Product_variationsColor_2 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[3]";
-	public static final String Product_variationsColor_2_img = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[3]/span/img";
-	public static final String Product_variationsColor_2_imgSelected = "//*[@id='wrapper']/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[3]/span/img";
+	public static final String Product_variationsFirst ="/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']/div[@class='sell-wrap']/div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
+	public static final String Product_variationsFirstAgain = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td//div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
+	public static final String Product_variationsFirst_i = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[";
+	public static final String Product_variationsFirst_1 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[2]";
+	public static final String Product_variationsFirst_1_img = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[2]/span/img";
+	public static final String Product_variationsFirst_1_imgSelected = "//*[@id='wrapper']/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[2]/span/img";
+	public static final String Product_variationsFirst_2 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[3]";
+	public static final String Product_variationsFirst_2_img = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[3]/span/img";
+	public static final String Product_variationsFirst_2_imgSelected = "//*[@id='wrapper']/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[3]/span/img";
+	public static final String Product_variationsFirst_3 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[4]";
+	public static final String Product_variationsFirst_5 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[6]";
+	public static final String Product_variationsFirst_5_img = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[6]/span/img";
+	public static final String Product_variationsFirst_dropdownFrame = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]";
+	public static final String Product_variationsFirst_text ="//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[2]/p/span/span";
 
-	public static final String Product_variationsColor_3 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[4]";
-	public static final String Product_variationsColor_5 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[6]";
-	public static final String Product_variationsColor_5_img = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[6]/span/img";
-	public static final String Product_variationsLength ="/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']/div[@class='sell-wrap']/div[@class='buy-options']/table[@class='product__params']/tbody/tr[2]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
-	public static final String Product_variationsLengthAgain ="/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']//div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric']/span[@class='ico ico--arrow-triangle-down']";
-	public static final String Product_variationsLength_1 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[2]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[2]";
-	public static final String Product_variationsLength_2 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[2]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[3]";
-	public static final String Product_variationsLength_i = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[2]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[";
-	public static final String Product_variationsColor_dropdownFrame = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]";
-	public static final String Product_variationsLength_dropdownFrame = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[2]/td/div/div[2]/div[1]/div[1]";
-	public static final String Product_variationsFrameClosed = "selectric-wrapper";
-	
+	public static final String Product_variationsSecond ="/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']/div[@class='sell-wrap']/div[@class='buy-options']/table[@class='product__params']/tbody/tr[2]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
+	public static final String Product_variationsSecondAgain ="/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']/div[@class='product__main']//div[@class='buy-options']/table[@class='product__params']//div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric']/span[@class='ico ico--arrow-triangle-down']";
+	public static final String Product_variationsSecond_1 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[2]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[2]";
+	public static final String Product_variationsSecond_2 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[2]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[3]";
+	public static final String Product_variationsSecond_i = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[2]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[";
+	public static final String Product_variationsSecond_dropdownFrame = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[2]/td/div/div[2]/div[1]/div[1]";
+	public static final String Product_variationsSecond_text ="//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[2]/td/div/div[2]/div[1]/div[1]/div[2]/p/span/span";
+
 	public static final String Product_variationsThird ="/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']/div[@class='sell-wrap']/div[@class='buy-options']/table[@class='product__params']/tbody/tr[3]/td/div[@class='product__params-selection']/div[@class='field__field']/div[@class='select type-variations']/div[1]/div[@class='selectric']//span[@class='selectric-option-text']";
 	public static final String Product_variationsThird_1 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[3]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[2]";
 	public static final String Product_variationsThird_i = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[3]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[";
 	public static final String Product_variationsThird_2 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[3]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[3]";
 	public static final String Product_variationsThird_dropdownFrame = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[3]/td/div/div[2]/div[1]/div[1]";
 
+	public static final String Product_variationsFrameClosed = "selectric-wrapper";
 	
 	public static final String Product_plusOne = "/html//div[@id='wrapper']/div[3]//section/div[@class='product__body']//div[@class='product__buy-buttons-buy-now']/a[1]/span[@class='button-buy-amount-text']";
 	public static final String Product_quantityManual_mobile = "/html//input[@id='accessibility-buy-product-amount']";
@@ -95,28 +98,7 @@ public class ElementsBuying {
 	public static final String Product_pin = "/html//div[@id='wrapper']//section//div[@class='product__pin']/a/span[@class='product__pin-anchor']";
 	public static final String Product_dailyDealsTitle = "/html/body//section[@class='one-block']//main[@role='main']/section//div[@class='daily__heading-deal']";
 
-	
-	
-//// product quick-popup: ////////////////////////////////////////////////////////
-
-	public static final String ProductFramed_color ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']/div[@class='featherlight-content quick-view']/div[@class='featherlight-content-wrap']/div/section/div[@class='product__body']//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric']/p/span";
-	public static final String ProductFramed_color_1 ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric-items']/div/ul/li[2]/span";
-	public static final String ProductFramed_color_2 ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric-items']/div/ul/li[3]/span";
-	public static final String ProductFramed_length ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']/div[@class='featherlight-content quick-view']/div[@class='featherlight-content-wrap']/div/section/div[@class='product__body']//div[@class='buy-options']/table[@class='product__params']/tbody/tr[2]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric']/p/span";
-	public static final String ProductFramed_length_1 = "/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[2]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric-items']/div/ul/li[2]/span";
-	public static final String ProductFramed_length_2 = "/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[2]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric-items']/div/ul/li[2]/span";
-	public static final String ProductFramed_color_dropdownFrame = "/html/body/div[*]/div/div/div/div/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]";
-	public static final String ProductFramed_length_dropdownFrame = "/html/body/div[*]/div/div/div/div/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[2]/td/div/div[2]/div[1]/div[1]";
-	public static final String ProductFramed_third ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']/div[@class='featherlight-content quick-view']/div[@class='featherlight-content-wrap']/div/section/div[@class='product__body']//div[@class='buy-options']/table[@class='product__params']/tbody/tr[3]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric']/p/span";
-	public static final String ProductFramed_third_1 ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[3]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric-items']/div/ul/li[2]/span";
-	public static final String ProductFramed_third_2 ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[3]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric-items']/div/ul/li[3]/span";
-	public static final String ProductFramed_third_dropdownFrame = "/html/body/div[*]/div/div/div/div/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[3]/td/div/div[2]/div[1]/div[1]";
-
-	public static final String ProductFramed_addToCart = "/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='product__buy']/div[@class='product__buy-buttons']/a/span[@class='button__inner']";	
-	public static final String Checkout_button = "/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']/div[@class='featherlight-content quick-view']/div[@class='featherlight-content-wrap']//section//div[@class='product__buy']/div[@class='product__buy-buttons']/div[@class='product__buy-buttons-buy-now']/a[2]//span[@class='button__inner']";
 	public static final String PayNow_button = "/html//div[@id='wrapper']/div[@class='product__page']//section/div[@class='product__body']/div[@class='product__main']//div[@class='product__buy-buttons-buy-now']/a[2]//span[@class='button__inner']";
-	public static final String ProceedToPayment_button_framed = "/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']/div[@class='featherlight-content quick-view']/div[@class='featherlight-content-wrap']//section//div[@class='product__buy']/div[@class='product__buy-buttons']/div[@class='product__buy-buttons-buy-now']/a[2]//span[@class='ico ico--arrow']";
-	public static final String ProceedToPayment_button = "/html//div[@id='wrapper']/div[2]//section/div[@class='product__body']/div[@class='product__main']//div[@class='product__buy-buttons-buy-now']/a[2]//span[@class='ico ico--arrow']";
 	public static final String Product_payment_Remove = "/html//div[@id='wrapper']/div[2]/div[2]/div[@class='user-goods-list']/div[1]/div[1]//span[@class='ico']";
 	public static final String Product_payment_Remove_mobile = "/html//div[@id='wrapper']/div[2]/div[2]/div[@class='user-goods-list']/div[1]/div//span[@class='ico']";
 	public static final String Product_paymentPopup_Remove = "//div[@id='payment_item_delete_popup']/div[@class='popup__delete']/div[4]";
@@ -127,6 +109,26 @@ public class ElementsBuying {
 	public static final String Thanks_box = "/html//div[@id='wrapper']/div[@class='pay']/div[@class='pay__main']/div[2]//div[@class='pay__step-success']/div[1]/p[1]";
 
 	
+	
+//// product quick-popup page: ////////////////////////////////////////////////////////
+
+	public static final String ProductQuickPopup_variationsFirst ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']/div[@class='featherlight-content quick-view']/div[@class='featherlight-content-wrap']/div/section/div[@class='product__body']//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric']/p/span";
+	public static final String ProductQuickPopup_variationsFirst_1 ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric-items']/div/ul/li[2]/span";
+	public static final String ProductQuickPopup_variationsFirst_2 ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[1]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric-items']/div/ul/li[3]/span";
+	public static final String ProductQuickPopup_variationsSecond ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']/div[@class='featherlight-content quick-view']/div[@class='featherlight-content-wrap']/div/section/div[@class='product__body']//div[@class='buy-options']/table[@class='product__params']/tbody/tr[2]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric']/p/span";
+	public static final String ProductQuickPopup_variationsSecond_1 = "/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[2]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric-items']/div/ul/li[2]/span";
+	public static final String ProductQuickPopup_variationsSecond_2 = "/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[2]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric-items']/div/ul/li[2]/span";
+	public static final String ProductQuickPopup_variationsFirst_dropdownFrame = "/html/body/div[*]/div/div/div/div/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[1]/td/div/div[2]/div[1]/div[1]";
+	public static final String ProductQuickPopup_variationsSecond_dropdownFrame = "/html/body/div[*]/div/div/div/div/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[2]/td/div/div[2]/div[1]/div[1]";
+	public static final String ProductQuickPopup_variationsThird ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']/div[@class='featherlight-content quick-view']/div[@class='featherlight-content-wrap']/div/section/div[@class='product__body']//div[@class='buy-options']/table[@class='product__params']/tbody/tr[3]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric']/p/span";
+	public static final String ProductQuickPopup_variationsThird_1 ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[3]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric-items']/div/ul/li[2]/span";
+	public static final String ProductQuickPopup_variationsThird_2 ="/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='buy-options']/table[@class='product__params']/tbody/tr[3]/td/div[@class='product__params-selection']/div[@class='field__field']/div[1]/div[1]/div[@class='selectric-items']/div/ul/li[3]/span";
+	public static final String ProductQuickPopup_variationsThird_dropdownFrame = "/html/body/div[*]/div/div/div/div/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[3]/td/div/div[2]/div[1]/div[1]";
+
+	public static final String ProductQuickPopup_addToCart = "/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']//div[@class='featherlight-content-wrap']//section//div[@class='product__buy']/div[@class='product__buy-buttons']/a/span[@class='button__inner']";		
+	public static final String ProductQuickPopup_PayNow_button = "/html/body/div[@role='dialog']/div[@class='featherlight-close-layer']/div[@class='featherlight-content quick-view']/div[@class='featherlight-content-wrap']//section//div[@class='product__buy']/div[@class='product__buy-buttons']/div[@class='product__buy-buttons-buy-now']/a[2]//span[@class='button__inner']";
+
+
 	
 //// gallery: ////////////////////////////////////////////////////////
 

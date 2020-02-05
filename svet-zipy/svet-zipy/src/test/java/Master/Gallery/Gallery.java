@@ -24,18 +24,15 @@ public class Gallery extends Gallery_MAIN {
 		
 		//open required product and save its main picture at gallery
 		driver.get(ElementsBuying.ProductWithColors);
-		Thread.sleep(1000);
-		String gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
+		Thread.sleep(1000);		
+		String gallery_image = act.elementAttText(ElementsBuying.Product_galleryImage, "src", driver);		
 
 		//choose the first variation and save its image
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();
-		Thread.sleep(1000);
-		String variation1_image = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1_img)).getAttribute("src");		
+		Functions.chooseVariations_firstVariation_productPage(driver, "1");
+		String variation1_image = act.elementAttText(ElementsBuying.Product_variationsFirst_1_imgSelected, "src", driver);
 		
-		//save the new image of gallery
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1)).click();
-		wait.until(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath(ElementsBuying.Product_galleryImage), "src", gallery_image)));
-		gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
+		act.waitForAttributeChange(ElementsBuying.Product_galleryImage, "src", gallery_image, driver);
+		gallery_image = act.elementAttText(ElementsBuying.Product_variationsFirst_1_img, "src", driver);
 
 		//if correct, the images are identical 
 		Assert.assertTrue(gallery_image.equals(variation1_image));	
@@ -50,24 +47,17 @@ public class Gallery extends Gallery_MAIN {
 		//open required product and save its main picture at gallery
 		driver.get(ElementsBuying.ProductWithColors);
 		Thread.sleep(1000);
-		String gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
+		String gallery_image = act.elementAttText(ElementsBuying.Product_galleryImage, "src", driver);		
+		
+		//choose first variation - first option
+		Functions.chooseVariations_firstVariation_productPage(driver, "1");
 
-		//choose first variation 
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();
-		Thread.sleep(1000);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsColor_1))).click();
-		Thread.sleep(3000);
+		//change to second option and save its image 
+		Functions.chooseVariations_firstVariationAgain_productPage(driver, "2");
+		String variation2_image = act.elementAttText(ElementsBuying.Product_variationsFirst_2_imgSelected, "src", driver);
 
-		//change to second variation and save its image 
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColorAgain)).click();
-		Thread.sleep(1000);
-		gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");
-		String variation2_image = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_2_img)).getAttribute("src");		
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_2)).click();
-	
 		//save the new image of gallery
-		wait.until(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath(ElementsBuying.Product_galleryImage), "src", gallery_image)));
-		gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
+		gallery_image = act.elementAttText(ElementsBuying.Product_galleryImage, "src", driver);		
 
 		//if correct, the images are identical 
 		Assert.assertTrue(gallery_image.equals(variation2_image));			
@@ -80,15 +70,16 @@ public class Gallery extends Gallery_MAIN {
 		
 		//open required product
 		driver.get(ElementsBuying.ProductWithColors);
-		
-		//save the main picture image and the second bottom image in gallery 
-		String gallery_bottomImage2 = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage_bottom2)).getAttribute("src");					
-		String gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
+		Thread.sleep(1000);
+
+		//save the main picture image and the second bottom image in gallery 	
+		String gallery_bottomImage2 = act.elementAttText(ElementsBuying.Product_galleryImage_bottom2, "src", driver);			
+		String gallery_image = act.elementAttText(ElementsBuying.Product_galleryImage, "src", driver);			
 
 		//slide left in gallery and save the new image
-		driver.findElement(By.xpath(ElementsBuying.Product_galleryImage_left)).click();
-		wait.until(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath(ElementsBuying.Product_galleryImage), "src", gallery_image)));
-		gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
+		act.click(ElementsBuying.Product_galleryImage_left, driver);
+		act.waitForAttributeChange(ElementsBuying.Product_galleryImage, "src", gallery_image, driver);
+		gallery_image = act.elementAttText(ElementsBuying.Product_galleryImage, "src", driver);		
 
 		//if correct, the images are identical 
 		Assert.assertTrue(gallery_image.equals(gallery_bottomImage2));					
@@ -102,23 +93,23 @@ public class Gallery extends Gallery_MAIN {
 		
 		//open required product
 		driver.get(ElementsBuying.ProductWithColors);
-		
+		Thread.sleep(1000);
+
 		//save the main picture image and the first bottom image in gallery 
-		String gallery_bottomImage1 = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage_bottom1)).getAttribute("src");		
-		String gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
+		String gallery_image = act.elementAttText(ElementsBuying.Product_galleryImage, "src", driver);			
 
 		//slide left in gallery and save the new image
-		driver.findElement(By.xpath(ElementsBuying.Product_galleryImage_left)).click();
-		wait.until(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath(ElementsBuying.Product_galleryImage), "src", gallery_image)));
-		gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
+		act.click(ElementsBuying.Product_galleryImage_left, driver);
+		act.waitForAttributeChange(ElementsBuying.Product_galleryImage, "src", gallery_image, driver);
+		String gallery_imageNew = act.elementAttText(ElementsBuying.Product_galleryImage, "src", driver);		
 
 		//slide back right in gallery and save the new image
-		driver.findElement(By.xpath(ElementsBuying.Product_galleryImage_right)).click();
-		wait.until(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath(ElementsBuying.Product_galleryImage), "src", gallery_image)));
-		gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
+		act.click(ElementsBuying.Product_galleryImage_right, driver);
+		act.waitForAttributeChange(ElementsBuying.Product_galleryImage, "src", gallery_imageNew, driver);
+		gallery_imageNew = act.elementAttText(ElementsBuying.Product_galleryImage, "src", driver);		
 
 		//if correct, the images are identical 
-		Assert.assertTrue(gallery_image.equals(gallery_bottomImage1));	
+		Assert.assertTrue(gallery_image.equals(gallery_imageNew));	
 	}
 
 
@@ -129,20 +120,17 @@ public class Gallery extends Gallery_MAIN {
 		
 		//open required product
 		driver.get(ElementsBuying.ProductWithColors);
-		
+		Thread.sleep(1000);
+
 		//save the main picture image and the third bottom image in gallery 
-		String gallery_bottomImage3 = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage_bottom3)).getAttribute("src");					
-		String gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
+		String gallery_bottomImage3 = act.elementAttText(ElementsBuying.Product_galleryImage_bottom3, "src", driver);			
+		String gallery_image = act.elementAttText(ElementsBuying.Product_galleryImage, "src", driver);			
 
-		//slide left in gallery and save the new image
-		driver.findElement(By.xpath(ElementsBuying.Product_galleryImage_left)).click();
-		wait.until(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath(ElementsBuying.Product_galleryImage), "src", gallery_image)));
-		gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
-
-		//slide left in gallery and save the new image
-		driver.findElement(By.xpath(ElementsBuying.Product_galleryImage_left)).click();
-		wait.until(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath(ElementsBuying.Product_galleryImage), "src", gallery_image)));
-		gallery_image = driver.findElement(By.xpath(ElementsBuying.Product_galleryImage)).getAttribute("src");		
+		//slide left in gallery twice and save the new image
+		act.click(ElementsBuying.Product_galleryImage_left, driver);
+		act.click(ElementsBuying.Product_galleryImage_left, driver);
+		Thread.sleep(1000);
+		gallery_image = act.elementAttText(ElementsBuying.Product_galleryImage, "src", driver);	
 
 		//if correct, the images are identical 
 		Assert.assertTrue(gallery_image.equals(gallery_bottomImage3));					
@@ -158,13 +146,11 @@ public class Gallery extends Gallery_MAIN {
 		Thread.sleep(1000);
 
 		//save the image of the first variation
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();
-		Thread.sleep(1000);
-		String variation1_image = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1_img)).getAttribute("src");		
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1)).click();
+		Functions.chooseVariations_firstVariation_productPage(driver, "1");
+		String variation1_image = act.elementAttText(ElementsBuying.Product_variationsFirst_1_imgSelected, "src", driver);
 
 		//save the image appeared near the chosen variation
-		String nearVariation_image = driver.findElement(By.xpath(ElementsBuying.Product_gallery_nearVariation)).getAttribute("src");
+		String nearVariation_image = act.elementAttText(ElementsBuying.Product_gallery_nearVariation, "src", driver);
 		
 		//if correct, the images are identical 
 		Assert.assertTrue(variation1_image.equals(nearVariation_image));			
@@ -180,19 +166,14 @@ public class Gallery extends Gallery_MAIN {
 		Thread.sleep(1000);
 
 		//choose first variation 
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();
-		Thread.sleep(1000);
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1)).click();
-		Thread.sleep(3000);
+		Functions.chooseVariations_firstVariation_productPage(driver, "1");
 
 		//change to second variation and save its image 
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColorAgain)).click();
-		Thread.sleep(1000);
-		String variation2_image = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_2_img)).getAttribute("src");		
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_2)).click();
+		Functions.chooseVariations_firstVariationAgain_productPage(driver, "2");
+		String variation2_image = act.elementAttText(ElementsBuying.Product_variationsFirst_2_imgSelected, "src", driver);
 
 		//save the image appeared near the chosen variation
-		String nearVariation_image = driver.findElement(By.xpath(ElementsBuying.Product_gallery_nearVariation)).getAttribute("src");
+		String nearVariation_image = act.elementAttText(ElementsBuying.Product_gallery_nearVariation, "src", driver);
 		
 		//if correct, the images are identical 
 		Assert.assertTrue(variation2_image.equals(nearVariation_image));			

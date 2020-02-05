@@ -60,9 +60,9 @@ public class Cart_price extends Cart_MAIN {
 		}
 				
 		//choose the product variation - first option from the droplist
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsColor))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsFirst))).click();
 		Thread.sleep(500);
-		WebElement variationColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1));
+		WebElement variationColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsFirst_1));
 		variationColor_1.click();
 				
 		//add to the cart and save the price after discount
@@ -168,8 +168,8 @@ public class Cart_price extends Cart_MAIN {
 		}
 					
 		//choose the product variation - first option from the droplist and save its price
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsColor))).click();		
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsColor_1))).click();;
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsFirst))).click();		
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsFirst_1))).click();;
 		Thread.sleep(3000);
 		String price1 = driver.findElement(By.xpath(ElementsBuying.Product_discount)).getText().trim();	
 		
@@ -178,8 +178,8 @@ public class Cart_price extends Cart_MAIN {
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlusAgain)));
 
 		//choose another product variation - second option from the droplist - and save its name
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsColorAgain))).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsColor_3))).click();;
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsFirstAgain))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsFirst_3))).click();;
 		Thread.sleep(3000);
 		String price2 = driver.findElement(By.xpath(ElementsBuying.Product_discount)).getText().trim();	
 		

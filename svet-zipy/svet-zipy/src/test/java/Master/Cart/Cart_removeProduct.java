@@ -148,9 +148,9 @@ public class Cart_removeProduct extends Cart_MAIN {
 
 		//choose the product variation - first option from the droplist - and save its name
 		Thread.sleep(1000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsColor))).click();		
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsFirst))).click();		
 		Thread.sleep(1000);
-		WebElement variationColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1));
+		WebElement variationColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsFirst_1));
 		String ProductVariation1 = variationColor_1.getText().trim();;
 		variationColor_1.click();						
 		
@@ -161,9 +161,9 @@ public class Cart_removeProduct extends Cart_MAIN {
 
 		//choose another product variation - second option from the droplist - and save its name
 		Thread.sleep(1000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsColorAgain))).click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsFirstAgain))).click();
 		Thread.sleep(2000);
-		WebElement variationColor_2 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_3));
+		WebElement variationColor_2 = driver.findElement(By.xpath(ElementsBuying.Product_variationsFirst_3));
 		String ProductVariation2 = variationColor_2.getText().trim();
 		variationColor_2.click();
 		

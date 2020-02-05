@@ -23,24 +23,20 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		
 		//get to the required product page
 		driver.get(ElementsBuying.Product_oneVariation);
-		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
-		//save its name
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");		
-
-		//choose the product variation - first option from the droplist - and save variation name
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();		
-		Thread.sleep(1500);
-		WebElement elementColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1));
-		String ProductElement1 = elementColor_1.getText().trim();
-		elementColor_1.click();
 		
+		//make sure there is no 400 error
+		Functions.validate_error404(driver);
+
+		//save its name
+		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);		
+
+		//choose the product variation - first option - and save variation name
+		Functions.chooseVariations_firstVariation_productPage(driver, "1");
+		String ProductElement1 = act.elementText(ElementsBuying.Product_variationsFirst_text, driver);
+						
 		//add to the cart
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
 		WebElement cartFrame = Functions.openCart(driver);
 
 		// if we managed to add the product correctly, its title and its chosen variation are found in the cart:
@@ -57,30 +53,22 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		//get to the required product page
 		driver.get(ElementsBuying.Product_twoVariations);
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
-		//save its name
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");				
+		Functions.validate_error404(driver);
 
-		//choose the first variation - first option from the first droplist - and save its name
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();
-		Thread.sleep(1500);
-		WebElement variationColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1));
-		String ProductVariation1 = variationColor_1.getText().trim();
-		variationColor_1.click();
+		//save its name
+		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);				
+
+		//choose the first variation - first option - and save its name
+		Functions.chooseVariations_firstVariation_productPage(driver, "1");
+		String ProductVariation1 = act.elementText(ElementsBuying.Product_variationsFirst_text, driver);
 		
-		//choose the second variation - first option from the second droplist - and save its name
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsLength))).click();		
-		Thread.sleep(1500);
-		WebElement variationLength_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsLength_1));
-		String ProductVariation2 = variationLength_1.getText().trim();
-		variationLength_1.click();
+		//choose the second variation - first option - and save its name
+		Functions.chooseVariations_secondVariation_productPage(driver, "1");
+		String ProductVariation2 = act.elementText(ElementsBuying.Product_variationsSecond_text, driver);
 		
 		//add to the cart
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
 		WebElement cartFrame = Functions.openCart(driver);
 
 		// if we managed to add the product correctly, its title and its chosen variations are found in the cart:
@@ -97,36 +85,29 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 			
 			//get to the required product page
 			driver.get(ElementsBuying.Product_oneVariation);
+	
 			//make sure there is no 400 error
-			if(driver.getTitle().contains("404")) {
-				System.out.println("test failed because of 404 eror");
-				Assert.assertTrue(false);
-			}
-			//save its name
-			String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");		
+			Functions.validate_error404(driver);
 
-			//choose the product variation - first option from the droplist - and save elements name
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsColor))).click();		
-			Thread.sleep(1000);
-			WebElement variationColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1));
-			String ProductVariation1 = variationColor_1.getText().trim();;
-			variationColor_1.click();						
+			//save its name
+			String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);		
+
+			//choose the product variation - first option - and save elements name
+			Functions.chooseVariations_firstVariation_productPage(driver, "1");
+			String ProductVariation1 = act.elementText(ElementsBuying.Product_variationsFirst_text, driver);						
 			
 			//add to the cart
 			Thread.sleep(2000);
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlusAgain)));
+			act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+			act.waitForPresence(ElementsBuying.Product_quantityPlusAgain, driver);
 
-			//choose another product variation - second option from the droplist - and save its name
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsColorAgain))).click();
-			Thread.sleep(3500);
-			WebElement variationColor_2 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_3));
-			String ProductVariation2 = variationColor_2.getText().trim();
-			variationColor_2.click();
+			//choose another product variation - third option - and save its name
+			Functions.chooseVariations_firstVariationAgain_productPage(driver, "3");
+			String ProductVariation2 = act.elementText(ElementsBuying.Product_variationsFirst_text, driver);
 			
 			//add to the cart again
 			Thread.sleep(2000);
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+			act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
 			WebElement cartFrame = Functions.openCart(driver);
 
 			// if we managed to add the product correctly, its title and its chosen variations are found in the cart:
@@ -148,42 +129,31 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		//get to the required product page
 		driver.get(ElementsBuying.Product_twoVariations);
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
-		//save its name
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");				
+		Functions.validate_error404(driver);
 
-		//choose the first variation - first option from the first droplist - and save its name
-		driver.findElement(By.xpath(ElementsBuying.Product_variationsColor)).click();		
-		Thread.sleep(500);
-		WebElement variationColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsColor_1));
-		String ProductVariation1 = variationColor_1.getText().trim();;
-		variationColor_1.click();
+		//save its name
+		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);				
+
+		//choose the first variation - first option - and save its name
+		Functions.chooseVariations_firstVariation_productPage(driver, "1");
+		String ProductVariation1 = act.elementText(ElementsBuying.Product_variationsFirst_text, driver);
 		
-		//choose the second variation - first option from the second droplist - and save its name
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsLength))).click();		
-		Thread.sleep(500);
-		WebElement variationLength_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsLength_1));
-		String ProductVariation2 = variationLength_1.getText().trim();;
-		variationLength_1.click();
+		//choose the second variation - first option - and save its name
+		Functions.chooseVariations_secondVariation_productPage(driver, "1");
+		String ProductVariation2 = act.elementText(ElementsBuying.Product_variationsSecond_text, driver);
 		
 		//add to the cart
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlusAgain)));
+		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+		act.waitForPresence(ElementsBuying.Product_quantityPlusAgain, driver);
 
-		//choose the second variation again - second option from the second droplist - and save its name
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsLengthAgain))).click();	
-		Thread.sleep(1000);
-		WebElement variationLength_2 = driver.findElement(By.xpath(ElementsBuying.Product_variationsLength_2));
-		String ProductVariation3 = variationLength_2.getText().trim();
-		variationLength_2.click();
+		//choose another second product variation - second option - and save its name
+		Functions.chooseVariations_secondVariationAgain_productPage(driver, "2");
+		String ProductVariation3 = act.elementText(ElementsBuying.Product_variationsFirst_text, driver);
 
 		//add to the cart again
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
 
 		WebElement cartFrame = Functions.openCart(driver);
 
@@ -207,16 +177,14 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		driver.get(ElementsBuying.Product_noVariations);
 
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
+
 
 		//add to the cart and then add another one to the cart with the plus-one button
 		Thread.sleep(1500);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
 		Thread.sleep(1500);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_plusOne))).click();
+		act.waitForPresenceAndClick(ElementsBuying.Product_plusOne, driver);
 
 		WebElement cartFrame = Functions.openCart(driver);
 
@@ -235,15 +203,14 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		driver.get(ElementsBuying.Product_noVariations);
 
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
+
 		
 		//increase the quantity to 2 and then add to the cart 
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_quantityPlus))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_quantityPlus, driver);
+
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_addToCart))).click();
+		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
 
 		WebElement cartFrame = Functions.openCart(driver);
 
@@ -263,17 +230,16 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		driver.get(ElementsBuying.Product_noVariations);
 
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
+
 
 		//add to the cart and then increase the quantity to another 2 and add to the cart again 
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_addToCart))).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_quantityPlusAgain))).click();
+		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+		act.waitForClickableAndClick(ElementsBuying.Product_quantityPlusAgain, driver);
+
 		Thread.sleep(1000);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_plusOne))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_plusOne, driver);
 
 		WebElement cartFrame = Functions.openCart(driver);
 
@@ -292,18 +258,17 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		driver.get(ElementsBuying.Product_noVariations);
 
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
+
 
 		//add to the cart 
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_addToCart))).click();
+		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
 
 		//back to main page and open the cart			
 		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
+
+		act.waitForClickableAndClick(ElementsBuying.Product_openCart, driver);
 		Thread.sleep(3000);
 		//change the quantity in the cart manually to 3
 		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity))).click()

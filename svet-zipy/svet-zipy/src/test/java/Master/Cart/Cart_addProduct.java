@@ -21,25 +21,24 @@ public class Cart_addProduct extends Cart_MAIN {
 
 		//open deals page
 		driver.get(ElementsWebsites.Zipy_il_deals);
-		
+
 		//open one of the deals products
-		driver.findElement(By.xpath(ElementsThumbs.dailyDeal_onPage_3)).click();
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_deals_withPopup)));
+		act.click(ElementsThumbs.dailyDeal_onPage_3, driver);
+		act.waitForUrlChange(ElementsWebsites.Zipy_il_deals_withPopup, driver);
 		Thread.sleep(2000);
 		
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
+
 		//save its name
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPopup)).getText().trim();
+		String ProductTitle = act.elementText(ElementsBuying.Product_titleFromPopup, driver);
 
 		//choose variations if exist and add to the cart
 		Thread.sleep(2000);
 		Functions.chooseVariations_quickPopupPage(driver);
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_addToCart))).click();
+		
+		act.waitForPresenceAndClick(ElementsBuying.ProductQuickPopup_addToCart, driver);
 		WebElement cartFrame = Functions.openCart(driver);
 		
 		// if we managed to add the product, its title is found in the cart:
@@ -56,19 +55,19 @@ public class Cart_addProduct extends Cart_MAIN {
 		driver.get(ElementsWebsites.Zipy_il_lessThan5);
 
 		//click the third thumbnail
-		driver.findElement(By.xpath(ElementsThumbs.lessThan5_3)).click();	
+		act.click(ElementsThumbs.lessThan5_3, driver);
+
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
+
 		//save its title	
-		String ProductTitle = driver.findElement(By.xpath(ElementsThumbs.lessThan5_3_title)).getText().trim();
-					
+		String ProductTitle = act.elementText(ElementsThumbs.lessThan5_3_title, driver);
+		
 		//choose variations if exist and add to the cart
 		Functions.chooseVariations_quickPopupPage(driver);
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_addToCart))).click();		
+		
+		act.waitForPresenceAndClick(ElementsBuying.ProductQuickPopup_addToCart, driver);
 		WebElement cartFrame = Functions.openCart(driver);
 		
 		// if we managed to add the product, its title is found in the cart:
@@ -88,21 +87,20 @@ public class Cart_addProduct extends Cart_MAIN {
 		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1))).click()
 		.moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1_1))).click().build().perform();
 		
-		//click the third thumbnail  
-		driver.findElement(By.xpath(ElementsThumbs.category_3)).click();	
+		//click the third thumbnail 
+		act.click(ElementsThumbs.category_3, driver);
+
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		} 
+		Functions.validate_error404(driver);
+
 		//save its title	
-		String ProductTitle = driver.findElement(By.xpath(ElementsThumbs.category_3_title)).getText().trim();
+		String ProductTitle = act.elementText(ElementsThumbs.category_3_title, driver);
 		Functions.closePopUp(driver);
 		
 		//choose variations if exist and add to the cart
 		Functions.chooseVariations_quickPopupPage(driver);
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_addToCart))).click();
+		act.waitForPresenceAndClick(ElementsBuying.ProductQuickPopup_addToCart, driver);
 		WebElement cartFrame = Functions.openCart(driver);
 		
 		// if we managed to add the product, its title is found in the cart:
@@ -120,33 +118,30 @@ public class Cart_addProduct extends Cart_MAIN {
 		String currentUrl = driver.getCurrentUrl();
 		
 		//open one of the deals products  
-		driver.findElement(By.xpath(ElementsThumbs.dailyDeal_onPage_3)).click();		
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(currentUrl)));
-		Thread.sleep(2000);	
-		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		} 
-		currentUrl = driver.getCurrentUrl();		
-
-		//move to the next product  
-		driver.findElement(By.xpath(ElementsBuying.ProductFramed_next)).click();
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(currentUrl)));
+		act.click(ElementsThumbs.dailyDeal_onPage_3, driver);
+		act.waitForUrlChange(currentUrl, driver);
 		Thread.sleep(2000);	
 		
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		} 
+		Functions.validate_error404(driver);
+
+		currentUrl = driver.getCurrentUrl();		
+
+		//move to the next product  
+		act.click(ElementsBuying.ProductFramed_next, driver);
+		act.waitForUrlChange(currentUrl, driver);
+		Thread.sleep(2000);	
+		
+		//make sure there is no 400 error
+		Functions.validate_error404(driver);
+
 		//save its name
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPopup)).getText().trim();
+		String ProductTitle = act.elementText(ElementsBuying.Product_titleFromPopup, driver);
 
 		//choose variations if exist and add to the cart
 		Functions.chooseVariations_quickPopupPage(driver);
 		Thread.sleep(2000);	
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_addToCart))).click();
+		act.waitForPresenceAndClick(ElementsBuying.ProductQuickPopup_addToCart, driver);
 		WebElement cartFrame = Functions.openCart(driver);
 
 		// if we managed to add the product, its title is found in the cart:
@@ -162,17 +157,15 @@ public class Cart_addProduct extends Cart_MAIN {
 		driver.get(ElementsBuying.Product_noVariations);
 		
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
 		
-		//save its name
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		//save its name		
+		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 		
 		//add to the cart
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+		Thread.sleep(2000);
 		WebElement cartFrame = Functions.openCart(driver);
 
 		// if we managed to add the product, its title is found in the cart:
@@ -188,31 +181,28 @@ public class Cart_addProduct extends Cart_MAIN {
 		driver.get(ElementsBuying.Product_noVariations);
 		
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		} 
-		//save its name
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		Functions.validate_error404(driver);
+
+		//save its name		
+		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 		
 		//add to the cart
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
 
 		//get to the amazon product page
 		driver.get(ElementsBuying.Product_noVariationsAmazon);
+		
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		} 
+		Functions.validate_error404(driver);
+
 		//save its name
-		String ProductTitleAmazon = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture_amazon)).getAttribute("content");
+		String ProductTitleAmazon = act.elementAttText(ElementsBuying.Product_titleFromPicture_amazon, "content", driver);
 		
 		//add to the cart
 		Thread.sleep(3000);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_addToCart))).click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addedToCart))).click();
+		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+		act.waitForPresence(ElementsBuying.Product_addedToCart, driver);
 		Thread.sleep(1000);
 
 		WebElement cartFrame = Functions.openCart(driver);
@@ -222,8 +212,8 @@ public class Cart_addProduct extends Cart_MAIN {
 				(cartFrame.getText().contains(ProductTitleAmazon)));
 				
 		//at the end, remove the product from the cart, for the future tests
-		driver.findElement(By.xpath(ElementsBuying.Product_cartRemove)).click();
-				
+		act.click(ElementsBuying.Product_cartRemove, driver);
+	
 	}
 	
 	

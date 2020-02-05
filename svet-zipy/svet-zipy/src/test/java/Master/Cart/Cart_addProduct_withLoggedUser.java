@@ -24,18 +24,17 @@ public class Cart_addProduct_withLoggedUser extends Cart_MAIN {
 
 		//get to the required product page
 		driver.get(ElementsBuying.Product_noVariations);
+	
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
+
 		//save its name
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 
 		//add to the cart
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_added)));
+		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+		act.waitForPresence(ElementsBuying.Product_addedToCart, driver);
 
 		//back to main page and connect to the user
 		driver.get(ElementsWebsites.Zipy_il);
@@ -63,17 +62,16 @@ public class Cart_addProduct_withLoggedUser extends Cart_MAIN {
 		
 		//get to the required product page
 		driver.get(ElementsBuying.Product_noVariations);
+
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
+
 		//save its name
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 		
 		//add to the cart /
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
 		
 		//disconnect from the user and then connect back 
 		Functions.unLogIn(driver);

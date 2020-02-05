@@ -32,31 +32,32 @@ public class Cart_mobile extends Cart_MAIN {
 		Thread.sleep(500);
 
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
+
 		//save its price
-		String price = Functions.priceSum(driver, ElementsBuying.Product_price, ElementsBuying.Product_delivery).trim();
+		String price = act.elementText(ElementsBuying.Product_discount, driver);
+		//String price = Functions.priceSum(driver, ElementsBuying.Product_price, ElementsBuying.Product_delivery).trim();
 		
 		//increase the quantity to 2 and then add to the cart 
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlus))).click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_plusOne)));
+		act.waitForPresenceAndClick(ElementsBuying.Product_quantityPlus, driver);
+		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+		act.waitForPresence(ElementsBuying.Product_plusOne, driver);
 
 		//reopen the cart and change the quantity manually to "1"
 		Thread.sleep(1000);
 		((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
-		WebElement Sum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum_mobile));
+		act.waitForClickableAndClick(ElementsBuying.Product_openCart, driver);
+		
+		WebElement Sum = act.saveElement(ElementsBuying.Product_cart_finalSum_mobile, driver);
 		String FirstSum = Sum.getText();
 		
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_cart_quantityDrop))).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_cart_quantityDrop_1))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_cart_quantityDrop, driver);
+		act.waitForClickableAndClick(ElementsBuying.Product_cart_quantityDrop_1, driver);
 				
 		new WebDriverWait(driver, 30).until(ExpectedConditions.not(ExpectedConditions.
 				textToBePresentInElement(Sum, FirstSum)));
-		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum_mobile)).getText();
+		
+		String FinalSum = act.elementText(ElementsBuying.Product_cart_finalSum_mobile, driver);
 
 		// the final sum supposed to be of 1 unit only :
 		Assert.assertTrue(FinalSum.contains(price) && !FirstSum.equals(FinalSum));
@@ -79,11 +80,11 @@ public class Cart_mobile extends Cart_MAIN {
 		//reopen the cart and change the quantity manually to "11"
 		Thread.sleep(1000);
 		((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_openCart, driver);
 		
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_cart_quantityDrop))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_cart_quantityDrop, driver);
 		Thread.sleep(1000);
-		driver.findElement(By.xpath(ElementsBuying.Product_cart_quantityDrop_10)).click();
+		act.click(ElementsBuying.Product_cart_quantityDrop_10, driver);
 		Thread.sleep(2500);
 
 		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity10plus_mobile))).click()
@@ -91,8 +92,8 @@ public class Cart_mobile extends Cart_MAIN {
 
 		//reopen the cart and check for the current quantity
 		driver.get(ElementsWebsites.Zipy_il);		
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
-		String Quantity = driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity_mobile)).getAttribute("value");
+		act.waitForClickableAndClick(ElementsBuying.Product_openCart, driver);		
+		String Quantity = act.elementAttText(ElementsBuying.Product_cart_quantity_mobile, "value", driver);
 
 		// if succeed, the final quantity supposed to be 11 units :
 		Assert.assertTrue(Quantity.equals("11"));
@@ -135,12 +136,13 @@ public class Cart_mobile extends Cart_MAIN {
 		//remove the product to favorites and reopen the cart
 		Functions.removeFromCart_toFavs_mobile(driver); 
 		Functions.openCart(driver);
-		boolean removedItem = driver.findElement(By.xpath(ElementsBuying.Product_cartIsEmpty)).isDisplayed();		
+		boolean removedItem = act.elementDisplayed(ElementsBuying.Product_cartIsEmpty, driver);		
 		
 		// open the favorites window and save its contents
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
+		act.click(ElementsBuying.Product_favoritesButton, driver);	
 		Thread.sleep(500);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+		
+		String favoritesFrame = act.elementText(ElementsBuying.Product_favoritesFrame, driver);
 				
 		// if we managed to remove the product, the cart won't contain its title, but the favorites will contain it:			
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) && removedItem);

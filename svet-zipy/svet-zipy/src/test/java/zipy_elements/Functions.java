@@ -164,6 +164,15 @@ public class Functions {
 					
 	}
 	
+	//stop the test in case of 404 error
+	public static void validate_error404(WebDriver driver) throws Exception{
+		if(driver.getTitle().contains("404")) {
+			System.out.println("test failed because of 404 eror");
+			Assert.assertTrue(false);
+		}	
+	}
+	
+	
 ////////////// cart functions: ////////////////////////////////////////////////////////
 		
 	// A function for emptying the cart.
@@ -305,29 +314,31 @@ public class Functions {
 		String[] chooseInternational = {"Выбрать","בחר", "Διάλεξε","Selectează ", "Scegli","Selecionar"};
 		
 		//choose the first variation if there is such an option
-		if (!driver.findElements(By.xpath(ElementsBuying.ProductFramed_color)).isEmpty()){
+		if (!driver.findElements(By.xpath(ElementsBuying.ProductQuickPopup_variationsFirst)).isEmpty()){
 			Thread.sleep(1000);
-			choose = act.elementText(ElementsBuying.ProductFramed_color, driver);
+			choose = act.elementText(ElementsBuying.ProductQuickPopup_variationsFirst, driver);
 			if (Arrays.asList(chooseInternational).contains(choose)) {
 				Functions.chooseVariations_firstVariation_quickPopup(driver);
 			}
 		}
 		//choose the second variation if there is such an option
-		if (!driver.findElements(By.xpath(ElementsBuying.ProductFramed_length)).isEmpty()){
+		if (!driver.findElements(By.xpath(ElementsBuying.ProductQuickPopup_variationsSecond)).isEmpty()){
 			Thread.sleep(1000);
-			choose = driver.findElement(By.xpath(ElementsBuying.ProductFramed_length)).getText().trim();
+			choose = driver.findElement(By.xpath(ElementsBuying.ProductQuickPopup_variationsSecond)).getText().trim();
 			if (Arrays.asList(chooseInternational).contains(choose)) {
 				Functions.chooseVariations_secondVariation_quickPopup(driver);
 			}
-		}
-		//choose the second variation if there is such an option
-		if (!driver.findElements(By.xpath(ElementsBuying.ProductFramed_third)).isEmpty()){
-			Thread.sleep(1000);
-			choose = driver.findElement(By.xpath(ElementsBuying.ProductFramed_third)).getText().trim();
-			if (Arrays.asList(chooseInternational).contains(choose)) {
-				Functions.chooseVariations_thirdVariation_quickPopup(driver);
+			
+			//choose the second variation if there is such an option
+			if (!driver.findElements(By.xpath(ElementsBuying.ProductQuickPopup_variationsThird)).isEmpty()){
+				Thread.sleep(1000);
+				choose = driver.findElement(By.xpath(ElementsBuying.ProductQuickPopup_variationsThird)).getText().trim();
+				if (Arrays.asList(chooseInternational).contains(choose)) {
+					Functions.chooseVariations_thirdVariation_quickPopup(driver);
+				}
 			}
 		}
+		
 	}
 		
 	// A function for choosing color and size variations, if exist, in product page.
@@ -338,17 +349,17 @@ public class Functions {
 		String[] chooseInternational = {"Выбрать","בחר", "Διάλεξε","Selectează ", "Scegli","Selecionar"};
 
 		//choose the first variation if there is such option
-		if (!driver.findElements(By.xpath(ElementsBuying.Product_variationsColor)).isEmpty()){
+		if (!driver.findElements(By.xpath(ElementsBuying.Product_variationsFirst)).isEmpty()){
 			Thread.sleep(1000);
-			choose = act.elementText(ElementsBuying.Product_variationsColor, driver);			
+			choose = act.elementText(ElementsBuying.Product_variationsFirst, driver);			
 			if (Arrays.asList(chooseInternational).contains(choose)) {
 				Functions.chooseVariations_firstVariation_productPage(driver, "1");
 			}
 		}
 		//choose the second variation if there is such option
-		if (!driver.findElements(By.xpath(ElementsBuying.Product_variationsLength)).isEmpty()){
+		if (!driver.findElements(By.xpath(ElementsBuying.Product_variationsSecond)).isEmpty()){
 			Thread.sleep(1000);
-			choose = act.elementText(ElementsBuying.Product_variationsLength, driver);
+			choose = act.elementText(ElementsBuying.Product_variationsSecond, driver);
 			if (Arrays.asList(chooseInternational).contains(choose)) {
 				Functions.chooseVariations_secondVariation_productPage(driver, "1");
 			}
@@ -366,61 +377,61 @@ public class Functions {
 	// A function for choosing first variation (usually color) on product page - selecting "i" line 
 	public static void chooseVariations_firstVariation_productPage(WebDriver driver, String i) throws Exception{
 		i = String.valueOf( Integer.valueOf(i) + 1 );
-		act.click(ElementsBuying.Product_variationsColor, driver);
-		act.waitForAttributeChange(ElementsBuying.Product_variationsColor_dropdownFrame, "class", "selectric-wrapper", driver);		
-		act.waitForClickable(ElementsBuying.Product_variationsColor_i + i + "]", driver);
+		act.click(ElementsBuying.Product_variationsFirst, driver);
+		act.waitForAttributeChange(ElementsBuying.Product_variationsFirst_dropdownFrame, "class", "selectric-wrapper", driver);		
+		act.waitForClickableAndClick(ElementsBuying.Product_variationsFirst_i + i + "]", driver);
 		try{
-		act.waitForAttribute(ElementsBuying.Product_variationsColor_dropdownFrame, "class", "selectric-wrapper", driver);
+		act.waitForAttribute(ElementsBuying.Product_variationsFirst_dropdownFrame, "class", "selectric-wrapper", driver);
 		} catch (Exception e) { // in case the first option is out of stock
 			i = String.valueOf( Integer.valueOf(i) + 2 );
-			act.waitForClickable(ElementsBuying.Product_variationsColor_i + i + "]", driver);
-			act.waitForAttribute(ElementsBuying.Product_variationsColor_dropdownFrame, "class", "selectric-wrapper", driver);
+			act.waitForClickableAndClick(ElementsBuying.Product_variationsFirst_i + i + "]", driver);
+			act.waitForAttribute(ElementsBuying.Product_variationsFirst_dropdownFrame, "class", "selectric-wrapper", driver);
 		}
 	}
 	
 	// A function for choosing first variation AGAIN (usually color) on product page - selecting "i" line 
 	public static void chooseVariations_firstVariationAgain_productPage(WebDriver driver, String i) throws Exception{
 		i = String.valueOf( Integer.valueOf(i) + 1 );
-		act.click(ElementsBuying.Product_variationsColorAgain, driver);
-		act.waitForAttributeChange(ElementsBuying.Product_variationsColor_dropdownFrame, "class", "selectric-wrapper", driver);
+		act.click(ElementsBuying.Product_variationsFirstAgain, driver);
+		act.waitForAttributeChange(ElementsBuying.Product_variationsFirst_dropdownFrame, "class", "selectric-wrapper", driver);
 		try {
-			act.waitForClickable(ElementsBuying.Product_variationsColor_i + i + "]", driver);
+			act.waitForClickableAndClick(ElementsBuying.Product_variationsFirst_i + i + "]", driver);
 		}
 		catch (Exception e) {
 			Thread.sleep(3000);
-			act.waitForClickable(ElementsBuying.Product_variationsColor_i + i + "]", driver);
+			act.waitForClickableAndClick(ElementsBuying.Product_variationsFirst_i + i + "]", driver);
 		}
-		act.waitForAttribute(ElementsBuying.Product_variationsColor_dropdownFrame, "class", "selectric-wrapper", driver);
+		act.waitForAttribute(ElementsBuying.Product_variationsFirst_dropdownFrame, "class", "selectric-wrapper", driver);
 	
 	}
 	
 	// A function for choosing second variation (usually size) on product page - selecting "i" line 
 	public static void chooseVariations_secondVariation_productPage(WebDriver driver, String i) throws Exception{
 		i = String.valueOf( Integer.valueOf(i) + 1 );
-		act.click(ElementsBuying.Product_variationsLength, driver);
-		act.waitForAttributeChange(ElementsBuying.Product_variationsLength_dropdownFrame, "class", "selectric-wrapper", driver);		
-		act.waitForClickable(ElementsBuying.Product_variationsLength_i + i + "]", driver);
+		act.click(ElementsBuying.Product_variationsSecond, driver);
+		act.waitForAttributeChange(ElementsBuying.Product_variationsSecond_dropdownFrame, "class", "selectric-wrapper", driver);		
+		act.waitForClickableAndClick(ElementsBuying.Product_variationsSecond_i + i + "]", driver);
 		try{
-		act.waitForAttribute(ElementsBuying.Product_variationsLength_dropdownFrame, "class", "selectric-wrapper", driver);
+		act.waitForAttribute(ElementsBuying.Product_variationsSecond_dropdownFrame, "class", "selectric-wrapper", driver);
 		} catch (Exception e) { // in case the first option is out of stock
 			i = String.valueOf( Integer.valueOf(i) + 2 );
-			act.waitForClickable(ElementsBuying.Product_variationsLength_i + i + "]", driver);
-			act.waitForAttribute(ElementsBuying.Product_variationsLength_dropdownFrame, "class", "selectric-wrapper", driver);
+			act.waitForClickableAndClick(ElementsBuying.Product_variationsSecond_i + i + "]", driver);
+			act.waitForAttribute(ElementsBuying.Product_variationsSecond_dropdownFrame, "class", "selectric-wrapper", driver);
 		}
 	}
 	
 	// A function for choosing second variation AGAIN (usually size) on product page - selecting "i" line 
 	public static void chooseVariations_secondVariationAgain_productPage(WebDriver driver, String i) throws Exception{
 		i = String.valueOf( Integer.valueOf(i) + 1 );
-		act.click(ElementsBuying.Product_variationsLengthAgain, driver);
-		act.waitForAttributeChange(ElementsBuying.Product_variationsLength_dropdownFrame, "class", "selectric-wrapper", driver);
+		act.click(ElementsBuying.Product_variationsSecondAgain, driver);
+		act.waitForAttributeChange(ElementsBuying.Product_variationsSecond_dropdownFrame, "class", "selectric-wrapper", driver);
 		try {
-			act.waitForClickable(ElementsBuying.Product_variationsLength_i + i + "]", driver);
+			act.waitForClickableAndClick(ElementsBuying.Product_variationsSecond_i + i + "]", driver);
 		}
 		catch (Exception e) {
 			Thread.sleep(3000);
-			act.waitForClickable(ElementsBuying.Product_variationsLength_i + i + "]", driver);
-		}		act.waitForAttribute(ElementsBuying.Product_variationsLength_dropdownFrame, "class", "selectric-wrapper", driver);
+			act.waitForClickableAndClick(ElementsBuying.Product_variationsSecond_i + i + "]", driver);
+		}		act.waitForAttribute(ElementsBuying.Product_variationsSecond_dropdownFrame, "class", "selectric-wrapper", driver);
 	
 	}
 	
@@ -430,53 +441,53 @@ public class Functions {
 		i = String.valueOf( Integer.valueOf(i) + 1 );
 		act.click(ElementsBuying.Product_variationsThird, driver);
 		act.waitForAttributeChange(ElementsBuying.Product_variationsThird_dropdownFrame, "class", "selectric-wrapper", driver);
-		act.waitForClickable(ElementsBuying.Product_variationsThird_i + i + "]", driver);
+		act.waitForClickableAndClick(ElementsBuying.Product_variationsThird_i + i + "]", driver);
 		try{
 		act.waitForAttribute(ElementsBuying.Product_variationsThird_dropdownFrame, "class", "selectric-wrapper", driver);
 		} catch (Exception e) { // in case the first option is out of stock
 			i = String.valueOf( Integer.valueOf(i) + 2 );
-			act.waitForClickable(ElementsBuying.Product_variationsThird_i + i + "]", driver);
+			act.waitForClickableAndClick(ElementsBuying.Product_variationsThird_i + i + "]", driver);
 			act.waitForAttribute(ElementsBuying.Product_variationsThird_dropdownFrame, "class", "selectric-wrapper", driver);
 		}
 	}
 	
 	// A function for choosing first variation (usually color) on quick Popup page 
 	public static void chooseVariations_firstVariation_quickPopup(WebDriver driver) throws Exception{
-		act.click(ElementsBuying.ProductFramed_color, driver);
-		act.waitForAttributeChange(ElementsBuying.ProductFramed_color_dropdownFrame, "class", "selectric-wrapper", driver);		
-		act.waitForClickable(ElementsBuying.ProductFramed_color_1, driver);
+		act.click(ElementsBuying.ProductQuickPopup_variationsFirst, driver);
+		act.waitForAttributeChange(ElementsBuying.ProductQuickPopup_variationsFirst_dropdownFrame, "class", "selectric-wrapper", driver);		
+		act.waitForClickableAndClick(ElementsBuying.ProductQuickPopup_variationsFirst_1, driver);
 		try{
-			act.waitForAttribute(ElementsBuying.ProductFramed_color_dropdownFrame, "class", "selectric-wrapper", driver);	
+			act.waitForAttribute(ElementsBuying.ProductQuickPopup_variationsFirst_dropdownFrame, "class", "selectric-wrapper", driver);	
 		} catch (Exception e) { // in case the first option is out of stock
-			act.waitForClickable(ElementsBuying.ProductFramed_color_2, driver);
-			act.waitForAttribute(ElementsBuying.ProductFramed_color_dropdownFrame, "class", "selectric-wrapper", driver);	
+			act.waitForClickableAndClick(ElementsBuying.ProductQuickPopup_variationsFirst_2, driver);
+			act.waitForAttribute(ElementsBuying.ProductQuickPopup_variationsFirst_dropdownFrame, "class", "selectric-wrapper", driver);	
 		}
 	}
 	
 	// A function for choosing second variation (usually size) on quick Popup page 
 	public static void chooseVariations_secondVariation_quickPopup(WebDriver driver) throws Exception{
-		act.click(ElementsBuying.ProductFramed_length, driver);
-		act.waitForAttributeChange(ElementsBuying.ProductFramed_length_dropdownFrame, "class", "selectric-wrapper", driver);
-		act.waitForClickable(ElementsBuying.ProductFramed_length_1, driver);
+		act.click(ElementsBuying.ProductQuickPopup_variationsSecond, driver);
+		act.waitForAttributeChange(ElementsBuying.ProductQuickPopup_variationsSecond_dropdownFrame, "class", "selectric-wrapper", driver);
+		act.waitForClickableAndClick(ElementsBuying.ProductQuickPopup_variationsSecond_1, driver);
 		try{
-			act.waitForAttribute(ElementsBuying.ProductFramed_length_dropdownFrame, "class", "selectric-wrapper", driver);
+			act.waitForAttribute(ElementsBuying.ProductQuickPopup_variationsSecond_dropdownFrame, "class", "selectric-wrapper", driver);
 		} catch (Exception e) { // in case the first option is out of stock
-			act.waitForClickable(ElementsBuying.ProductFramed_length_2, driver);
-			act.waitForAttribute(ElementsBuying.ProductFramed_length_dropdownFrame, "class", "selectric-wrapper", driver);
+			act.waitForClickableAndClick(ElementsBuying.ProductQuickPopup_variationsSecond_2, driver);
+			act.waitForAttribute(ElementsBuying.ProductQuickPopup_variationsSecond_dropdownFrame, "class", "selectric-wrapper", driver);
 		}
 	}
 		
 
 	// A function for choosing third variation (usually size) on quick Popup page 
 	public static void chooseVariations_thirdVariation_quickPopup(WebDriver driver) throws Exception{
-		act.click(ElementsBuying.ProductFramed_third, driver);
-		act.waitForAttributeChange(ElementsBuying.ProductFramed_third_dropdownFrame, "class", "selectric-wrapper", driver);
-		act.waitForClickable(ElementsBuying.ProductFramed_third_1, driver);
+		act.click(ElementsBuying.ProductQuickPopup_variationsThird, driver);
+		act.waitForAttributeChange(ElementsBuying.ProductQuickPopup_variationsThird_dropdownFrame, "class", "selectric-wrapper", driver);
+		act.waitForClickableAndClick(ElementsBuying.ProductQuickPopup_variationsThird_1, driver);
 		try{
-		act.waitForAttribute(ElementsBuying.ProductFramed_third_dropdownFrame, "class", "selectric-wrapper", driver);
+		act.waitForAttribute(ElementsBuying.ProductQuickPopup_variationsThird_dropdownFrame, "class", "selectric-wrapper", driver);
 		} catch (Exception e) { // in case the first option is out of stock
-			act.waitForClickable(ElementsBuying.ProductFramed_third_2, driver);
-			act.waitForAttribute(ElementsBuying.ProductFramed_third_dropdownFrame, "class", "selectric-wrapper", driver);
+			act.waitForClickableAndClick(ElementsBuying.ProductQuickPopup_variationsThird_2, driver);
+			act.waitForAttribute(ElementsBuying.ProductQuickPopup_variationsThird_dropdownFrame, "class", "selectric-wrapper", driver);
 		}
 	}
 	

@@ -26,7 +26,7 @@ import org.junit.runners.Parameterized.Parameters;
 
 import zipy_elements.*;
 
-//class of actions with web elements	
+//class of base actions with web elements	
 public class act {
 	
 	
@@ -67,9 +67,12 @@ public class act {
 		new WebDriverWait(driver, 15).until(ExpectedConditions.presenceOfElementLocated(By.xpath(path)));
 	}
 
-	
+	// A function for waiting for web-element appearance and click
+	public static void waitForPresenceAndClick(String path, WebDriver driver) throws Exception{				
+		new WebDriverWait(driver, 15).until(ExpectedConditions.presenceOfElementLocated(By.xpath(path))).click();
+	}
 	// A function for waiting for web-element to be clickable and click
-	public static void waitForClickable(String path, WebDriver driver) throws Exception{				
+	public static void waitForClickableAndClick(String path, WebDriver driver) throws Exception{				
 		new WebDriverWait(driver, 15).until(ExpectedConditions.elementToBeClickable(By.xpath(path))).click();
 	}
 	
