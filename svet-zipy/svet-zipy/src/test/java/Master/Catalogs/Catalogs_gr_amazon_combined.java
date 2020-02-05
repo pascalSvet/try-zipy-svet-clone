@@ -64,13 +64,13 @@ public class Catalogs_gr_amazon_combined extends Catalogs_MAIN {
 		Thread.sleep(2000);
 		
 		//save all links from the current category
-		List<WebElement> links = driver.findElements(By.xpath(ElementsRecommended.category_linksStart + num + "]/div//*[@href]"));
+		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + num + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsRecommended.category_mainCategoryStart + num + "]/a/span[2]")).getText();
+		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + num + "]/a/span[2]")).getText();
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		//open each link in current category, one by one

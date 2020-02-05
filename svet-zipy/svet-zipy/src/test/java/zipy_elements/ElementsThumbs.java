@@ -1,6 +1,6 @@
 package zipy_elements;
 
-public class ElementsRecommended {
+public class ElementsThumbs {
 	
 	//buying - Elements 
 	// populars(6 elements):

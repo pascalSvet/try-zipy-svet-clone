@@ -34,7 +34,7 @@ public class MainPageThumbs_il extends MainPageThumbs_MAIN {
 		Thread.sleep(2000);
 		
 		//opening all thumbnails in different tabs, and check if any of them  failed to open
-		boolean fails = Functions.checkThumbnailsInTabs(driver, 10, ElementsRecommended.mainPage);
+		boolean fails = Functions.checkThumbnailsInTabs(driver, 10, ElementsThumbs.mainPage);
 		driver.switchTo().window(winHandleBefore);
 
 		// if we managed to open all products correctly, there will be no fails:

@@ -31,7 +31,7 @@ public class act {
 	
 	
 	// A function for returning web-element (found by xpath)
-	public static WebElement element(String path, WebDriver driver) throws Exception{			
+	public static WebElement saveElement(String path, WebDriver driver) throws Exception{			
 		return driver.findElement(By.xpath(path));										
 	}
 
@@ -43,7 +43,7 @@ public class act {
 	
 		
 	// A function for returning web-element attribute text
-	public static String elementAttribute(String path, String attribute, WebDriver driver) throws Exception{			
+	public static String elementAttText(String path, String attribute, WebDriver driver) throws Exception{			
 		return driver.findElement(By.xpath(path)).getAttribute(attribute).trim();										
 	}
 	
@@ -68,9 +68,9 @@ public class act {
 	}
 
 	
-	// A function for waiting for web-element to be clickable
+	// A function for waiting for web-element to be clickable and click
 	public static void waitForClickable(String path, WebDriver driver) throws Exception{				
-		new WebDriverWait(driver, 15).until(ExpectedConditions.elementToBeClickable(By.xpath(path)));
+		new WebDriverWait(driver, 15).until(ExpectedConditions.elementToBeClickable(By.xpath(path))).click();
 	}
 	
 	
@@ -79,12 +79,26 @@ public class act {
 		new WebDriverWait(driver, 15).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(path)));
 	}
 		
-
+	// A function for waiting for web-element to be visible
+	public static void waitForVisibility(String path, WebDriver driver) throws Exception{				
+		new WebDriverWait(driver, 15).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(path)));
+	}
 	// A function for waiting for url to change
 	public static void waitForUrlChange(String url, WebDriver driver) throws Exception{				
 		new WebDriverWait(driver, 15).until(ExpectedConditions.not(ExpectedConditions.urlToBe(url)));
 	}
 	
+	// A function for waiting for attribute to change
+	public static void waitForAttributeChange(String path, String att, String old, WebDriver driver) throws Exception{				
+		new WebDriverWait(driver, 15).until(ExpectedConditions.not(ExpectedConditions.attributeToBe(By.xpath(path), att, old)));
+
+	}
+	
+	// A function for waiting for attribute to be
+	public static void waitForAttribute(String path, String att, String update, WebDriver driver) throws Exception{				
+		new WebDriverWait(driver, 15).until(ExpectedConditions.attributeToBe(By.xpath(path), att, update));
+
+	}
 	
 	// A function for returning if element is displayed
 	public static boolean elementDisplayed(String path, WebDriver driver) throws Exception{				

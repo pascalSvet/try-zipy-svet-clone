@@ -23,7 +23,7 @@ public class Cart_addProduct extends Cart_MAIN {
 		driver.get(ElementsWebsites.Zipy_il_deals);
 		
 		//open one of the deals products
-		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3)).click();
+		driver.findElement(By.xpath(ElementsThumbs.dailyDeal_onPage_3)).click();
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_deals_withPopup)));
 		Thread.sleep(2000);
 		
@@ -37,7 +37,7 @@ public class Cart_addProduct extends Cart_MAIN {
 
 		//choose variations if exist and add to the cart
 		Thread.sleep(2000);
-		Functions.chooseVariations_ProductFramed(driver);
+		Functions.chooseVariations_quickPopupPage(driver);
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_addToCart))).click();
 		WebElement cartFrame = Functions.openCart(driver);
@@ -56,17 +56,17 @@ public class Cart_addProduct extends Cart_MAIN {
 		driver.get(ElementsWebsites.Zipy_il_lessThan5);
 
 		//click the third thumbnail
-		driver.findElement(By.xpath(ElementsRecommended.lessThan5_3)).click();	
+		driver.findElement(By.xpath(ElementsThumbs.lessThan5_3)).click();	
 		//make sure there is no 400 error
 		if(driver.getTitle().contains("404")) {
 			System.out.println("test failed because of 404 eror");
 			Assert.assertTrue(false);
 		}
 		//save its title	
-		String ProductTitle = driver.findElement(By.xpath(ElementsRecommended.lessThan5_3_title)).getText().trim();
+		String ProductTitle = driver.findElement(By.xpath(ElementsThumbs.lessThan5_3_title)).getText().trim();
 					
 		//choose variations if exist and add to the cart
-		Functions.chooseVariations_ProductFramed(driver);
+		Functions.chooseVariations_quickPopupPage(driver);
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_addToCart))).click();		
 		WebElement cartFrame = Functions.openCart(driver);
@@ -89,18 +89,18 @@ public class Cart_addProduct extends Cart_MAIN {
 		.moveToElement(driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1_1))).click().build().perform();
 		
 		//click the third thumbnail  
-		driver.findElement(By.xpath(ElementsRecommended.category_3)).click();	
+		driver.findElement(By.xpath(ElementsThumbs.category_3)).click();	
 		//make sure there is no 400 error
 		if(driver.getTitle().contains("404")) {
 			System.out.println("test failed because of 404 eror");
 			Assert.assertTrue(false);
 		} 
 		//save its title	
-		String ProductTitle = driver.findElement(By.xpath(ElementsRecommended.category_3_title)).getText().trim();
+		String ProductTitle = driver.findElement(By.xpath(ElementsThumbs.category_3_title)).getText().trim();
 		Functions.closePopUp(driver);
 		
 		//choose variations if exist and add to the cart
-		Functions.chooseVariations_ProductFramed(driver);
+		Functions.chooseVariations_quickPopupPage(driver);
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_addToCart))).click();
 		WebElement cartFrame = Functions.openCart(driver);
@@ -120,7 +120,7 @@ public class Cart_addProduct extends Cart_MAIN {
 		String currentUrl = driver.getCurrentUrl();
 		
 		//open one of the deals products  
-		driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3)).click();		
+		driver.findElement(By.xpath(ElementsThumbs.dailyDeal_onPage_3)).click();		
 		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(currentUrl)));
 		Thread.sleep(2000);	
 		//make sure there is no 400 error
@@ -144,7 +144,7 @@ public class Cart_addProduct extends Cart_MAIN {
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPopup)).getText().trim();
 
 		//choose variations if exist and add to the cart
-		Functions.chooseVariations_ProductFramed(driver);
+		Functions.chooseVariations_quickPopupPage(driver);
 		Thread.sleep(2000);	
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductFramed_addToCart))).click();
 		WebElement cartFrame = Functions.openCart(driver);

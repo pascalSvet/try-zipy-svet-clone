@@ -35,7 +35,7 @@ public class Dev_Populars_cy extends Dev_Populars_MAIN {
 
 
 		//opening all thumbnails in different tabs, and counting the number of thumbnails that failed to open
-		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsRecommended.populars);
+		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsThumbs.populars);
 		driver.switchTo().window(winHandleBefore);
 
 		// if we managed to open all products correctly, there will be no fails:
@@ -54,7 +54,7 @@ public class Dev_Populars_cy extends Dev_Populars_MAIN {
 		Thread.sleep(2000);
 		
 		//opening all thumbnails in different tabs, and counting the number of thumbnails that failed to open
-		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsRecommended.populars);
+		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsThumbs.populars);
 		driver.switchTo().window(winHandleBefore);
 
 		// if we managed to open all products correctly, there will be no fails:
@@ -73,7 +73,7 @@ public class Dev_Populars_cy extends Dev_Populars_MAIN {
 		Thread.sleep(2000);
 
 		//opening all thumbnails in different tabs, and counting the number of thumbnails that failed to open
-		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsRecommended.populars);
+		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsThumbs.populars);
 		driver.switchTo().window(winHandleBefore);
 
 		// if we managed to open all products correctly, there will be no fails:

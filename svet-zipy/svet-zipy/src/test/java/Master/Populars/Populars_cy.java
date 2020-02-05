@@ -33,7 +33,7 @@ public class Populars_cy extends Populars_MAIN {
 
 
 		//opening all thumbnails in different tabs and check their loading
-		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsRecommended.populars);
+		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsThumbs.populars);
 		driver.switchTo().window(winHandleBefore);
 
 		// if we managed to open all products correctly, there will be no fails:
@@ -52,7 +52,7 @@ public class Populars_cy extends Populars_MAIN {
 		Thread.sleep(2000);
 		
 		//opening all thumbnails in different tabs and check their loading
-		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsRecommended.populars);
+		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsThumbs.populars);
 		driver.switchTo().window(winHandleBefore);
 
 		// if we managed to open all products correctly, there will be no fails:
@@ -71,7 +71,7 @@ public class Populars_cy extends Populars_MAIN {
 		Thread.sleep(2000);
 
 		//opening all thumbnails in different tabs and check their loading
-		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsRecommended.populars);
+		boolean fails = Functions.checkPopularTabs(driver, 6, ElementsThumbs.populars);
 		driver.switchTo().window(winHandleBefore);
 
 		// if we managed to open all products correctly, there will be no fails:

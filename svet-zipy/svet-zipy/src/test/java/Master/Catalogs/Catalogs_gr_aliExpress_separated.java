@@ -37,13 +37,13 @@ public class Catalogs_gr_aliExpress_separated extends Catalogs_MAIN {
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
 		
-		List<WebElement> links = driver.findElements(By.xpath(ElementsRecommended.category_linksStart + "1" + "]/div//*[@href]"));
+		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "1" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsRecommended.category_mainCategoryStart + "1" + "]/a/span[2]")).getText();
+		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "1" + "]/a/span[2]")).getText();
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -91,13 +91,13 @@ public class Catalogs_gr_aliExpress_separated extends Catalogs_MAIN {
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
 		
-		List<WebElement> links = driver.findElements(By.xpath(ElementsRecommended.category_linksStart + "2" + "]/div//*[@href]"));
+		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "2" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsRecommended.category_mainCategoryStart + "2" + "]/a/span[2]")).getText();
+		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "2" + "]/a/span[2]")).getText();
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -145,13 +145,13 @@ public class Catalogs_gr_aliExpress_separated extends Catalogs_MAIN {
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
 		
-		List<WebElement> links = driver.findElements(By.xpath(ElementsRecommended.category_linksStart + "3" + "]/div//*[@href]"));
+		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "3" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsRecommended.category_mainCategoryStart + "3" + "]/a/span[2]")).getText();
+		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "3" + "]/a/span[2]")).getText();
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -199,13 +199,13 @@ public class Catalogs_gr_aliExpress_separated extends Catalogs_MAIN {
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
 		
-		List<WebElement> links = driver.findElements(By.xpath(ElementsRecommended.category_linksStart + "4" + "]/div//*[@href]"));
+		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "4" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsRecommended.category_mainCategoryStart + "4" + "]/a/span[2]")).getText();
+		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "4" + "]/a/span[2]")).getText();
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -253,13 +253,13 @@ public class Catalogs_gr_aliExpress_separated extends Catalogs_MAIN {
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
 		
-		List<WebElement> links = driver.findElements(By.xpath(ElementsRecommended.category_linksStart + "5" + "]/div//*[@href]"));
+		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "5" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsRecommended.category_mainCategoryStart + "5" + "]/a/span[2]")).getText();
+		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "5" + "]/a/span[2]")).getText();
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -307,13 +307,13 @@ public class Catalogs_gr_aliExpress_separated extends Catalogs_MAIN {
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
 		
-		List<WebElement> links = driver.findElements(By.xpath(ElementsRecommended.category_linksStart + "6" + "]/div//*[@href]"));
+		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "6" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsRecommended.category_mainCategoryStart + "6" + "]/a/span[2]")).getText();
+		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "6" + "]/a/span[2]")).getText();
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -361,13 +361,13 @@ public class Catalogs_gr_aliExpress_separated extends Catalogs_MAIN {
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
 		
-		List<WebElement> links = driver.findElements(By.xpath(ElementsRecommended.category_linksStart + "7" + "]/div//*[@href]"));
+		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "7" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsRecommended.category_mainCategoryStart + "7" + "]/a/span[2]")).getText();
+		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "7" + "]/a/span[2]")).getText();
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -415,13 +415,13 @@ public class Catalogs_gr_aliExpress_separated extends Catalogs_MAIN {
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
 		
-		List<WebElement> links = driver.findElements(By.xpath(ElementsRecommended.category_linksStart + "8" + "]/div//*[@href]"));
+		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "8" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsRecommended.category_mainCategoryStart + "8" + "]/a/span[2]")).getText();
+		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "8" + "]/a/span[2]")).getText();
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {

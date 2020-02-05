@@ -85,7 +85,7 @@ public class Errors_502 extends Errors_MAIN {
 		//scroll down and open first 16 deals in different tabs
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollTo(0,1000);");		
-		boolean fails = Functions.checkLinksInTabs_error502(driver, 16, ElementsRecommended.dailyDeal_onPage_i);
+		boolean fails = Functions.checkLinksInTabs_error502(driver, 16, ElementsThumbs.dailyDeal_onPage_i);
 
 		//if correct, all deals loaded
 		Assert.assertFalse(fails);	
@@ -102,7 +102,7 @@ public class Errors_502 extends Errors_MAIN {
 		//scroll down and open first 16 deals in different tabs
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollTo(0,1000);");						
-		boolean fails = Functions.checkLinksInTabs_error502(driver, 16, ElementsRecommended.dailyDeal_onPage_i);
+		boolean fails = Functions.checkLinksInTabs_error502(driver, 16, ElementsThumbs.dailyDeal_onPage_i);
 
 		//if correct, all deals loaded
 		Assert.assertFalse(fails);	
@@ -120,7 +120,7 @@ public class Errors_502 extends Errors_MAIN {
 		//scroll down and open first 16 deals in different tabs
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollTo(0,1000);");						
-		boolean fails = Functions.checkLinksInTabs_error502(driver, 16, ElementsRecommended.dailyDeal_onPage_i);
+		boolean fails = Functions.checkLinksInTabs_error502(driver, 16, ElementsThumbs.dailyDeal_onPage_i);
 
 		//if correct, all deals loaded
 		Assert.assertFalse(fails);	

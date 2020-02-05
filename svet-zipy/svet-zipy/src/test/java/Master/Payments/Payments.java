@@ -30,7 +30,7 @@ public class Payments extends Payments_MAIN {
 		wait.until(ExpectedConditions.elementToBeClickable((By.xpath(ElementsBuying.SearchItemAli_thumb)))).click();;
 		
 		//choose the color and size options 
-		Functions.chooseVariations_ProductFramed(driver);
+		Functions.chooseVariations_quickPopupPage(driver);
 		
 		//buy directly
 		Thread.sleep(2000);
@@ -227,7 +227,7 @@ public class Payments extends Payments_MAIN {
 		new WebDriverWait(driver, 20).until(ExpectedConditions.not(ExpectedConditions.urlToBe("https://www.zipy.co.il/fiveshekel/")));
 
 		//choose the color and size options if exist
-		Functions.chooseVariations_ProductFramed(driver);
+		Functions.chooseVariations_quickPopupPage(driver);
 
 		//buy directly
 		Thread.sleep(2000);

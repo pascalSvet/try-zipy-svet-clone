@@ -32,7 +32,7 @@ public class Dev_MainPageThumbs_gr extends Dev_MainPageThumbs_MAIN {
 		Thread.sleep(2000);
 		
 		//opening all thumbnails in different tabs, and counting the number of thumbnails that failed to open
-		boolean fails = Functions.checkThumbnailsInTabs(driver, 8, ElementsRecommended.dailyDeal);
+		boolean fails = Functions.checkThumbnailsInTabs(driver, 8, ElementsThumbs.dailyDeal);
 		driver.switchTo().window(winHandleBefore);
 
 		// if we managed to open all products correctly, there will be no fails:
@@ -51,7 +51,7 @@ public class Dev_MainPageThumbs_gr extends Dev_MainPageThumbs_MAIN {
 		Thread.sleep(2000);
 
 		//opening all thumbnails in different tabs, and counting the number of thumbnails that failed to open
-		boolean fails = Functions.checkThumbnailsInTabs(driver, 8, ElementsRecommended.dailyDeal);
+		boolean fails = Functions.checkThumbnailsInTabs(driver, 8, ElementsThumbs.dailyDeal);
 		driver.switchTo().window(winHandleBefore);
 
 		// if we managed to open all products correctly, there will be no fails:
@@ -70,7 +70,7 @@ public class Dev_MainPageThumbs_gr extends Dev_MainPageThumbs_MAIN {
 		Thread.sleep(2000);		
 
 		//opening all thumbnails in different tabs, and counting the number of thumbnails that failed to open
-		boolean fails = Functions.checkThumbnailsInTabs(driver, 8, ElementsRecommended.dailyDeal);
+		boolean fails = Functions.checkThumbnailsInTabs(driver, 8, ElementsThumbs.dailyDeal);
 		driver.switchTo().window(winHandleBefore);
 
 		// if we managed to open all products correctly, there will be no fails:

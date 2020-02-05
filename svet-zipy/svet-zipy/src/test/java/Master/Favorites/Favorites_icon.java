@@ -20,10 +20,10 @@ public class Favorites_icon extends Favorites_MAIN {
 		driver.get(ElementsWebsites.Zipy_il_deals);
 		
 		//move mouse over one of the thumbnails
-		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3))).build().perform();;
+		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsThumbs.dailyDeal_onPage_3))).build().perform();;
 
 		// if correct, the pin button is visible:
-		Assert.assertTrue(driver.findElement(By.xpath(ElementsRecommended.Product_PinThumbIcon)).isDisplayed());				
+		Assert.assertTrue(driver.findElement(By.xpath(ElementsThumbs.Product_PinThumbIcon)).isDisplayed());				
 	}
 
 	
@@ -36,19 +36,19 @@ public class Favorites_icon extends Favorites_MAIN {
 		driver.get(ElementsWebsites.Zipy_il_deals);
 		
 		//move mouse over one of the thumbnails
-		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsRecommended.dailyDeal_onPage_3))).build().perform();;
+		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsThumbs.dailyDeal_onPage_3))).build().perform();;
 
 		//save the color of pin icon, click it and save the new color
-		String colorUnselected = driver.findElement(By.xpath(ElementsRecommended.Product_PinThumbIcon_colorUnselected)).getAttribute("class");
-		driver.findElement(By.xpath(ElementsRecommended.Product_PinThumbIcon)).click();		
+		String colorUnselected = driver.findElement(By.xpath(ElementsThumbs.Product_PinThumbIcon_colorUnselected)).getAttribute("class");
+		driver.findElement(By.xpath(ElementsThumbs.Product_PinThumbIcon)).click();		
 		Thread.sleep(1000);
-		String colorSelected = driver.findElement(By.xpath(ElementsRecommended.Product_PinThumbIcon_colorSelected)).getAttribute("class");
+		String colorSelected = driver.findElement(By.xpath(ElementsThumbs.Product_PinThumbIcon_colorSelected)).getAttribute("class");
 		
 		// if correct, the unselected color is grey and the selected color is pink:
 		Assert.assertTrue(colorUnselected.contains("grey") && colorSelected.contains("pink"));	
 		
 		//at the end, remove the product from the favorites, for the future tests		
-		driver.findElement(By.xpath(ElementsRecommended.Product_PinThumbIcon_Selected)).click();		
+		driver.findElement(By.xpath(ElementsThumbs.Product_PinThumbIcon_Selected)).click();		
 	}
 	
 	
