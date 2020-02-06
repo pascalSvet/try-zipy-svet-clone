@@ -24,17 +24,13 @@ public class Cart_removeProduct extends Cart_MAIN {
 		driver.get(ElementsBuying.Product_noVariations);
 
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
 		
-		//save its title
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		//save its title		
+		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 		
 		//add to the cart
-		Thread.sleep(1500);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		Functions.addToCart(driver);		
 
 		//empty the cart
 		Functions.openAndEmptyCart(driver);	
@@ -53,34 +49,29 @@ public class Cart_removeProduct extends Cart_MAIN {
 		driver.get(ElementsBuying.Product_noVariations);
 
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
 		
 		//save its title
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 		
 		//add to the cart
-		Thread.sleep(1500);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		Functions.addToCart(driver);		
 
 		//back to main page and open the cart			
-		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
+		Functions.openCart(driver);
 		
 		//remove the item and choose adding it to favorites
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_cartRemove))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_cartRemove, driver);
 		Thread.sleep(1500);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_cart_moveToFavorites))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_cart_moveToFavorites, driver);
 		
-		//check if the cart contains the removed item  
-		boolean removedItem = driver.findElement(By.xpath(ElementsBuying.Product_cartIsEmpty)).isDisplayed();		
+		//check if the cart contains the removed item  		
+		boolean removedItem = act.elementDisplayed(ElementsBuying.Product_cartIsEmpty, driver);		
 		
 		// open the favorites window and save its contents
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
+		act.click(ElementsBuying.Product_favoritesButton, driver);
 		Thread.sleep(1000);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+		String favoritesFrame = act.elementText(ElementsBuying.Product_favoritesFrame, driver);
 				
 		// if we managed to remove the product, the cart won't contain its title, but the favorites will contain it:			
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) && removedItem);
@@ -99,28 +90,23 @@ public class Cart_removeProduct extends Cart_MAIN {
 		driver.get(ElementsBuying.Product_noVariations);
 
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
 		
 		//save its title
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 		
 		//add to the cart
-		Thread.sleep(1500);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		Functions.addToCart(driver);		
 	
 		//back to main page and open the cart			
-		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
+		Functions.openCart(driver);
 		
 		//remove the item and choose returning it to the cart
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_cartRemove))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_cartRemove, driver);
 		Thread.sleep(1500);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_cart_returnToCart))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_cart_returnToCart, driver);
 		Thread.sleep(1500);
-		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
+		WebElement cartFrame = act.saveElement(ElementsBuying.Product_cartFrame, driver);
 		wait.until(ExpectedConditions.visibilityOf(cartFrame));
 
 		// if we managed to return the product, its title is found in the cart:
@@ -138,47 +124,31 @@ public class Cart_removeProduct extends Cart_MAIN {
 		driver.get(ElementsBuying.Product_oneVariation);
 
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
 		
 		//save its title
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");		
+		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 
 		//choose the product variation - first option from the droplist - and save its name
-		Thread.sleep(1000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsFirst))).click();		
-		Thread.sleep(1000);
-		WebElement variationColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsFirst_1));
-		String ProductVariation1 = variationColor_1.getText().trim();;
-		variationColor_1.click();						
+		Functions.chooseVariations_firstVariation_productPage(driver, "1");
+		String ProductVariation1 = act.elementText(ElementsBuying.Product_variationsFirst_text, driver);						
 		
 		//add to the cart
-		Thread.sleep(1500);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlusAgain)));
+		Functions.addToCart(driver);		
 
 		//choose another product variation - second option from the droplist - and save its name
-		Thread.sleep(1000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsFirstAgain))).click();
-		Thread.sleep(2000);
-		WebElement variationColor_2 = driver.findElement(By.xpath(ElementsBuying.Product_variationsFirst_3));
-		String ProductVariation2 = variationColor_2.getText().trim();
-		variationColor_2.click();
+		Functions.chooseVariations_firstVariationAgain_productPage(driver, "3");
+		String ProductVariation2 = act.elementText(ElementsBuying.Product_variationsFirst_text, driver);
 		
 		//add to the cart again
-		Thread.sleep(1500);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		Functions.addToCart(driver);		
 
 		//back to main page and open the cart			
-		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
+		Functions.openCart(driver);
 		
 		//remove the first item from the cart
-		Thread.sleep(500);
-		Thread.sleep(1500);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_cartRemove))).click();
+		Thread.sleep(200);
+		act.waitForClickableAndClick(ElementsBuying.Product_cartRemove, driver);
 			
 		//reopen the cart			
 		WebElement cartFrame = Functions.openCart(driver);
@@ -199,13 +169,10 @@ public class Cart_removeProduct extends Cart_MAIN {
 		driver.get(ElementsBuying.Product_noVariations);
 
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
 		
 		//save its title
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 		
 		//add to the cart and proceed to the payment
 		Thread.sleep(2000);
@@ -213,9 +180,9 @@ public class Cart_removeProduct extends Cart_MAIN {
 
 		//remove the product
 		Thread.sleep(1500);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_payment_Remove))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_payment_Remove, driver);
 		Thread.sleep(1500);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_paymentPopup_Remove))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_paymentPopup_Remove, driver);
 
 		//reopen the cart	
 		Functions.openCart(driver);
@@ -233,13 +200,10 @@ public class Cart_removeProduct extends Cart_MAIN {
 		driver.get(ElementsBuying.Product_noVariations);
 
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
 		
 		//save its title
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 		
 		//add to the cart and proceed to the payment
 		Thread.sleep(2000);
@@ -247,20 +211,20 @@ public class Cart_removeProduct extends Cart_MAIN {
 
 		//remove the product
 		Thread.sleep(1500);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_payment_Remove))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_payment_Remove, driver);
 		Thread.sleep(1500);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_paymentPopup_moveToFavs))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_paymentPopup_moveToFavs, driver);
 
 		//reopen the cart	
 		Functions.openCart(driver);
 
-		//check if the cart contains the removed item  
-		boolean removedItem = driver.findElement(By.xpath(ElementsBuying.Product_cartIsEmpty)).isDisplayed();		
+		//check if the cart contains the removed item  		
+		boolean removedItem = act.elementDisplayed(ElementsBuying.Product_cartIsEmpty, driver);		
 		
 		// open the favorites window and save its contents
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
+		act.click(ElementsBuying.Product_favoritesButton, driver);
 		Thread.sleep(1500);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+		String favoritesFrame = act.elementText(ElementsBuying.Product_favoritesFrame, driver);
 				
 		// if we managed to remove the product, the cart won't contain its title, but the favorites will contain it:			
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) && removedItem);

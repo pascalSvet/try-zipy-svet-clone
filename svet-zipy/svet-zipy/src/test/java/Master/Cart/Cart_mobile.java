@@ -40,8 +40,7 @@ public class Cart_mobile extends Cart_MAIN {
 		
 		//increase the quantity to 2 and then add to the cart 
 		act.waitForPresenceAndClick(ElementsBuying.Product_quantityPlus, driver);
-		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
-		act.waitForPresence(ElementsBuying.Product_plusOne, driver);
+		Functions.addToCart(driver);
 
 		//reopen the cart and change the quantity manually to "1"
 		Thread.sleep(1000);

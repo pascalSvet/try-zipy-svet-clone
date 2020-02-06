@@ -35,10 +35,8 @@ public class Cart_addProduct extends Cart_MAIN {
 
 		//choose variations if exist and add to the cart
 		Thread.sleep(2000);
-		Functions.chooseVariations_quickPopupPage(driver);
-		Thread.sleep(2000);
-		
-		act.waitForPresenceAndClick(ElementsBuying.ProductQuickPopup_addToCart, driver);
+		Functions.chooseVariations_quickPopupPage(driver);		
+		Functions.addToCart_quickPopup(driver);
 		WebElement cartFrame = Functions.openCart(driver);
 		
 		// if we managed to add the product, its title is found in the cart:
@@ -64,10 +62,8 @@ public class Cart_addProduct extends Cart_MAIN {
 		String ProductTitle = act.elementText(ElementsThumbs.lessThan5_3_title, driver);
 		
 		//choose variations if exist and add to the cart
-		Functions.chooseVariations_quickPopupPage(driver);
-		Thread.sleep(2000);
-		
-		act.waitForPresenceAndClick(ElementsBuying.ProductQuickPopup_addToCart, driver);
+		Functions.chooseVariations_quickPopupPage(driver);		
+		Functions.addToCart_quickPopup(driver);
 		WebElement cartFrame = Functions.openCart(driver);
 		
 		// if we managed to add the product, its title is found in the cart:
@@ -99,8 +95,7 @@ public class Cart_addProduct extends Cart_MAIN {
 		
 		//choose variations if exist and add to the cart
 		Functions.chooseVariations_quickPopupPage(driver);
-		Thread.sleep(2000);
-		act.waitForPresenceAndClick(ElementsBuying.ProductQuickPopup_addToCart, driver);
+		Functions.addToCart_quickPopup(driver);
 		WebElement cartFrame = Functions.openCart(driver);
 		
 		// if we managed to add the product, its title is found in the cart:
@@ -140,8 +135,7 @@ public class Cart_addProduct extends Cart_MAIN {
 
 		//choose variations if exist and add to the cart
 		Functions.chooseVariations_quickPopupPage(driver);
-		Thread.sleep(2000);	
-		act.waitForPresenceAndClick(ElementsBuying.ProductQuickPopup_addToCart, driver);
+		Functions.addToCart_quickPopup(driver);
 		WebElement cartFrame = Functions.openCart(driver);
 
 		// if we managed to add the product, its title is found in the cart:
@@ -163,9 +157,7 @@ public class Cart_addProduct extends Cart_MAIN {
 		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 		
 		//add to the cart
-		Thread.sleep(2000);
-		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
-		Thread.sleep(2000);
+		Functions.addToCart(driver);
 		WebElement cartFrame = Functions.openCart(driver);
 
 		// if we managed to add the product, its title is found in the cart:
@@ -187,8 +179,7 @@ public class Cart_addProduct extends Cart_MAIN {
 		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 		
 		//add to the cart
-		Thread.sleep(2000);
-		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+		Functions.addToCart(driver);
 
 		//get to the amazon product page
 		driver.get(ElementsBuying.Product_noVariationsAmazon);
@@ -200,11 +191,7 @@ public class Cart_addProduct extends Cart_MAIN {
 		String ProductTitleAmazon = act.elementAttText(ElementsBuying.Product_titleFromPicture_amazon, "content", driver);
 		
 		//add to the cart
-		Thread.sleep(3000);
-		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
-		act.waitForPresence(ElementsBuying.Product_addedToCart, driver);
-		Thread.sleep(1000);
-
+		Functions.addToCart(driver);
 		WebElement cartFrame = Functions.openCart(driver);
 
 		// if we managed to add the products, both titles are in the cart:

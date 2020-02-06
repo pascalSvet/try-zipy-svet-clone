@@ -23,21 +23,19 @@ public class Cart_price extends Cart_MAIN {
 		System.out.println("Running test for checking the final sum in the cart includes the delivery ");		
 
 		//get to the required product page  
-		driver.get(ElementsBuying.Product_noVariations);
+		driver.get(ElementsBuying.Product_noVariations2);
 		
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
 		
-		//save the sum of its price and delivery price/
-		String Sum = Functions.priceSum(driver,ElementsBuying.Product_price,ElementsBuying.Product_delivery).trim();
+		//save the price
+		String Sum = Functions.priceSum(driver, ElementsBuying.Product_price, ElementsBuying.Product_delivery).trim();
 
 		//add to the cart
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		Functions.addToCart(driver);
 		Functions.openCart(driver);
-		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
+		
+		String FinalSum = act.elementText(ElementsBuying.Product_cart_finalSum, driver);
 
 		// if the prices added correctly, the final price will be the sum of original price plus delivery :
 		Assert.assertTrue(FinalSum.contains(Sum));
@@ -51,27 +49,17 @@ public class Cart_price extends Cart_MAIN {
 		System.out.println("Running test for checking the final sum in the cart includes the discount");		
 
 		//get to the required product page
-		driver.get(ElementsBuying.Product_oneVariation);
+		driver.get(ElementsBuying.Product_noVariations);
 
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
-				
-		//choose the product variation - first option from the droplist
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsFirst))).click();
-		Thread.sleep(500);
-		WebElement variationColor_1 = driver.findElement(By.xpath(ElementsBuying.Product_variationsFirst_1));
-		variationColor_1.click();
+		Functions.validate_error404(driver);
 				
 		//add to the cart and save the price after discount
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
-		Thread.sleep(3000);
-		String priceAfterDiscount = driver.findElement(By.xpath(ElementsBuying.Product_discount)).getText();	
+		String priceAfterDiscount = act.elementText(ElementsBuying.Product_discount, driver);	
+		Functions.addToCart(driver);		
 		Functions.openCart(driver);
 		
-		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
+		String FinalSum = act.elementText(ElementsBuying.Product_cart_finalSum, driver);
 		
 		// if the prices added correctly, the price after the discount will be the final sum	
 		Assert.assertTrue(FinalSum.contains(priceAfterDiscount));
@@ -89,12 +77,10 @@ public class Cart_price extends Cart_MAIN {
 		Thread.sleep(500);
 		
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
+
 		//save its price
-		String price1 = Functions.priceSum(driver, ElementsBuying.Product_price, ElementsBuying.Product_delivery).trim();
+		String price1 = act.elementText(ElementsBuying.Product_discount, driver);
 		
 		//add to the cart 
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
@@ -110,7 +96,7 @@ public class Cart_price extends Cart_MAIN {
 		//the sum of both products
 		String Sum = Functions.stringSum(driver,price1,price2).trim();
 		Functions.openCart(driver);
-		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
+		String FinalSum = act.elementText(ElementsBuying.Product_cart_finalSum, driver);
 
 		// if the prices added correctly, the final price will be the sum of two products	
 		Assert.assertTrue(FinalSum.contains(Sum));
@@ -129,23 +115,20 @@ public class Cart_price extends Cart_MAIN {
 		driver.get(ElementsBuying.Product_noVariations);
 		
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
 				
 		//increase the quantity to 2 and save the price
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlus))).click();
 		Thread.sleep(3000);
-		String price = Functions.priceSum(driver, ElementsBuying.Product_price, ElementsBuying.Product_delivery).trim();
+		String price = act.elementText(ElementsBuying.Product_discount, driver);
 		
 		//save the sum of two units
 		String Sum = Functions.stringSum(driver,price,price).trim();
 						
 		//add to the cart 
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		Functions.addToCart(driver);
 		Functions.openCart(driver);
-		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
+		String FinalSum = act.elementText(ElementsBuying.Product_cart_finalSum, driver);
 
 		// if the prices added correctly, the final price will be the sum of two units
 		Assert.assertTrue(FinalSum.contains(Sum));
@@ -162,34 +145,28 @@ public class Cart_price extends Cart_MAIN {
 		driver.get(ElementsBuying.Product_oneVariation);
 
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
 					
 		//choose the product variation - first option from the droplist and save its price
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsFirst))).click();		
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsFirst_1))).click();;
+		Functions.chooseVariations_firstVariation_productPage(driver, "1");
 		Thread.sleep(3000);
-		String price1 = driver.findElement(By.xpath(ElementsBuying.Product_discount)).getText().trim();	
-		
+		String price1 = act.elementText(ElementsBuying.Product_price, driver);
+			
 		//add to the cart 
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlusAgain)));
+		Functions.addToCart(driver);
 
 		//choose another product variation - second option from the droplist - and save its name
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsFirstAgain))).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_variationsFirst_3))).click();;
+		Functions.chooseVariations_firstVariationAgain_productPage(driver, "3");
 		Thread.sleep(3000);
-		String price2 = driver.findElement(By.xpath(ElementsBuying.Product_discount)).getText().trim();	
-		
+		String price2 = act.elementText(ElementsBuying.Product_price, driver);
+			
 		//save the sum of two variations
 		String Sum = Functions.stringSum(driver,price1,price2).trim();
 		
 		//add to the cart 
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		Functions.addToCart(driver);
 		Functions.openCart(driver);
-		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
+		String FinalSum = act.elementText(ElementsBuying.Product_cart_finalSum, driver);
 
 		// if the prices added correctly, the final sum	includes the prices of all variations
 		Assert.assertTrue(FinalSum.contains(Sum));
@@ -209,13 +186,10 @@ public class Cart_price extends Cart_MAIN {
 		Thread.sleep(500);
 		
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
 		
 		//save its price			
-		String price1 = Functions.priceSum(driver, ElementsBuying.Product_price, ElementsBuying.Product_delivery).trim();
+		String price1 = act.elementText(ElementsBuying.Product_discount, driver);
 		
 		//add to the cart 
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
@@ -225,24 +199,21 @@ public class Cart_price extends Cart_MAIN {
 		Thread.sleep(500);
 		
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
 		
 		//save its price	
 		String price2 = Functions.priceSum(driver, ElementsBuying.Product_price, ElementsBuying.Product_delivery).trim();
 		
 		//add to the cart
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		Functions.addToCart(driver);
 		
 		//reopen the cart and remove the first item from the cart		
 		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_openCart, driver);
 		Thread.sleep(500);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_cartRemove))).click();
+		act.waitForClickableAndClick(ElementsBuying.Product_cartRemove, driver);
 		Thread.sleep(500);
-		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
+		String FinalSum = act.elementText(ElementsBuying.Product_cart_finalSum, driver);
 
 		// if the prices added correctly, the final price will be of the second product only	
 		Assert.assertTrue(FinalSum.contains(price2));
@@ -263,30 +234,26 @@ public class Cart_price extends Cart_MAIN {
 		Thread.sleep(500);
 
 		//make sure there is no 400 error
-		if(driver.getTitle().contains("404")) {
-			System.out.println("test failed because of 404 eror");
-			Assert.assertTrue(false);
-		}
+		Functions.validate_error404(driver);
+
 		//save its price
-		String price = Functions.priceSum(driver, ElementsBuying.Product_price, ElementsBuying.Product_delivery).trim();
+		String price = act.elementText(ElementsBuying.Product_discount, driver);
 		
 		//increase the quantity to 2 and then add to the cart 
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_quantityPlus))).click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		act.waitForPresenceAndClick(ElementsBuying.Product_quantityPlus, driver);;
+		Functions.addToCart(driver);
 
 		//reopen the cart and change the quantity manually to "1"
 		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();	
-		WebElement Sum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum));
-		String FirstSum = Sum.getText();
+		act.waitForClickableAndClick(ElementsBuying.Product_openCart, driver);		
+		String FirstSum = act.elementText(ElementsBuying.Product_cart_finalSum, driver);
 		Thread.sleep(500);
 		
 		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsBuying.Product_cart_quantity))).click()
 				.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys("1",Keys.ENTER).build().perform();
 		
-		new WebDriverWait(driver, 30).until(ExpectedConditions.not(ExpectedConditions.
-				textToBePresentInElement(Sum, FirstSum)));
-		String FinalSum = driver.findElement(By.xpath(ElementsBuying.Product_cart_finalSum)).getText();
+		act.waitForTextChange(ElementsBuying.Product_cart_finalSum, FirstSum, driver);
+		String FinalSum = act.elementText(ElementsBuying.Product_cart_finalSum, driver);
 
 		// the final sum supposed to be of 1 unit only :
 		Assert.assertTrue(FinalSum.contains(price) && !FirstSum.equals(FinalSum));

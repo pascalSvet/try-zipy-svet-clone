@@ -35,8 +35,7 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		String ProductElement1 = act.elementText(ElementsBuying.Product_variationsFirst_text, driver);
 						
 		//add to the cart
-		Thread.sleep(2000);
-		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+		Functions.addToCart(driver);
 		WebElement cartFrame = Functions.openCart(driver);
 
 		// if we managed to add the product correctly, its title and its chosen variation are found in the cart:
@@ -67,8 +66,7 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		String ProductVariation2 = act.elementText(ElementsBuying.Product_variationsSecond_text, driver);
 		
 		//add to the cart
-		Thread.sleep(2000);
-		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+		Functions.addToCart(driver);
 		WebElement cartFrame = Functions.openCart(driver);
 
 		// if we managed to add the product correctly, its title and its chosen variations are found in the cart:
@@ -97,8 +95,7 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 			String ProductVariation1 = act.elementText(ElementsBuying.Product_variationsFirst_text, driver);						
 			
 			//add to the cart
-			Thread.sleep(2000);
-			act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+			Functions.addToCart(driver);
 			act.waitForPresence(ElementsBuying.Product_quantityPlusAgain, driver);
 
 			//choose another product variation - third option - and save its name
@@ -143,18 +140,14 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		String ProductVariation2 = act.elementText(ElementsBuying.Product_variationsSecond_text, driver);
 		
 		//add to the cart
-		Thread.sleep(2000);
-		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
-		act.waitForPresence(ElementsBuying.Product_quantityPlusAgain, driver);
+		Functions.addToCart(driver);
 
 		//choose another second product variation - second option - and save its name
 		Functions.chooseVariations_secondVariationAgain_productPage(driver, "2");
 		String ProductVariation3 = act.elementText(ElementsBuying.Product_variationsFirst_text, driver);
 
 		//add to the cart again
-		Thread.sleep(2000);
-		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
-
+		Functions.addToCart(driver);
 		WebElement cartFrame = Functions.openCart(driver);
 
 		// if we managed to add the product correctly, its title and its chosen variations are found in the cart:
@@ -181,8 +174,7 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 
 
 		//add to the cart and then add another one to the cart with the plus-one button
-		Thread.sleep(1500);
-		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+		Functions.addToCart(driver);
 		Thread.sleep(1500);
 		act.waitForPresenceAndClick(ElementsBuying.Product_plusOne, driver);
 
@@ -208,10 +200,7 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		
 		//increase the quantity to 2 and then add to the cart 
 		act.waitForClickableAndClick(ElementsBuying.Product_quantityPlus, driver);
-
-		Thread.sleep(2000);
-		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
-
+		Functions.addToCart(driver);
 		WebElement cartFrame = Functions.openCart(driver);
 
 		// if we managed to add the product twice, its quantity in the cart is 2:
@@ -234,10 +223,8 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 
 
 		//add to the cart and then increase the quantity to another 2 and add to the cart again 
-		Thread.sleep(2000);
-		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+		Functions.addToCart(driver);
 		act.waitForClickableAndClick(ElementsBuying.Product_quantityPlusAgain, driver);
-
 		Thread.sleep(1000);
 		act.waitForClickableAndClick(ElementsBuying.Product_plusOne, driver);
 
@@ -260,10 +247,8 @@ public class Cart_addProduct_withVariations extends Cart_MAIN {
 		//make sure there is no 400 error
 		Functions.validate_error404(driver);
 
-
 		//add to the cart 
-		Thread.sleep(2000);
-		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+		Functions.addToCart(driver);
 
 		//back to main page and open the cart			
 		driver.get(ElementsWebsites.Zipy_il);

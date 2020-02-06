@@ -258,6 +258,23 @@ public class Functions {
 	}
 
 	
+	// A function for adding product to the cart (on product page)
+	public static void addToCart(WebDriver driver) throws Exception{
+		
+		Thread.sleep(2000);
+		String cart = act.elementText(ElementsBuying.Product_cart_topBarQuantity, driver);
+		act.waitForClickableAndClick(ElementsBuying.Product_addToCart, driver);
+		act.waitForTextChange(ElementsBuying.Product_cart_topBarQuantity, cart, driver);				
+	}
+	
+	// A function for adding product to the cart (on quick popup page)
+	public static void addToCart_quickPopup(WebDriver driver) throws Exception{
+		
+		Thread.sleep(2000);
+		String cart = act.elementText(ElementsBuying.Product_cart_topBarQuantity, driver);
+		act.waitForClickableAndClick(ElementsBuying.ProductQuickPopup_addToCart, driver);
+		act.waitForTextChange(ElementsBuying.Product_cart_topBarQuantity, cart, driver);				
+	}
 	
 ////////////// price functions: ////////////////////////////////////////////////////////
 	
@@ -265,8 +282,16 @@ public class Functions {
 	public static String priceSum(WebDriver driver, String price1, String price2) throws Exception{
 		WebElement firstPrice1 = driver.findElement(By.xpath(price1));
 		WebElement secondPrice2 = driver.findElement(By.xpath(price2));
-		double firstPrice = Double.parseDouble(firstPrice1.getText());
-		double secondPrice = Double.parseDouble(secondPrice2.getText());
+		String first = firstPrice1.getText();
+		if( first == null) {
+			first = "0";
+		}
+		String second = secondPrice2.getText();
+		if( second == null) {
+			second = "0";
+		}
+		double firstPrice = Double.parseDouble(first);
+		double secondPrice = Double.parseDouble(second);
 		BigDecimal sumTemp = BigDecimal.valueOf(firstPrice).add(BigDecimal.valueOf(secondPrice));
 		String Sum = String.valueOf(sumTemp);
 		
@@ -279,6 +304,12 @@ public class Functions {
 	
 	// A function for summing two strings.
 	public static String stringSum(WebDriver driver, String price1, String price2) throws Exception{
+		if( price1 == null) {
+			price1 = "0";
+		}
+		if( price2 == null) {
+			price2 = "0";
+		}
 		double firstPrice = Double.parseDouble(price1);
 		double secondPrice = Double.parseDouble(price2);
 		BigDecimal sumTemp = BigDecimal.valueOf(firstPrice).add(BigDecimal.valueOf(secondPrice));
@@ -292,6 +323,9 @@ public class Functions {
 	
 	// A function for multiplying string.
 	public static String stringMultiply(WebDriver driver, String price1, int num) throws Exception{
+		if( price1 == null) {
+			price1 = "0";
+		}
 		double firstPrice = Double.parseDouble(price1);
 		BigDecimal multTemp = BigDecimal.valueOf(firstPrice).multiply(BigDecimal.valueOf(num));
 		String Mult = String.valueOf(multTemp);
@@ -499,9 +533,7 @@ public class Functions {
 
 		driver.get(ElementsBuying.Product_noVariations);
 		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
-		Thread.sleep(500);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_plusOne)));
+		Functions.addToCart(driver);
 
 		return ProductTitle;		
 	}

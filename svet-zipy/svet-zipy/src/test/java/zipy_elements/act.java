@@ -101,8 +101,15 @@ public class act {
 	public static void waitForAttribute(String path, String att, String update, WebDriver driver) throws Exception{				
 		new WebDriverWait(driver, 15).until(ExpectedConditions.attributeToBe(By.xpath(path), att, update));
 
-	}
+	}	
 	
+	// A function for waiting for element text to change
+		public static void waitForTextChange(String path, String text, WebDriver driver) throws Exception{				
+			new WebDriverWait(driver, 15).until(ExpectedConditions.not(ExpectedConditions.textToBePresentInElementLocated(By.xpath(path), text)));
+
+		}
+		
+		
 	// A function for returning if element is displayed
 	public static boolean elementDisplayed(String path, WebDriver driver) throws Exception{				
 		return driver.findElement(By.xpath(path)).isDisplayed();

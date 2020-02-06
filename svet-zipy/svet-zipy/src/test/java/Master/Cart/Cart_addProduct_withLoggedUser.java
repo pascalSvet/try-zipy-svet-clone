@@ -32,9 +32,7 @@ public class Cart_addProduct_withLoggedUser extends Cart_MAIN {
 		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 
 		//add to the cart
-		Thread.sleep(2000);
-		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
-		act.waitForPresence(ElementsBuying.Product_addedToCart, driver);
+		Functions.addToCart(driver);
 
 		//back to main page and connect to the user
 		driver.get(ElementsWebsites.Zipy_il);
@@ -70,8 +68,7 @@ public class Cart_addProduct_withLoggedUser extends Cart_MAIN {
 		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 		
 		//add to the cart /
-		Thread.sleep(2000);
-		act.waitForPresenceAndClick(ElementsBuying.Product_addToCart, driver);
+		Functions.addToCart(driver);
 		
 		//disconnect from the user and then connect back 
 		Functions.unLogIn(driver);
