@@ -35,7 +35,7 @@ public class User_password extends User_MAIN {
 		Functions.changePassword(driver, ElementsLogin.Email_zipy_password, "123456");
 
 		//if changed correctly, there is a success message
-		Assert.assertFalse(driver.findElements(By.xpath(ElementsLogin.user_changePassword_succesMessageVi)).isEmpty());
+		Assert.assertTrue(act.elementExist(ElementsLogin.user_changePassword_succesMessageVi, driver));
 		
 		//change the password back at the end, for future tests
 		driver.get(ElementsWebsites.Zipy_il);
@@ -56,14 +56,12 @@ public class User_password extends User_MAIN {
 		Functions.unLogIn(driver);
 		Thread.sleep(1000);
 		
-		//press login button		
-		JavascriptExecutor ex=(JavascriptExecutor)driver;
-		ex.executeScript("arguments[0].click()", driver.findElement(By.xpath(ElementsLogin.Login_button)));
-		Thread.sleep(500);		
+		//press login button
+		act.exClick(ElementsLogin.Login_button, driver);	
 				
 		//recover the password by email 
-		driver.findElement(By.xpath(ElementsLogin.user_recoverPassword)).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsLogin.user_recoverPassword_help)));
+		act.click(ElementsLogin.user_recoverPassword, driver);
+		act.waitForClickable(ElementsLogin.user_recoverPassword_help, driver);
 
 		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.user_recoverPassword_field))).click()
 		.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(ElementsLogin.Email_zipy, Keys.ENTER)

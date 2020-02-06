@@ -35,7 +35,7 @@ public class User_email extends User_MAIN {
 		Functions.changeEmail(driver, ElementsLogin.Email_zipy2, ElementsLogin.Email_zipy_password);
 
 		//if changed correctly, there is a success message
-		Assert.assertFalse(driver.findElements(By.xpath(ElementsLogin.user_changePassword_succesMessageVi)).isEmpty());
+		Assert.assertTrue(act.elementExist(ElementsLogin.user_changePassword_succesMessageVi, driver));
 		
 		//change the email back at the end, for future tests
 		driver.get(ElementsWebsites.Zipy_il);

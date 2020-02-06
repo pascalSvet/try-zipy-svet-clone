@@ -29,14 +29,18 @@ public class User_mobile extends User_MAIN {
 		System.out.println("running test (in mobile version) for changing the password");
 		
 		//change to mobile screen resolution and enter main page
-		driver.manage().window().setSize(new Dimension(320,480));
+		driver.manage().window().setSize(new Dimension(320,700));
+		
 		driver.get(ElementsWebsites.Zipy_il);
+
+		System.out.println(driver.manage().window().getSize().getWidth());
+		System.out.println(driver.manage().window().getSize().getHeight());
 
 		//enter private data and change password 
 		Functions.changePassword(driver, ElementsLogin.Email_zipy_password, "123456");
 
-		//if changed correctly, there is a success message
-		Assert.assertFalse(driver.findElements(By.xpath(ElementsLogin.user_changePassword_succesMessageVi)).isEmpty());
+		//if changed correctly, there is a success message		
+		Assert.assertTrue(act.elementExist(ElementsLogin.user_changePassword_succesMessageVi, driver));
 		
 		//change the password back at the end, for future tests
 		driver.get(ElementsWebsites.Zipy_il);
@@ -51,14 +55,17 @@ public class User_mobile extends User_MAIN {
 		System.out.println("running test (in mobile version) for changing the email");
 		
 		//change to mobile screen resolution and enter main page
-		driver.manage().window().setSize(new Dimension(320,480));
+		driver.manage().window().setSize(new Dimension(320,700));
 		driver.get(ElementsWebsites.Zipy_il);
+
+		System.out.println(driver.manage().window().getSize().getWidth());
+		System.out.println(driver.manage().window().getSize().getHeight());
 
 		//enter private data and change email 
 		Functions.changeEmail(driver, ElementsLogin.Email_zipy2, ElementsLogin.Email_zipy_password);
 
 		//if changed correctly, there is a success message
-		Assert.assertFalse(driver.findElements(By.xpath(ElementsLogin.user_changePassword_succesMessageVi)).isEmpty());
+		Assert.assertTrue(act.elementExist(ElementsLogin.user_changePassword_succesMessageVi, driver));
 		
 		//change the email back at the end, for future tests
 		driver.get(ElementsWebsites.Zipy_il);
