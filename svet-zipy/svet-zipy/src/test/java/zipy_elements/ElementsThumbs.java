@@ -35,9 +35,9 @@ public class ElementsThumbs {
 
 	
 	// search
-	public static final String search_3 = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[3]";
+	public static final String search_3 = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[3]/a";
 	public static final String search_3_title = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[3]/a";
-	public static final String Product_search_3_PinThumbIcon = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[3]/div/div[@class='daily__item-info']/button[@class='daily__item-pin']";
+	public static final String search_3_PinThumbIcon = "//*[@id=\"wrapper\"]/div[*]/main/section[2]/div[3]/div[3]/div/div[2]/button/span/svg/use";
 
 	// less-than-5 tab
 	public static final String lessThan5_3 = "//*[@id=\"wrapper\"]/div[2]/main/section[2]/div[2]/div[3]";

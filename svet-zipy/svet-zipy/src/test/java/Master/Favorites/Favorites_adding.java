@@ -18,16 +18,17 @@ public class Favorites_adding extends Favorites_MAIN {
 		System.out.println("Running test for adding to favorites from the product page");		
 
 		//get to the required product page and save its title
-		driver.get(ElementsBuying.Product_noVariations);
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt").trim();
+		driver.get(ElementsBuying.Product_noVariations);		
+		String ProductTitle = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 
 		//add to the favorites
-		driver.findElement(By.xpath(ElementsBuying.Product_pin)).click();
+		act.click(ElementsBuying.Product_pin, driver);
 
-		// open the favorites window and save its contents
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
+		// open the favorites window and save its contents 
+		act.click(ElementsBuying.Product_favoritesButton, driver);
 		Thread.sleep(500);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+		
+		String favoritesFrame = act.elementText(ElementsBuying.Product_favoritesFrame, driver);
 		
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
@@ -43,18 +44,19 @@ public class Favorites_adding extends Favorites_MAIN {
 
 		//open one of the products on the main page and save its name
 		driver.get(ElementsWebsites.Zipy_il);
-		driver.findElement(By.xpath(ElementsThumbs.dailyDeal_3)).click();
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String ProductTitle = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPopup)).getText().trim();
+		act.click(ElementsThumbs.dailyDeal_3, driver);
+		act.waitForUrlChange(ElementsWebsites.Zipy_il_withPopup, driver);
+		
+		String ProductTitle = act.elementText(ElementsBuying.Product_titleFromPopup, driver);
 
 		//add to favorites
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton_popup)).click();
+		act.click(ElementsBuying.Product_favoritesButton_popup, driver);
 		Thread.sleep(2000);
 		
 		// open the favorites window and save its contents
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
+		act.click(ElementsBuying.Product_favoritesButton, driver);
 		Thread.sleep(2000);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+		String favoritesFrame = act.elementText(ElementsBuying.Product_favoritesFrame, driver);
 
 		System.out.println(favoritesFrame);
 		System.out.println(ProductTitle);
@@ -63,7 +65,7 @@ public class Favorites_adding extends Favorites_MAIN {
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 		
 		//at the end, remove the products from the favorites, for the future tests		
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
+		act.click(ElementsBuying.Product_favoritesRemove, driver);
 	}
 
 
@@ -80,18 +82,18 @@ public class Favorites_adding extends Favorites_MAIN {
 		.moveToElement(driver.findElement(By.xpath(ElementsThumbs.Product_PinThumbIcon))).click().build().perform();
 
 		//save products title			
-		String ProductTitle = driver.findElement(By.xpath(ElementsThumbs.dailyDeal_onPage_3_title)).getText().trim();
+		String ProductTitle = act.elementText(ElementsThumbs.dailyDeal_onPage_3_title, driver);
 				
 		// open the favorites window and save its contents
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
+		act.click(ElementsBuying.Product_favoritesButton, driver);
 		Thread.sleep(500);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+		String favoritesFrame = act.elementText(ElementsBuying.Product_favoritesFrame, driver);
 		
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 		
 		//at the end, remove the products from the favorites, for the future tests		
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
+		act.click(ElementsBuying.Product_favoritesRemove, driver);
 		
 	}
 		
@@ -107,20 +109,20 @@ public class Favorites_adding extends Favorites_MAIN {
 		//click the pin button on the thumbnail
 		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsThumbs.lessThan5_3)))
 		.moveToElement(driver.findElement(By.xpath(ElementsThumbs.lessThan5_3_PinThumbIcon))).click().build().perform();
-
+		
 		//save products title			
-		String ProductTitle = driver.findElement(By.xpath(ElementsThumbs.lessThan5_3_title)).getText().trim();
+		String ProductTitle = act.elementText(ElementsThumbs.lessThan5_3_title, driver);
 					
 		// open the favorites window and save its contents
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
+		act.click(ElementsBuying.Product_favoritesButton, driver);
 		Thread.sleep(500);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+		String favoritesFrame = act.elementText(ElementsBuying.Product_favoritesFrame, driver);
 		
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 		
 		//at the end, remove the products from the favorites, for the future tests		
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
+		act.click(ElementsBuying.Product_favoritesRemove, driver);
 	}
 	
 	
@@ -130,30 +132,32 @@ public class Favorites_adding extends Favorites_MAIN {
 		System.out.println("Running test for adding to favorites from search thumbnail");		
 		
 		//open the main page
-		driver.get(ElementsWebsites.Zipy_il);
-		
+		driver.get(ElementsWebsites.Zipy_il_withPopup);
+		Functions.closePopUp(driver);
+
 		//perform search and open the product
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys("usb", Keys.ENTER);
-		wait.until(ExpectedConditions.elementToBeClickable((By.xpath(ElementsThumbs.search_3))));
-		
-		//click the pin button on the thumbnail
-		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsThumbs.search_3)))
-		.moveToElement(driver.findElement(By.xpath(ElementsThumbs.Product_search_3_PinThumbIcon))).click().build().perform();
+		act.waitForUrlChange(ElementsWebsites.Zipy_il_withPopup, driver);
 
-		//save products title			
-		String ProductTitle = driver.findElement(By.xpath(ElementsThumbs.search_3_title)).getText().trim();
+		//click the pin button
+		act.click(ElementsThumbs.search_3, driver);
+		act.click(ElementsBuying.Product_favoritesButton_popup, driver);
+		Thread.sleep(1500);
+
+		//save products title	
+		String ProductTitle = act.elementText(ElementsBuying.Product_titleFromPopup, driver);
 				
 		// open the favorites window and save its contents
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
+		act.click(ElementsBuying.Product_favoritesButton, driver);
 		Thread.sleep(500);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+		String favoritesFrame = act.elementText(ElementsBuying.Product_favoritesFrame, driver);
 		
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 			
 		//at the end, remove the products from the favorites, for the future tests		
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
+		act.click(ElementsBuying.Product_favoritesRemove, driver);
 	}
 
 	
@@ -174,18 +178,18 @@ public class Favorites_adding extends Favorites_MAIN {
 		.moveToElement(driver.findElement(By.xpath(ElementsThumbs.category_3_PinThumbIcon))).click().build().perform();
 
 		//save products title			
-		String ProductTitle = driver.findElement(By.xpath(ElementsThumbs.category_3_title)).getText().trim();
+		String ProductTitle = act.elementText(ElementsThumbs.category_3_title, driver);
 				
 		// open the favorites window and save its contents
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesButton)).click();
+		act.click(ElementsBuying.Product_favoritesButton, driver);
 		Thread.sleep(500);
-		String favoritesFrame = driver.findElement(By.xpath(ElementsBuying.Product_favoritesFrame)).getText();
+		String favoritesFrame = act.elementText(ElementsBuying.Product_favoritesFrame, driver);
 		
 		// if correct, the product title will be found in the favorites window:
 		Assert.assertTrue(favoritesFrame.contains(ProductTitle) );
 		
 		//at the end, remove the products from the favorites, for the future tests		
-		driver.findElement(By.xpath(ElementsBuying.Product_favoritesRemove)).click();
+		act.click(ElementsBuying.Product_favoritesRemove, driver);
 		
 	}
 	

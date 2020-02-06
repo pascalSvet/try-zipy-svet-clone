@@ -39,16 +39,17 @@ public class Favorites_icon extends Favorites_MAIN {
 		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsThumbs.dailyDeal_onPage_3))).build().perform();;
 
 		//save the color of pin icon, click it and save the new color
-		String colorUnselected = driver.findElement(By.xpath(ElementsThumbs.Product_PinThumbIcon_colorUnselected)).getAttribute("class");
+		
+		String colorUnselected = act.elementAttText(ElementsThumbs.Product_PinThumbIcon_colorUnselected, "class", driver);
 		driver.findElement(By.xpath(ElementsThumbs.Product_PinThumbIcon)).click();		
 		Thread.sleep(1000);
-		String colorSelected = driver.findElement(By.xpath(ElementsThumbs.Product_PinThumbIcon_colorSelected)).getAttribute("class");
+		String colorSelected = act.elementAttText(ElementsThumbs.Product_PinThumbIcon_colorSelected, "class", driver);
 		
 		// if correct, the unselected color is grey and the selected color is pink:
 		Assert.assertTrue(colorUnselected.contains("grey") && colorSelected.contains("pink"));	
 		
-		//at the end, remove the product from the favorites, for the future tests		
-		driver.findElement(By.xpath(ElementsThumbs.Product_PinThumbIcon_Selected)).click();		
+		//at the end, remove the product from the favorites, for the future tests	
+		act.click(ElementsThumbs.Product_PinThumbIcon_Selected, driver);	
 	}
 	
 	

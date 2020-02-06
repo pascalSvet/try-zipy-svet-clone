@@ -24,14 +24,16 @@ public class Search_links extends Search_MAIN {
 		
 		//open product on aliExpress and save its title
 		driver.get(ElementsBuying.Search_link_aliExpress);
-		String titleOnAliexpress = driver.findElement(By.xpath(ElementsBuying.Search_link_aliExpress_title)).getText().trim();
+		
+		String titleOnAliexpress = act.elementText(ElementsBuying.Search_link_aliExpress_title, driver);
 
 		// search by the link on zipy, open the product and save its title 
 		driver.get(ElementsWebsites.Zipy_il);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_link_aliExpress, Keys.ENTER);
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String titleOnzipy = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		act.waitForUrlChange(ElementsWebsites.Zipy_il_withPopup, driver);
+		
+		String titleOnzipy = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 
 		//if search succeed, the product we found on zipy is the same from aliExpress
 		Assert.assertTrue(titleOnAliexpress.equals(titleOnzipy));	
@@ -46,14 +48,15 @@ public class Search_links extends Search_MAIN {
 		
 		//open product on ebay and save its title
 		driver.get(ElementsBuying.Search_link_ebay);
-		String titleOnEbay = driver.findElement(By.xpath(ElementsBuying.Search_link_ebay_title)).getAttribute("content");
+		String titleOnEbay = act.elementAttText(ElementsBuying.Search_link_ebay_title, "content", driver);
 
 		// search by the link on zipy, open the product and save its title 
 		driver.get(ElementsWebsites.Zipy_il);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_link_ebay, Keys.ENTER);
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String titleOnzipy = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		act.waitForUrlChange(ElementsWebsites.Zipy_il_withPopup, driver);
+		
+		String titleOnzipy = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 
 		//if search succeed, the product we found on zipy is the same from ebay
 		Assert.assertTrue(titleOnEbay.equals(titleOnzipy));	
@@ -67,14 +70,15 @@ public class Search_links extends Search_MAIN {
 		
 		//open product on amazon and save its title
 		driver.get(ElementsBuying.Search_link_amazon);
-		String titleOnamazon = driver.findElement(By.xpath(ElementsBuying.Search_link_amazon_title)).getText().trim();
+		String titleOnamazon = act.elementText(ElementsBuying.Search_link_amazon_title, driver);
 
 		// search by the link on zipy, open the product and save its title 
 		driver.get(ElementsWebsites.Zipy_il);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_link_amazon, Keys.ENTER);
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String titleOnzipy = driver.findElement(By.xpath(ElementsBuying.Search_link_amazon_zipyTitle)).getAttribute("content");
+		act.waitForUrlChange(ElementsWebsites.Zipy_il_withPopup, driver);
+		
+		String titleOnzipy = act.elementAttText(ElementsBuying.Search_link_amazon_zipyTitle, "content", driver);
 
 		//if search succeed, the product we found on zipy is the same from amazon
 		Assert.assertTrue(titleOnamazon.equals(titleOnzipy));	
@@ -89,14 +93,15 @@ public class Search_links extends Search_MAIN {
 		
 		//open product on aliExpress and save its title
 		driver.get(ElementsBuying.Search_link_aliExpress);
-		String titleOnAliexpress = driver.findElement(By.xpath(ElementsBuying.Search_link_aliExpress_title)).getText().trim();
+		String titleOnAliexpress = act.elementText(ElementsBuying.Search_link_aliExpress_title, driver);
 
 		// search by the link on zipy, open the product and save its title 
 		driver.get(ElementsWebsites.Zipy_gr);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
-			.sendKeys(ElementsBuying.Search_link_aliExpress, Keys.ENTER);
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_gr_withPopup)));
-		String titleOnzipy = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+			.sendKeys(ElementsBuying.Search_link_aliExpress, Keys.ENTER);		
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_withPopup, driver);
+	
+		String titleOnzipy = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 
 		//if search succeed, the product we found on zipy is the same from aliExpress
 		Assert.assertTrue(titleOnAliexpress.equals(titleOnzipy));	
@@ -110,14 +115,16 @@ public class Search_links extends Search_MAIN {
 		
 		//open product on ebay.de and save its title
 		driver.get(ElementsBuying.Search_link_ebayDE);
-		String titleOnEbay = driver.findElement(By.xpath(ElementsBuying.Search_link_ebayDY_title)).getAttribute("content");
+		
+		String titleOnEbay = act.elementAttText(ElementsBuying.Search_link_ebayDY_title, "content", driver);
 
 		// search by the link on zipy, open the product and save its title 
 		driver.get(ElementsWebsites.Zipy_gr);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_link_ebayDE, Keys.ENTER);
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_gr_withPopup)));
-		String titleOnzipy = driver.findElement(By.xpath(ElementsBuying.Product_titleFromPicture)).getAttribute("alt");
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_withPopup, driver);
+		
+		String titleOnzipy = act.elementAttText(ElementsBuying.Product_titleFromPicture, "alt", driver);
 
 		//if search succeed, the product we found on zipy is the same from ebay.de
 		Assert.assertTrue(titleOnEbay.equals(titleOnzipy));	
@@ -131,14 +138,15 @@ public class Search_links extends Search_MAIN {
 		
 		//open product on amazon.de and save its title
 		driver.get(ElementsBuying.Search_link_amazonDE);
-		String titleOnamazon = driver.findElement(By.xpath(ElementsBuying.Search_link_amazon_title)).getText().trim();
+		String titleOnamazon = act.elementText(ElementsBuying.Search_link_amazon_title, driver);
 
 		// search by the link on zipy, open the product and save its title 
 		driver.get(ElementsWebsites.Zipy_gr);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_link_amazonDE, Keys.ENTER);
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_gr_withPopup)));
-		String titleOnzipy = driver.findElement(By.xpath(ElementsBuying.Search_link_amazon_zipyTitle)).getAttribute("content");
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_withPopup, driver);
+		
+		String titleOnzipy = act.elementAttText(ElementsBuying.Search_link_amazon_zipyTitle, "content", driver);
 
 		//if search succeed, the product we found on zipy is the same from amazon.de
 		Assert.assertTrue(titleOnamazon.equals(titleOnzipy));	

@@ -347,32 +347,61 @@ public class Functions {
 		String choose = "";
 		String[] chooseInternational = {"Выбрать","בחר", "Διάλεξε","Selectează ", "Scegli","Selecionar"};
 		
-		//choose the first variation if there is such an option
-		if (!driver.findElements(By.xpath(ElementsBuying.ProductQuickPopup_variationsFirst)).isEmpty()){
+		String first = "exist";
+		String second = "exist";
+		String third = null;
+
+		//check if there is a weight field, and fill it if so
+		Functions.checkWeight(driver);
+		
+		//check if there is first variation to choose
+		try {
+			new WebDriverWait(driver, 3).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductQuickPopup_variationsFirst)));
+		} 	catch (Exception e) { 
+			first = null;
+		}
+		//check if there is second variation to choose
+		try {
+			new WebDriverWait(driver, 2).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductQuickPopup_variationsSecond)));
+			//check if there is third variation to choose
+			try {
+				third = "exist";
+				new WebDriverWait(driver, 2).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.ProductQuickPopup_variationsThird)));				
+			} 	catch (Exception e) { 
+				third = null;
+			}	
+		} 	catch (Exception e) {
+			second = null;
+		}		
+
+		
+		
+		//choose the first variation if exist
+		if (first != null){
 			Thread.sleep(1000);
 			choose = act.elementText(ElementsBuying.ProductQuickPopup_variationsFirst, driver);
 			if (Arrays.asList(chooseInternational).contains(choose)) {
 				Functions.chooseVariations_firstVariation_quickPopup(driver);
 			}
 		}
-		//choose the second variation if there is such an option
-		if (!driver.findElements(By.xpath(ElementsBuying.ProductQuickPopup_variationsSecond)).isEmpty()){
+		//choose the second variation if exist
+		if (second != null){
 			Thread.sleep(1000);
 			choose = driver.findElement(By.xpath(ElementsBuying.ProductQuickPopup_variationsSecond)).getText().trim();
 			if (Arrays.asList(chooseInternational).contains(choose)) {
 				Functions.chooseVariations_secondVariation_quickPopup(driver);
-			}
-			
-			//choose the second variation if there is such an option
-			if (!driver.findElements(By.xpath(ElementsBuying.ProductQuickPopup_variationsThird)).isEmpty()){
-				Thread.sleep(1000);
-				choose = driver.findElement(By.xpath(ElementsBuying.ProductQuickPopup_variationsThird)).getText().trim();
-				if (Arrays.asList(chooseInternational).contains(choose)) {
-					Functions.chooseVariations_thirdVariation_quickPopup(driver);
-				}
+			}						
+		}		
+		//choose the third variation if exist
+		if (third != null){
+			Thread.sleep(1000);
+			choose = driver.findElement(By.xpath(ElementsBuying.ProductQuickPopup_variationsThird)).getText().trim();
+			if (Arrays.asList(chooseInternational).contains(choose)) {
+				Functions.chooseVariations_thirdVariation_quickPopup(driver);
 			}
 		}
-		
+
+
 	}
 		
 	// A function for choosing color and size variations, if exist, in product page.
@@ -382,8 +411,36 @@ public class Functions {
 		String choose = "";
 		String[] chooseInternational = {"Выбрать","בחר", "Διάλεξε","Selectează ", "Scegli","Selecionar"};
 
+		String first = "exist";
+		String second = "exist";
+		String third = "exist";
+
+		//check if there is a weight field, and fill it if so
+		//Functions.checkWeight(driver);
+
+		//check if there is first variation to choose
+		try {
+			new WebDriverWait(driver, 3).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsFirst)));
+		} 	catch (Exception e) { 
+			first = null;
+		}
+		//check if there is second variation to choose
+		try {
+			new WebDriverWait(driver, 2).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsSecond)));
+		} 	catch (Exception e) {
+			second = null;
+		}
+		//check if there is third variation to choose
+		try {
+			new WebDriverWait(driver, 2).until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_variationsThird)));				
+		} 	catch (Exception e) { 
+			third = null;
+		}	
+
+
+		
 		//choose the first variation if there is such option
-		if (!driver.findElements(By.xpath(ElementsBuying.Product_variationsFirst)).isEmpty()){
+		if (first != null){
 			Thread.sleep(1000);
 			choose = act.elementText(ElementsBuying.Product_variationsFirst, driver);			
 			if (Arrays.asList(chooseInternational).contains(choose)) {
@@ -391,7 +448,7 @@ public class Functions {
 			}
 		}
 		//choose the second variation if there is such option
-		if (!driver.findElements(By.xpath(ElementsBuying.Product_variationsSecond)).isEmpty()){
+		if (second != null){
 			Thread.sleep(1000);
 			choose = act.elementText(ElementsBuying.Product_variationsSecond, driver);
 			if (Arrays.asList(chooseInternational).contains(choose)) {
@@ -399,7 +456,7 @@ public class Functions {
 			}
 		}
 		//choose the third variation if there is such option
-		if (!driver.findElements(By.xpath(ElementsBuying.Product_variationsThird)).isEmpty()){
+		if (third != null){
 			Thread.sleep(1000);
 			choose = act.elementText(ElementsBuying.Product_variationsThird, driver);
 			if (Arrays.asList(chooseInternational).contains(choose)) {
@@ -537,6 +594,28 @@ public class Functions {
 
 		return ProductTitle;		
 	}
+	
+	// A function for checking if there is an option of weight on the page
+	public static void checkWeight(WebDriver driver) throws Exception{	
+	
+		//check if there is a weight field to enter
+		String weight = "exist";
+
+		try {
+			new WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_chooseWeight)));
+		} 	
+		catch (Exception e) { 
+			weight = null;
+		}
+		//enter weight if exist
+		if (weight != null) {
+			Thread.sleep(1000);
+			String url = driver.getCurrentUrl();
+			driver.findElement(By.xpath(ElementsBuying.Product_chooseWeight)).sendKeys("300", Keys.ENTER);
+			act.waitForUrlChange(url, driver);
+		}
+	}
+
 
 	
 //////////////tabs functions: ////////////////////////////////////////////////////////

@@ -174,7 +174,7 @@ public class Dev_Favorites extends Dev_Favorites_MAIN {
 		
 		//click the pin button on the thumbnail
 		new Actions(driver).moveToElement(driver.findElement(By.xpath(ElementsThumbs.search_3)))
-		.moveToElement(driver.findElement(By.xpath(ElementsThumbs.Product_search_3_PinThumbIcon))).click().build().perform();
+		.moveToElement(driver.findElement(By.xpath(ElementsThumbs.search_3_PinThumbIcon))).click().build().perform();
 
 		//save products title			
 		String ProductTitle = driver.findElement(By.xpath(ElementsThumbs.search_3_title)).getText().trim();

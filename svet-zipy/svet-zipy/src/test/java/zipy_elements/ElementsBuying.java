@@ -47,6 +47,7 @@ public class ElementsBuying {
 	public static final String Product_closeFavorites = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]/strong[@class='topbar__items-link-count']";
 	public static final String Product_openFavorites = "/html//div[@id='topbar']/div[@class='default']/div[5]/span[1]/strong[@class='topbar__items-link-count']";
 	public static final String Product_favoritesTitle = "/html/body/div[1]/div[4]/div/div[1]//ul[@class='user-goods-list-heading']/li[@class='title']";
+	public static final String Product_favorites_topBarQuantity = "//*[@id=\"topbar\"]/div[2]/div[4]/span[1]/strong/span";
 
 	
 	
@@ -80,6 +81,7 @@ public class ElementsBuying {
 	public static final String Product_variationsThird_i = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[3]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[";
 	public static final String Product_variationsThird_2 = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[3]/td/div/div[2]/div[1]/div[1]/div[3]/div/ul/li[3]";
 	public static final String Product_variationsThird_dropdownFrame = "//*[@id=\"wrapper\"]/div[3]/main/section/div[1]/div[2]/div[3]/div[1]/table/tbody/tr[3]/td/div/div[2]/div[1]/div[1]";
+	public static final String Product_chooseWeight = "/html//input[@id='accessibility-product-weight-form-input']";
 
 	public static final String Product_variationsFrameClosed = "selectric-wrapper";
 	

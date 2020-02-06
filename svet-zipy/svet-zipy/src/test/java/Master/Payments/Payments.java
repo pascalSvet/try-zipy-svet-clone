@@ -60,13 +60,10 @@ public class Payments extends Payments_MAIN {
 
 		//add to the cart
 		Thread.sleep(2000);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_addToCart))).click();
+		Functions.addToCart(driver);
 
 		//back to main page and open the cart			
-		driver.get(ElementsWebsites.Zipy_il);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ElementsBuying.Product_openCart))).click();
-		WebElement cartFrame = driver.findElement(By.xpath(ElementsBuying.Product_cartFrame));
-		wait.until(ExpectedConditions.visibilityOf(cartFrame));
+		Functions.openCart(driver);
 				
 		//buy from cart
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Product_cartPay))).click();

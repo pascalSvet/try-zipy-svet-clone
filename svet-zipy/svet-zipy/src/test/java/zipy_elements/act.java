@@ -71,12 +71,15 @@ public class act {
 	public static void waitForPresenceAndClick(String path, WebDriver driver) throws Exception{				
 		new WebDriverWait(driver, 15).until(ExpectedConditions.presenceOfElementLocated(By.xpath(path))).click();
 	}
+	// A function for waiting for web-element to be clickable
+	public static void waitForClickable(String path, WebDriver driver) throws Exception{				
+		new WebDriverWait(driver, 15).until(ExpectedConditions.elementToBeClickable(By.xpath(path)));
+	}
+	
 	// A function for waiting for web-element to be clickable and click
 	public static void waitForClickableAndClick(String path, WebDriver driver) throws Exception{				
 		new WebDriverWait(driver, 15).until(ExpectedConditions.elementToBeClickable(By.xpath(path))).click();
 	}
-	
-	
 	// A function for waiting for web-element to be invisible
 	public static void waitForInvisibility(String path, WebDriver driver) throws Exception{				
 		new WebDriverWait(driver, 15).until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(path)));
@@ -116,12 +119,15 @@ public class act {
 	}
 	
 	
-	// A function for returning if element is exist
-	public static boolean elementExist(String path, WebDriver driver) throws Exception{				
+	// A function for returning if element doesn't exist
+	public static boolean elementNotExist(String path, WebDriver driver) throws Exception{				
 		return driver.findElements(By.xpath(path)).isEmpty();
 	}
 	
-	
+	// A function for returning if element exist
+	public static boolean elementExist(String path, WebDriver driver) throws Exception{				
+		return !driver.findElements(By.xpath(path)).isEmpty();
+	}
 	
 	// A function for returning if element is exist
 	public static void open(String url, WebDriver driver) throws Exception{				

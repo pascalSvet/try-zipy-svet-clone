@@ -27,8 +27,8 @@ public class Search_redirect extends Search_MAIN {
 		// perform search for a product that is definitely not on the site
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_itemOnAliexpressOnly, Keys.ENTER);
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_amazon_withPopup)));
-		
+		act.waitForUrlChange(ElementsWebsites.Zipy_il_amazon_withPopup, driver);
+
 		//if replaced, there is an appropriate message
 		Assert.assertFalse(driver.findElements(By.xpath(ElementsBuying.Search_redirect)).isEmpty());	
 	}
@@ -45,12 +45,12 @@ public class Search_redirect extends Search_MAIN {
 		// perform search for a product that is definitely not on the site
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_itemOnAliexpressOnly, Keys.ENTER);
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_gr_ebay_withPopup)));
-		
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_ebay_withPopup, driver);
+
 		//turn off smart search
 		String oldUrl = driver.getCurrentUrl();
-		driver.findElement(By.xpath(ElementsBuying.Search_smartSearchButton)).click();
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(oldUrl)));
+		act.click(ElementsBuying.Search_smartSearchButton, driver);
+		act.waitForUrlChange(oldUrl, driver);
 
 		//if replaced, there is an appropriate message
 		Assert.assertFalse(driver.findElements(By.xpath(ElementsBuying.Search_redirect)).isEmpty());	
@@ -68,16 +68,17 @@ public class Search_redirect extends Search_MAIN {
 		// perform search for a product that is definitely not on the site
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_itemEverywhere, Keys.ENTER);
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_gr_ebay_withPopup)));
-		
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_ebay_withPopup, driver);
+
 		//turn off smart search
 		String oldUrl = driver.getCurrentUrl();
-		driver.findElement(By.xpath(ElementsBuying.Search_smartSearchButton)).click();
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(oldUrl)));
+		act.click(ElementsBuying.Search_smartSearchButton, driver);
+		act.waitForUrlChange(oldUrl, driver);
+
 		oldUrl = driver.getCurrentUrl();
 		//turn it on back
-		driver.findElement(By.xpath(ElementsBuying.Search_smartSearchButton)).click();
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(oldUrl)));
+		act.click(ElementsBuying.Search_smartSearchButton, driver);
+		act.waitForUrlChange(oldUrl, driver);
 
 
 		//if replaced, there is an appropriate message
@@ -96,7 +97,7 @@ public class Search_redirect extends Search_MAIN {
 		// perform search for a product that is definitely not on the site
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_itemNotOnAliexpress, Keys.ENTER);
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_gr_ali_withPopup)));
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_ali_withPopup, driver);
 
 		//if replaced, there is an appropriate message
 		Assert.assertFalse(driver.findElements(By.xpath(ElementsBuying.Search_redirect)).isEmpty());	

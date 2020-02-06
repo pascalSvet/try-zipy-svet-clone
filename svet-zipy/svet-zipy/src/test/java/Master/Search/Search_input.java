@@ -79,16 +79,16 @@ public class Search_input extends Search_MAIN {
 		// perform search with the first part of special characters in portuguese
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_pt1, Keys.ENTER);
-		Boolean firstPart = driver.findElements(By.xpath(ElementsBuying.Product_sortBy)).isEmpty();
+		Boolean firstPart = act.elementExist(ElementsBuying.Product_sortBy, driver);
 		
 		// perform another search with the second part of special characters in portuguese
 		driver.get(ElementsWebsites.Zipy_pt);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
-			.sendKeys(ElementsBuying.Search_pt2, Keys.ENTER);
-		Boolean secondPart = driver.findElements(By.xpath(ElementsBuying.Product_sortBy)).isEmpty();
+			.sendKeys(ElementsBuying.Search_pt2, Keys.ENTER);		
+		Boolean secondPart = act.elementExist(ElementsBuying.Product_sortBy, driver);
 		
 		//if search succeed, there is option for ordering the results in both cases
-		Assert.assertFalse(firstPart && secondPart);	
+		Assert.assertTrue(firstPart && secondPart);	
 
 	}
 	
@@ -105,7 +105,7 @@ public class Search_input extends Search_MAIN {
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_special_apostrophe, Keys.ENTER);
 
-		String serchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		String serchField = act.elementAttText(ElementsBuying.Search_content, "value", driver); 
 		
 		//if search succeed correctly, the element we were looking for did not change, and there is option for ordering the results
 		Assert.assertTrue(serchField.equals(ElementsBuying.Search_special_apostrophe) &&
@@ -125,7 +125,7 @@ public class Search_input extends Search_MAIN {
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_special_dash, Keys.ENTER);
 
-		String serchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		String serchField = act.elementAttText(ElementsBuying.Search_content, "value", driver); 
 				
 		//if search succeed correctly, the element we were looking for did not change, and there is option for ordering the results
 		Assert.assertTrue(serchField.equals(ElementsBuying.Search_special_dash) &&
@@ -146,7 +146,7 @@ public class Search_input extends Search_MAIN {
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_special_parenthesis, Keys.ENTER);
 
-		String serchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		String serchField = act.elementAttText(ElementsBuying.Search_content, "value", driver); 
 				
 		//if search succeed correctly, the element we were looking for did not change, and there is option for ordering the results
 		Assert.assertTrue(serchField.equals(ElementsBuying.Search_special_parenthesis) &&
@@ -166,7 +166,7 @@ public class Search_input extends Search_MAIN {
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_special_bracket, Keys.ENTER);
 
-		String serchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		String serchField = act.elementAttText(ElementsBuying.Search_content, "value", driver); 
 				
 		//if search succeed correctly, the element we were looking for did not change, and there is option for ordering the results
 		Assert.assertTrue(serchField.equals(ElementsBuying.Search_special_bracket) &&

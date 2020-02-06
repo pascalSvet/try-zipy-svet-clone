@@ -27,8 +27,9 @@ public class Search_field extends Search_MAIN {
 		// enter search keyword and then clear the field
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_eng);
-		driver.findElement(By.xpath(ElementsBuying.Search_delete)).click();
-		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		act.click(ElementsBuying.Search_delete, driver);
+		
+		String searchField = act.elementAttText(ElementsBuying.Search_content, "value", driver); 
 
 		//if succeed, then the field will be empty
 		Assert.assertTrue("".equals(searchField));	
@@ -46,7 +47,7 @@ public class Search_field extends Search_MAIN {
 		// enter search keyword and then clear the field
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys("", Keys.ENTER);
-		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		String searchField = act.elementAttText(ElementsBuying.Search_content, "value", driver); 
 		String searchFieldMessage = driver.findElement(By.id("desktop_search_fild")).getAttribute("class"); 
 
 		//if succeed, then the field will be empty and the "type a product name" message will shake
@@ -84,12 +85,12 @@ public class Search_field extends Search_MAIN {
 			.sendKeys(ElementsBuying.Search_eng);
 		
 		//clear the search field
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsBuying.Search_autocompleteArrow1)));
-		driver.findElement(By.xpath(ElementsBuying.Search_delete)).click();
+		act.waitForPresence(ElementsBuying.Search_autocompleteArrow1, driver);
+		act.click(ElementsBuying.Search_delete, driver);
 		Thread.sleep(1000);
 		
 		//if succeed, then a dropdown menu will close
-		Assert.assertTrue(!driver.findElement(By.xpath(ElementsBuying.Search_autocompleteArrow1)).isDisplayed());	
+		Assert.assertFalse(act.elementDisplayed(ElementsBuying.Search_autocompleteArrow1, driver));	
 	}
 
 	
@@ -106,17 +107,16 @@ public class Search_field extends Search_MAIN {
 			.sendKeys(ElementsBuying.Search_eng);
 
 		//choose the first hint and save its name
-		String hint1 = driver.findElement(By.xpath(ElementsBuying.Search_autocompleteHint1)).getText().trim();
-		driver.findElement(By.xpath(ElementsBuying.Search_autocompleteArrow1)).click();
-		driver.findElement(By.xpath(ElementsBuying.Search_button)).click();
+		String hint1 = act.elementText(ElementsBuying.Search_autocompleteHint1, driver);
+		act.click(ElementsBuying.Search_autocompleteArrow1, driver);
+		act.click(ElementsBuying.Search_button, driver);
 		
 		//save the new search name
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		act.waitForUrlChange(ElementsWebsites.Zipy_il_withPopup, driver);
+		String searchField = act.elementAttText(ElementsBuying.Search_content, "value", driver); 
 
 		//if search succeed correctly, the search field contains the hint and there is option for ordering the results
-		Assert.assertTrue( hint1.equals(searchField) &&
-				!driver.findElements(By.xpath(ElementsBuying.Product_sortBy)).isEmpty() );	
+		Assert.assertTrue( hint1.equals(searchField) && act.elementExist(ElementsBuying.Product_sortBy, driver) );					
 	}
 	
 	
@@ -133,9 +133,9 @@ public class Search_field extends Search_MAIN {
 			.sendKeys(ElementsBuying.Search_eng, Keys.ENTER);
 		
 		//switch to amazon
-		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_amazonButton)).click();	
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		act.click(ElementsWebsites.Zipy_il_amazonButton, driver);
+		act.waitForUrlChange(ElementsWebsites.Zipy_il_withPopup, driver);
+		String searchField = act.elementAttText(ElementsBuying.Search_content, "value", driver); 
 
 		//if succeed, then a search field will keep the keyword
 		Assert.assertTrue(ElementsBuying.Search_eng.equals(searchField));	
@@ -155,9 +155,9 @@ public class Search_field extends Search_MAIN {
 			.sendKeys(ElementsBuying.Search_eng, Keys.ENTER);
 		
 		//switch to ebay
-		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_ebayButton)).click();	
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		act.click(ElementsWebsites.Zipy_il_ebayButton, driver);	
+		act.waitForUrlChange(ElementsWebsites.Zipy_il_withPopup, driver);
+		String searchField = act.elementAttText(ElementsBuying.Search_content, "value", driver); 
 
 		//if succeed, then a search field will keep the keyword
 		Assert.assertTrue(ElementsBuying.Search_eng.equals(searchField));	
@@ -177,9 +177,9 @@ public class Search_field extends Search_MAIN {
 			.sendKeys(ElementsBuying.Search_eng, Keys.ENTER);
 
 		//switch to Less-than-5
-		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_lessThan5Button)).click();	
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		act.click(ElementsWebsites.Zipy_il_lessThan5Button, driver); 
+		act.waitForUrlChange(ElementsWebsites.Zipy_il_withPopup, driver);
+		String searchField = act.elementAttText(ElementsBuying.Search_content, "value", driver); 
 
 		//if succeed, then a search field will keep the keyword
 		Assert.assertTrue(ElementsBuying.Search_eng.equals(searchField));	
@@ -198,12 +198,12 @@ public class Search_field extends Search_MAIN {
 		//perform search and then clear the field
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_eng, Keys.ENTER);
-		driver.findElement(By.xpath(ElementsBuying.Search_delete)).click();
+		act.click(ElementsBuying.Search_delete, driver);
 
 		//switch to amazon
-		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_amazonButton)).click();	
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		act.click(ElementsWebsites.Zipy_il_amazonButton, driver);	
+		act.waitForUrlChange(ElementsWebsites.Zipy_il_withPopup, driver);
+		String searchField = act.elementAttText(ElementsBuying.Search_content, "value", driver); 
 
 		//if succeed, then a search field will be empty
 		Assert.assertTrue("".equals(searchField));	
@@ -222,12 +222,12 @@ public class Search_field extends Search_MAIN {
 		//perform search and then clear the field
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_eng, Keys.ENTER);
-		driver.findElement(By.xpath(ElementsBuying.Search_delete)).click();
+		act.click(ElementsBuying.Search_delete, driver);
 		
 		//switch to ebay
 		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_ebayButton)).click();	
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		act.waitForUrlChange(ElementsWebsites.Zipy_il_withPopup, driver);
+		String searchField = act.elementAttText(ElementsBuying.Search_content, "value", driver); 
 
 		//if succeed, then a search field will be empty
 		Assert.assertTrue("".equals(searchField));	
@@ -245,12 +245,12 @@ public class Search_field extends Search_MAIN {
 		//perform search and then clear the field
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("desktop_search_fild")))
 			.sendKeys(ElementsBuying.Search_eng, Keys.ENTER);
-		driver.findElement(By.xpath(ElementsBuying.Search_delete)).click();
+		act.click(ElementsBuying.Search_delete, driver);
 
 		//switch to Less-than-5
-		driver.findElement(By.xpath(ElementsWebsites.Zipy_il_lessThan5Button)).click();	
-		wait.until(ExpectedConditions.not(ExpectedConditions.urlToBe(ElementsWebsites.Zipy_il_withPopup)));
-		String searchField = driver.findElement(By.xpath(ElementsBuying.Search_content)).getAttribute("value"); 
+		act.click(ElementsWebsites.Zipy_il_lessThan5Button, driver);
+		act.waitForUrlChange(ElementsWebsites.Zipy_il_withPopup, driver);
+		String searchField = act.elementAttText(ElementsBuying.Search_content, "value", driver); 
 
 		//if succeed, then a search field will be empty
 		Assert.assertTrue("".equals(searchField));	
