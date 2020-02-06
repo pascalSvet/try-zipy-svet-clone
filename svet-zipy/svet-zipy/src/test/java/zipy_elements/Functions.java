@@ -97,7 +97,7 @@ public class Functions {
 
 		//enter private data and choose - change password 
 		driver.findElement(By.xpath(ElementsLogin.user_personalDataButton)).click();
-		if (driver.manage().window().getSize().getWidth()<=400) {
+		if (driver.manage().window().getSize().getWidth()<=550) {
 			driver.findElement(By.xpath(ElementsLogin.user_changePassword_mobile)).click();
 
 		} else {
@@ -118,7 +118,7 @@ public class Functions {
 
 		//enter private data and choose - change password 
 		driver.findElement(By.xpath(ElementsLogin.user_personalDataButton)).click();
-		if (driver.manage().window().getSize().getWidth()<=400) {
+		if (driver.manage().window().getSize().getWidth()<=550) {
 			driver.findElement(By.xpath(ElementsLogin.user_changeEmail_mobile)).click();
 		} else {
 			driver.findElement(By.xpath(ElementsLogin.user_changeEmail)).click();
@@ -158,9 +158,11 @@ public class Functions {
 	
 	//close the advert pop-up note if exist (in greece version)
 	public static void advertNote_close_gr(WebDriver driver) throws Exception{	
-		if (!driver.findElements(By.xpath(ElementsLogin.Start_advertNote_close)).isEmpty()) {
-				driver.findElement(By.xpath(ElementsLogin.Start_advertNote_close)).click();
-		}
+		try {
+			new WebDriverWait(driver, 8).
+			until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ElementsLogin.Start_advertNote_close))).click();
+		} catch (Exception e) { }
+
 					
 	}
 	

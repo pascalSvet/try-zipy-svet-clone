@@ -15,7 +15,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import zipy_elements.*;
 
-public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
+public class Catalogs_gr_amazon extends Catalogs_MAIN {
 		
 	
 	//Test - opening all sub categories in amazon - Israel - 1 category - fashion
@@ -28,11 +28,13 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 		if( counter ==1) {
 			Functions.closePopUp_gr(driver);
 		}
+		Functions.advertNote_close_gr(driver);
 		
 		int fails = 0;
 
-		wait.until( ExpectedConditions.elementToBeClickable(By.xpath(ElementsWebsites.Zipy_gr_amazonButton))).click();
-		
+		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_amazonButton, driver);
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_withPopup, driver);
+
 		driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1)).click();
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
@@ -43,7 +45,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "1" + "]/a/span[2]")).getText();
+		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "1" + "]/a/span[2]", driver);
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -51,7 +53,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			driver.get(currentLink);
 			
 				try {
-					boolean t = driver.findElement(By.xpath(ElementsBuying.Product_sortBy)).isDisplayed(); 
+					boolean t = act.elementDisplayed(ElementsBuying.Product_sortBy, driver); 
 				}
 				catch (Exception ex) {
 					if(driver.getCurrentUrl().contains("toys")) {					
@@ -82,11 +84,13 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 		if( counter ==1) {
 			Functions.closePopUp_gr(driver);
 		}
-		
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
-		wait.until( ExpectedConditions.elementToBeClickable(By.xpath(ElementsWebsites.Zipy_gr_amazonButton))).click();
-		
+		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_amazonButton, driver);
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_withPopup, driver);
+
 		driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1)).click();
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
@@ -97,7 +101,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "2" + "]/a/span[2]")).getText();
+		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "2" + "]/a/span[2]", driver);
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -105,7 +109,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			driver.get(currentLink);
 			
 				try {
-					boolean t = driver.findElement(By.xpath(ElementsBuying.Product_sortBy)).isDisplayed(); 
+					boolean t = act.elementDisplayed(ElementsBuying.Product_sortBy, driver); 
 				}
 				catch (Exception ex) {
 					if(driver.getCurrentUrl().contains("toys")) {					
@@ -136,11 +140,13 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 		if( counter ==1) {
 			Functions.closePopUp_gr(driver);
 		}
-		
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
-		wait.until( ExpectedConditions.elementToBeClickable(By.xpath(ElementsWebsites.Zipy_gr_amazonButton))).click();
-		
+		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_amazonButton, driver);
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_withPopup, driver);
+
 		driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1)).click();
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
@@ -151,7 +157,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "3" + "]/a/span[2]")).getText();
+		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "3" + "]/a/span[2]", driver);
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -159,7 +165,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			driver.get(currentLink);
 			
 				try {
-					boolean t = driver.findElement(By.xpath(ElementsBuying.Product_sortBy)).isDisplayed(); 
+					boolean t = act.elementDisplayed(ElementsBuying.Product_sortBy, driver); 
 				}
 				catch (Exception ex) {
 					if(driver.getCurrentUrl().contains("toys")) {					
@@ -190,11 +196,13 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 		if( counter ==1) {
 			Functions.closePopUp_gr(driver);
 		}
-		
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
-		wait.until( ExpectedConditions.elementToBeClickable(By.xpath(ElementsWebsites.Zipy_gr_amazonButton))).click();
-		
+		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_amazonButton, driver);
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_withPopup, driver);
+
 		driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1)).click();
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
@@ -205,7 +213,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "4" + "]/a/span[2]")).getText();
+		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "4" + "]/a/span[2]", driver);
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -213,7 +221,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			driver.get(currentLink);
 			
 				try {
-					boolean t = driver.findElement(By.xpath(ElementsBuying.Product_sortBy)).isDisplayed(); 
+					boolean t = act.elementDisplayed(ElementsBuying.Product_sortBy, driver); 
 				}
 				catch (Exception ex) {
 					if(driver.getCurrentUrl().contains("toys")) {					
@@ -244,11 +252,13 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 		if( counter ==1) {
 			Functions.closePopUp_gr(driver);
 		}
-		
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
-		wait.until( ExpectedConditions.elementToBeClickable(By.xpath(ElementsWebsites.Zipy_gr_amazonButton))).click();
-		
+		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_amazonButton, driver);
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_withPopup, driver);
+
 		driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1)).click();
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
@@ -259,7 +269,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "5" + "]/a/span[2]")).getText();
+		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "5" + "]/a/span[2]", driver);
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -267,7 +277,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			driver.get(currentLink);
 			
 				try {
-					boolean t = driver.findElement(By.xpath(ElementsBuying.Product_sortBy)).isDisplayed(); 
+					boolean t = act.elementDisplayed(ElementsBuying.Product_sortBy, driver); 
 				}
 				catch (Exception ex) {
 					if(driver.getCurrentUrl().contains("toys")) {					
@@ -298,11 +308,13 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 		if( counter ==1) {
 			Functions.closePopUp_gr(driver);
 		}
-		
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
-		wait.until( ExpectedConditions.elementToBeClickable(By.xpath(ElementsWebsites.Zipy_gr_amazonButton))).click();
-		
+		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_amazonButton, driver);
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_withPopup, driver);
+
 		driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1)).click();
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
@@ -313,7 +325,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "6" + "]/a/span[2]")).getText();
+		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "6" + "]/a/span[2]", driver);
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -321,7 +333,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			driver.get(currentLink);
 			
 				try {
-					boolean t = driver.findElement(By.xpath(ElementsBuying.Product_sortBy)).isDisplayed(); 
+					boolean t = act.elementDisplayed(ElementsBuying.Product_sortBy, driver); 
 				}
 				catch (Exception ex) {
 					if(driver.getCurrentUrl().contains("toys")) {					
@@ -352,11 +364,13 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 		if( counter ==1) {
 			Functions.closePopUp_gr(driver);
 		}
-		
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
-		wait.until( ExpectedConditions.elementToBeClickable(By.xpath(ElementsWebsites.Zipy_gr_amazonButton))).click();
-		
+		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_amazonButton, driver);
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_withPopup, driver);
+
 		driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1)).click();
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
@@ -367,7 +381,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "7" + "]/a/span[2]")).getText();
+		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "7" + "]/a/span[2]", driver);
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -375,7 +389,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			driver.get(currentLink);
 			
 				try {
-					boolean t = driver.findElement(By.xpath(ElementsBuying.Product_sortBy)).isDisplayed(); 
+					boolean t = act.elementDisplayed(ElementsBuying.Product_sortBy, driver); 
 				}
 				catch (Exception ex) {
 					if(driver.getCurrentUrl().contains("toys")) {					
@@ -406,11 +420,13 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 		if( counter ==1) {
 			Functions.closePopUp_gr(driver);
 		}
-		
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
-		wait.until( ExpectedConditions.elementToBeClickable(By.xpath(ElementsWebsites.Zipy_gr_amazonButton))).click();
-		
+		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_amazonButton, driver);
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_withPopup, driver);
+
 		driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1)).click();
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
@@ -421,7 +437,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "8" + "]/a/span[2]")).getText();
+		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "8" + "]/a/span[2]", driver);
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -429,7 +445,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			driver.get(currentLink);
 			
 				try {
-					boolean t = driver.findElement(By.xpath(ElementsBuying.Product_sortBy)).isDisplayed(); 
+					boolean t = act.elementDisplayed(ElementsBuying.Product_sortBy, driver); 
 				}
 				catch (Exception ex) {
 					if(driver.getCurrentUrl().contains("toys")) {					
@@ -460,12 +476,14 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 		if( counter ==1) {
 			Functions.closePopUp_gr(driver);
 		}
-		
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
-		wait.until( ExpectedConditions.elementToBeClickable(By.xpath(ElementsWebsites.Zipy_gr_amazonButton))).click();
-		
-		driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1)).click();
+		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_amazonButton, driver);
+		act.waitForUrlChange(ElementsWebsites.Zipy_gr_withPopup, driver);
+
+		act.click(ElementsLogin.sideCategoryUp1, driver);
 		String winHandleMain = driver.getWindowHandle();
 		Thread.sleep(2000);
 		
@@ -475,7 +493,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			hrf.add(i, links.get(i).getAttribute("href"));
 		}
 
-		String nameCategory = driver.findElement(By.xpath(ElementsThumbs.category_mainCategoryStart + "9" + "]/a/span[2]")).getText();
+		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "9" + "]/a/span[2]", driver);
 		System.out.println("openning " +  hrf.size() + " sub categories of " + nameCategory);
 		
 		for(int i = 1; i<hrf.size(); i++) {
@@ -483,7 +501,7 @@ public class Catalogs_gr_amazon_separated extends Catalogs_MAIN {
 			driver.get(currentLink);
 			
 				try {
-					boolean t = driver.findElement(By.xpath(ElementsBuying.Product_sortBy)).isDisplayed(); 
+					boolean t = act.elementDisplayed(ElementsBuying.Product_sortBy, driver); 
 				}
 				catch (Exception ex) {
 					if(driver.getCurrentUrl().contains("toys")) {					
