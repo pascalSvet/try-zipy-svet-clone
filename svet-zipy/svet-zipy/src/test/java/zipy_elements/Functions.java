@@ -138,21 +138,22 @@ public class Functions {
 
 	//close the pop-up window if exist
 	public static void closePopUp(WebDriver driver) throws Exception{
-			if (driver.findElements(By.xpath(ElementsLogin.Popup_welcome_close)).size() != 0){
-				driver.findElement(By.xpath(ElementsLogin.Popup_welcome_close)).click();
-				new WebDriverWait(driver, 10).
-				until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(ElementsLogin.Popup_welcome_close)));
-			}
+		try {
+			new WebDriverWait(driver, 10).
+			until(ExpectedConditions.presenceOfElementLocated(By.xpath(ElementsLogin.Popup_welcome_close))).click();
+		} catch (Exception e) { }			
 	}
 	
 	//close the pop-up window if exist (in greece version)
 	public static void closePopUp_gr(WebDriver driver) throws Exception{
 
-		if (driver.findElements(By.xpath(ElementsLogin.Popup_welcome_close_gr)).size() != 0){
-				driver.findElement(By.xpath(ElementsLogin.Popup_welcome_close_gr)).click();
-				new WebDriverWait(driver, 10).
-				until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(ElementsLogin.Popup_welcome_close_gr)));
-			}
+		try {
+			new WebDriverWait(driver, 10).
+			until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='tucson-body']")));
+			System.out.println("0");
+			act.click(ElementsLogin.Popup_welcome_close_gr, driver);
+			System.out.println("2");
+		} catch (Exception e) { System.out.println("111");}
 	}
 
 	

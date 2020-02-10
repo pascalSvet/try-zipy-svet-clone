@@ -24,11 +24,8 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		System.out.println("Running test for opening all subcategories in #" + "1" + " category from aliExpress - Israel");	
 
 		counter++;
-		driver.get(ElementsWebsites.Zipy_gr_withPopup);
-		if( counter ==1) {
-			Functions.closePopUp_gr(driver);
-		}
-		
+		driver.get(ElementsWebsites.Zipy_gr);
+		Functions.advertNote_close_gr(driver);
 		int fails = 0;
 
 		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_aliButton, driver);
@@ -40,7 +37,7 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "1" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
-			hrf.add(i, links.get(i).getAttribute("href"));
+			hrf.add(i, links.get(i).getAttribute("href") + "/?utm_medium=email");
 		}
 
 		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "1" + "]/a/span[2]", driver);
@@ -78,11 +75,9 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		System.out.println("Running test for opening all subcategories in #" + "2" + " category from aliExpress - Israel");	
 
 		counter++;
-		driver.get(ElementsWebsites.Zipy_gr_withPopup);
-		if( counter ==1) {
-			Functions.closePopUp_gr(driver);
-		}
-		
+		driver.get(ElementsWebsites.Zipy_gr);
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
 		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_aliButton, driver);
@@ -94,7 +89,7 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "2" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
-			hrf.add(i, links.get(i).getAttribute("href"));
+			hrf.add(i, links.get(i).getAttribute("href") + "/?utm_medium=email");
 		}
 
 		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "2" + "]/a/span[2]", driver);
@@ -132,11 +127,9 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		System.out.println("Running test for opening all subcategories in #" + "3" + " category from aliExpress - Israel");	
 
 		counter++;
-		driver.get(ElementsWebsites.Zipy_gr_withPopup);
-		if( counter ==1) {
-			Functions.closePopUp_gr(driver);
-		}
-		
+		driver.get(ElementsWebsites.Zipy_gr);
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
 		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_aliButton, driver);
@@ -148,7 +141,7 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "3" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
-			hrf.add(i, links.get(i).getAttribute("href"));
+			hrf.add(i, links.get(i).getAttribute("href") + "/?utm_medium=email");
 		}
 
 		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "3" + "]/a/span[2]", driver);
@@ -186,11 +179,9 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		System.out.println("Running test for opening all subcategories in #" + "4" + " category from aliExpress - Israel");	
 
 		counter++;
-		driver.get(ElementsWebsites.Zipy_gr_withPopup);
-		if( counter ==1) {
-			Functions.closePopUp_gr(driver);
-		}
-		
+		driver.get(ElementsWebsites.Zipy_gr);
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
 		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_aliButton, driver);
@@ -202,7 +193,7 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "4" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
-			hrf.add(i, links.get(i).getAttribute("href"));
+			hrf.add(i, links.get(i).getAttribute("href") + "/?utm_medium=email" + "/?utm_medium=email");
 		}
 
 		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "4" + "]/a/span[2]", driver);
@@ -240,11 +231,9 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		System.out.println("Running test for opening all subcategories in #" + "5" + " category from aliExpress - Israel");	
 
 		counter++;
-		driver.get(ElementsWebsites.Zipy_gr_withPopup);
-		if( counter ==1) {
-			Functions.closePopUp_gr(driver);
-		}
-		
+		driver.get(ElementsWebsites.Zipy_gr);
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
 		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_aliButton, driver);
@@ -256,7 +245,7 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "5" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
-			hrf.add(i, links.get(i).getAttribute("href"));
+			hrf.add(i, links.get(i).getAttribute("href") + "/?utm_medium=email");
 		}
 
 		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "5" + "]/a/span[2]", driver);
@@ -294,11 +283,9 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		System.out.println("Running test for opening all subcategories in #" + "6" + " category from aliExpress - Israel");	
 
 		counter++;
-		driver.get(ElementsWebsites.Zipy_gr_withPopup);
-		if( counter ==1) {
-			Functions.closePopUp_gr(driver);
-		}
-		
+		driver.get(ElementsWebsites.Zipy_gr);
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
 		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_aliButton, driver);
@@ -310,7 +297,7 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "6" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
-			hrf.add(i, links.get(i).getAttribute("href"));
+			hrf.add(i, links.get(i).getAttribute("href") + "/?utm_medium=email");
 		}
 
 		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "6" + "]/a/span[2]", driver);
@@ -348,11 +335,9 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		System.out.println("Running test for opening all subcategories in #" + "7" + " category from aliExpress - Israel");	
 
 		counter++;
-		driver.get(ElementsWebsites.Zipy_gr_withPopup);
-		if( counter ==1) {
-			Functions.closePopUp_gr(driver);
-		}
-		
+		driver.get(ElementsWebsites.Zipy_gr);
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
 		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_aliButton, driver);
@@ -364,7 +349,7 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "7" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
-			hrf.add(i, links.get(i).getAttribute("href"));
+			hrf.add(i, links.get(i).getAttribute("href") + "/?utm_medium=email");
 		}
 
 		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "7" + "]/a/span[2]", driver);
@@ -402,11 +387,9 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		System.out.println("Running test for opening all subcategories in #" + "8" + " category from aliExpress - Israel");	
 
 		counter++;
-		driver.get(ElementsWebsites.Zipy_gr_withPopup);
-		if( counter ==1) {
-			Functions.closePopUp_gr(driver);
-		}
-		
+		driver.get(ElementsWebsites.Zipy_gr);
+		Functions.advertNote_close_gr(driver);
+
 		int fails = 0;
 
 		act.waitForClickableAndClick(ElementsWebsites.Zipy_gr_aliButton, driver);
@@ -418,7 +401,7 @@ public class Catalogs_gr_aliExpress extends Catalogs_MAIN {
 		List<WebElement> links = driver.findElements(By.xpath(ElementsThumbs.category_linksStart + "8" + "]/div//*[@href]"));
 		ArrayList<String> hrf = new ArrayList<String>();
 		for(int i = 0; i<links.size(); i++) {
-			hrf.add(i, links.get(i).getAttribute("href"));
+			hrf.add(i, links.get(i).getAttribute("href") + "/?utm_medium=email");
 		}
 
 		String nameCategory = act.elementText(ElementsThumbs.category_mainCategoryStart + "8" + "]/a/span[2]", driver);
