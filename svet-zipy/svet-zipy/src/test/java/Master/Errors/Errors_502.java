@@ -32,6 +32,7 @@ public class Errors_502 extends Errors_MAIN {
 		
 		//open first category from catalog, and open first 17 items in different tabs
 		driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1)).click();
+		Thread.sleep(2000);
 		boolean fails = Functions.checkCategoriesInTabs_error502(driver, 11, 6, ElementsLogin.sideCategoryUp1_i, ElementsLogin.sideCategoryUp1_i_secondRow);
 
 		//if correct, all categories loaded
@@ -50,6 +51,7 @@ public class Errors_502 extends Errors_MAIN {
 		
 		//open first category from catalog, and open first 17 items in different tabs
 		driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1)).click();
+		Thread.sleep(2000);
 		boolean fails = Functions.checkCategoriesInTabs_error502(driver, 11, 6, ElementsLogin.sideCategoryUp1_i, ElementsLogin.sideCategoryUp1_i_secondRow);
 
 		//if correct, all categories loaded
@@ -67,6 +69,7 @@ public class Errors_502 extends Errors_MAIN {
 		
 		//open first category from catalog, and open first 17 items in different tabs
 		driver.findElement(By.xpath(ElementsLogin.sideCategoryUp1)).click();
+		Thread.sleep(2000);
 		boolean fails = Functions.checkCategoriesInTabs_error502(driver, 11, 6, ElementsLogin.sideCategoryUp1_i, ElementsLogin.sideCategoryUp1_i_secondRow);
 
 		//if correct, all categories loaded
@@ -84,7 +87,7 @@ public class Errors_502 extends Errors_MAIN {
 
 		//scroll down and open first 16 deals in different tabs
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollTo(0,1000);");		
+		jse.executeScript("window.scrollTo(0,500);");		
 		boolean fails = Functions.checkLinksInTabs_error502(driver, 16, ElementsThumbs.dailyDeal_onPage_i);
 
 		//if correct, all deals loaded
@@ -101,7 +104,8 @@ public class Errors_502 extends Errors_MAIN {
 		
 		//scroll down and open first 16 deals in different tabs
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollTo(0,1000);");						
+		jse.executeScript("window.scrollTo(0,500);");	
+		Thread.sleep(2000);
 		boolean fails = Functions.checkLinksInTabs_error502(driver, 16, ElementsThumbs.dailyDeal_onPage_i);
 
 		//if correct, all deals loaded
@@ -119,7 +123,8 @@ public class Errors_502 extends Errors_MAIN {
 		
 		//scroll down and open first 16 deals in different tabs
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollTo(0,1000);");						
+		jse.executeScript("window.scrollTo(0,500);");						
+		Thread.sleep(2000);
 		boolean fails = Functions.checkLinksInTabs_error502(driver, 16, ElementsThumbs.dailyDeal_onPage_i);
 
 		//if correct, all deals loaded
