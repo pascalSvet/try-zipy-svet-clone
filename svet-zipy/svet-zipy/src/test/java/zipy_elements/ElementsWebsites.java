@@ -9,11 +9,13 @@ public class ElementsWebsites {
 	
 public static final String Zipy_il = "https://www.zipy.co.il/?utm_medium=email";			//Israel
 public static final String Zipy_ilRu = "https://ru.zipy.co.il/?utm_medium=email";			//Israel russian
-public static final String Zipy_il_ali = "https://www.https://www.zipy.co.il/אליאקספרס/?utm_medium=email";				//Israel
-public static final String Zipy_il_ali_withPopup = "https://www.https://www.zipy.co.il/אליאקספרס";				//Israel
+public static final String Zipy_il_ali = "https://www.https://www.zipy.co.il/אליאקספרס/?utm_medium=email";				
+public static final String Zipy_il_ali_withPopup = "https://www.https://www.zipy.co.il/אליאקספרס";				
 public static final String Zipy_il_amazon = "https://www.zipy.co.il/amazon/?utm_medium=email";		
 public static final String Zipy_il_withPopup = "https://www.zipy.co.il/";			
 public static final String Zipy_il_amazon_withPopup = "https://www.https://www.https://www.zipy.co.il/amazon";			
+public static final String Zipy_il_findzip = "https://www.zipy.co.il/findzip/?utm_medium=email";			
+public static final String Zipy_il_findzip_mapList = "https://www.zipy.co.il/zipmap";			
 
 public static final String Zipy_gr = "https://www.zipy.gr/?utm_medium=email";				//Greece
 public static final String Zipy_gr_ebay = "https://www.zipy.gr/ebay/?utm_medium=email";

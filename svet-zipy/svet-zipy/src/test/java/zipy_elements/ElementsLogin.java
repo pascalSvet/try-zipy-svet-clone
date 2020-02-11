@@ -145,5 +145,57 @@ public class ElementsLogin {
 	public static final String user_changeEmail_newEmaiField = "/html//input[@id='i_profile-email']";
 	public static final String user_changeEmail_mobile = "/html//div[@id='topbar']//span[@class='ico ico--email']";
 
+	
+	
+////findzip (index): ////////////////////////////////////////////////////////
 
+	
+	public static final String index_correctIndex1 = "8425137"; //באר שבע, אביגדור המאירי  27  (index_cityField_data_BS +  index_streetField_data1 + index_houseField_data1)
+	public static final String index_correctIndex2 = "8477712"; // 27 באר שבע, שד' ירושלים (index_cityField_data_BS +  index_streetField_data2 + index_houseField_data1)
+	public static final String index_correctIndex3 = "8428392"; // באר שבע, תל חי 27 א    (index_cityField_data_BS +  index_streetField_data3 + index_houseField_data1 + index_entryField_1)
+	public static final String index_correctIndex4 = "8428393"; // באר שבע, תל חי 27 ב    (index_cityField_data_BS +  index_streetField_data3 + index_houseField_data1 + index_entryField_2)
+	public static final String index_correctIndex5 = "6941309"; // תל אביב , אביגדור המאירי  9 (index_cityField_data_TA +  index_streetField_data1 + index_houseField_data2)
+	public static final String index_correctIndex6 = "8425138"; //באר שבע, אביגדור המאירי  29 (index_cityField_data_BS +  index_streetField_data1 + index_houseField_data3) 
+	public static final String index_correctIndex7 = "8486227"; //באר שבע, הר כנען 27      (index_cityField_data_BS +  index_streetField_data4 + index_houseField_data1) 
+	public static final String index_correctIndex8 = "8486209"; //באר שבע, הר כנען 9      (index_cityField_data_BS +  index_streetField_data4 + index_houseField_data2) 
+	public static final String index_correctIndex9 = "8477703"; //באר שבע, שד' ירושלים 9      (index_cityField_data_BS +  index_streetField_data2 + index_houseField_data2) 
+	public static final String index_correctIndex10 = "8414001"; //באר שבע, ת.ד. 4023       (index_cityField_data_BS +  index_postboxField_data1) 
+
+	public static final String index_cityField = "/html//input[@id='location']";
+	public static final String index_cityField_partData = "באר";
+	public static final String index_cityField_data_BS = "באר שבע";
+	public static final String index_cityField_data_TA = "תל אביב";
+	public static final String index_cityField_data_1 = "/html//form[@id='address2zip-form']/div[@class='txt__calc-fields']/div[1]/div[@class='field__field']/div/div/span[@class='autocomplete-link']";
+	public static final String index_city_mapList = "//div[@id='wrapper']//main[@role='main']//a[@href='https://www.zipy.co.il/zipmap']";
+	public static final String index_city_mapList_BS = "/html//div[@id='wrapper']//main[@role='main']/section[@class='txt']//a[@alt='איתור מיקוד באר שבע']";
+	
+	public static final String index_streetField = "/html//input[@id='street']";
+	public static final String index_streetField_data1 = "אביגדור המאירי";
+	public static final String index_streetField_data2 = "שד' ירושלים";
+	public static final String index_streetField_data3 = "תל חי";
+	public static final String index_streetField_data4 = "הר כנען";
+
+	public static final String index_houseField = "/html//input[@id='house']";
+	public static final String index_houseField_data1 = "27";
+	public static final String index_houseField_data2 = "9";
+	public static final String index_houseField_data3 = "29";
+	
+	public static final String index_entryField = "/html//form[@id='address2zip-form']/div[@class='txt__calc-fields']/div[@class='narrow']//div[@class='field field--default field--entrance']/div[@class='field__field']/div//div[@class='selectric']//span[@class='selectric-option-text']";
+	public static final String index_entryField_1 = "/html//form[@id='address2zip-form']//div[@class='field field--default field--entrance']/div[@class='field__field']/div/div[1]/div[@class='selectric-items']//ul/li[2]//span[@class='selectric-option-text']";
+	public static final String index_entryField_2 = "/html//form[@id='address2zip-form']//div[@class='field field--default field--entrance']/div[@class='field__field']/div/div[1]/div[@class='selectric-items']//ul/li[3]//span[@class='selectric-option-text']";
+	
+	public static final String index_postboxField = "/html//input[@id='pob']";
+	public static final String index_postboxField_data1 = "4023";
+
+	public static final String index_foundByZipy = "/html//form[@id='address2zip-form']//span[@class='zip-value']";
+
+	public static final String index_history1 = "//*[@id='wrapper']/div[2]/main/section/div[2]/div[2]/div/div[1]/button/span";
+	public static final String index_history2 = "//*[@id='wrapper']/div[2]/main/section/div[2]/div[2]/div/div[2]/button/span";
+	public static final String index_history_i = "//*[@id='wrapper']/div[2]/main/section/div[2]/div[2]/div/div["; // + i + "]/button/span"
+
+	public static final String index_searchButton = "/html//form[@id='address2zip-form']//button[@type='submit']";
+	public static final String index_clearButton = "/html//form[@id='address2zip-form']//div[@class='buttons__down']/button[@type='button']";
+	public static final String index_infoIcon = "//form[@id='address2zip-form']//span[@class='ico ico--info']";
+
+	
 }

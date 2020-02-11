@@ -61,6 +61,7 @@ public class act {
 		Thread.sleep(500);		
 	}
 	
+	
 		
 	// A function for waiting for web-element appearance
 	public static void waitForPresence(String path, WebDriver driver) throws Exception{				
@@ -92,6 +93,11 @@ public class act {
 	// A function for waiting for url to change
 	public static void waitForUrlChange(String url, WebDriver driver) throws Exception{				
 		new WebDriverWait(driver, 15).until(ExpectedConditions.not(ExpectedConditions.urlToBe(url)));
+	}
+	
+	// A function for waiting for url to change
+	public static void waitForUrl(String url, WebDriver driver) throws Exception{				
+		new WebDriverWait(driver, 15).until(ExpectedConditions.urlToBe(url));
 	}
 	
 	// A function for waiting for attribute to change

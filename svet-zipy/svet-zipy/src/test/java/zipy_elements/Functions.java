@@ -266,6 +266,7 @@ public class Functions {
 		
 		Thread.sleep(2000);
 		String cart = act.elementText(ElementsBuying.Product_cart_topBarQuantity, driver);
+		Thread.sleep(2000);
 		act.waitForClickableAndClick(ElementsBuying.Product_addToCart, driver);
 		act.waitForTextChange(ElementsBuying.Product_cart_topBarQuantity, cart, driver);				
 	}
@@ -275,6 +276,7 @@ public class Functions {
 		
 		Thread.sleep(2000);
 		String cart = act.elementText(ElementsBuying.Product_cart_topBarQuantity, driver);
+		Thread.sleep(2000);
 		act.waitForClickableAndClick(ElementsBuying.ProductQuickPopup_addToCart, driver);
 		act.waitForTextChange(ElementsBuying.Product_cart_topBarQuantity, cart, driver);				
 	}
@@ -734,7 +736,7 @@ public class Functions {
 			boolean tr = driver.getTitle().contains("502"); 
 			if (tr ==true) {
 					fails++;
-					System.out.println("the link:  " + driver.getCurrentUrl() + "/n encountered an 502 error" );			
+					System.out.println("the link:  " + driver.getCurrentUrl() + " encountered an 502 error" );			
 			}
 			driver.close();
 		}
@@ -821,5 +823,42 @@ public class Functions {
 		Thread.sleep(1000);
 	}
 		
-			
+	
+	
+//////////////aliExpress functions: ////////////////////////////////////////////////////////
+
+	
+	// A function for finding index.
+	public static void findZipIndex(String city, String street, String house, WebDriver driver) throws Exception{
+
+		//clear all fields
+		act.click(ElementsLogin.index_clearButton, driver);
+
+		//enter city:
+		driver.findElement(By.xpath(ElementsLogin.index_cityField)).sendKeys(city);
+		Thread.sleep(3000);
+		act.waitForPresenceAndClick(ElementsLogin.index_cityField_data_1, driver);
+		Thread.sleep(2000);
+		
+		//enter street and house:
+		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.index_streetField))).click()
+		.sendKeys(street, Keys.TAB, house, Keys.ENTER)
+		.build().perform();	
+		Thread.sleep(3000);
+		
+	}
+	
+	// A function for finding index in the same city as in previous search.
+	public static void findZipIndex_sameCity(String city, String street, String house, WebDriver driver) throws Exception{
+
+		//clear all fields
+		act.click(ElementsLogin.index_clearButton, driver);
+
+		//enter city, street and house:
+		new Actions (driver).moveToElement(driver.findElement(By.xpath(ElementsLogin.index_cityField))).click()
+		.sendKeys(city, Keys.TAB, street, Keys.TAB, house, Keys.ENTER)
+		.build().perform();	
+		Thread.sleep(3000);
+		
+	}
 }
